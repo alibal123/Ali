@@ -1,0 +1,50 @@
+{
+  "timezone": "Europe/Istanbul",
+  "posts": [
+    {
+      "id": "gun1_liste",
+      "folder": "posts/gun1_liste",
+      "publish_at": "2026-10-01T20:00",
+      "platforms": [
+        "instagram"
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "gun2_incendies",
+      "folder": "posts/gun2_incendies",
+      "publish_at": "2026-10-02T20:00",
+      "platforms": [
+        "instagram"
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "gun3_belgesel",
+      "folder": "posts/gun3_belgesel",
+      "publish_at": "2026-10-03T20:00",
+      "platforms": [
+        "instagram"
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "gun4_oyun",
+      "folder": "posts/gun4_oyun",
+      "publish_at": "2026-10-04T20:00",
+      "platforms": [
+        "instagram"
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "gun5_jagten",
+      "folder": "posts/gun5_jagten",
+      "publish_at": "2026-10-05T20:00",
+      "platforms": [
+        "instagram"
+      ],
+      "status": "planned"
+    }
+  ]
+}
