@@ -65,7 +65,25 @@ def publish_instagram(post):
     return call("POST", f"{IG_USER}/media_publish", creation_id=c)["id"]
 
 
+def check():
+    """Paylaşım yapmadan: anahtar geçerli mi, hesap doğru mu, görseller herkese açık mı?"""
+    me = call("GET", "me", fields="user_id,username,account_type")
+    print(f"Anahtar geçerli → hesap: @{me.get('username')} ({me.get('account_type')}), id {me.get('user_id')}")
+    if str(me.get("user_id")) != str(IG_USER.strip()):
+        print(f"UYARI: IG_USER_ID ({IG_USER}) hesapla eşleşmiyor ({me.get('user_id')})")
+    sched = json.load(open("schedule.json", encoding="utf-8"))
+    for post in sched["posts"]:
+        f = sorted(x for x in os.listdir(post["folder"]) if x.endswith(".jpg"))[0]
+        u = f"{RAW}/{post['folder']}/{f}"
+        with urllib.request.urlopen(urllib.request.Request(u, method="HEAD"), timeout=30) as r:
+            print(f"[{post['id']}] {post['publish_at']} → görsel erişilebilir ({r.status}, {r.headers.get('Content-Type')})")
+    print("KONTROL TAMAM")
+
+
 def main():
+    if DRY:
+        check()
+        return
     sched = json.load(open("schedule.json", encoding="utf-8"))
     tz = ZoneInfo(sched.get("timezone", "Europe/Istanbul"))
     now = datetime.now(tz)
