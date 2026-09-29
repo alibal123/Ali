@@ -1,17 +1,28 @@
 name: Instagram anahtarını yenile
 
 # Instagram uzun ömürlü anahtarı 60 günde biter. Bu iş her pazartesi yeniler.
-# Gerekli gizli değişken: GH_PAT (bu repoda "Secrets: read and write" yetkili ince ayarlı GitHub anahtarı)
+# Gerekli gizli değişken: GH_PAT (yalnızca bu depo, "Secrets: Read and write")
 on:
   schedule:
     - cron: "0 6 * * 1"
   workflow_dispatch:
+    inputs:
+      test_only:
+        description: "Sadece GH_PAT yetkisini test et, yenileme yapma (1 = evet)"
+        default: "0"
 
 jobs:
   refresh:
     runs-on: ubuntu-latest
     steps:
+      - name: GH_PAT yetkisini kontrol et
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: |
+          gh secret list --repo "$GITHUB_REPOSITORY"
+          echo "GH_PAT çalışıyor: gizli alanlar okunabiliyor."
       - name: Yenile ve kaydet
+        if: ${{ github.event.inputs.test_only != '1' }}
         env:
           IG_TOKEN: ${{ secrets.IG_TOKEN }}
           GH_TOKEN: ${{ secrets.GH_PAT }}
