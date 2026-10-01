@@ -8,7 +8,11 @@
       "platforms": [
         "instagram"
       ],
-      "status": "planned"
+      "status": "published",
+      "results": {
+        "instagram": "18121117558939895"
+      },
+      "published_at": "2026-10-01T20:19+03:00"
     },
     {
       "id": "gun2_incendies",
