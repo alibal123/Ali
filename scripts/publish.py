@@ -16,6 +16,7 @@ REPO = os.environ["GITHUB_REPOSITORY"]
 BRANCH = os.environ.get("GITHUB_REF_NAME", "main")
 RAW = f"https://raw.githubusercontent.com/{REPO}/{BRANCH}"
 DRY = os.environ.get("DRY_RUN") == "1"
+WAIT_AHEAD = timedelta(minutes=45)  # bu kadar yakın bir gönderi varsa saatini bekle
 LATE_LIMIT = timedelta(hours=6)  # 6 saatten fazla gecikmiş gönderiyi atla, kullanıcıya bırak
 
 
@@ -87,6 +88,15 @@ def main():
     sched = json.load(open("schedule.json", encoding="utf-8"))
     tz = ZoneInfo(sched.get("timezone", "Europe/Istanbul"))
     now = datetime.now(tz)
+    # GitHub zamanlayıcısı gecikebildiği için iş erken başlar; yakında saati gelecek gönderi varsa tam saatine kadar bekle.
+    upcoming = [datetime.fromisoformat(p["publish_at"]).replace(tzinfo=tz) for p in sched["posts"]
+                if p.get("status") == "planned"]
+    soon = [t for t in upcoming if now < t <= now + WAIT_AHEAD]
+    if soon:
+        wait = (min(soon) - now).total_seconds()
+        print(f"{min(soon):%H:%M} gönderisi için {int(wait)} sn bekleniyor…")
+        time.sleep(wait + 5)
+        now = datetime.now(tz)
     changed = False
     for post in sched["posts"]:
         if post.get("status") != "planned":

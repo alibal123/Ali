@@ -2,7 +2,8 @@ name: Zamanı gelen gönderileri paylaş
 
 on:
   schedule:
-    - cron: "*/15 * * * *"   # her 15 dakikada bir kontrol
+    - cron: "*/15 * * * *"   # her 15 dakikada bir kontrol (yedek)
+    - cron: "33 16 * * *"    # 19:33 İstanbul: erken uyan, 20:00 gönderisini tam saatinde paylaş
   workflow_dispatch:
     inputs:
       dry_run:
