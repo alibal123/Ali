@@ -1,16 +1,222 @@
 {
   "note": "Paylaşılan ya da zamanlanan filmler. Haftalık görev bunları TEKRAR seçmez (oyun cevapları hariç). Her yeni gönderiden sonra eklenir.",
   "films": [
-    {"title": "Coherence", "year": 2013, "tmdb": "220289", "post": "gun1_liste"},
-    {"title": "Primer", "year": 2004, "tmdb": "14337", "post": "gun1_liste"},
-    {"title": "The Man from Earth", "year": 2007, "tmdb": "13363", "post": "gun1_liste"},
-    {"title": "Predestination", "year": 2014, "tmdb": "206487", "post": "gun1_liste"},
-    {"title": "Triangle", "year": 2009, "tmdb": "26466", "post": "gun1_liste"},
-    {"title": "Incendies", "year": 2010, "tmdb": "46738", "post": "gun2_incendies"},
-    {"title": "Three Identical Strangers", "year": 2018, "tmdb": "489988", "post": "gun3_belgesel"},
-    {"title": "Jagten", "year": 2012, "tmdb": "103663", "post": "gun5_jagten"},
-    {"title": "Sicario", "year": 2015, "tmdb": "273481", "post": "hesapta daha önce paylaşıldı"},
-    {"title": "Everyone Is Lying to You for Money", "year": 2025, "tmdb": "", "post": "hesapta daha önce paylaşıldı"}
+    {
+      "title": "Coherence",
+      "year": 2013,
+      "tmdb": "220289",
+      "post": "gun1_liste"
+    },
+    {
+      "title": "Primer",
+      "year": 2004,
+      "tmdb": "14337",
+      "post": "gun1_liste"
+    },
+    {
+      "title": "The Man from Earth",
+      "year": 2007,
+      "tmdb": "13363",
+      "post": "gun1_liste"
+    },
+    {
+      "title": "Predestination",
+      "year": 2014,
+      "tmdb": "206487",
+      "post": "gun1_liste"
+    },
+    {
+      "title": "Triangle",
+      "year": 2009,
+      "tmdb": "26466",
+      "post": "gun1_liste"
+    },
+    {
+      "title": "Incendies",
+      "year": 2010,
+      "tmdb": "46738",
+      "post": "gun2_incendies"
+    },
+    {
+      "title": "Three Identical Strangers",
+      "year": 2018,
+      "tmdb": "489988",
+      "post": "gun3_belgesel"
+    },
+    {
+      "title": "Jagten",
+      "year": 2012,
+      "tmdb": "103663",
+      "post": "gun5_jagten"
+    },
+    {
+      "title": "Sicario",
+      "year": 2015,
+      "tmdb": "273481",
+      "post": "hesapta daha önce paylaşıldı"
+    },
+    {
+      "title": "Everyone Is Lying to You for Money",
+      "year": 2025,
+      "tmdb": "",
+      "post": "hesapta daha önce paylaşıldı"
+    },
+    {
+      "title": "Uzak",
+      "year": 2002,
+      "tmdb": "",
+      "post": "2026-10-06..10"
+    },
+    {
+      "title": "Kaç Para Kaç",
+      "year": 1999,
+      "tmdb": "",
+      "post": "2026-10-06..10"
+    },
+    {
+      "title": "Yazgı",
+      "year": 2001,
+      "tmdb": "",
+      "post": "2026-10-06..10"
+    },
+    {
+      "title": "Anayurt Oteli",
+      "year": 1987,
+      "tmdb": "",
+      "post": "2026-10-06..10"
+    },
+    {
+      "title": "Güneşe Yolculuk",
+      "year": 1999,
+      "tmdb": "",
+      "post": "2026-10-06..10"
+    },
+    {
+      "title": "Fantastic Mr. Fox",
+      "year": 2009,
+      "tmdb": "",
+      "post": "2026-10-06..10"
+    },
+    {
+      "title": "Mary and Max",
+      "year": 2009,
+      "tmdb": "",
+      "post": "2026-10-06..10"
+    },
+    {
+      "title": "Shrek the Third",
+      "year": 2007,
+      "tmdb": "",
+      "post": "2026-10-06..10"
+    },
+    {
+      "title": "Ernest & Celestine",
+      "year": 2012,
+      "tmdb": "",
+      "post": "2026-10-06..10"
+    },
+    {
+      "title": "964 Pinocchio",
+      "year": 1991,
+      "tmdb": "",
+      "post": "2026-10-06..10"
+    },
+    {
+      "title": "Akira",
+      "year": 1988,
+      "tmdb": "",
+      "post": "2026-10-06..10"
+    },
+    {
+      "title": "Duvara Karşı",
+      "year": 2004,
+      "tmdb": "",
+      "post": "2026-10-06..10"
+    },
+    {
+      "title": "Amores Perros",
+      "year": 2000,
+      "tmdb": "",
+      "post": "2026-10-06..10"
+    },
+    {
+      "title": "Memories of Murder",
+      "year": 2003,
+      "tmdb": "",
+      "post": "2026-10-06..10"
+    },
+    {
+      "title": "Run Lola Run",
+      "year": 1998,
+      "tmdb": "",
+      "post": "2026-10-06..10"
+    },
+    {
+      "title": "Gone with the Wind",
+      "year": 1939,
+      "tmdb": "",
+      "post": "2026-10-06..10"
+    },
+    {
+      "title": "4 Months, 3 Weeks and 2 Days",
+      "year": 2007,
+      "tmdb": "",
+      "post": "2026-10-06..10"
+    },
+    {
+      "title": "Y Tu Mamá También",
+      "year": 2001,
+      "tmdb": "",
+      "post": "2026-10-06..10"
+    },
+    {
+      "title": "Mondays in the Sun",
+      "year": 2002,
+      "tmdb": "",
+      "post": "2026-10-06..10"
+    },
+    {
+      "title": "Pay It Forward",
+      "year": 2000,
+      "tmdb": "",
+      "post": "2026-10-06..10"
+    },
+    {
+      "title": "Five Feet Apart",
+      "year": 2019,
+      "tmdb": "",
+      "post": "2026-10-06..10"
+    },
+    {
+      "title": "The Ultimate Gift",
+      "year": 2006,
+      "tmdb": "",
+      "post": "2026-10-06..10"
+    },
+    {
+      "title": "Infinity Pool",
+      "year": 2023,
+      "tmdb": "",
+      "post": "2026-10-06..10"
+    },
+    {
+      "title": "Nope",
+      "year": 2022,
+      "tmdb": "",
+      "post": "2026-10-06..10"
+    },
+    {
+      "title": "Longlegs",
+      "year": 2024,
+      "tmdb": "",
+      "post": "2026-10-06..10"
+    }
   ],
-  "quiz_answers_used": ["Shutter Island", "Up", "Inception", "Interstellar", "Fight Club"]
+  "quiz_answers_used": [
+    "Shutter Island",
+    "Up",
+    "Inception",
+    "Interstellar",
+    "Fight Club"
+  ]
 }

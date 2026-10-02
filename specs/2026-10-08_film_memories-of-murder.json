@@ -1,0 +1,22 @@
+{
+  "id": "2026-10-08_film_memories-of-murder",
+  "theme": "teal",
+  "pill": "FİLM",
+  "stills_dir": "assets/stills",
+  "caption": "Memories of Murder (2003), 1980'lerin sonunda Güney Kore'nin Hwaseong bölgesinde işlenen gerçek cinayetlerden yola çıkıyor. Bir kasabada art arda kadınlar öldürülürken, yerel polis ne yapacağını bilemez hâldedir.\n\nTaşralı dedektif Park, suçluları gözlerinin içine bakarak tanıyabileceğine inanır. Seul'den gelen Seo ise yalnızca belgelere ve kanıtlara güvenir. Katil iz bırakmadıkça iki adamın yöntemleri birbirine karışır, öfkeleri büyür.\n\nBong Joon-ho, Parasite'tan 16 yıl önce çektiği bu filmde bir polisiyeyi kara mizahla, bir dönem portresini çaresizlikle birleştiriyor. Gerçek katil ise film çıktıktan 16 yıl sonra, 2019'da DNA ile bulundu.",
+  "slides": [
+    {"type": "fullphoto", "img": "memories_2.jpg", "pos": "center 40%", "accent": "teal", "kick": "Bong Joon-ho, Parasite'tan 16 yıl önce",
+     "title": "Memories<br>of Murder", "line": "Bir tarlada başlayan, <b style='color:var(--a)'>16 yıl boyunca çözülemeyen</b> gerçek bir dava."},
+    {"type": "number", "accent": "amber", "bg": "light", "accent_dark": "#9a5b12", "lab": "Gerçek olay", "big": "1986",
+     "html": "Güney Kore'nin Hwaseong bölgesinde kadınlar art arda öldürülmeye başlar. Katil yıllarca yakalanamaz ve dava ülkenin <b>en ünlü çözülemeyen dosyalarından</b> biri olur."},
+    {"type": "text", "accent": "teal", "img": "memories_1.jpg", "pos": "center 30%", "lab": "İki dedektif",
+     "html": "Taşralı Park, suçluyu <i>gözlerinin içine</i> bakarak tanıyacağına inanır. Seul'den gelen Seo ise yalnızca <b>belgelere</b> güvenir. Katili kovalarken ikisi de birbirine dönüşmeye başlar."},
+    {"type": "file", "bg": "light", "accent": "coral", "accent_dark": "#b23a2c", "lab": "Dava dosyası", "title": "Memories of Murder", "stamp": "AÇIK DOSYA",
+     "pairs": [["Yönetmen", "Bong Joon-ho"], ["Yıl", "2003"], ["Başrol", "Song Kang-ho, Kim Sang-kyung"], ["Süre", "131 dakika"], ["Tür", "Suç · Gerilim · Kara mizah"]],
+     "note": "Not: Gerçek katil, film çıktıktan <b>16 yıl sonra</b>, 2019'da DNA kanıtıyla belirlendi."},
+    {"type": "bullets", "accent": "sky", "img": "memories_3.jpg", "pos": "center 25%", "lab": "Neden izlemelisin",
+     "items": ["Bong Joon-ho'nun ikinci uzun metrajı; Parasite'ın ustalığı burada başlıyor.", "Polisiye gibi açılıyor, kara mizahla sürüyor, çaresizlikle bitiyor.", "Son sahnesindeki bakış, sinema tarihinin en çok konuşulan anlarından."]},
+    {"type": "cta", "accent": "teal", "img": "memories_5.jpg", "blur": 6,
+     "q": "Sence bir katili yakalamak mı daha zor, yoksa <b>vazgeçmek</b> mi?", "chips": ["Yorumlara yaz", "Kaydet"]}
+  ]
+}

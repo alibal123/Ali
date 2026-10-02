@@ -14,22 +14,31 @@ Kullanıcı **tamamen otomatik** istedi: onay bekleme, hazırla ve zamanla; sonu
 - `schedule.json`'daki en son `publish_at` tarihinden **sonraki gün** başla, **gelecek pazar** (dahil) bitir.
   Normalde bu, pazartesi–pazar 7 gün eder. Zaten dolu günleri atla. Saat her zaman `T20:00`.
 
-## 2. Haftalık içerik dönüşümü
-| Gün | Tür (pill) | Tema | Format |
-|---|---|---|---|
-| Pazartesi | FİLM | red | Tek film: cover → konu (big) → ana çatışma (big) → neden izlemeli (bullets, 3) → künye (rows) → cta |
-| Salı | LİSTE | red | "…5 film" listesi: cover → 5×film (n=1..5) → cta |
-| Çarşamba | BELGESEL | cyan | Gerçek hikâye anlatımı: cover → 3×big (hikâyeyi adım adım aç, sonu verme) → künye (rows) → cta |
-| Perşembe | FİLM | orange | Pazartesi formatı; farklı tür/ülke seç |
-| Cuma | OYUN | lime | Emojilerden filmi bul: cover → 5×emoji (blur 22, img = o filmin sahnesi) → cevaplar (rows, img net) |
-| Cumartesi | RADAR | lime | Az bilinen/yeni film: cover → konu (big) → bullets → künye (rows, extra ile "X'i sevdiysen") → cta |
-| Pazar | LİSTE | red | Temalı liste (ör. "tek mekânda geçen 5 film", "sonu ters köşe 5 belgesel") |
+## 2. Haftalık içerik ve tasarım çeşitliliği
+Kullanıcı açıkça istedi: **tek renk kullanma, gönderiler birbirinin aynısı olmasın.** Her gün farklı format ve renk paleti;
+gönderi içinde de slaytlar arasında vurgu rengini değiştir (`accent`), en az bir slaytta `bg: "light"` (krem) ya da `"solid"` kullan.
+Kullanılabilir renkler: red, orange, amber, lime, teal, cyan, sky, violet, pink, coral (tools/render.py THEMES).
 
-Film seçimi:
-- Hesabın sloganı: **"aynı filmlere bakmaktan sıkıldık."** Klişe popüler filmler yerine kaliteli ama az konuşulan filmler seç
-  (farklı ülkeler, türler, on yıllar). Oyun (cuma) bilinen filmlerle yapılabilir.
-- `history.json`'daki filmleri **tekrar seçme**. Oyun cevapları için `quiz_answers_used` listesine bak.
-- Bilgileri (yıl, yönetmen, süre, ödül, Türkçe adı) **web'den doğrula**; emin olmadığın bilgiyi yazma. Spoiler verme.
+Haftalık format havuzu (her hafta hepsinden en az 5'i, art arda aynı format yok):
+| Format (pill) | Slayt tipleri | Örnek |
+|---|---|---|
+| LİSTE | collage kapak → film ×5 → cta (light) | 2026-10-06 Türk sineması |
+| EŞLEŞTİRME | fullphoto kapak → pair ×4 → cta (solid) | 2026-10-07 Bunu sevdiysen |
+| FİLM (derin inceleme) | fullphoto → number (light) → text (foto) → file (light) → bullets → cta | 2026-10-08 Memories of Murder |
+| OYUN | cover (solid) → crop ×5 → reveal | 2026-10-09 Detaydan filmi bul |
+| VERİ | collage → bars ×2 → text (light) → cta | 2026-10-10 İzleyici vs eleştirmen |
+| BELGESEL / RADAR / YÖNETMEN | cover/fullphoto, big, rows, cta | gun3_belgesel, gun5_jagten |
+`specs/2026-10-*.json` dosyaları referans örneklerdir; yeni spec yazarken bunlardan başla.
+
+Okunabilirlik: uzun metinde **`text`** tipini kullan (düz yazı; `<i>` yalnızca 2–4 kelimelik vurgu). `big` (serif italik) yalnızca
+≤25 kelimelik kısa cümleler için. Render çıktısında "metni taşıyor" uyarısı varsa metni kısalt.
+
+Veri kaynakları (hesaba uygun film seçimi):
+- `insights/media.json`: hesabın gönderi performansı (her pazar 08:17'de güncellenir). En çok tutanlar: kült/tuhaf/animasyon
+  (Four Lions, Shrek, Fantastic Mr. Fox, 964 Pinocchio), Türk filmleri (Kabadayı, Duvara Karşı) ve liste karuselleri.
+- Kullanıcının izleme listesi: Mac'te `~/Downloads/DERECE FİLM/İzlenecek Filmler Listesi.pdf` (469 film, türlere göre, IMDb/RT puanlı).
+  Mac erişilebilirse buradan seç; değilse `history.json` ve kendi bilgine dayan.
+- Kullanıcının indirdiği filmler: `~/Downloads/FİLMLER/` (ffmpeg ile gerçek kare çıkarılabilir — OYUN için ideal).
 
 ## 3. Metin kuralları
 - Türkçe, sade, merak uyandıran. Slayt metinleri kısa; `big` en fazla ~45 kelime.
@@ -38,22 +47,17 @@ Film seçimi:
 - **Açıklama (caption)** hesabın kendi stilinde: film adı + (yıl) ile başlayan 3 paragraf; 1) konu, 2) gelişme, 3) neden önemli.
   Sonunda kısa bir soru olabilir. Hashtag kullanma. Oyun gününde kısa açıklama.
 
-## 4. Sahne fotoğrafları (TMDB, yazısız sahne kareleri)
-Bulut ortamı TMDB'ye doğrudan erişemez; kullanıcının Mac'indeki Claude tarayıcı paneli (built-in browser) kullanılır.
-Mac erişilemezse bu adımı atla ve slaytları fotoğrafsız üret (tasarım zaten koyu zeminle çalışır).
+## 4. Sahne fotoğrafları
+**Önerilen yol (Mac gerekmez):**
+1. TMDB'de filmin backdrop görsellerini bul (WebSearch/WebFetch ya da tarayıcı). Yazısız sahne kareleri seç (afiş/logo olmasın).
+2. `assets/stills/request.json` dosyasına `{"<ad>": "https://image.tmdb.org/t/p/w1280/<dosya>.jpg"}` satırları ekle, commit + push.
+3. "Sahne karelerini indir" iş akışı (fetch-stills.yml) push ile otomatik çalışır ve `assets/stills/<ad>.jpg` olarak depoya ekler.
+   1–2 dakika bekle, `git pull`.
+4. Spec'lerde `"stills_dir": "assets/stills"` ve `"img": "<ad>.jpg"`.
 
-1. Tarayıcı panelinde `https://www.themoviedb.org/` aç.
-2. Her film için (JS ile, sayfa bağlamında):
-   - Arama: `fetch('/search/movie?query='+encodeURIComponent(ad)+'%20y:'+yıl)` → HTML'den ilk `/movie/<id>-...` bağlantısı.
-   - Arka planlar: `fetch('/movie/<id-slug>/images/backdrops?image_language=xx')` → `img` src'lerinden dosya adları (ilk 12).
-3. Adayları küçük önizlemeyle (w185) sayfada ızgara olarak göster, **ekran görüntüsüyle** yazısız ve kaliteli sahne karelerini seç
-   (afiş, logo ya da yazı içerenleri eleme).
-4. Seçilenleri tek bir **TAR** dosyası olarak indir: JS ile `https://image.tmdb.org/t/p/w1280/<dosya>` görsellerini `fetch` et,
-   bellekte ustar formatında birleştir, `Blob` → `<a download="derecefilm_sahneler_<tarih>.tar">` oluştur ve tam sayfa bir buton olarak ekle,
-   sonra butona **tarayıcı tıklamasıyla** bas (script içinden `click()` indirmeyi engelliyor; gerçek tıklama gerekli).
-5. Mac'te `~/Downloads/derecefilm_sahneler_<tarih>.tar` dosyasını `~/Desktop/derecefilm_sahneler/<tarih>/` altına aç, `device_stage_files` ile
-   buluta al, `work/stills/` altına kopyala. Spec'lerde `stills_dir` bu klasör olsun.
-6. İş bitince sayfaya eklediğin butonu kaldır.
+**Gerçek film karesi (opsiyonel, Mac açıksa):** device_bash ile `~/Downloads/FİLMLER/<film>/*.mp4` dosyasından
+`ffmpeg -ss <saniye> -i <dosya> -frames:v 1 -vf scale=1280:-2` ile kare çıkar, Desktop'a yaz, device_stage_files ile buluta al,
+`assets/stills/frame_<ad>.jpg` olarak depoya ekle. Çıplaklık/şiddet içeren kareleri kullanma.
 
 ## 5. Üret ve zamanla
 1. Her gün için `specs/<YYYY-MM-DD>_<tür>_<kısa-ad>.json` yaz; `id` aynı ad olsun.

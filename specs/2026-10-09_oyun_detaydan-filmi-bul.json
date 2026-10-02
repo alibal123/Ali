@@ -1,0 +1,27 @@
+{
+  "id": "2026-10-09_oyun_detaydan-filmi-bul",
+  "theme": "pink",
+  "pill": "OYUN",
+  "stills_dir": "assets/stills",
+  "caption": "Bir detay, bir film. Bu haftanın kareleri doğrudan arşivimdeki filmlerden alındı; her slaytta bir sahnenin yalnızca küçük bir parçasını görüyorsun.\n\nİpuçları da işine yarayabilir: biri 20 dakikada her şeyi değiştirmeye çalışıyor, biri 1939'dan beri yanıyor, biri bir masada kıpırdamadan bekliyor. Cevaplar son sayfada.\n\nKaydırmadan önce tahminlerini yorumlara yaz. Kaç tanesini bildin?",
+  "slides": [
+    {"type": "cover", "bg": "solid", "accent": "pink", "kick": "Oyun · 5 yakın plan",
+     "h1": "Bir detay,<br>bir film.", "sub": "Her karede bir sahnenin <b>küçük bir parçası</b> var. Hangi filmden? Cevaplar son sayfada."},
+    {"type": "crop", "accent": "coral", "lab": "Kare 01", "img": "frame_lola_9.jpg", "zoom": 2.4, "focus": "12% 40%",
+     "hint": "İpucu: 20 dakikası var ve koşmaya başlıyor."},
+    {"type": "crop", "accent": "amber", "lab": "Kare 02", "img": "frame_gwtw_4.jpg", "zoom": 2.2, "focus": "62% 35%",
+     "hint": "İpucu: 1939'dan beri sinemanın en ünlü yangınlarından biri."},
+    {"type": "crop", "accent": "teal", "lab": "Kare 03", "img": "frame_4months_8.jpg", "zoom": 2.4, "focus": "40% 45%",
+     "hint": "İpucu: Kamera bu sofrada kıpırdamadan dakikalarca bekliyor. Cannes, 2007."},
+    {"type": "crop", "accent": "sky", "lab": "Kare 04", "img": "frame_ytumama_8.jpg", "zoom": 2.6, "focus": "55% 55%",
+     "hint": "İpucu: İki genç, bir kadın ve var olmayan bir plaj."},
+    {"type": "crop", "accent": "lime", "lab": "Kare 05", "img": "frame_mondays_2.jpg", "zoom": 2.2, "focus": "45% 40%",
+     "hint": "İpucu: Tersane kapanınca işsiz kalan arkadaşlar. Başrolde Javier Bardem."},
+    {"type": "reveal", "accent": "pink", "lab": "Cevaplar",
+     "items": [{"img": "frame_lola_9.jpg", "n": "01", "answer": "Run Lola Run", "meta": "1998 · Tom Tykwer"},
+               {"img": "frame_gwtw_4.jpg", "n": "02", "answer": "Gone with the Wind", "meta": "1939 · Victor Fleming"},
+               {"img": "frame_4months_8.jpg", "n": "03", "answer": "4 Months, 3 Weeks…", "meta": "2007 · Cristian Mungiu"},
+               {"img": "frame_ytumama_8.jpg", "n": "04", "answer": "Y Tu Mamá También", "meta": "2001 · Alfonso Cuarón"},
+               {"img": "frame_mondays_2.jpg", "n": "05", "answer": "Mondays in the Sun", "meta": "2002 · F. León de Aranoa"}]}
+  ]
+}

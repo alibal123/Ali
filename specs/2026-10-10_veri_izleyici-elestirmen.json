@@ -1,0 +1,28 @@
+{
+  "id": "2026-10-10_veri_izleyici-elestirmen",
+  "theme": "sky",
+  "pill": "VERİ",
+  "stills_dir": "assets/stills",
+  "caption": "İzleyici mi haklı, eleştirmen mi? Bazı filmlere izleyiciler bayılırken eleştirmenler burun kıvırıyor, bazılarında ise tam tersi oluyor.\n\nPay It Forward, Five Feet Apart ve The Ultimate Gift IMDb'de 7'nin üzerinde puan alırken Rotten Tomatoes'ta eleştirmenlerin yarısından azını ikna edebildi. Infinity Pool, Nope ve Longlegs ise eleştirmenlerin büyük çoğunluğundan olumlu not aldı ama izleyiciyi ikiye böldü.\n\nUnutma: Rotten Tomatoes yüzdesi bir puan değil, filmi olumlu bulan eleştirmenlerin oranı. Sen bir filme başlamadan önce hangisine bakıyorsun?",
+  "slides": [
+    {"type": "collage", "accent": "sky", "kick": "Puanlar yalan söyler mi?",
+     "imgs": [{"img": "payit_1.jpg", "label": "Pay It Forward"}, {"img": "fivefeet_1.jpg", "label": "Five Feet Apart"}, {"img": "ultgift_1.jpg", "label": "The Ultimate Gift"},
+              {"img": "infinity_1.jpg", "label": "Infinity Pool"}, {"img": "nope_1.jpg", "label": "Nope"}, {"img": "longlegs_1.jpg", "label": "Longlegs"}],
+     "h1": "İzleyici mi haklı, <em>eleştirmen</em> mi?", "sub": "Aynı filme bakıp bambaşka şey gören 6 film."},
+    {"type": "bars", "accent": "amber", "lab": "İzleyici sevdi", "title": "Eleştirmen<br>ikna olmadı",
+     "a_label": "IMDb (izleyici, ×10)", "b_label": "Rotten Tomatoes (eleştirmen)", "a_color": "amber", "b_color": "sky",
+     "items": [{"name": "Pay It Forward", "year": 2000, "a": 72, "a_txt": "7.2", "b": 39, "b_txt": "%39"},
+               {"name": "Five Feet Apart", "year": 2019, "a": 72, "a_txt": "7.2", "b": 52, "b_txt": "%52"},
+               {"name": "The Ultimate Gift", "year": 2006, "a": 73, "a_txt": "7.3", "b": 32, "b_txt": "%32"}]},
+    {"type": "bars", "accent": "coral", "lab": "Eleştirmen övdü", "title": "İzleyici<br>ikiye bölündü",
+     "a_label": "IMDb (izleyici, ×10)", "b_label": "Rotten Tomatoes (eleştirmen)", "a_color": "amber", "b_color": "coral",
+     "items": [{"name": "Infinity Pool", "year": 2023, "a": 60, "a_txt": "6.0", "b": 87, "b_txt": "%87"},
+               {"name": "Nope", "year": 2022, "a": 68, "a_txt": "6.8", "b": 83, "b_txt": "%83"},
+               {"name": "Longlegs", "year": 2024, "a": 66, "a_txt": "6.6", "b": 85, "b_txt": "%85"}],
+     "note": "Puanlar Ekim 2026 itibarıyla; zamanla değişebilir."},
+    {"type": "text", "bg": "light", "accent": "sky", "accent_dark": "#2d5fae", "lab": "Peki neden?",
+     "html": "Rotten Tomatoes yüzdesi bir <b>not ortalaması değil</b>; filmi olumlu bulan eleştirmenlerin oranı. IMDb ise izleyicilerin verdiği notların ortalaması. Yani %87, “herkes 8,7 verdi” demek değil, <i>“çoğu beğendi”</i> demek."},
+    {"type": "cta", "accent": "sky", "img": "nope_1.jpg", "blur": 4,
+     "q": "Bir filme başlamadan önce <b>hangisine</b> bakıyorsun: izleyiciye mi, eleştirmene mi?", "chips": ["Yorumlara yaz", "Kaydet"]}
+  ]
+}

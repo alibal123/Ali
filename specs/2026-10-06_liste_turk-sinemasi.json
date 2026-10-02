@@ -1,0 +1,102 @@
+{
+  "id": "2026-10-06_liste_turk-sinemasi",
+  "theme": "amber",
+  "pill": "LİSTE",
+  "stills_dir": "assets/stills",
+  "caption": "Türk sinemasının sessiz başyapıtları. Gişe rekoru kırmadılar, televizyonda pek dönmediler ama festivallerde ödüller aldılar ve izleyenin aklından hiç çıkmadılar.\n\nUzak, İstanbul'un karlı sokaklarında birbirine yabancılaşan iki akrabayı; Kaç Para Kaç, bulduğu parayla ahlakı arasında sıkışan bir esnafı; Yazgı, Camus'nün Yabancı'sından esinlenen kayıtsız bir adamı anlatıyor. Anayurt Oteli bir kasaba otelinde büyüyen bir saplantıya, Güneşe Yolculuk ise iki gencin arkadaşlığına ve doğuya uzanan bir yolculuğa bakıyor.\n\nBu listeyi kaydet, bir pazar akşamı sırayla izle. Hangisini izledin, hangisini listene ekliyorsun?",
+  "slides": [
+    {
+      "type": "collage",
+      "kick": "Kaydet, bir pazar akşamına lazım olacak",
+      "imgs": [
+        {
+          "img": "uzak_2.jpg",
+          "label": "Uzak"
+        },
+        {
+          "img": "anayurt_1.jpg",
+          "label": "Anayurt Oteli"
+        },
+        {
+          "img": "kacpara_1.jpg",
+          "label": "Kaç Para Kaç"
+        },
+        {
+          "img": "yazgi_1.jpg",
+          "label": "Yazgı"
+        },
+        {
+          "img": "guneseyol_1.jpg",
+          "label": "Güneşe Yolculuk"
+        }
+      ],
+      "h1": "Türk sinemasının <em>sessiz</em> başyapıtları",
+      "sub": "Gişede değil, festivallerde ve hafızalarda kazanan 5 film."
+    },
+    {
+      "type": "film",
+      "n": 1,
+      "accent": "sky",
+      "img": "uzak_1.jpg",
+      "pos": "center 30%",
+      "title": "Uzak",
+      "meta": "2002 · Nuri Bilge Ceylan",
+      "konu": "Köyden İstanbul'a iş aramaya gelen Yusuf, fotoğrafçı akrabası Mahmut'un evine yerleşir. Karlı bir kış boyunca aynı evi paylaşan iki adam birbirine her gün biraz daha uzaklaşır.",
+      "why": "Cannes'da Büyük Ödül ve iki başrole ortak En İyi Erkek Oyuncu ödülü."
+    },
+    {
+      "type": "film",
+      "n": 2,
+      "accent": "amber",
+      "img": "kacpara_1.jpg",
+      "title": "Kaç Para Kaç",
+      "meta": "1999 · Reha Erdem",
+      "konu": "Küçük bir dükkân işleten dürüst Selim, bindiği taksinin arka koltuğunda unutulmuş, dolarla dolu bir çanta bulur. Zor günlerden geçerken o parayı harcamaya başlar.",
+      "why": "Paranın bir insanı adım adım nasıl değiştirdiğini anlatan, Reha Erdem'in ilk uzun metrajı."
+    },
+    {
+      "type": "film",
+      "n": 3,
+      "accent": "coral",
+      "img": "yazgi_1.jpg",
+      "pos": "center 35%",
+      "title": "Yazgı",
+      "meta": "2001 · Zeki Demirkubuz",
+      "konu": "Musa, başına gelen hiçbir şeye tepki vermeyen, hayata hep uzaktan bakan bir adamdır. Kayıtsızlığı, bir gün hayatını kontrol edemeyeceği bir yöne sürükler.",
+      "why": "Camus'nün Yabancı romanından uyarlandı, Cannes'da Belirli Bir Bakış bölümünde gösterildi."
+    },
+    {
+      "type": "film",
+      "n": 4,
+      "accent": "teal",
+      "img": "anayurt_1.jpg",
+      "title": "Anayurt Oteli",
+      "meta": "1987 · Ömer Kavur",
+      "konu": "Küçük bir kasabada eski bir oteli işleten Zebercet'in sıradan günleri, bir gece kalıp bir hafta sonra döneceğini söyleyen gizemli bir kadınla altüst olur.",
+      "why": "Yusuf Atılgan'ın romanından uyarlandı. Venedik'te FIPRESCI ödülü aldı."
+    },
+    {
+      "type": "film",
+      "n": 5,
+      "accent": "pink",
+      "img": "guneseyol_1.jpg",
+      "title": "Güneşe Yolculuk",
+      "meta": "1999 · Yeşim Ustaoğlu",
+      "konu": "İstanbul'a çalışmaya gelen Mehmet, yanlışlıkla şüpheli sanılıp gözaltına alınınca hayatı değişir. Tek dostu Berzan'dır ve bir gün onun için uzun bir yolculuğa çıkar.",
+      "why": "Berlin Film Festivali'nde Mavi Melek ödülünü kazandı."
+    },
+    {
+      "type": "cta",
+      "bg": "light",
+      "accent": "amber",
+      "accent_dark": "#a3561a",
+      "lab": "Sıra sende",
+      "q": "Bu listeye <b>hangi Türk filmini</b> eklerdin? Yorumlara yaz, en çok önerileni bir sonraki listeye koyalım.",
+      "chips": [
+        "Kaydet",
+        "Yorumlara yaz",
+        "Arkadaşına gönder"
+      ]
+    }
+  ]
+}

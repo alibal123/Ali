@@ -53,6 +53,51 @@
         "instagram"
       ],
       "status": "planned"
+    },
+    {
+      "id": "2026-10-06_liste_turk-sinemasi",
+      "folder": "posts/2026-10-06_liste_turk-sinemasi",
+      "publish_at": "2026-10-06T20:00",
+      "platforms": [
+        "instagram"
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "2026-10-07_eslesme_sevdiysen",
+      "folder": "posts/2026-10-07_eslesme_sevdiysen",
+      "publish_at": "2026-10-07T20:00",
+      "platforms": [
+        "instagram"
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "2026-10-08_film_memories-of-murder",
+      "folder": "posts/2026-10-08_film_memories-of-murder",
+      "publish_at": "2026-10-08T20:00",
+      "platforms": [
+        "instagram"
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "2026-10-09_oyun_detaydan-filmi-bul",
+      "folder": "posts/2026-10-09_oyun_detaydan-filmi-bul",
+      "publish_at": "2026-10-09T20:00",
+      "platforms": [
+        "instagram"
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "2026-10-10_veri_izleyici-elestirmen",
+      "folder": "posts/2026-10-10_veri_izleyici-elestirmen",
+      "publish_at": "2026-10-10T20:00",
+      "platforms": [
+        "instagram"
+      ],
+      "status": "planned"
     }
   ]
 }

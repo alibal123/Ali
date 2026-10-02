@@ -1,31 +1,45 @@
-"""derecefilm karusel tasarım motoru.
+"""derecefilm karusel tasarım motoru (v2).
 
-Kullanım:
-    python3 tools/render.py specs/<gonderi>.json
+Kullanım:  python3 tools/render.py specs/<gonderi>.json [--preview]
 
-Spec JSON dosyası bir gönderiyi tanımlar ve posts/<id>/ klasörüne 1080x1350 JPG + caption.txt üretir.
-Gereksinimler (tek sefer):  pip install playwright pillow  ·  npm i --prefix tools @fontsource/oswald @fontsource/inter @fontsource/playfair-display
-Emoji için sistemde 'Noto Color Emoji' fontu olmalı.
+Gereksinimler (tek sefer):
+  pip install playwright pillow
+  npm i --prefix tools @fontsource/oswald @fontsource/inter @fontsource/playfair-display @fontsource/courier-prime @fontsource/dm-serif-display
+  Emoji için sistemde 'Noto Color Emoji' fontu.
 
-Spec şeması:
+SPEC
 {
-  "id": "2026-10-06_film_prisoners",          # klasör adı
-  "theme": "red" | "cyan" | "lime" | "orange", # vurgu rengi
-  "pill": "FİLM",                              # sağ üst etiket: LİSTE / FİLM / BELGESEL / OYUN / RADAR
-  "caption": "…açıklama metni…",
-  "stills_dir": "/yol/sahneler",               # opsiyonel; slaytlardaki "img" bu klasöre göre
-  "slides": [ {"type": ..., "img": "dosya.jpg", "blur": 0, ...}, ... ]
+  "id": "2026-10-06_liste_turk",        klasör adı (posts/<id>/)
+  "theme": "amber",                      varsayılan vurgu (THEMES anahtarı ya da #hex)
+  "pill": "LİSTE",
+  "caption": "...",
+  "stills_dir": "assets/stills",         göreli ise depo köküne göre
+  "slides": [ {...}, ... ]               2–10 slayt
 }
-Slayt tipleri (metinlerde <em>…</em> başlıkta, <b>…</b> büyük metinde vurgu rengi verir):
-  cover   : kick, h1 (html), sub
-  film    : n (0 = numarasız), title, meta, konu, why
-  big     : lab, html
-  bullets : lab, items [3 madde]
-  rows    : lab, pairs [[etiket, değer], …], extra (html, opsiyonel)
-  warn    : lab, title, sub
-  emoji   : lab, emoji, hint
-  cta     : q (html), chips [..]
-"img" verilmezse slayt fotoğrafsız (koyu zemin) çizilir. "blur": 10–22 arası bulanıklık (oyun sorularında cevabı saklamak için).
+
+HER SLAYTTA OPSİYONEL
+  accent : bu slayta özel vurgu rengi (tema adı ya da #hex)  → aynı gönderide renk çeşitliliği
+  bg     : "dark" (varsayılan) | "light" (krem kâğıt) | "solid" (vurgu rengi zemin)
+  img, blur, pos ("center 30%" gibi background-position)
+
+SLAYT TİPLERİ
+  cover     : kick, h1 (html, <em> vurgu), sub
+  film      : n, title, meta, konu, why
+  big       : lab, html            (kısa, ≤ 25 kelime; serif italik büyük)
+  text      : lab, html            (uzun metin; okunaklı düz yazı, <i> ve <b> vurgu)
+  bullets   : lab, items
+  rows      : lab, pairs, extra
+  warn      : lab, title, sub
+  emoji     : lab, emoji, hint
+  cta       : q (html), chips
+  collage   : kick, h1 (html), sub, imgs [ {img, label} ×4–6 ]
+  pair      : n, a {img, title, meta}, b {img, title, meta}, why
+  fullphoto : img, kick, title, line           (fotoğraf tam sayfa)
+  file      : lab, title, pairs, stamp, note   (dava dosyası; açık zeminde iyi durur)
+  bars      : lab, title, items [ {name, year, a, b} ], a_label, b_label, note
+  crop      : n, img, zoom (2–4), focus ("x% y%"), hint   (kırpılmış yakın plan bulmaca)
+  reveal    : lab, items [ {img, n, answer, meta} ×2–5 ]  (cevap ızgarası)
+  number    : big (ör. "1986"), lab, html
 """
 import html, json, os, sys
 from playwright.sync_api import sync_playwright
@@ -36,11 +50,21 @@ REPO = os.path.dirname(HERE)
 FS = f"file://{HERE}/node_modules/@fontsource"
 
 THEMES = {
-    "red": ("#e8364f", "rgba(232,54,79,.22)"),
-    "orange": ("#e8364f", "rgba(232,120,54,.20)"),
-    "cyan": ("#3fd0e0", "rgba(63,208,224,.18)"),
-    "lime": ("#c8e64a", "rgba(200,230,74,.16)"),
+    "red": "#e8364f", "orange": "#ff7a3d", "amber": "#f2b33d", "lime": "#c8e64a",
+    "teal": "#2fd3b5", "cyan": "#3fd0e0", "sky": "#6aa8ff", "violet": "#9b7bff",
+    "pink": "#ff5fa2", "coral": "#ff6f61", "cream": "#efe6d6",
 }
+
+
+def col(c):
+    return THEMES.get(c, c) if c else None
+
+
+def rgba(hexc, a):
+    h = hexc.lstrip("#")
+    r, g, b = int(h[0:2], 16), int(h[2:4], 16), int(h[4:6], 16)
+    return f"rgba({r},{g},{b},{a})"
+
 
 NOISE = ("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'>"
          "<filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/></filter>"
@@ -48,66 +72,170 @@ NOISE = ("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width=
 
 CSS = f"""
 @import url('{FS}/oswald/500.css'); @import url('{FS}/oswald/700.css');
-@import url('{FS}/inter/400.css'); @import url('{FS}/inter/600.css');
-@import url('{FS}/playfair-display/400-italic.css'); @import url('{FS}/playfair-display/700-italic.css');
+@import url('{FS}/inter/400.css'); @import url('{FS}/inter/500.css'); @import url('{FS}/inter/600.css'); @import url('{FS}/inter/700.css');
+@import url('{FS}/playfair-display/400-italic.css'); @import url('{FS}/playfair-display/700-italic.css'); @import url('{FS}/playfair-display/800-italic.css');
+@import url('{FS}/courier-prime/400.css'); @import url('{FS}/courier-prime/700.css');
+@import url('{FS}/dm-serif-display/400.css');
 *{{margin:0;padding:0;box-sizing:border-box}}
-html,body{{width:1080px;height:1350px;background:#0b0b0c}}
-body{{font-family:Inter,sans-serif;color:#f2efe9;position:relative;overflow:hidden}}
+html,body{{width:1080px;height:1350px}}
+body{{--bg:#0b0b0c;--fg:#f2efe9;--mut:#9d978f;--line:#2a2927;background:var(--bg);font-family:Inter,sans-serif;color:var(--fg);position:relative;overflow:hidden}}
+body.light{{--bg:#efe6d6;--fg:#1a1714;--mut:#6d6458;--line:#cdbfa8}}
+body.solid{{--bg:var(--a);--fg:#111;--mut:rgba(0,0,0,.6);--line:rgba(0,0,0,.2)}}
 .glow{{position:absolute;inset:0;background:radial-gradient(900px 700px at 85% 5%, var(--a2), transparent 60%),radial-gradient(700px 600px at 0% 100%, rgba(255,255,255,.04), transparent 60%)}}
+body.light .glow,body.solid .glow{{display:none}}
 .noise{{position:absolute;inset:0;background:url("{NOISE}");opacity:.09;mix-blend-mode:overlay}}
-.ph{{position:absolute;top:0;left:0;width:1080px;height:800px;background-size:cover;background-position:center}}
-.ph::after{{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,11,12,.55) 0%,rgba(11,11,12,.05) 18%,rgba(11,11,12,.15) 45%,rgba(11,11,12,.85) 80%,#0b0b0c 100%)}}
-body.hasph .main{{justify-content:flex-end;padding-bottom:40px}}
-body.hasph .glow{{opacity:.5}}
-.frame{{position:absolute;inset:0;padding:78px 84px;display:flex;flex-direction:column}}
-.top{{display:flex;justify-content:space-between;align-items:center}}
-.brand{{font-family:Oswald;font-weight:500;letter-spacing:.32em;font-size:24px;color:#cfcac2}}
+body.light .noise{{opacity:.16;mix-blend-mode:multiply}}
+.ph{{position:absolute;top:0;left:0;width:1080px;height:820px;background-size:cover;background-position:center}}
+.ph::after{{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,11,12,.6) 0%,rgba(11,11,12,.05) 16%,rgba(11,11,12,.2) 42%,rgba(11,11,12,.92) 76%,#0b0b0c 100%)}}
+.ph.full{{height:1350px}}
+.ph.full::after{{background:linear-gradient(180deg,rgba(0,0,0,.55) 0%,rgba(0,0,0,0) 18%,rgba(0,0,0,0) 48%,rgba(0,0,0,.88) 82%,rgba(0,0,0,.96) 100%)}}
+body.hasph .main{{justify-content:flex-end;padding-bottom:30px}}
+body.hasph .glow{{opacity:.45}}
+body.hasph .main *{{text-shadow:0 2px 18px rgba(0,0,0,.55)}}
+.frame{{position:absolute;inset:0;padding:78px 84px 70px;display:flex;flex-direction:column}}
+.top{{display:flex;justify-content:space-between;align-items:center;position:relative;z-index:2}}
+.brand{{font-family:Oswald;font-weight:500;letter-spacing:.32em;font-size:24px;color:var(--fg);opacity:.8}}
 .pill{{font-family:Oswald;font-weight:500;font-size:22px;letter-spacing:.22em;color:#0b0b0c;background:var(--a);padding:8px 18px 9px;border-radius:40px}}
-.main{{flex:1;display:flex;flex-direction:column;justify-content:center}}
-.bot{{display:flex;justify-content:space-between;align-items:center;font-family:Oswald;font-size:24px;letter-spacing:.14em;color:#8e8a84}}
+body.solid .pill{{background:#111;color:var(--a)}}
+.main{{flex:1;display:flex;flex-direction:column;justify-content:center;position:relative;z-index:2}}
+.bot{{display:flex;justify-content:space-between;align-items:center;font-family:Oswald;font-size:24px;letter-spacing:.14em;color:var(--mut);position:relative;z-index:2}}
 .bot b{{color:var(--a);font-weight:500}}
-.kick{{font-family:Oswald;font-weight:500;font-size:32px;letter-spacing:.1em;color:var(--a);margin-bottom:34px}}
-.h1{{font-family:Oswald;font-weight:700;font-size:112px;line-height:1.1;text-transform:uppercase;letter-spacing:-.005em}}
+body.solid .bot b{{color:#111}}
+body.light .bot b{{color:var(--ad)}}
+.kick{{font-family:Oswald;font-weight:500;font-size:32px;letter-spacing:.1em;color:var(--a);margin-bottom:30px}}
+body.light .kick,body.light .lab{{color:var(--ad)}}
+body.solid .kick,body.solid .lab{{color:#111}}
+body.solid .big b,body.solid .txt b,body.solid .sub b{{color:#fff}}
+body.hasph .kick{{color:#fff;display:inline-block;align-self:flex-start;background:rgba(0,0,0,.45);padding:6px 16px;border-radius:8px;border-left:5px solid var(--a)}}
+.h1{{font-family:Oswald;font-weight:700;font-size:112px;line-height:1.08;text-transform:uppercase;letter-spacing:-.005em}}
 .h1 em{{font-style:normal;color:var(--a)}}
-.sub{{font-family:'Playfair Display';font-style:italic;font-size:44px;line-height:1.3;color:#d9d4cc;margin-top:44px;max-width:860px}}
+body.light .h1 em{{color:var(--ad)}}
+.sub{{font-family:Inter;font-weight:500;font-size:38px;line-height:1.4;color:var(--fg);opacity:.86;margin-top:38px;max-width:880px}}
+.sub i{{font-family:'Playfair Display';font-weight:700}}
 .num{{font-family:Oswald;font-weight:700;font-size:190px;line-height:.8;color:transparent;-webkit-text-stroke:2px var(--a);margin-bottom:30px}}
 .title{{font-family:Oswald;font-weight:700;font-size:104px;line-height:1;text-transform:uppercase}}
-.meta{{font-family:Oswald;font-weight:500;font-size:28px;letter-spacing:.14em;color:#9d978f;margin:22px 0 46px;text-transform:uppercase}}
-.p{{font-size:37px;line-height:1.48;color:#e6e1d9}}
-.why{{margin-top:44px;border-left:5px solid var(--a);padding:6px 0 6px 30px;font-family:'Playfair Display';font-style:italic;font-size:38px;line-height:1.4;color:#f2efe9}}
-.big{{font-family:'Playfair Display';font-style:italic;font-size:62px;line-height:1.3}}
-.big b{{font-style:italic;color:var(--a);font-weight:700}}
+.meta{{font-family:Oswald;font-weight:500;font-size:28px;letter-spacing:.14em;color:var(--mut);margin:22px 0 40px;text-transform:uppercase}}
+body.hasph .meta{{color:#cfc8bd}}
+.p{{font-size:37px;line-height:1.48;color:var(--fg);opacity:.92}}
+.why{{margin-top:40px;border-left:6px solid var(--a);padding:4px 0 4px 30px;font-family:Inter;font-weight:600;font-size:36px;line-height:1.42;color:var(--fg)}}
+.big{{font-family:'Playfair Display';font-style:italic;font-weight:700;font-size:66px;line-height:1.24}}
+.big b{{color:var(--a);font-weight:800}}
+body.light .big b,body.light .txt b{{color:var(--ad)}}
+.txt{{font-family:Inter;font-weight:500;font-size:46px;line-height:1.38}}
+.txt b{{color:var(--a);font-weight:700}}
+.txt i{{font-family:'Playfair Display';font-style:italic;font-weight:700;font-size:1.06em}}
 .lab{{font-family:Oswald;font-weight:500;font-size:28px;letter-spacing:.24em;color:var(--a);margin-bottom:30px;text-transform:uppercase}}
-ul{{list-style:none}} li{{font-size:38px;line-height:1.42;padding:26px 0;border-top:1px solid #2a2927;display:flex;gap:28px}}
-li:last-child{{border-bottom:1px solid #2a2927}} li span{{font-family:Oswald;color:var(--a);font-size:34px;min-width:52px}}
-.rows div{{display:flex;justify-content:space-between;align-items:baseline;padding:28px 0;border-top:1px solid #2a2927;font-size:38px}}
-.rows div:last-child{{border-bottom:1px solid #2a2927}}
-.rows span{{font-family:Oswald;font-weight:500;font-size:26px;letter-spacing:.2em;color:#8e8a84;text-transform:uppercase}}
+ul{{list-style:none}} li{{font-size:38px;line-height:1.42;padding:24px 0;border-top:1px solid var(--line);display:flex;gap:28px}}
+li:last-child{{border-bottom:1px solid var(--line)}} li span{{font-family:Oswald;color:var(--a);font-size:34px;min-width:52px}}
+.rows div{{display:flex;justify-content:space-between;align-items:baseline;gap:30px;padding:26px 0;border-top:1px solid var(--line);font-size:38px}}
+.rows div:last-child{{border-bottom:1px solid var(--line)}}
+.rows span{{font-family:Oswald;font-weight:500;font-size:26px;letter-spacing:.2em;color:var(--mut);text-transform:uppercase;white-space:nowrap}}
 .emoji{{font-size:210px;line-height:1.1;letter-spacing:.06em;margin:20px 0 50px;font-family:'Noto Color Emoji'}}
-.hint{{font-family:'Playfair Display';font-style:italic;font-size:42px;color:#bdb7ae}}
+.hint{{font-family:Inter;font-weight:500;font-size:40px;line-height:1.35;color:var(--fg);opacity:.85}}
 .warn{{font-family:Oswald;font-weight:700;font-size:92px;line-height:1.02;text-transform:uppercase}}
-.cta{{display:flex;gap:18px;margin-top:60px;flex-wrap:wrap}}
+.cta{{display:flex;gap:18px;margin-top:56px;flex-wrap:wrap}}
 .cta div{{border:2px solid var(--a);color:var(--a);border-radius:60px;padding:16px 30px;font-family:Oswald;font-size:30px;letter-spacing:.12em;text-transform:uppercase}}
+body.light .cta div{{border-color:var(--ad);color:var(--ad)}}
+body.solid .cta div{{border-color:#111;color:#111}}
+/* kolaj */
+.grid{{display:grid;gap:14px;margin:6px 0 40px}}
+.grid.g4{{grid-template-columns:1fr 1fr}} .grid.g5{{grid-template-columns:repeat(6,1fr)}}
+.grid.g5 .cell:nth-child(-n+2){{grid-column:span 3}} .grid.g5 .cell:nth-child(n+3){{grid-column:span 2}}
+.grid.g6{{grid-template-columns:1fr 1fr 1fr}}
+.cell{{position:relative;height:250px;border-radius:14px;overflow:hidden;background-size:cover;background-position:center}}
+.grid.g5 .cell:nth-child(-n+2){{height:290px}}
+.cell b{{position:absolute;left:14px;bottom:12px;font-family:Oswald;font-weight:500;font-size:24px;letter-spacing:.08em;color:#fff;text-transform:uppercase;text-shadow:0 2px 10px rgba(0,0,0,.8)}}
+.cell::after{{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(0,0,0,.7))}}
+.cell b{{z-index:1}}
+/* eşleştirme */
+.pairbox{{display:flex;flex-direction:column;gap:18px}}
+.pcard{{position:relative;height:360px;border-radius:18px;overflow:hidden;background-size:cover;background-position:center}}
+.pcard::after{{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.82) 0%,rgba(0,0,0,.35) 55%,rgba(0,0,0,0) 100%)}}
+.pcard .in{{position:absolute;left:34px;bottom:30px;z-index:1}}
+.pcard .tag{{display:inline-block;font-family:Oswald;font-weight:500;font-size:22px;letter-spacing:.2em;padding:6px 14px;border-radius:30px;margin-bottom:14px}}
+.pcard.a .tag{{background:rgba(255,255,255,.16);color:#fff}}
+.pcard.b .tag{{background:var(--a);color:#111}}
+.pcard .t{{font-family:Oswald;font-weight:700;font-size:62px;line-height:1;text-transform:uppercase;color:#fff}}
+.pcard .m{{font-family:Oswald;font-size:24px;letter-spacing:.14em;color:#d9d2c6;margin-top:10px;text-transform:uppercase}}
+.arrow{{font-family:Oswald;font-size:40px;color:var(--a);text-align:center;margin:-6px 0}}
+.pwhy{{margin-top:30px;font-family:Inter;font-weight:500;font-size:36px;line-height:1.42}}
+.pwhy b{{color:var(--a)}}
+/* tam fotoğraf */
+.fp-title{{font-family:'DM Serif Display';font-size:120px;line-height:1;letter-spacing:-.01em}}
+.fp-line{{font-family:Inter;font-weight:500;font-size:40px;line-height:1.38;margin-top:26px;max-width:880px;opacity:.92}}
+/* dava dosyası */
+.file{{border:3px solid var(--fg);padding:44px 46px 40px;position:relative;font-family:'Courier Prime',monospace}}
+.file .ft{{font-family:'Courier Prime';font-weight:700;font-size:56px;line-height:1.1;margin-bottom:26px;text-transform:uppercase;padding-right:300px}}
+.file .fr{{display:flex;gap:22px;font-size:33px;line-height:1.35;padding:14px 0;border-top:2px dashed var(--line)}}
+.file .fr span{{min-width:270px;color:var(--mut);text-transform:uppercase;font-size:26px;padding-top:5px;letter-spacing:.06em}}
+.file .stamp{{position:absolute;right:-24px;top:-34px;transform:rotate(-9deg);border:6px solid var(--ad);color:var(--ad);font-family:Oswald;font-weight:700;font-size:44px;letter-spacing:.12em;padding:6px 22px;background:var(--bg)}}
+.file .fn{{margin-top:22px;font-size:30px;line-height:1.4;color:var(--fg)}}
+/* puan grafiği */
+.btitle{{font-family:Oswald;font-weight:700;font-size:70px;line-height:1.05;text-transform:uppercase;margin-bottom:22px}}
+.legend{{display:flex;gap:30px;font-family:Oswald;font-size:24px;letter-spacing:.14em;margin-bottom:24px;text-transform:uppercase}}
+.legend i{{display:inline-block;width:22px;height:22px;border-radius:5px;vertical-align:-3px;margin-right:10px}}
+.bitem{{padding:18px 0;border-top:1px solid var(--line)}}
+.bname{{font-family:Oswald;font-weight:500;font-size:32px;letter-spacing:.04em;margin-bottom:10px;text-transform:uppercase}}
+.bname small{{color:var(--mut);font-size:24px;margin-left:10px}}
+.brow{{display:flex;align-items:center;gap:16px;margin:6px 0}}
+.bar{{height:26px;border-radius:13px}}
+.bval{{font-family:Oswald;font-size:28px;min-width:120px}}
+.bnote{{margin-top:22px;font-size:28px;line-height:1.4;color:var(--mut)}}
+/* kırpılmış bulmaca */
+.cropwin{{width:912px;height:700px;border-radius:24px;overflow:hidden;position:relative;border:4px solid var(--a);margin-bottom:34px}}
+.cropwin div{{position:absolute;inset:0;background-size:cover}}
+.qn{{font-family:Oswald;font-weight:700;font-size:44px;letter-spacing:.06em;color:var(--a);margin-bottom:16px;text-transform:uppercase}}
+/* cevap ızgarası */
+.rv{{display:grid;grid-template-columns:1fr 1fr;gap:16px}}
+.rv .r{{position:relative;height:300px;border-radius:14px;overflow:hidden;background-size:cover;background-position:center}}
+.rv .r:last-child:nth-child(odd){{grid-column:span 2}}
+.rv .r::after{{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(0,0,0,.85))}}
+.rv .r div{{position:absolute;left:18px;bottom:14px;z-index:1}}
+.rv .r em{{font-style:normal;font-family:Oswald;font-weight:700;font-size:26px;color:var(--a)}}
+.rv .r strong{{display:block;font-family:Oswald;font-weight:700;font-size:38px;line-height:1.05;color:#fff;text-transform:uppercase}}
+.rv .r small{{font-family:Oswald;font-size:20px;letter-spacing:.12em;color:#d9d2c6;text-transform:uppercase}}
+/* sayı */
+.bignum{{font-family:'DM Serif Display';font-size:300px;line-height:.9;color:var(--a);letter-spacing:-.02em}}
+body.light .bignum{{color:var(--ad)}}
 """
 
 e = html.escape
 
 
-def body_for(s):
+def stills_path(spec, img):
+    if not img:
+        return None
+    if os.path.isabs(img):
+        return img
+    base = spec.get("stills_dir", "assets/stills")
+    if not os.path.isabs(base):
+        base = os.path.join(REPO, base)
+    p = os.path.join(base, img)
+    return p if os.path.exists(p) else None
+
+
+def url(spec, img):
+    p = stills_path(spec, img)
+    return f"file://{p}" if p else ""
+
+
+def body_for(spec, s):
     t = s["type"]
     if t == "cover":
-        return f'<div class="kick">{e(s["kick"])}</div><div class="h1">{s["h1"]}</div><div class="sub">{e(s["sub"])}</div>'
+        return f'<div class="kick">{e(s["kick"])}</div><div class="h1">{s["h1"]}</div><div class="sub">{s.get("sub","")}</div>'
     if t == "film":
         num = f'<div class="num">{int(s["n"]):02d}</div>' if s.get("n") else ""
         return (f'{num}<div class="title" lang="en">{e(s["title"])}</div><div class="meta" lang="en">{e(s["meta"])}</div>'
                 f'<div class="p">{e(s["konu"])}</div><div class="why">{e(s["why"])}</div>')
     if t == "big":
         return f'<div class="lab">{e(s["lab"])}</div><div class="big">{s["html"]}</div>'
+    if t == "text":
+        return f'<div class="lab">{e(s["lab"])}</div><div class="txt">{s["html"]}</div>'
     if t == "bullets":
         lis = "".join(f"<li><span>{i+1:02d}</span><div>{e(x)}</div></li>" for i, x in enumerate(s["items"]))
         return f'<div class="lab">{e(s["lab"])}</div><ul>{lis}</ul>'
     if t == "rows":
-        r = "".join(f"<div><span>{e(a)}</span>{e(b)}</div>" for a, b in s["pairs"])
+        r = "".join(f"<div><span>{e(a)}</span><div style='text-align:right'>{e(b)}</div></div>" for a, b in s["pairs"])
         extra = s.get("extra", "")
         if extra and not extra.lstrip().startswith("<"):
             extra = f'<div class="sub">{e(extra)}</div>'
@@ -118,30 +246,75 @@ def body_for(s):
         return f'<div class="lab">{e(s["lab"])}</div><div class="emoji">{s["emoji"]}</div><div class="hint">{e(s["hint"])}</div>'
     if t == "cta":
         chips = "".join(f"<div>{e(x)}</div>" for x in s.get("chips", []))
-        return f'<div class="lab">Sıra sende</div><div class="big">{s["q"]}</div><div class="cta">{chips}</div>'
+        return f'<div class="lab">{e(s.get("lab","Sıra sende"))}</div><div class="big">{s["q"]}</div><div class="cta">{chips}</div>'
+    if t == "collage":
+        n = len(s["imgs"])
+        cells = "".join(f'<div class="cell" style="background-image:url({url(spec,c["img"])})"><b lang="en">{e(c.get("label",""))}</b></div>' for c in s["imgs"])
+        return (f'<div class="kick">{e(s["kick"])}</div><div class="grid g{n}">{cells}</div>'
+                f'<div class="h1" style="font-size:96px">{s["h1"]}</div><div class="sub" style="margin-top:26px">{s.get("sub","")}</div>')
+    if t == "pair":
+        a, b = s["a"], s["b"]
+        lab = s.get("lab") or f"Eşleşme {int(s.get('n', 1)):02d}"
+        num = f'<div class="lab">{e(lab)}</div>'
+        return (f'{num}<div class="pairbox">'
+                f'<div class="pcard a" style="background-image:url({url(spec,a["img"])});background-position:{a.get("pos","center")}"><div class="in"><span class="tag">SEVDİYSEN</span><div class="t" lang="en">{e(a["title"])}</div><div class="m" lang="en">{e(a["meta"])}</div></div></div>'
+                f'<div class="arrow">↓</div>'
+                f'<div class="pcard b" style="background-image:url({url(spec,b["img"])});background-position:{b.get("pos","center")}"><div class="in"><span class="tag">BUNU İZLE</span><div class="t" lang="en">{e(b["title"])}</div><div class="m" lang="en">{e(b["meta"])}</div></div></div>'
+                f'</div><div class="pwhy">{s["why"]}</div>')
+    if t == "fullphoto":
+        return (f'<div class="kick">{e(s.get("kick",""))}</div><div class="fp-title" lang="en">{s["title"]}</div>'
+                f'<div class="fp-line">{s.get("line","")}</div>')
+    if t == "file":
+        rows = "".join(f'<div class="fr"><span>{e(a)}</span><div>{e(b)}</div></div>' for a, b in s["pairs"])
+        stamp = f'<div class="stamp">{e(s["stamp"])}</div>' if s.get("stamp") else ""
+        note = f'<div class="fn">{s["note"]}</div>' if s.get("note") else ""
+        return f'<div class="lab">{e(s["lab"])}</div><div class="file">{stamp}<div class="ft" lang="en">{e(s["title"])}</div>{rows}{note}</div>'
+    if t == "bars":
+        ca, cb = col(s.get("a_color", "amber")), col(s.get("b_color", "sky"))
+        items = ""
+        for it in s["items"]:
+            items += (f'<div class="bitem"><div class="bname" lang="en">{e(it["name"])}<small>{e(str(it.get("year","")))}</small></div>'
+                      f'<div class="brow"><div class="bar" style="width:{int(it["a"]*7.2)}px;background:{ca}"></div><div class="bval">{e(it["a_txt"])}</div></div>'
+                      f'<div class="brow"><div class="bar" style="width:{int(it["b"]*7.2)}px;background:{cb}"></div><div class="bval">{e(it["b_txt"])}</div></div></div>')
+        legend = f'<div class="legend"><span><i style="background:{ca}"></i>{e(s["a_label"])}</span><span><i style="background:{cb}"></i>{e(s["b_label"])}</span></div>'
+        note = f'<div class="bnote">{e(s["note"])}</div>' if s.get("note") else ""
+        return f'<div class="lab">{e(s["lab"])}</div><div class="btitle">{s["title"]}</div>{legend}{items}{note}'
+    if t == "crop":
+        z = s.get("zoom", 3)
+        return (f'<div class="qn">{e(s["lab"])}</div>'
+                f'<div class="cropwin"><div style="background-image:url({url(spec,s["img"])});background-size:{int(z*100)}% auto;background-position:{s.get("focus","50% 50%")}"></div></div>'
+                f'<div class="hint">{e(s["hint"])}</div>')
+    if t == "reveal":
+        cells = "".join(f'<div class="r" style="background-image:url({url(spec,it["img"])})"><div><em>{e(it["n"])}</em><strong lang="en">{e(it["answer"])}</strong><small lang="en">{e(it["meta"])}</small></div></div>' for it in s["items"])
+        return f'<div class="lab">{e(s["lab"])}</div><div class="rv">{cells}</div>'
+    if t == "number":
+        return f'<div class="lab">{e(s["lab"])}</div><div class="bignum">{e(s["big"])}</div><div class="txt" style="margin-top:20px">{s["html"]}</div>'
     raise ValueError(f"bilinmeyen slayt tipi: {t}")
 
 
 def page(spec, s, idx, total):
-    accent, glow = THEMES[spec.get("theme", "red")]
+    accent = col(s.get("accent")) or col(spec.get("theme", "red"))
+    accent_dark = col(s.get("accent_dark")) or "#b8432f"
+    bg = s.get("bg", "dark")
     ph = ""
-    img = s.get("img")
-    if img:
-        path = img if os.path.isabs(img) else os.path.join(spec.get("stills_dir", ""), img)
-        if os.path.exists(path):
+    if s.get("img") and s["type"] not in ("crop", "pair", "collage", "reveal"):
+        p = stills_path(spec, s["img"])
+        if p:
             blur = s.get("blur", 0)
             f = f"filter:blur({blur}px) brightness(.8);transform:scale(1.08);" if blur else ""
-            ph = f'<div class="ph" style="background-image:url(file://{path});{f}"></div>'
+            full = " full" if s["type"] == "fullphoto" else ""
+            ph = f'<div class="ph{full}" style="background-image:url(file://{p});background-position:{s.get("pos","center")};{f}"></div>'
+    cls = " ".join(x for x in [bg if bg != "dark" else "", "hasph" if ph else ""] if x)
     swipe = "<b>KAYDIR →</b>" if idx < total else ""
     return f"""<!doctype html><html lang="tr"><head><meta charset="utf-8"><style>{CSS}</style></head>
-<body class="{'hasph' if ph else ''}" style="--a:{accent};--a2:{glow}">{ph}<div class="glow"></div><div class="noise"></div>
+<body class="{cls}" style="--a:{accent};--a2:{rgba(accent,.2)};--ad:{accent_dark}">{ph}<div class="glow"></div><div class="noise"></div>
 <div class="frame"><div class="top"><div class="brand">DERECE FİLM</div><div class="pill">{e(spec['pill'])}</div></div>
-<div class="main">{body_for(s)}</div>
+<div class="main">{body_for(spec, s)}</div>
 <div class="bot"><div>@derecefilm &nbsp;·&nbsp; {idx:02d}/{total:02d}</div><div>{swipe}</div></div>
 </div></body></html>"""
 
 
-def render(spec_path):
+def render(spec_path, preview=False):
     spec = json.load(open(spec_path, encoding="utf-8"))
     out = os.path.join(REPO, "posts", spec["id"])
     os.makedirs(out, exist_ok=True)
@@ -150,6 +323,10 @@ def render(spec_path):
             os.remove(os.path.join(out, f))
     slides = spec["slides"]
     assert 2 <= len(slides) <= 10, "karusel 2–10 slayt olmalı"
+    for s in slides:
+        for k in ("img",):
+            if s.get(k) and not stills_path(spec, s[k]):
+                print(f"UYARI: görsel bulunamadı: {s[k]}")
     tmp = os.path.join(out, "_tmp.html")
     with sync_playwright() as p:
         b = p.chromium.launch()
@@ -158,7 +335,10 @@ def render(spec_path):
             open(tmp, "w", encoding="utf-8").write(page(spec, s, i, len(slides)))
             pg.goto("file://" + tmp, wait_until="networkidle")
             pg.evaluate("document.fonts.ready.then(()=>1)")
-            pg.wait_for_timeout(150)
+            pg.wait_for_timeout(200)
+            over = pg.evaluate("(()=>{const m=document.querySelector('.main');return m.scrollHeight>m.clientHeight+4})()")
+            if over:
+                print(f"UYARI: {spec['id']} slayt {i} metni taşıyor")
             png = os.path.join(out, f"{i:02d}.png")
             pg.screenshot(path=png)
             Image.open(png).convert("RGB").save(png[:-4] + ".jpg", quality=93, subsampling=0)
@@ -171,4 +351,5 @@ def render(spec_path):
 
 if __name__ == "__main__":
     for a in sys.argv[1:]:
-        render(a)
+        if not a.startswith("--"):
+            render(a)
