@@ -1,0 +1,36 @@
+name: Sahne karelerini indir
+
+# assets/stills/request.json içindeki {ad: url} listesini indirir ve assets/stills/<ad>.jpg olarak kaydeder.
+on:
+  workflow_dispatch:
+  push:
+    paths: ["assets/stills/request.json"]
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: İndir
+        run: |
+          python3 - <<'PY'
+          import json, os, urllib.request
+          req = json.load(open("assets/stills/request.json"))
+          for name, url in req.items():
+              out = f"assets/stills/{name}.jpg"
+              if os.path.exists(out):
+                  continue
+              urllib.request.urlretrieve(url, out)
+              print("indirildi:", name, os.path.getsize(out))
+          PY
+      - name: Kaydet
+        run: |
+          git config user.name "derecefilm-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add assets/stills
+          git diff --cached --quiet || (git commit -m "Sahne kareleri indirildi" && git pull --rebase && git push)
