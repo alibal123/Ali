@@ -1,0 +1,27 @@
+name: Hesap verilerini topla
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 5 * * 0"   # her pazar 08:17 İstanbul (haftalık içerik görevinden önce)
+
+permissions:
+  contents: write
+
+jobs:
+  insights:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Verileri çek
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+        run: python3 scripts/insights.py
+      - name: Kaydet
+        run: |
+          git config user.name "derecefilm-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add insights/media.json
+          git diff --cached --quiet || (git commit -m "Hesap verileri güncellendi" && git pull --rebase && git push)
