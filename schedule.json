@@ -21,7 +21,11 @@
       "platforms": [
         "instagram"
       ],
-      "status": "planned"
+      "status": "published",
+      "results": {
+        "instagram": "18068307200780626"
+      },
+      "published_at": "2026-10-02T20:00+03:00"
     },
     {
       "id": "gun3_belgesel",
