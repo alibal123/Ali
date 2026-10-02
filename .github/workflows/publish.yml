@@ -22,6 +22,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main          # tetiklendiği andaki eski hali değil, deponun EN GÜNCEL halini oku
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -37,4 +39,4 @@ jobs:
           git config user.name "derecefilm-bot"
           git config user.email "bot@users.noreply.github.com"
           git add schedule.json
-          git diff --cached --quiet || (git commit -m "Paylaşım durumu güncellendi" && git push)
+          git diff --cached --quiet || (git commit -m "Paylaşım durumu güncellendi" && git pull --rebase && git push)

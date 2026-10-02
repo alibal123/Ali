@@ -66,6 +66,30 @@ def publish_instagram(post):
     return call("POST", f"{IG_USER}/media_publish", creation_id=c)["id"]
 
 
+def _norm(s):
+    return " ".join((s or "").split())
+
+
+def already_on_instagram(post):
+    """Aynı açıklamayla son 3 günde paylaşılmış bir gönderi varsa onun id'sini döndürür (çift paylaşım koruması)."""
+    caption = _norm(open(os.path.join(post["folder"], "caption.txt"), encoding="utf-8").read())
+    items = call("GET", f"{IG_USER}/media", fields="id,caption,timestamp", limit="20").get("data", [])
+    cutoff = datetime.now(ZoneInfo("UTC")) - timedelta(days=3)
+    for m in items:
+        ts = datetime.strptime(m["timestamp"], "%Y-%m-%dT%H:%M:%S%z")
+        if ts >= cutoff and _norm(m.get("caption")) == caption:
+            return m["id"]
+    return None
+
+
+def refresh_repo():
+    """Bekleme sırasında başka bir çalışma durumu güncellemiş olabilir: deponun en güncel halini çek."""
+    import subprocess
+    r = subprocess.run(["git", "pull", "--rebase", "-q"], capture_output=True, text=True)
+    if r.returncode != 0:
+        print("git pull uyarısı:", r.stderr.strip()[:300])
+
+
 def check():
     """Paylaşım yapmadan: anahtar geçerli mi, hesap doğru mu, görseller herkese açık mı?"""
     me = call("GET", "me", fields="user_id,username,account_type")
@@ -78,6 +102,10 @@ def check():
         u = f"{RAW}/{post['folder']}/{f}"
         with urllib.request.urlopen(urllib.request.Request(u, method="HEAD"), timeout=30) as r:
             print(f"[{post['id']}] {post['publish_at']} → görsel erişilebilir ({r.status}, {r.headers.get('Content-Type')})")
+    for post in sched["posts"]:
+        if post.get("status") == "published":
+            found = already_on_instagram(post)
+            print(f"[{post['id']}] çift paylaşım koruması: Instagram'da {'BULUNDU ' + found if found else 'bulunamadı'}")
     print("KONTROL TAMAM")
 
 
@@ -96,6 +124,8 @@ def main():
         wait = (min(soon) - now).total_seconds()
         print(f"{min(soon):%H:%M} gönderisi için {int(wait)} sn bekleniyor…")
         time.sleep(wait + 5)
+        refresh_repo()
+        sched = json.load(open("schedule.json", encoding="utf-8"))
         now = datetime.now(tz)
     changed = False
     for post in sched["posts"]:
@@ -112,7 +142,12 @@ def main():
         results = post.setdefault("results", {})
         try:
             if "instagram" in post["platforms"] and "instagram" not in results:
-                results["instagram"] = publish_instagram(post)
+                existing = already_on_instagram(post)
+                if existing:
+                    print(f"[{post['id']}] Instagram'da zaten var ({existing}), tekrar paylaşılmadı")
+                    results["instagram"] = existing
+                else:
+                    results["instagram"] = publish_instagram(post)
             post["status"] = "published"
             post["published_at"] = now.isoformat(timespec="minutes")
         except Exception as e:
