@@ -34,7 +34,11 @@
       "platforms": [
         "instagram"
       ],
-      "status": "planned"
+      "status": "published",
+      "results": {
+        "instagram": "18099838991272869"
+      },
+      "published_at": "2026-10-03T20:03+03:00"
     },
     {
       "id": "gun4_oyun",
