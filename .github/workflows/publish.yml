@@ -3,7 +3,9 @@ name: Zamanı gelen gönderileri paylaş
 on:
   schedule:
     - cron: "*/15 * * * *"   # her 15 dakikada bir kontrol (yedek)
-    - cron: "33 16 * * *"    # 19:33 İstanbul: erken uyan, 20:00 gönderisini tam saatinde paylaş
+    - cron: "7 12 * * *"     # 15:07 İstanbul: erken uyan, 20:00'ye kadar bekle (GitHub zamanlayıcısı akşamları atlayabiliyor)
+    - cron: "37 14 * * *"    # 17:37 İstanbul: yedek
+    - cron: "33 16 * * *"    # 19:33 İstanbul: yedek
   workflow_dispatch:
     inputs:
       dry_run:
@@ -20,6 +22,7 @@ concurrency:
 jobs:
   publish:
     runs-on: ubuntu-latest
+    timeout-minutes: 355
     steps:
       - uses: actions/checkout@v4
         with:

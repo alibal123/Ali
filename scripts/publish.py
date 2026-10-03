@@ -16,7 +16,7 @@ REPO = os.environ["GITHUB_REPOSITORY"]
 BRANCH = os.environ.get("GITHUB_REF_NAME", "main")
 RAW = f"https://raw.githubusercontent.com/{REPO}/{BRANCH}"
 DRY = os.environ.get("DRY_RUN") == "1"
-WAIT_AHEAD = timedelta(minutes=45)  # bu kadar yakın bir gönderi varsa saatini bekle
+WAIT_AHEAD = timedelta(hours=5, minutes=45)  # GitHub zamanlayıcısı saatlerce susabildiği için: öğleden sonra gelen ilk çalışma 20:00'ye kadar bekler
 LATE_LIMIT = timedelta(hours=6)  # 6 saatten fazla gecikmiş gönderiyi atla, kullanıcıya bırak
 
 
