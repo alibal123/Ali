@@ -3,28 +3,91 @@
   "theme": "violet",
   "pill": "EŞLEŞTİRME",
   "stills_dir": "assets/stills",
-  "caption": "Bunu sevdiysen, bunu izle. Sevdiğin bir filmin bıraktığı boşluğu doldurmanın en iyi yolu, aynı damarı taşıyan başka bir film bulmak.\n\nFantastic Mr. Fox'un kuklalarından Mary and Max'in hüzünlü mektuplarına, Shrek'in iyi kalpli ötekisinden Ernest ve Celestine'in sulu boya dostluğuna, 964 Pinocchio'nun yeraltı kabusundan Akira'nın Neo-Tokyo'suna ve Duvara Karşı'nın yıkıcı aşkından Amores Perros'un kesişen hayatlarına uzanan dört eşleşme hazırladık.\n\nSen hangi filmi seviyorsun? Yorumlara yaz, ona en yakın filmi bir sonraki eşleştirmede önerelim.",
+  "caption": "Bunu sevdiysen, bunu izle. Sevdiğin bir filmin bıraktığı boşluğu doldurmanın en iyi yolu, aynı damarı taşıyan başka bir film bulmak.\n\nFantastic Mr. Fox'un kuklalarından Mary and Max'in hüzünlü mektuplarına, Shrek'in iyi kalpli ötekisinden Ernest ve Celestine'in sulu boya dostluğuna, 964 Pinocchio'nun yeraltı kabusundan Akira'nın Neo-Tokyo'suna ve Duvara Karşı'nın yıkıcı aşkından Amores Perros'un kesişen hayatlarına uzanan dört eşleşme hazırladık.\n\nSen hangi filmi seviyorsun? Yorumlara yaz, ona en yakın filmi bir sonraki eşleştirmede önerelim.\n\nYarın 20:00'de: Bong Joon-ho'nun Parasite'tan 16 yıl önce çektiği, gerçek bir davadan doğan film.",
   "slides": [
-    {"type": "fullphoto", "img": "mrfox_2.jpg", "pos": "70% center", "accent": "violet", "kick": "Eşleştirme",
-     "title": "Bunu sevdiysen,<br>bunu izle.", "line": "Sevdiğin filmin bıraktığı boşluğu dolduracak <b style='color:var(--a)'>4 eşleşme</b>."},
-    {"type": "pair", "n": 1, "accent": "amber",
-     "a": {"img": "mrfox_1.jpg", "title": "Fantastic Mr. Fox", "meta": "2009 · Wes Anderson"},
-     "b": {"img": "marymax_1.jpg", "title": "Mary and Max", "meta": "2009 · Adam Elliot"},
-     "why": "İkisi de elle oynatılan kuklalarla çekildi. Mary and Max, aynı tatlı mizahı <b>çok daha hüzünlü</b> bir mektup arkadaşlığına dönüştürüyor."},
-    {"type": "pair", "n": 2, "accent": "lime",
-     "a": {"img": "shrek_1.jpg", "title": "Shrek the Third", "meta": "2007 · Chris Miller"},
-     "b": {"img": "ernest_1.jpg", "title": "Ernest & Celestine", "meta": "2012 · Renner, Aubier, Patar"},
-     "why": "Ayılarla farelerin birbirinden korktuğu bir dünyada başlayan bir dostluk. Shrek'in ötekine sarılan kalbi, <b>sulu boya</b> bir masalda. Oscar adayı."},
-    {"type": "pair", "n": 3, "accent": "coral",
-     "a": {"img": "pinocchio964_1.jpg", "title": "964 Pinocchio", "meta": "1991 · Shozin Fukui"},
-     "b": {"img": "akira_1.jpg", "title": "Akira", "meta": "1988 · Katsuhiro Otomo"},
-     "why": "Japon siberpunkının iki ucu. 964 Pinocchio'nun yeraltı kabusu sana iyi geldiyse, türün kapısını açan <b>Neo-Tokyo</b> seni bekliyor."},
-    {"type": "pair", "n": 4, "accent": "pink",
-     "a": {"img": "headon_1.jpg", "title": "Duvara Karşı", "meta": "2004 · Fatih Akın"},
-     "b": {"img": "amores_1.jpg", "title": "Amores Perros", "meta": "2000 · Alejandro G. Iñárritu"},
-     "why": "Aşkı ve öfkeyi aynı nefeste anlatan iki film. Duvara Karşı'nın yıkıcı tutkusu, bir trafik kazasıyla <b>kesişen üç hayatta</b> devam ediyor."},
-    {"type": "cta", "bg": "solid", "accent": "violet", "lab": "Sıra sende",
-     "q": "Yorumlara <b>en sevdiğin filmi</b> yaz, ona en yakın filmi bir sonraki eşleştirmede önerelim.",
-     "chips": ["Yorumlara yaz", "Kaydet"]}
+    {
+      "type": "fullphoto",
+      "img": "mrfox_2.jpg",
+      "pos": "70% center",
+      "accent": "violet",
+      "kick": "Eşleştirme",
+      "title": "Bunu sevdiysen,<br>bunu izle.",
+      "line": "Sevdiğin filmin bıraktığı boşluğu dolduracak <b style='color:var(--a)'>4 eşleşme</b>."
+    },
+    {
+      "type": "pair",
+      "n": 1,
+      "accent": "amber",
+      "a": {
+        "img": "mrfox_1.jpg",
+        "title": "Fantastic Mr. Fox",
+        "meta": "2009 · Wes Anderson"
+      },
+      "b": {
+        "img": "marymax_1.jpg",
+        "title": "Mary and Max",
+        "meta": "2009 · Adam Elliot"
+      },
+      "why": "İkisi de elle oynatılan kuklalarla çekildi. Mary and Max, aynı tatlı mizahı <b>çok daha hüzünlü</b> bir mektup arkadaşlığına dönüştürüyor."
+    },
+    {
+      "type": "pair",
+      "n": 2,
+      "accent": "lime",
+      "a": {
+        "img": "shrek_1.jpg",
+        "title": "Shrek the Third",
+        "meta": "2007 · Chris Miller"
+      },
+      "b": {
+        "img": "ernest_1.jpg",
+        "title": "Ernest & Celestine",
+        "meta": "2012 · Renner, Aubier, Patar"
+      },
+      "why": "Ayılarla farelerin birbirinden korktuğu bir dünyada başlayan bir dostluk. Shrek'in ötekine sarılan kalbi, <b>sulu boya</b> bir masalda. Oscar adayı."
+    },
+    {
+      "type": "pair",
+      "n": 3,
+      "accent": "coral",
+      "a": {
+        "img": "pinocchio964_1.jpg",
+        "title": "964 Pinocchio",
+        "meta": "1991 · Shozin Fukui"
+      },
+      "b": {
+        "img": "akira_1.jpg",
+        "title": "Akira",
+        "meta": "1988 · Katsuhiro Otomo"
+      },
+      "why": "Japon siberpunkının iki ucu. 964 Pinocchio'nun yeraltı kabusu sana iyi geldiyse, türün kapısını açan <b>Neo-Tokyo</b> seni bekliyor."
+    },
+    {
+      "type": "pair",
+      "n": 4,
+      "accent": "pink",
+      "a": {
+        "img": "headon_1.jpg",
+        "title": "Duvara Karşı",
+        "meta": "2004 · Fatih Akın"
+      },
+      "b": {
+        "img": "amores_1.jpg",
+        "title": "Amores Perros",
+        "meta": "2000 · Alejandro G. Iñárritu"
+      },
+      "why": "Aşkı ve öfkeyi aynı nefeste anlatan iki film. Duvara Karşı'nın yıkıcı tutkusu, bir trafik kazasıyla <b>kesişen üç hayatta</b> devam ediyor."
+    },
+    {
+      "type": "cta",
+      "bg": "solid",
+      "accent": "violet",
+      "lab": "Sıra sende",
+      "q": "Yorumlara <b>en sevdiğin filmi</b> yaz, ona en yakın filmi bir sonraki eşleştirmede önerelim.",
+      "chips": [
+        "Yorumlara yaz",
+        "Kaydet"
+      ]
+    }
   ]
 }

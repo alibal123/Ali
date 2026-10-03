@@ -47,6 +47,11 @@ Veri kaynakları (hesaba uygun film seçimi):
 - **Açıklama (caption)** hesabın kendi stilinde: film adı + (yıl) ile başlayan 3 paragraf; 1) konu, 2) gelişme, 3) neden önemli.
   Sonunda kısa bir soru olabilir. Hashtag kullanma. Oyun gününde kısa açıklama.
 
+- **Devamlılık:** Her açıklamanın son satırı bir sonraki günün gönderisini haber versin:
+  `Yarın 20:00'de: <bir cümlelik merak uyandıran tanıtım>`. Haftanın son gönderisinde
+  `Yarın 20:00'de yeni haftanın ilk gönderisiyle buradayız. Takipte kal.` yaz. Yeni haftaya başlarken önceki haftanın
+  son açıklaması zaten bu genel satırla bittiği için ona dokunma.
+
 ## 4. Sahne fotoğrafları
 **Önerilen yol (Mac gerekmez):**
 1. TMDB'de filmin backdrop görsellerini bul (WebSearch/WebFetch ya da tarayıcı). Yazısız sahne kareleri seç (afiş/logo olmasın).
