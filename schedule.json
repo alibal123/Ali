@@ -47,7 +47,11 @@
       "platforms": [
         "instagram"
       ],
-      "status": "planned"
+      "status": "published",
+      "results": {
+        "instagram": "18117145214327928"
+      },
+      "published_at": "2026-10-04T20:00+03:00"
     },
     {
       "id": "gun5_jagten",
