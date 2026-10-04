@@ -26,8 +26,8 @@ jobs:
           for m in media:
               c = get(f"{m['id']}/comments", fields="id,timestamp", limit="50")
               if "error" in c:
-                  print("YORUM OKUMA HATASI:", c["error"]); break
+                  print("::warning::YORUM OKUMA HATASI: " + c["error"]); break
               total += len(c.get("data", []))
               print(m["timestamp"][:10], "comments_count:", m.get("comments_count"), "okunan:", len(c.get("data", [])))
-          print("TOPLAM okunan yorum:", total)
+          print(f"::notice::TOPLAM okunan yorum: {total} ({len(media)} gönderide)")
           PY
