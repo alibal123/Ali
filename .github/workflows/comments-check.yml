@@ -28,6 +28,6 @@ jobs:
               if "error" in c:
                   print("::warning::YORUM OKUMA HATASI: " + c["error"]); break
               total += len(c.get("data", []))
-              print(m["timestamp"][:10], "comments_count:", m.get("comments_count"), "okunan:", len(c.get("data", [])))
+              print(f"::notice::{m['timestamp'][:10]} comments_count={m.get('comments_count')} okunan={len(c.get('data', []))}")
           print(f"::notice::TOPLAM okunan yorum: {total} ({len(media)} gönderide)")
           PY
