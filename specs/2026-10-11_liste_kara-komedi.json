@@ -1,0 +1,105 @@
+{
+  "id": "2026-10-11_liste_kara-komedi",
+  "theme": "red",
+  "pill": "LİSTE",
+  "stills_dir": "assets/stills",
+  "caption": "Gülerken suçlu hissettiren 5 kara komedi. Hepsinde ciddi, hatta korkunç bir mesele var; ama film seni o meseleye kahkahayla bakmaya zorluyor.\n\nIn Bruges, bir iş ters gidince Belçika'da saklanmak zorunda kalan iki tetikçiyi; Wild Tales, sabrın taştığı an patlayan altı ayrı hikâyeyi; The Death of Stalin, liderin ölümünün ardından koltuk kapma yarışına giren Sovyet yönetimini anlatıyor. Delicatessen yiyeceğin para yerine geçtiği bir apartmana, The Lobster ise 45 gün içinde eş bulamayanın hayvana dönüştürüldüğü bir otele götürüyor.\n\nFour Lions'ı sevdiysen bu liste tam sana göre. Kaydet, bir akşam sırayla izle. Hangisi seni en çok güldürdü, hangisi en çok rahatsız etti?\n\nYarın 20:00'de yeni haftanın ilk gönderisiyle buradayız. Takipte kal.",
+  "slides": [
+    {
+      "type": "collage",
+      "kick": "Gülerken suçlu hissedeceksin",
+      "imgs": [
+        {
+          "img": "bruges_2.jpg",
+          "label": "In Bruges"
+        },
+        {
+          "img": "stalin_2.jpg",
+          "label": "The Death of Stalin"
+        },
+        {
+          "img": "wildtales_2.jpg",
+          "label": "Wild Tales"
+        },
+        {
+          "img": "delicatessen_1.jpg",
+          "label": "Delicatessen"
+        },
+        {
+          "img": "lobster_1.jpg",
+          "label": "The Lobster"
+        }
+      ],
+      "h1": "Kara mizahın <em>en iyi</em> 5 filmi",
+      "sub": "Ciddi meseleler, karanlık durumlar ve bastıramayacağın kahkahalar."
+    },
+    {
+      "type": "film",
+      "n": 1,
+      "accent": "lime",
+      "img": "bruges_2.jpg",
+      "pos": "center 40%",
+      "title": "In Bruges",
+      "meta": "2008 · Martin McDonagh",
+      "konu": "Londra'da bir iş ters gidince iki tetikçi, patronlarının emriyle Belçika'nın masalsı kasabası Brugge'de saklanmaya gönderilir. Biri kasabaya hayran kalır, diğeri her dakikasından nefret eder.",
+      "why": "Colin Farrell bu rolle Altın Küre kazandı, McDonagh'ın senaryosu BAFTA aldı."
+    },
+    {
+      "type": "film",
+      "n": 2,
+      "accent": "cyan",
+      "img": "wildtales_3.jpg",
+      "pos": "center 30%",
+      "title": "Wild Tales",
+      "meta": "2014 · Damián Szifron",
+      "konu": "Bir uçak yolculuğu, yol kenarında bir kavga, bir düğün... Altı ayrı hikâyede sıradan insanlar sabırlarının son damlasında kontrolü kaybeder ve intikam peşine düşer.",
+      "why": "Oscar'a aday oldu, BAFTA'da En İyi Yabancı Film ödülünü kazandı."
+    },
+    {
+      "type": "film",
+      "n": 3,
+      "accent": "red",
+      "img": "stalin_3.jpg",
+      "pos": "center 25%",
+      "title": "The Death of Stalin",
+      "meta": "2017 · Armando Iannucci",
+      "konu": "1953'te Stalin ölünce çevresindeki adamlar hem yas tutuyormuş gibi yapar hem de birbirinin ayağını kaydırmaya çalışır. Tarihin en karanlık koltuk kavgası absürt bir komediye dönüşür.",
+      "why": "Rusya'da yasaklandı. Güldürürken iktidarın ne kadar ürkütücü olabildiğini gösteriyor."
+    },
+    {
+      "type": "film",
+      "n": 4,
+      "accent": "orange",
+      "img": "delicatessen_2.jpg",
+      "pos": "center 35%",
+      "title": "Delicatessen",
+      "meta": "1991 · Jeunet & Caro",
+      "konu": "Kıyamet sonrası Fransa'da yiyecek o kadar azdır ki tahıl para yerine geçer. Alt katında kasap dükkânı olan eski bir apartmana iş için gelen eski bir palyaço, kiracıların tuhaf dünyasına karışır.",
+      "why": "Amélie'nin yönetmeninin ilk filmi. Dört César ödülü kazandı."
+    },
+    {
+      "type": "film",
+      "n": 5,
+      "accent": "violet",
+      "img": "lobster_1.jpg",
+      "pos": "center 60%",
+      "title": "The Lobster",
+      "meta": "2015 · Yorgos Lanthimos",
+      "konu": "Bekâr kalmanın yasak olduğu bir dünyada yalnız insanlar bir otele kapatılır. 45 gün içinde kendine eş bulamayan, seçtiği bir hayvana dönüştürülür.",
+      "why": "Cannes'da Jüri Ödülü'nü kazandı, Oscar'da en iyi özgün senaryo dalında aday oldu."
+    },
+    {
+      "type": "cta",
+      "bg": "light",
+      "accent": "violet",
+      "accent_dark": "#5b3fc4",
+      "lab": "Sıra sende",
+      "q": "Bu listeye <b>hangi kara komediyi</b> eklerdin? Yorumlara yaz, en çok önerileni bir sonraki listeye koyalım.",
+      "chips": [
+        "Kaydet",
+        "Yorumlara yaz",
+        "Arkadaşına gönder"
+      ]
+    }
+  ]
+}

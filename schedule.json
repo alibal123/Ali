@@ -102,6 +102,15 @@
         "instagram"
       ],
       "status": "planned"
+    },
+    {
+      "id": "2026-10-11_liste_kara-komedi",
+      "folder": "posts/2026-10-11_liste_kara-komedi",
+      "publish_at": "2026-10-11T20:00",
+      "platforms": [
+        "instagram"
+      ],
+      "status": "planned"
     }
   ]
 }
