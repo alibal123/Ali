@@ -73,7 +73,11 @@
       "platforms": [
         "instagram"
       ],
-      "status": "planned"
+      "status": "published",
+      "results": {
+        "instagram": "18129477355685876"
+      },
+      "published_at": "2026-10-06T19:01+03:00"
     },
     {
       "id": "2026-10-07_eslesme_sevdiysen",
