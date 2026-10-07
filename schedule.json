@@ -86,7 +86,11 @@
       "platforms": [
         "instagram"
       ],
-      "status": "planned"
+      "status": "published",
+      "results": {
+        "instagram": "18016332044953038"
+      },
+      "published_at": "2026-10-07T20:00+03:00"
     },
     {
       "id": "2026-10-08_film_memories-of-murder",
