@@ -127,6 +127,96 @@
         "instagram"
       ],
       "status": "planned"
+    },
+    {
+      "id": "2026-10-12_kultur_kavusamayan-asiklar",
+      "folder": "posts/2026-10-12_kultur_kavusamayan-asiklar",
+      "publish_at": "2026-10-12T20:00",
+      "platforms": [
+        "instagram"
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "2026-10-13_karsilastirma_dori-memento",
+      "folder": "posts/2026-10-13_karsilastirma_dori-memento",
+      "publish_at": "2026-10-13T20:00",
+      "platforms": [
+        "instagram"
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "2026-10-14_film_dogville",
+      "folder": "posts/2026-10-14_film_dogville",
+      "publish_at": "2026-10-14T20:00",
+      "platforms": [
+        "instagram"
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "2026-10-15_belgesel_turkiye-en-iyi",
+      "folder": "posts/2026-10-15_belgesel_turkiye-en-iyi",
+      "publish_at": "2026-10-15T20:00",
+      "platforms": [
+        "instagram"
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "2026-10-16_oyun_ben-kimim",
+      "folder": "posts/2026-10-16_oyun_ben-kimim",
+      "publish_at": "2026-10-16T20:00",
+      "platforms": [
+        "instagram"
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "2026-10-17_karsilastirma_uzayli-iletisim",
+      "folder": "posts/2026-10-17_karsilastirma_uzayli-iletisim",
+      "publish_at": "2026-10-17T20:00",
+      "platforms": [
+        "instagram"
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "2026-10-18_oyuncu_ralph-fiennes",
+      "folder": "posts/2026-10-18_oyuncu_ralph-fiennes",
+      "publish_at": "2026-10-18T20:00",
+      "platforms": [
+        "instagram"
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "2026-10-19_liste_keanu-fedakarlik",
+      "folder": "posts/2026-10-19_liste_keanu-fedakarlik",
+      "publish_at": "2026-10-19T20:00",
+      "platforms": [
+        "instagram"
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "2026-10-20_liste_hayati-sorgulatan",
+      "folder": "posts/2026-10-20_liste_hayati-sorgulatan",
+      "publish_at": "2026-10-20T20:00",
+      "platforms": [
+        "instagram"
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "2026-10-21_film_agir-roman",
+      "folder": "posts/2026-10-21_film_agir-roman",
+      "publish_at": "2026-10-21T20:00",
+      "platforms": [
+        "instagram"
+      ],
+      "status": "planned"
     }
   ]
 }

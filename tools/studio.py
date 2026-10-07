@@ -10,6 +10,14 @@ Gönderi dosyası (Python) şunları tanımlar:
   SLIDES   : [html, html, ...]  (her biri 1080×1350 bir slayt gövdesi)
   CAPTION  : açıklama metni
 Yardımcılar: img("ad.jpg") → depo içi görselin file:// adresi; GRAIN → film greni SVG'si.
+Taşma kontrolü: metin kutusuna data-fit ekle; taşarsa uyarı basılır.
+Türkçe büyük harf: text-transform:uppercase kullanılan yerde İngilizce adları lang='en' ile sar (yoksa i → İ olur).
+
+Fontlar (tek sefer):
+  npm i --prefix tools @fontsource/{oswald,inter,playfair-display,courier-prime,dm-serif-display,cormorant-garamond,caveat,\
+    archivo-narrow,libre-caslon-text,josefin-sans,old-standard-tt,abril-fatface,cinzel,ibm-plex-mono,space-grotesk,\
+    barlow-condensed,fraunces,archivo-black,inter-tight,lobster,anton,eb-garamond,caveat-brush,kalam}
+  (Hepsini TEK komutta kur; npm --no-save ile parça parça kurmak öncekileri siler.)
 """
 import importlib.util, os, sys
 from playwright.sync_api import sync_playwright
