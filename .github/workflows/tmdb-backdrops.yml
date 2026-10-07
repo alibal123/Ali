@@ -1,0 +1,77 @@
+name: TMDB sahne karelerini bul ve indir
+
+# assets/stills/tmdb_request.json: {"<ad>": {"q": "Film adı", "year": 1996, "n": 6}} ya da {"<ad>": {"id": 389, "n": 6}}
+# Her film için yazısız (dil etiketi olmayan) arka plan görsellerinden n tanesini assets/stills/<ad>_<i>.jpg olarak indirir.
+# Bulunan film adları/kimlikleri assets/stills/tmdb_resolved.json'a yazılır (kontrol için).
+on:
+  workflow_dispatch:
+  push:
+    paths: ["assets/stills/tmdb_request.json"]
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Bul ve indir
+        run: |
+          python3 - <<'PY'
+          import json, os, re, urllib.parse, urllib.request
+          UA = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/124 Safari/537.36",
+                "Accept-Language": "en-US,en;q=0.9"}
+          def get(url):
+              with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=40) as r:
+                  return r.read().decode("utf-8", "ignore")
+          req = json.load(open("assets/stills/tmdb_request.json"))
+          resolved_path = "assets/stills/tmdb_resolved.json"
+          resolved = json.load(open(resolved_path)) if os.path.exists(resolved_path) else {}
+          for name, r in req.items():
+              if name in resolved and resolved[name].get("files"):
+                  continue
+              try:
+                  mid = r.get("id")
+                  if not mid:
+                      q = urllib.parse.quote(f'{r["q"]} y:{r["year"]}' if r.get("year") else r["q"])
+                      html = get(f"https://www.themoviedb.org/search/movie?query={q}")
+                      m = re.search(r'href="/movie/(\d+)[^"]*"', html)
+                      mid = m.group(1) if m else None
+                  if not mid:
+                      resolved[name] = {"error": "bulunamadı"}; continue
+                  page = get(f"https://www.themoviedb.org/movie/{mid}?language=en-US")
+                  t = re.search(r"<title>([^<]+)</title>", page)
+                  paths = []
+                  for lang in ("xx", "null", ""):
+                      suffix = f"?image_language={lang}" if lang else ""
+                      try:
+                          h = get(f"https://www.themoviedb.org/movie/{mid}/images/backdrops{suffix}")
+                      except Exception:
+                          continue
+                      for p in re.findall(r"/t/p/[a-z0-9_]+/([A-Za-z0-9]{20,40}\.jpg)", h):
+                          if p not in paths:
+                              paths.append(p)
+                      if len(paths) >= r.get("n", 6):
+                          break
+                  files = []
+                  for i, p in enumerate(paths[: r.get("n", 6)], 1):
+                      out = f"assets/stills/{name}_{i}.jpg"
+                      if not os.path.exists(out):
+                          urllib.request.urlretrieve(f"https://image.tmdb.org/t/p/w1280/{p}", out)
+                      files.append(out)
+                  resolved[name] = {"id": mid, "title": t.group(1).strip() if t else "", "files": files}
+                  print(name, mid, resolved[name]["title"], len(files))
+              except Exception as e:
+                  resolved[name] = {"error": str(e)[:200]}
+                  print("HATA", name, e)
+          json.dump(resolved, open(resolved_path, "w"), ensure_ascii=False, indent=1)
+          PY
+      - name: Kaydet
+        run: |
+          git config user.name "derecefilm-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add assets/stills
+          git diff --cached --quiet || (git commit -m "TMDB sahne kareleri indirildi" && git pull --rebase && git push)
