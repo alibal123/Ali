@@ -127,6 +127,96 @@
         "instagram"
       ],
       "status": "planned"
+    },
+    {
+      "id": "2026-10-12_film_kirmizi",
+      "folder": "posts/2026-10-12_film_kirmizi",
+      "publish_at": "2026-10-12T20:00",
+      "platforms": [
+        "instagram"
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "2026-10-13_liste_kafanin-icinde",
+      "folder": "posts/2026-10-13_liste_kafanin-icinde",
+      "publish_at": "2026-10-13T20:00",
+      "platforms": [
+        "instagram"
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "2026-10-14_karsilastirma_uzaylilarla-konusmak",
+      "folder": "posts/2026-10-14_karsilastirma_uzaylilarla-konusmak",
+      "publish_at": "2026-10-14T20:00",
+      "platforms": [
+        "instagram"
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "2026-10-15_film_the-menu",
+      "folder": "posts/2026-10-15_film_the-menu",
+      "publish_at": "2026-10-15T20:00",
+      "platforms": [
+        "instagram"
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "2026-10-16_oyun-haftanin-detaylari",
+      "folder": "posts/2026-10-16_oyun-haftanin-detaylari",
+      "publish_at": "2026-10-16T20:00",
+      "platforms": [
+        "instagram"
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "2026-10-17_sahne_grand-budapest-oranlar",
+      "folder": "posts/2026-10-17_sahne_grand-budapest-oranlar",
+      "publish_at": "2026-10-17T20:00",
+      "platforms": [
+        "instagram"
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "2026-10-18_film_kayip-balik-nemo",
+      "folder": "posts/2026-10-18_film_kayip-balik-nemo",
+      "publish_at": "2026-10-18T20:00",
+      "platforms": [
+        "instagram"
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "2026-10-19_film_dogville",
+      "folder": "posts/2026-10-19_film_dogville",
+      "publish_at": "2026-10-19T20:00",
+      "platforms": [
+        "instagram"
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "2026-10-20_film_schindler-tek-renk",
+      "folder": "posts/2026-10-20_film_schindler-tek-renk",
+      "publish_at": "2026-10-20T20:00",
+      "platforms": [
+        "instagram"
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "2026-10-21_liste-7-oneri",
+      "folder": "posts/2026-10-21_liste-7-oneri",
+      "publish_at": "2026-10-21T20:00",
+      "platforms": [
+        "instagram"
+      ],
+      "status": "planned"
     }
   ]
 }

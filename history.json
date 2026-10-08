@@ -240,6 +240,82 @@
       "year": 2015,
       "tmdb": "254320",
       "post": "2026-10-11_liste_kara-komedi"
+    },
+    {
+      "title": "Three Colors: Red",
+      "post": "2026-10-12_film_kirmizi"
+    },
+    {
+      "title": "Memento",
+      "post": "2026-10-13_liste_kafanin-icinde"
+    },
+    {
+      "title": "Being John Malkovich",
+      "post": "2026-10-13_liste_kafanin-icinde"
+    },
+    {
+      "title": "The Truman Show",
+      "post": "2026-10-13_liste_kafanin-icinde"
+    },
+    {
+      "title": "Close Encounters of the Third Kind",
+      "post": "2026-10-14_karsilastirma_uzaylilarla-konusmak"
+    },
+    {
+      "title": "Contact",
+      "post": "2026-10-14_karsilastirma_uzaylilarla-konusmak"
+    },
+    {
+      "title": "Arrival",
+      "post": "2026-10-14_karsilastirma_uzaylilarla-konusmak"
+    },
+    {
+      "title": "The Menu",
+      "post": "2026-10-15_film_the-menu"
+    },
+    {
+      "title": "The Grand Budapest Hotel",
+      "post": "2026-10-17_sahne_grand-budapest-oranlar"
+    },
+    {
+      "title": "Finding Nemo",
+      "post": "2026-10-18_film_kayip-balik-nemo"
+    },
+    {
+      "title": "Dogville",
+      "post": "2026-10-19_film_dogville"
+    },
+    {
+      "title": "Schindler's List",
+      "post": "2026-10-20_film_schindler-tek-renk"
+    },
+    {
+      "title": "Stalker",
+      "post": "2026-10-21_liste-7-oneri"
+    },
+    {
+      "title": "Dark City",
+      "post": "2026-10-21_liste-7-oneri"
+    },
+    {
+      "title": "The Fall",
+      "post": "2026-10-21_liste-7-oneri"
+    },
+    {
+      "title": "Paprika",
+      "post": "2026-10-21_liste-7-oneri"
+    },
+    {
+      "title": "Timecrimes",
+      "post": "2026-10-21_liste-7-oneri"
+    },
+    {
+      "title": "Synecdoche, New York",
+      "post": "2026-10-21_liste-7-oneri"
+    },
+    {
+      "title": "Moon",
+      "post": "2026-10-21_liste-7-oneri"
     }
   ],
   "quiz_answers_used": [
@@ -247,6 +323,7 @@
     "Up",
     "Inception",
     "Interstellar",
-    "Fight Club"
+    "Fight Club",
+    "The Matrix Revolutions"
   ]
 }
