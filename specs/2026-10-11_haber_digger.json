@@ -1,0 +1,94 @@
+{
+  "id": "2026-10-11_haber_digger",
+  "theme": "amber",
+  "slides": [
+    {
+      "type": "news",
+      "variant": "top",
+      "nimg": "news_digger_2.jpg",
+      "npos": "center 40%",
+      "date": "11 Ekim 2026",
+      "tag": "GİŞE",
+      "h": "<span lang='en'>Tom Cruise</span>'a <em>19 yılın en kötü</em> açılışı",
+      "dek": "Iñárritu'nun yönettiği Digger, ABD'de ilk hafta sonunda yaklaşık 8 milyon dolarda kaldı.",
+      "src": "AP, MEDIAPOST, CONSEQUENCE"
+    },
+    {
+      "type": "video",
+      "video": "c02_digger_rigs.mp4",
+      "lab": "Konu",
+      "html": "Dünyanın en güçlü adamı, <b>kendi yarattığı felaketi</b> durdurmaya çalışıyor.",
+      "pos": "bottom",
+      "dur": 8,
+      "focus": "center",
+      "sub": "Tom Cruise, ağır makyaj altında petrol zengini Digger Rockwell'i oynuyor."
+    },
+    {
+      "type": "text",
+      "lab": "Kara komedi",
+      "img": "news_digger_1.jpg",
+      "pos": "center 40%",
+      "accent": "orange",
+      "html": "Birdman ve The Revenant'ın yönetmeni Alejandro G. Iñárritu'nun yeni filmi, petrol zengini bir milyarderi anlatan <b>hicivli bir kara komedi.</b>"
+    },
+    {
+      "type": "number",
+      "lab": "Dünya geneli açılış",
+      "big": "20",
+      "bg": "light",
+      "accent": "amber",
+      "accent_dark": "#9a6a10",
+      "html": "milyon dolar civarı. Bütçesinin <b>en az 125 milyon dolar</b> olduğu bildiriliyor."
+    },
+    {
+      "type": "video",
+      "video": "c03_digger_oil.mp4",
+      "lab": "Eleştirmenler ikiye bölündü",
+      "html": "Rotten Tomatoes'ta yaklaşık <b>%51–53</b>, Metacritic'te <b>44</b>.",
+      "pos": "bottom",
+      "dur": 8,
+      "focus": "center",
+      "accent": "orange",
+      "sub": "Warner Bros. de olumsuz yorumları reklamında kullanıp 'kararı siz verin' dedi."
+    },
+    {
+      "type": "rows",
+      "lab": "Bilinenler",
+      "accent": "sky",
+      "img": "news_digger_3.jpg",
+      "pos": "center",
+      "pairs": [
+        [
+          "Yönetmen",
+          "Alejandro G. Iñárritu"
+        ],
+        [
+          "Oyuncular",
+          "Tom Cruise, Sandra Hüller, Riz Ahmed, John Goodman"
+        ],
+        [
+          "Çekim",
+          "VistaVision formatı"
+        ],
+        [
+          "Türkiye",
+          "2 Ekim'den beri vizyonda"
+        ]
+      ],
+      "extra": "Seyirci notu (CinemaScore): C+"
+    },
+    {
+      "type": "cta",
+      "bg": "solid",
+      "accent": "amber",
+      "q": "Digger'ı izledin mi? Eleştirmenlere katılıyor musun?",
+      "chips": [
+        "İzledim",
+        "İzleyeceğim"
+      ]
+    }
+  ],
+  "caption": "Alejandro G. Iñárritu'nun yönettiği, Tom Cruise'un başrolünde olduğu Digger, ABD'de ilk hafta sonunda yaklaşık 8 milyon dolar topladı. Bu, Cruise'un yaklaşık 19 yıldaki en düşük açılışı. Film dünya genelinde ise yaklaşık 20 milyon dolarla açıldı.\n\nCruise'un ağır makyaj altında petrol zengini bir milyarderi oynadığı hicivli kara komedi, eleştirmenleri ikiye böldü. Warner Bros. da olumsuz yorumları reklamında kullanarak izleyiciye \"kararı siz verin\" dedi.\n\nFilm Türkiye'de 2 Ekim'den beri vizyonda.\n\nKaynak: AP, MediaPost, Consequence, Gulf News, Beyazperde",
+  "stills_dir": "assets/stills",
+  "pill": "HABER"
+}

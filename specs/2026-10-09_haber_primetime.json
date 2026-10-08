@@ -1,0 +1,88 @@
+{
+  "id": "2026-10-09_haber_primetime",
+  "theme": "cyan",
+  "slides": [
+    {
+      "type": "news",
+      "variant": "top",
+      "nimg": "news_primetime_4.jpg",
+      "npos": "center 30%",
+      "date": "9 Ekim 2026",
+      "tag": "A24",
+      "h": "<span lang='en'>Pattinson</span>'lı <span lang='en'>Primetime</span> <em>gişeyi sarstı</em>",
+      "dek": "Film, A24 tarihinin en büyük üçüncü açılışını yaptı.",
+      "src": "COMINGSOON, KOIMOI, ROTTEN TOMATOES"
+    },
+    {
+      "type": "video",
+      "video": "c00_primetime_kitchen.mp4",
+      "lab": "2006 · Canlı yayın",
+      "html": "Gizli kameralar, sıradan bir mutfak ve <b>milyonlarca izleyici.</b>",
+      "pos": "bottom",
+      "dur": 8,
+      "focus": "center"
+    },
+    {
+      "type": "text",
+      "lab": "Film ne anlatıyor?",
+      "img": "news_primetime_1.jpg",
+      "pos": "center 35%",
+      "accent": "amber",
+      "html": "Robert Pattinson, televizyon muhabiri Chris Hansen'ı oynuyor. Hansen, 2006'da gizli kamerayla çekilen bir yayın serisiyle <b>televizyon tarihine</b> geçmek ister. Film gerçek olaylardan esinlenen bir gerilim."
+    },
+    {
+      "type": "number",
+      "lab": "İlk hafta sonu",
+      "big": "19,2",
+      "img": "news_primetime_3.jpg",
+      "pos": "center 30%",
+      "html": "milyon dolar. Yaklaşık <b>15 milyon dolarlık</b> bütçeyle çekilen film, A24'ün en büyük üçüncü açılışını yaptı."
+    },
+    {
+      "type": "video",
+      "video": "c01_primetime_control.mp4",
+      "lab": "Venedik",
+      "html": "Dünya prömiyerinde <b>dakikalarca</b> ayakta alkışlandı.",
+      "pos": "bottom",
+      "dur": 8,
+      "focus": "center",
+      "accent": "amber"
+    },
+    {
+      "type": "rows",
+      "lab": "Bilinenler",
+      "accent": "sky",
+      "pairs": [
+        [
+          "Yönetmen",
+          "Lance Oppenheim"
+        ],
+        [
+          "Oyuncular",
+          "Robert Pattinson, Merritt Wever, Skyler Gisondo"
+        ],
+        [
+          "Eleştirmen",
+          "Rotten Tomatoes %85+"
+        ],
+        [
+          "Türkiye",
+          "23 Ekim (Beyazperde)"
+        ]
+      ],
+      "extra": "Senaryo, Esquire'da 2007'de yayımlanan bir habere dayanıyor."
+    },
+    {
+      "type": "cta",
+      "bg": "solid",
+      "accent": "cyan",
+      "q": "Pattinson'ın en iyi rolü sence hangisi?",
+      "chips": [
+        "Yorumla"
+      ]
+    }
+  ],
+  "caption": "Robert Pattinson'ın başrolünde olduğu Primetime, ABD'de ilk hafta sonunda 19,2 milyon dolar topladı. Yaklaşık 15 milyon dolarlık bütçeyle çekilen film, A24'ün tarihindeki en büyük üçüncü açılışı yaptı.\n\nFilm, 2006'da gizli kamerayla çekilen bir televizyon serisiyle ünlenen muhabir Chris Hansen'ı anlatıyor ve gerçek olaylardan esinleniyor. Venedik'teki dünya prömiyerinde dakikalarca ayakta alkışlanan film, eleştirmenlerden de olumlu notlar aldı.\n\nBeyazperde'ye göre Primetime 23 Ekim'de Türkiye'de vizyona girecek.\n\nKaynak: ComingSoon, Koimoi, Rotten Tomatoes, AP, Beyazperde",
+  "stills_dir": "assets/stills",
+  "pill": "HABER"
+}

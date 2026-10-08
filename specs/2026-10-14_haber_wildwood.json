@@ -1,0 +1,92 @@
+{
+  "id": "2026-10-14_haber_wildwood",
+  "theme": "orange",
+  "slides": [
+    {
+      "type": "news",
+      "variant": "full",
+      "nimg": "news_wildwood_1.jpg",
+      "npos": "45% center",
+      "date": "14 Ekim 2026",
+      "tag": "LAIKA",
+      "h": "<span lang='en'>Laika</span>'nın <em>en büyük</em> filmi geliyor",
+      "dek": "Coraline'in stüdyosundan stop-motion masalı <span lang='en'>Wildwood</span>, Türkiye'de Vahşi Orman adıyla vizyona girecek.",
+      "src": "AWN, ANIMATION SCOOP, SİNEMALAR.COM, BEYAZPERDE"
+    },
+    {
+      "type": "video",
+      "video": "c10_wildwood_forest.mp4",
+      "lab": "Konu",
+      "html": "Kargalar bebek kardeşini kaçırınca Prue, <b>Geçilmez Vahşi Doğa'ya</b> girer.",
+      "pos": "bottom",
+      "dur": 8,
+      "focus": "center",
+      "sub": "Portland'ın kıyısındaki büyülü bir ormanda kendini bir savaşın ortasında bulur."
+    },
+    {
+      "type": "text",
+      "lab": "16 yıllık hayal",
+      "img": "news_wildwood_2.jpg",
+      "pos": "center",
+      "accent": "amber",
+      "html": "Laika'nın patronu ve yönetmen Travis Knight, Colin Meloy'un romanının yazarlarına <b>yaklaşık 16 yıl önce</b>, Coraline'den hemen sonra ulaşmıştı."
+    },
+    {
+      "type": "video",
+      "video": "c11_wildwood_eagle.mp4",
+      "lab": "El yapımı",
+      "html": "Filmdeki kartal kuklasının üzerinde <b>3.794 tüy</b> var, hepsi tek tek yerleştirildi.",
+      "pos": "bottom",
+      "dur": 8,
+      "focus": "center",
+      "accent": "amber"
+    },
+    {
+      "type": "big",
+      "lab": "Bir ilk",
+      "img": "news_wildwood_3.jpg",
+      "pos": "center",
+      "accent": "orange",
+      "html": "Laika'nın <b>ilk PG-13</b> filmi. 132 dakikalık süresiyle bir animasyon için alışılmadık uzunlukta."
+    },
+    {
+      "type": "rows",
+      "lab": "Bilinenler",
+      "accent": "sky",
+      "pairs": [
+        [
+          "Yönetmen",
+          "Travis Knight"
+        ],
+        [
+          "Seslendirme",
+          "Peyton Elizabeth Lee, Carey Mulligan, Angela Bassett"
+        ],
+        [
+          "ABD",
+          "23 Ekim 2026"
+        ],
+        [
+          "Türkiye",
+          "22 Ocak 2027, Vahşi Orman"
+        ]
+      ],
+      "extra": "Görüntü yönetmeni Caleb Deschanel'in ilk stop-motion filmi."
+    },
+    {
+      "type": "cta",
+      "bg": "light",
+      "accent": "orange",
+      "accent_dark": "#b8432f",
+      "q": "En sevdiğin Laika filmi hangisi?",
+      "chips": [
+        "Coraline",
+        "Kubo",
+        "ParaNorman"
+      ]
+    }
+  ],
+  "caption": "Coraline ve Kubo'nun stüdyosu Laika'nın altıncı uzun metrajı Wildwood, ABD'de 23 Ekim'de vizyona giriyor. Film Türkiye'de 22 Ocak 2027'de Vahşi Orman adıyla gösterilecek.\n\nColin Meloy'un romanından uyarlanan stop-motion masalda Prue, kargaların kaçırdığı bebek kardeşini kurtarmak için Portland'ın kıyısındaki büyülü bir ormana girer. Seslendirme kadrosunda Carey Mulligan, Angela Bassett ve Jacob Tremblay var.\n\nLaika'nın şimdiye kadarki en büyük yapımı olan film, stüdyonun ilk PG-13 filmi. Filmdeki kartal kuklasının üzerinde tek tek yerleştirilmiş 3.794 tüy bulunuyor.\n\nKaynak: AWN, Animation Scoop, World of Reel, Sinemalar.com, Beyazperde",
+  "stills_dir": "assets/stills",
+  "pill": "HABER"
+}

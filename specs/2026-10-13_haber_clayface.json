@@ -1,0 +1,90 @@
+{
+  "id": "2026-10-13_haber_clayface",
+  "theme": "red",
+  "slides": [
+    {
+      "type": "news",
+      "variant": "top",
+      "nimg": "news_clayface_1.jpg",
+      "npos": "center 35%",
+      "date": "13 Ekim 2026",
+      "tag": "DC STUDIOS",
+      "h": "DC'nin korku filmi <span lang='en'>Clayface</span> <em>23 Ekim'de</em>",
+      "dek": "Mike Flanagan'ın yazdığı film, Cadılar Bayramı için ekime alındı.",
+      "src": "BLOODY DISGUSTING, THEWRAP, TECHRADAR"
+    },
+    {
+      "type": "video",
+      "video": "c08_clayface_clay.mp4",
+      "lab": "Konu",
+      "html": "Yüzü parçalanan bir aktör, deneysel bir tedaviyle <b>yeniden doğar.</b>",
+      "pos": "bottom",
+      "dur": 8,
+      "focus": "center",
+      "sub": "Ama bedeli ağırdır: vücudu kile dönüşmeye başlar."
+    },
+    {
+      "type": "text",
+      "lab": "Beden korkusu",
+      "img": "news_clayface_2.jpg",
+      "pos": "center 40%",
+      "accent": "amber",
+      "html": "Yapımcılar James Gunn ve Peter Safran, filmin tonunu <b>The Fly</b> ile karşılaştırıyor. ABD'de R (+17) sınıflandırmasıyla vizyona girecek."
+    },
+    {
+      "type": "video",
+      "video": "c09_clayface_city.mp4",
+      "lab": "Gotham, ama Liverpool",
+      "html": "Gotham sahneleri <b>Liverpool sokaklarında</b> çekildi.",
+      "pos": "bottom",
+      "dur": 8,
+      "focus": "center",
+      "accent": "amber"
+    },
+    {
+      "type": "big",
+      "lab": "Kamera arkası",
+      "img": "news_clayface_3.jpg",
+      "pos": "center 35%",
+      "accent": "red",
+      "html": "Başrol oyuncusu Tom Rhys Harries, filmi <b>yırtık ön çapraz bağla</b> çekti ve bunu yapımdan sakladı."
+    },
+    {
+      "type": "rows",
+      "lab": "Bilinenler",
+      "accent": "sky",
+      "pairs": [
+        [
+          "Yönetmen",
+          "James Watkins"
+        ],
+        [
+          "Senaryo",
+          "Mike Flanagan, Hossein Amini"
+        ],
+        [
+          "Oyuncular",
+          "Tom Rhys Harries, Naomi Ackie"
+        ],
+        [
+          "Bütçe",
+          "Yaklaşık 40–45 milyon dolar"
+        ]
+      ],
+      "extra": "ABD'de 23 Ekim'de vizyona giriyor; uluslararası gösterim 21 Ekim'den itibaren."
+    },
+    {
+      "type": "cta",
+      "bg": "solid",
+      "accent": "red",
+      "q": "Süper kahraman filmleri korku türüne geçmeli mi?",
+      "chips": [
+        "Evet",
+        "Hayır"
+      ]
+    }
+  ],
+  "caption": "DC Studios'un korku filmi Clayface, ABD'de 23 Ekim'de vizyona giriyor. Film, Cadılar Bayramı dönemine denk gelmesi için eylülden ekime alındı.\n\nMike Flanagan ile Hossein Amini'nin yazdığı, James Watkins'in yönettiği film, yüzü parçalanan bir aktörün deneysel bir tedaviyle yeniden doğmasını ve vücudunun kile dönüşmeye başlamasını anlatıyor. Yapımcılar James Gunn ve Peter Safran filmin tonunu The Fly ile karşılaştırıyor.\n\nGotham sahneleri Liverpool'da çekildi. Başrol oyuncusu Tom Rhys Harries ise filmi yırtık ön çapraz bağla çektiğini sonradan açıkladı.\n\nKaynak: Bloody Disgusting, TheWrap, TechRadar, Screen Global Production, SuperHeroHype",
+  "stills_dir": "assets/stills",
+  "pill": "HABER"
+}

@@ -3,3 +3,4 @@ tools/package*.json
 posts/*/_tmp.html
 work/
 __pycache__/
+posts/*/_onizleme/

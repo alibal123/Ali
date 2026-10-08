@@ -1,0 +1,92 @@
+{
+  "id": "2026-10-10_haber_ask-ve-yasam",
+  "theme": "pink",
+  "slides": [
+    {
+      "type": "news",
+      "variant": "full",
+      "nimg": "news_sense_1.jpg",
+      "npos": "40% center",
+      "date": "10 Ekim 2026",
+      "tag": "VİZYON",
+      "h": "Jane Austen klasiği <em>16 Ekim'de</em> sinemada",
+      "dek": "Daisy Edgar-Jones'lu yeni <span lang='en'>Sense and Sensibility</span>, Türkiye'de Aşk ve Yaşam adıyla vizyona giriyor.",
+      "src": "FOCUS FEATURES, BEYAZPERDE, WEBTEKNO"
+    },
+    {
+      "type": "video",
+      "video": "c06_sense_cottage.mp4",
+      "lab": "Konu",
+      "html": "Babalarını kaybeden Dashwood kızları, <b>evlerini de</b> kaybeder.",
+      "pos": "bottom",
+      "dur": 8,
+      "focus": "center",
+      "sub": "Annesi ve kız kardeşleriyle küçük bir kır evine taşınan Elinor ile Marianne, aşkın ve toplumun kurallarıyla sınanır."
+    },
+    {
+      "type": "text",
+      "lab": "İki kız kardeş",
+      "img": "news_sense_2.jpg",
+      "pos": "center 30%",
+      "accent": "amber",
+      "html": "Aklıyla hareket eden <b>Elinor</b> ve kalbinin peşinden giden <b>Marianne</b>. Austen'ın 1811 tarihli romanı, iki zıt karakter üzerinden aşkı anlatıyor."
+    },
+    {
+      "type": "big",
+      "lab": "Yönetmen",
+      "img": "news_sense_3.jpg",
+      "pos": "center 40%",
+      "accent": "pink",
+      "html": "Georgia Oakley'nin ikinci filmi. İlk filmi <b>Blue Jean</b> Venedik'te gösterilmiş ve BAFTA adaylığı almıştı."
+    },
+    {
+      "type": "video",
+      "video": "c07_sense_letter.mp4",
+      "lab": "Eleştirmenler",
+      "html": "Metacritic'te <b>72</b>, Rotten Tomatoes'ta <b>%79</b>.",
+      "pos": "bottom",
+      "dur": 8,
+      "focus": "center",
+      "accent": "amber",
+      "sub": "Dünya prömiyeri 15 Eylül'de Londra'da yapıldı."
+    },
+    {
+      "type": "rows",
+      "lab": "Bilinenler",
+      "accent": "violet",
+      "img": null,
+      "pairs": [
+        [
+          "Yönetmen",
+          "Georgia Oakley"
+        ],
+        [
+          "Oyuncular",
+          "Daisy Edgar-Jones, Esmé Creed-Miles, George MacKay"
+        ],
+        [
+          "Süre",
+          "132 dakika"
+        ],
+        [
+          "Türkiye",
+          "16 Ekim 2026"
+        ]
+      ],
+      "extra": "Senaryoyu Avustralyalı romancı Diana Reid yazdı."
+    },
+    {
+      "type": "cta",
+      "bg": "light",
+      "accent": "pink",
+      "accent_dark": "#c2386f",
+      "q": "En sevdiğin Jane Austen uyarlaması hangisi?",
+      "chips": [
+        "Yorumla"
+      ]
+    }
+  ],
+  "caption": "Jane Austen'ın Sense and Sensibility romanının yeni uyarlaması 16 Ekim'de Türkiye'de vizyona giriyor. Film Türkiye'de Aşk ve Yaşam adıyla gösterilecek.\n\nBabalarının ölümünden sonra evlerini kaybeden Dashwood kız kardeşlerini anlatan filmde Elinor'u Daisy Edgar-Jones, Marianne'ı Esmé Creed-Miles oynuyor. Kadroda George MacKay ve Caitríona Balfe de var.\n\nFilmi, ilk filmi Blue Jean ile dikkat çeken Georgia Oakley yönetti. Dünya prömiyeri 15 Eylül'de Londra'da yapılan film, eleştirmenlerden olumlu notlar aldı: Metacritic'te 72.\n\nKaynak: Focus Features, Metacritic, Rotten Tomatoes, Beyazperde, Webtekno",
+  "stills_dir": "assets/stills",
+  "pill": "HABER"
+}

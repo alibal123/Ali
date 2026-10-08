@@ -1,0 +1,85 @@
+{
+  "id": "2026-10-12_haber_fatherland",
+  "theme": "cream",
+  "slides": [
+    {
+      "type": "news",
+      "variant": "side",
+      "nimg": "news_fatherland_2.jpg",
+      "img": "news_fatherland_2.jpg",
+      "pos": "62% center",
+      "date": "12 Ekim 2026",
+      "tag": "MUBI",
+      "h": "Cannes'da en iyi yönetmen: <em><span lang='en'>Fatherland</span></em>",
+      "dek": "Ida ve Soğuk Savaş'ın yönetmeni Pawlikowski'nin yeni filmi.",
+      "src": "CULTURE.PL, WIKIPEDIA, POLSKIE RADIO"
+    },
+    {
+      "type": "video",
+      "video": "c04_fatherland_car.mp4",
+      "lab": "1949",
+      "html": "Thomas Mann ve kızı Erika, <b>ikiye bölünmüş Almanya'yı</b> arabayla geçiyor.",
+      "pos": "bottom",
+      "dur": 8,
+      "focus": "center",
+      "sub": "Mann, hem Batı'da hem Doğu'da Goethe Ödülü alacaktır."
+    },
+    {
+      "type": "text",
+      "lab": "Siyah beyaz",
+      "accent": "red",
+      "html": "Film, Ida ve Soğuk Savaş'ta olduğu gibi Łukasz Żal'ın kamerasından, <b>siyah beyaz</b> çekildi.",
+      "bg": "light",
+      "accent_dark": "#a3242f"
+    },
+    {
+      "type": "video",
+      "video": "c05_fatherland_hall.mp4",
+      "lab": "Cannes 2026",
+      "html": "Pawlikowski ana yarışmada <b>En İyi Yönetmen</b> ödülünü aldı.",
+      "pos": "bottom",
+      "dur": 8,
+      "focus": "center",
+      "accent": "amber",
+      "sub": "Rotten Tomatoes'ta %96."
+    },
+    {
+      "type": "rows",
+      "lab": "Bilinenler",
+      "accent": "sky",
+      "pairs": [
+        [
+          "Yönetmen",
+          "Paweł Pawlikowski"
+        ],
+        [
+          "Oyuncular",
+          "Sandra Hüller, Hanns Zischler, August Diehl"
+        ],
+        [
+          "Süre",
+          "82 dakika"
+        ],
+        [
+          "Türkiye",
+          "MUBI, Ata Yurdu adıyla"
+        ]
+      ],
+      "extra": "Film Türkiye'de ilk kez Eylül'de MUBI FEST İstanbul'da gösterildi; yayın tarihi henüz açıklanmadı."
+    },
+    {
+      "type": "cta",
+      "bg": "light",
+      "accent": "red",
+      "accent_dark": "#a3242f",
+      "q": "Ida mı, Soğuk Savaş mı?",
+      "chips": [
+        "Ida",
+        "Soğuk Savaş"
+      ]
+    }
+  ],
+  "caption": "Ida ve Soğuk Savaş'ın yönetmeni Paweł Pawlikowski, yeni filmi Fatherland ile Cannes'da En İyi Yönetmen ödülünü kazandı.\n\nFilm 1949'da geçiyor: Yazar Thomas Mann ve kızı Erika, ikiye bölünmüş Almanya'yı arabayla geçerek hem Batı'da hem Doğu'da verilecek Goethe Ödülü'ne gidiyor. Erika'yı Sandra Hüller, Thomas Mann'ı Hanns Zischler oynuyor. Film, Pawlikowski'nin önceki iki filmi gibi siyah beyaz çekildi.\n\nTürkiye'de MUBI'nin dağıttığı film, Ata Yurdu adıyla Eylül'de MUBI FEST İstanbul'da gösterildi. Platformdaki yayın tarihi henüz açıklanmadı.\n\nKaynak: Culture.pl, Polskie Radio, The Playlist, Sinefilatak, Beyazperde",
+  "stills_dir": "assets/stills",
+  "pill": "HABER"
+}

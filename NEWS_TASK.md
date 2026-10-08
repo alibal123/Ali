@@ -34,7 +34,7 @@ yalnızca 5. bölümdeki 3–4. adımları uygula (iş akışını tetikle, 14:0
 
 ## 3. Tasarım (tools/render.py, `news` tipi)
 - `pill: "HABER"`. Kapak: `{"type": "news", "variant": ..., "nimg": ..., "date": "8 Ekim 2026", "tag": "NETFLIX", "h": "...", "dek": "...", "src": "..."}`
-- **Varyant gün sırasına göre döner** (profil ızgarasında haberler aynı görünmesin): Pzt/Per/Paz `top`, Sal/Cum `full`, Çar/Cmt `side`.
+- **Varyant:** bir önceki günün haber kapağıyla AYNI varyantı kullanma (schedule.json'daki son `kind: haber` gönderisinin spec'ine bak). `full` ve `side` yüksek çözünürlüklü (yüksekliği 1000px+) kare ister; düşük çözünürlüklü karede `top` kullan.
   `side` için slayta `"img"` (aynı görsel) ve `"pos"` da ver. Her gün vurgu rengini (`theme`) bir önceki haberden farklı seç.
 - 3–4 slayt: kapak → `text` (haberin ayrıntısı, görselli) → `rows` "Bilinenler" (yönetmen, oyuncular, tarih, nerede) → `cta` (soru).
 - Başlık (`h`) en fazla ~8 kelime, merak uyandıran ama doğru. `<em>` ile 1–3 kelime vurgula.
@@ -42,6 +42,8 @@ yalnızca 5. bölümdeki 3–4. adımları uygula (iş akışını tetikle, 14:0
   Başlıkta İngilizce film adı geçerse `<span lang='en'>Ad</span>`.
   `rows.extra` düz metindir; içine HTML yazma.
 - Render: `python3 tools/render.py specs/<YYYY-MM-DD>_haber_<kısa-ad>.json`. Taşma uyarısı varsa kısalt. Kapağı Read ile gözle kontrol et.
+
+- **Video slayt (opsiyonel):** `assets/clips/` içinde konuyla uyumlu atmosfer klibi varsa `{"type": "video", "video": "<dosya>.mp4", "lab": ..., "html": ..., "sub": ..., "dur": 8}` ile ekleyebilirsin. Video slaytlar otomatik olarak "Atmosfer görüntüsü · filmden değildir" notu taşır; bu notu kaldırma. Aynı klibi iki farklı gönderide kullanma (history.json → news'e bak).
 
 ## 4. Açıklama (caption)
 - 2–3 kısa paragraf: haber + ayrıntı + neden önemli/ne zaman izlenebilir. Sonunda `Kaynak: <yayın adları>`.

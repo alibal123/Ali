@@ -1,0 +1,83 @@
+{
+  "id": "2026-10-15_haber_you-can-see-everything",
+  "theme": "violet",
+  "slides": [
+    {
+      "type": "news",
+      "variant": "side",
+      "nimg": "news_ycse_3.jpg",
+      "img": "news_ycse_3.jpg",
+      "pos": "40% center",
+      "date": "15 Ekim 2026",
+      "tag": "A24",
+      "h": "<span lang='en'>Nathan Fielder</span>'dan <em>gizli</em> belgesel",
+      "dek": "<span lang='en'>You Can See Everything</span>, Elizabeth Holmes'un cezaevine girmeden önceki günlerini anlatıyor.",
+      "src": "AP, A24, NBC BAY AREA"
+    },
+    {
+      "type": "video",
+      "video": "c12_ycse_camera.mp4",
+      "lab": "Konu",
+      "html": "Hapse girmesine <b>34 gün</b> kala Holmes, bir film ekibini hayatına davet ediyor.",
+      "pos": "bottom",
+      "dur": 8,
+      "focus": "center",
+      "sub": "Belgesel yaklaşık üç yıl boyunca gizlice çekildi."
+    },
+    {
+      "type": "text",
+      "lab": "Kim bu isim?",
+      "img": "news_ycse_1.jpg",
+      "pos": "center 35%",
+      "accent": "amber",
+      "html": "Elizabeth Holmes, kan testi şirketi Theranos'un kurucusu. Şirketin iddialarının çökmesinin ardından dolandırıcılıktan hüküm giydi ve <b>Mayıs 2023'te</b> cezaevine girdi."
+    },
+    {
+      "type": "video",
+      "video": "c13_ycse_blood.mp4",
+      "lab": "Telluride sürprizi",
+      "html": "Film, festivalde <b>telefonların kilitlendiği</b> gizli bir gösterimle tanıtıldı.",
+      "pos": "bottom",
+      "dur": 8,
+      "focus": "center",
+      "accent": "amber"
+    },
+    {
+      "type": "rows",
+      "lab": "Bilinenler",
+      "accent": "sky",
+      "pairs": [
+        [
+          "Yönetmenler",
+          "Nathan Fielder, Lance Oppenheim"
+        ],
+        [
+          "Dağıtım",
+          "A24"
+        ],
+        [
+          "Süre",
+          "174 dakika"
+        ],
+        [
+          "ABD",
+          "16 Ekim 2026, sinemalarda"
+        ]
+      ],
+      "extra": "Lance Oppenheim, 9 Ekim'de konuştuğumuz Primetime'ın da yönetmeni. Türkiye için henüz bir tarih açıklanmadı."
+    },
+    {
+      "type": "cta",
+      "bg": "solid",
+      "accent": "violet",
+      "q": "The Rehearsal'ı izledin mi?",
+      "chips": [
+        "İzledim",
+        "Listeme ekledim"
+      ]
+    }
+  ],
+  "caption": "The Rehearsal'ın yaratıcısı Nathan Fielder ile Lance Oppenheim'ın birlikte yönettiği belgesel You Can See Everything, 16 Ekim'de ABD'de vizyona giriyor.\n\nBelgesel, Theranos'un kurucusu Elizabeth Holmes'un Mayıs 2023'te cezaevine girmeden önceki 34 gününde başlıyor ve yaklaşık üç yıl boyunca gizlice çekiliyor. Film, Telluride Film Festivali'nde telefonların kilitlendiği sürpriz bir gösterimle tanıtıldı.\n\nA24'ün dağıttığı 174 dakikalık belgesel için Türkiye'de henüz bir gösterim tarihi açıklanmadı.\n\nKaynak: AP, A24, NBC Bay Area, Fast Company, RogerEbert.com",
+  "stills_dir": "assets/stills",
+  "pill": "HABER"
+}
