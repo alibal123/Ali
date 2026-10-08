@@ -251,7 +251,20 @@ body.split .brand{{font-size:20px;letter-spacing:.24em;white-space:nowrap}}
 .brand{{white-space:nowrap}}
 body.split .h1{{font-size:96px}}
 body.split .sub{{font-size:34px}}
+body.split .nh{{font-size:60px}} body.split .ndek{{font-size:30px}}
 body.cardpage .main{{justify-content:center}}
+/* haber */
+.nd{{display:flex;align-items:center;gap:14px;font-family:Oswald;font-weight:500;font-size:26px;letter-spacing:.24em;color:var(--fg);margin-bottom:22px;text-transform:uppercase}}
+.nd i{{width:16px;height:16px;border-radius:50%;background:var(--a);box-shadow:0 0 0 6px var(--a2)}}
+.nd span{{color:var(--a)}}
+.nimg{{width:912px;height:540px;background-size:cover;background-position:center;border-top:10px solid var(--a);margin-bottom:34px}}
+.nh{{font-family:Oswald;font-weight:700;font-size:78px;line-height:1.06;text-transform:uppercase}}
+.nh em{{font-style:normal;color:var(--a)}}
+.ndek{{font-family:Inter;font-weight:500;font-size:34px;line-height:1.4;margin-top:24px;opacity:.9}}
+.nsrc{{font-family:Oswald;font-size:22px;letter-spacing:.18em;color:var(--mut);margin-top:26px;text-transform:uppercase}}
+body.hasph .nsrc{{color:#cfc8bd}}
+.nbox{{background:rgba(11,11,12,.86);border-top:8px solid var(--a);padding:34px 38px 30px;margin:0 -20px}}
+.nbox *{{text-shadow:none!important}}
 /* tipografik dizin */
 .idx{{border-top:3px solid #111}}
 .idx div{{display:flex;align-items:baseline;gap:24px;padding:13px 0;border-bottom:2px solid rgba(0,0,0,.25)}}
@@ -387,6 +400,15 @@ def body_for(spec, s):
     if t == "index":
         rows = "".join(f'<div><b>{i+1:02d}</b><span lang="en">{e(a)}</span><small>{e(b)}</small></div>' for i, (a, b) in enumerate(s["items"]))
         return f'<div class="kick">{e(s.get("kick",""))}</div><div class="h1" style="font-size:84px;margin-bottom:34px">{s["h1"]}</div><div class="idx">{rows}</div>'
+    if t == "news":
+        v = s.get("variant", "top")
+        date = f'<div class="nd"><i></i>{e(s.get("date",""))} <span>· {e(s.get("tag","GÜNCEL"))}</span></div>'
+        head = f'<div class="nh">{s["h"]}</div><div class="ndek">{s.get("dek","")}</div><div class="nsrc">Kaynak: {e(s.get("src",""))}</div>'
+        if v == "top":
+            return f'{date}<div class="nimg" style="background-image:url({url(spec,s["nimg"])});background-position:{s.get("npos","center")}"></div>{head}'
+        if v == "full":
+            return f'<div class="nbox">{date}{head}</div>'
+        return f'{date}{head}'
     raise ValueError(f"bilinmeyen slayt tipi: {t}")
 
 
@@ -396,10 +418,13 @@ def page(spec, s, idx, total):
     bg = s.get("bg", "dark")
     ph = ""
     extra_cls = ""
-    if s["type"] == "split":
-        p = stills_path(spec, s["img"])
+    if s["type"] == "split" or (s["type"] == "news" and s.get("variant") == "side"):
+        p = stills_path(spec, s.get("img") or s.get("nimg"))
         ph = f'<div class="sp" style="background-image:url(file://{p});background-position:{s.get("pos","center")}"></div>'
         extra_cls = "split"
+    elif s["type"] == "news" and s.get("variant") == "full":
+        p = stills_path(spec, s["nimg"])
+        ph = f'<div class="ph full" style="background-image:url(file://{p});background-position:{s.get("npos","center")}"></div>'
     elif s.get("img") and s["type"] not in ("crop", "pair", "collage", "reveal"):
         p = stills_path(spec, s["img"])
         if p:
@@ -412,7 +437,9 @@ def page(spec, s, idx, total):
         extra_cls = "quote"
     if s["type"] == "card":
         extra_cls = "cardpage"
-    hp = "hasph" if ph and s["type"] not in ("split", "card") else ""
+    if s["type"] == "news" and s.get("variant") == "side":
+        extra_cls = "split"
+    hp = "hasph" if ph and s["type"] not in ("split", "card") and extra_cls != "split" else ""
     cls = " ".join(x for x in [bg if bg != "dark" else "", hp, extra_cls] if x)
     swipe = "<b>KAYDIR →</b>" if idx < total else ""
     return f"""<!doctype html><html lang="tr"><head><meta charset="utf-8"><style>{CSS}</style></head>

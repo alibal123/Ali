@@ -1,0 +1,62 @@
+{
+  "id": "2026-10-08_haber_possible-love",
+  "theme": "red",
+  "pill": "HABER",
+  "stills_dir": "assets/stills",
+  "slides": [
+    {
+      "type": "news",
+      "variant": "top",
+      "nimg": "news_possiblelove_1.jpg",
+      "npos": "center 30%",
+      "date": "8 Ekim 2026",
+      "tag": "NETFLIX",
+      "h": "<span lang='en'>Burning</span>'in yönetmeni <em>8 yıl sonra</em> dönüyor",
+      "dek": "Lee Chang-dong'un yeni filmi <span lang='en'>Possible Love</span>, 6 Kasım'da Netflix'te.",
+      "src": "NETFLIX, SCREEN DAILY"
+    },
+    {
+      "type": "text",
+      "lab": "Film ne anlatıyor?",
+      "img": "news_possiblelove_1.jpg",
+      "pos": "center 25%",
+      "accent": "amber",
+      "html": "Bir belgeselci, işten çıkarılan bir adam ile karısını filme almaya başlıyor. Kamera açıldıkça <b>iki evlilik</b> de saklı kalan duygularla yüzleşiyor."
+    },
+    {
+      "type": "rows",
+      "lab": "Bilinenler",
+      "accent": "sky",
+      "pairs": [
+        [
+          "Yönetmen",
+          "Lee Chang-dong"
+        ],
+        [
+          "Oyuncular",
+          "Jeon Do-yeon, Sul Kyung-gu, Zo In-sung, Cho Yeo-jeong"
+        ],
+        [
+          "Prömiyer",
+          "Venedik Film Festivali, ana yarışma"
+        ],
+        [
+          "Yayın",
+          "6 Kasım 2026, tüm dünyada"
+        ]
+      ],
+      "extra": "Lee'nin bir önceki filmi Burning 2018'de çıkmıştı."
+    },
+    {
+      "type": "cta",
+      "bg": "solid",
+      "accent": "red",
+      "q": "Burning'i izledin mi?",
+      "chips": [
+        "İzledim",
+        "Listeme ekledim"
+      ]
+    }
+  ],
+  "caption": "Burning'in yönetmeni Lee Chang-dong, 8 yıl aradan sonra yeni filmiyle dönüyor. Possible Love, 6 Kasım'da Netflix'te tüm dünyada yayınlanacak.\n\nFilm, işten çıkarılan bir adam ile karısını belgesel için kameraya almaya başlayan bir yönetmeni ve onun eşini anlatıyor. Çekimler ilerledikçe iki evlilik de saklı kalmış duygularla yüzleşmek zorunda kalıyor. Başrollerde Jeon Do-yeon, Sul Kyung-gu, Zo In-sung ve Cho Yeo-jeong var.\n\nDünya prömiyerini Venedik Film Festivali'nin ana yarışmasında yapan film, Kore'de eylülde vizyona girdi. Burning'i sevdiysen takvimine not al.\n\nKaynak: Netflix, Screen Daily"
+}
