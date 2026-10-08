@@ -41,6 +41,7 @@ Veri kaynakları (hesaba uygun film seçimi):
 - Kullanıcının indirdiği filmler: `~/Downloads/FİLMLER/` (ffmpeg ile gerçek kare çıkarılabilir — OYUN için ideal).
 
 ### Tasarım tarzı (bağlayıcı)
+Bir gönderide aynı fotoğraf iki slaytta KULLANILMAZ; her fotoğraflı slayt farklı bir sahne karesi olsun (film-grab galerisinden 6–12 kare çek).
 Kullanıcı 12–21 Ekim için studio.py + Higgsfield ile yapılan 10 farklı tasarım dilindeki gönderileri beğenmedi ve sildirdi.
 Gönderileri YALNIZCA tools/render.py ile, 1–11 Ekim gönderilerinin (specs/2026-10-0*.json, 2026-10-1[01]) genel tarzında yap: koyu zemin + sahne karesi,
 Oswald/Inter/Playfair, vurgu renkleri gönderiden gönderiye değişir. tools/studio.py ve Higgsfield (illüstrasyon/upscale) KULLANMA.

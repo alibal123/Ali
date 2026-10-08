@@ -28,6 +28,10 @@ yalnızca 5. bölümdeki 3–4. adımları uygula (iş akışını tetikle, 14:0
   ~60 sn bekle, `git pull --rebase`, dosyanın geldiğini ve Read ile görselin uygun olduğunu kontrol et.
 - Görsel alınamazsa `variant: "plain"` kullan ve kapak zeminini `"bg": "solid"` yap (fotoğrafsız tipografik haber).
 
+
+- **Görsel kuralı (Ali'nin isteği):** Bir gönderide aynı fotoğraf iki slaytta KULLANILMAZ. Her fotoğraflı slayt farklı bir kare olmalı. Haber için en az 3 farklı film karesi bul (resmi duyuru, festival incelemesi, haber siteleri; WebFetch ile 'sayfadaki film karesi görsellerinin tam adreslerini ver'). 3 kare bulamazsan fotoğrafsız slayt kullan (`rows`, `cta`, `bg: solid/light`), aynı kareyi tekrarlama. Afiş/yazılı görsel kullanma.
+- Haberde önemli bilgileri atlama: ödül, festival, Oscar adaylığı gibi bilgileri kaynaklarda özellikle ara.
+
 ## 3. Tasarım (tools/render.py, `news` tipi)
 - `pill: "HABER"`. Kapak: `{"type": "news", "variant": ..., "nimg": ..., "date": "8 Ekim 2026", "tag": "NETFLIX", "h": "...", "dek": "...", "src": "..."}`
 - **Varyant gün sırasına göre döner** (profil ızgarasında haberler aynı görünmesin): Pzt/Per/Paz `top`, Sal/Cum `full`, Çar/Cmt `side`.
