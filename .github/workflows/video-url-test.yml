@@ -1,0 +1,14 @@
+name: Video adresi testi
+on:
+  workflow_dispatch:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: jsDelivr içerik türü
+        run: |
+          for f in 2026-10-09_haber_primetime/02.mp4 2026-10-13_haber_clayface/04.mp4; do
+            u="https://cdn.jsdelivr.net/gh/${GITHUB_REPOSITORY}@${GITHUB_SHA}/posts/$f"
+            h=$(curl -sSIL -m 60 "$u" | grep -iE "^HTTP|content-type|content-length" | tr '\r\n' '  ')
+            echo "::notice::$f -> $h"
+          done
