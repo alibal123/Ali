@@ -197,6 +197,67 @@ body.solid .cta div{{border-color:#111;color:#111}}
 /* sayı */
 .bignum{{font-family:'DM Serif Display';font-size:300px;line-height:.9;color:var(--a);letter-spacing:-.02em}}
 body.light .bignum{{color:var(--ad)}}
+/* --- v3 yerleşimleri: aynı yazı tipleri, farklı kompozisyon --- */
+/* afiş: üstte çerçeveli kare, ortalanmış başlık */
+.poster{{text-align:center;display:flex;flex-direction:column;align-items:center}}
+.poster .pimg{{width:912px;height:640px;background-size:cover;background-position:center;border:2px solid rgba(255,255,255,.18);box-shadow:0 30px 80px rgba(0,0,0,.6)}}
+.poster .pk{{font-family:Oswald;font-weight:500;font-size:26px;letter-spacing:.4em;color:var(--a);margin:44px 0 10px}}
+.poster .pt{{font-family:'DM Serif Display';font-size:150px;line-height:.95}}
+.poster .pm{{font-family:Oswald;font-size:26px;letter-spacing:.3em;color:var(--mut);margin-top:16px;text-transform:uppercase}}
+.poster .pl{{font-family:'Playfair Display';font-style:italic;font-weight:700;font-size:40px;line-height:1.3;margin-top:22px;max-width:820px}}
+/* film şeridi */
+.strip{{display:flex;flex-direction:column;gap:0;margin-bottom:34px;background:#000;padding:0 46px;border-radius:6px;position:relative}}
+.strip::before,.strip::after{{content:'';position:absolute;top:0;bottom:0;width:30px;background:radial-gradient(circle at 15px 22px,#efe6d6 7px,transparent 8px) 0 0/30px 44px repeat-y}}
+.strip::before{{left:8px}} .strip::after{{right:8px}}
+.sfr{{height:228px;margin:12px 0;background-size:cover;background-position:center;position:relative}}
+.sfr b{{position:absolute;left:16px;top:10px;font-family:Oswald;font-weight:700;font-size:40px;color:var(--a);text-shadow:0 2px 10px rgba(0,0,0,.8)}}
+/* çerçeve: eğik fotoğraf + kutulu başlık */
+.frm{{position:relative;width:912px;height:760px;margin-bottom:20px}}
+.frm .fi{{position:absolute;inset:0;background-size:cover;background-position:center;border:16px solid var(--a);transform:rotate(-2.2deg);box-shadow:0 30px 70px rgba(0,0,0,.6)}}
+.frm .fb{{position:absolute;left:-10px;bottom:-40px;background:#0b0b0c;padding:22px 30px 26px;max-width:860px;transform:rotate(1deg)}}
+.frm .fb .h1{{font-size:86px}}
+/* menü kartı */
+.card{{align-self:center;width:840px;background:#efe6d6;color:#1a1714;padding:56px 60px 50px;text-align:center;outline:3px solid #efe6d6;outline-offset:12px;box-shadow:0 40px 90px rgba(0,0,0,.7)}}
+.card .ck{{font-family:Oswald;font-weight:500;font-size:24px;letter-spacing:.4em;color:var(--ad)}}
+.card .ct{{font-family:'DM Serif Display';font-size:104px;line-height:1;margin:18px 0 8px}}
+.card .cs{{font-family:'Playfair Display';font-style:italic;font-weight:700;font-size:32px;color:#6d6458}}
+.card hr{{border:0;border-top:2px solid #1a1714;width:120px;margin:30px auto}}
+.card .ci{{font-family:'Playfair Display';font-style:italic;font-weight:400;font-size:34px;line-height:1.75}}
+.card .ci b{{font-family:Oswald;font-style:normal;font-weight:500;font-size:22px;letter-spacing:.24em;color:var(--ad);margin-right:14px}}
+.card .cf{{font-family:Oswald;font-size:24px;letter-spacing:.24em;margin-top:30px;color:#6d6458;text-transform:uppercase}}
+/* mozaik bulmaca */
+.mos{{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:40px}}
+.mos div{{height:262px;border-radius:10px;background-repeat:no-repeat;position:relative}}
+.mos div::after{{content:'?';position:absolute;right:12px;bottom:4px;font-family:Oswald;font-weight:700;font-size:40px;color:var(--a);text-shadow:0 2px 8px #000}}
+/* en-boy oranları */
+.ratio{{position:relative;width:912px;height:666px;margin-bottom:46px}}
+.ratio .rimg{{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.55}}
+.ratio .rb{{position:absolute;left:0;right:0;border:4px solid;display:flex;justify-content:flex-end;align-items:flex-start}}
+.ratio .rb span{{font-family:Oswald;font-weight:700;font-size:34px;padding:4px 14px;color:#0b0b0c}}
+/* letterbox */
+.lbx{{width:912px;height:560px;background:#000;display:flex;align-items:center;justify-content:center;margin-bottom:34px;position:relative}}
+.lbx div{{width:912px;background-size:cover;background-position:center}}
+.lbx span{{position:absolute;right:16px;top:12px;font-family:Oswald;font-weight:700;font-size:40px;color:var(--a)}}
+/* alıntı */
+body.quote .main{{justify-content:center;text-align:center;align-items:center}}
+.qm{{font-family:'DM Serif Display';font-size:260px;line-height:.6;color:var(--a);height:120px}}
+.qt{{font-family:'Playfair Display';font-style:italic;font-weight:800;font-size:96px;line-height:1.12;max-width:900px}}
+.qb{{font-family:Oswald;font-size:28px;letter-spacing:.3em;color:var(--a);margin-top:40px;text-transform:uppercase}}
+/* ikiye bölünmüş */
+.sp{{position:absolute;left:0;top:0;width:500px;height:1350px;background-size:cover;background-position:center}}
+.sp::after{{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent 70%,rgba(11,11,12,.9))}}
+body.split .frame{{padding-left:560px}}
+body.split .brand{{font-size:20px;letter-spacing:.24em;white-space:nowrap}}
+.brand{{white-space:nowrap}}
+body.split .h1{{font-size:96px}}
+body.split .sub{{font-size:34px}}
+body.cardpage .main{{justify-content:center}}
+/* tipografik dizin */
+.idx{{border-top:3px solid #111}}
+.idx div{{display:flex;align-items:baseline;gap:24px;padding:13px 0;border-bottom:2px solid rgba(0,0,0,.25)}}
+.idx b{{font-family:Oswald;font-weight:700;font-size:30px;min-width:48px}}
+.idx span{{font-family:Oswald;font-weight:700;font-size:62px;line-height:1;text-transform:uppercase;flex:1}}
+.idx small{{font-family:Oswald;font-size:28px;letter-spacing:.1em}}
 """
 
 e = html.escape
@@ -289,6 +350,43 @@ def body_for(spec, s):
         return f'<div class="lab">{e(s["lab"])}</div><div class="rv">{cells}</div>'
     if t == "number":
         return f'<div class="lab">{e(s["lab"])}</div><div class="bignum">{e(s["big"])}</div><div class="txt" style="margin-top:20px">{s["html"]}</div>'
+    if t == "poster":
+        return (f'<div class="poster"><div class="pimg" style="background-image:url({url(spec,s["pimg"])});background-position:{s.get("ppos","center")}"></div>'
+                f'<div class="pk">{e(s.get("kick",""))}</div><div class="pt" lang="{s.get("lang","en")}">{s["title"]}</div>'
+                f'<div class="pm" lang="en">{e(s.get("meta",""))}</div><div class="pl">{s.get("line","")}</div></div>')
+    if t == "strip":
+        fr = "".join(f'<div class="sfr" style="background-image:url({url(spec,c["img"])});background-position:{c.get("pos","center")}"><b>{i+1:02d}</b></div>' for i, c in enumerate(s["imgs"]))
+        return f'<div class="strip">{fr}</div><div class="h1" style="font-size:92px">{s["h1"]}</div><div class="sub" style="margin-top:22px">{s.get("sub","")}</div>'
+    if t == "frame":
+        return (f'<div class="kick">{e(s.get("kick",""))}</div><div class="frm"><div class="fi" style="background-image:url({url(spec,s["fimg"])});background-position:{s.get("fpos","center")}"></div>'
+                f'<div class="fb"><div class="h1">{s["h1"]}</div></div></div><div class="sub" style="margin-top:70px">{s.get("sub","")}</div>')
+    if t == "card":
+        items = "".join(f'<div><b>{e(a)}</b>{e(b)}</div>' for a, b in s["items"])
+        return (f'<div class="card"><div class="ck">{e(s.get("kick",""))}</div><div class="ct" lang="en">{e(s["title"])}</div>'
+                f'<div class="cs">{s.get("sub","")}</div><hr><div class="ci">{items}</div><div class="cf">{e(s.get("foot",""))}</div></div>')
+    if t == "mosaic":
+        tiles = "".join(f'<div style="background-image:url({url(spec,c["img"])});background-size:{int(c.get("zoom",3)*100)}% auto;background-position:{c.get("focus","50% 50%")}"></div>' for c in s["tiles"])
+        return f'<div class="kick">{e(s.get("kick",""))}</div><div class="mos">{tiles}</div><div class="h1" style="font-size:96px">{s["h1"]}</div><div class="sub" style="margin-top:22px">{s.get("sub","")}</div>'
+    if t == "ratio":
+        boxes = ""
+        for r, c in s["ratios"]:
+            h = int(912 / float(r))
+            boxes += f'<div class="rb" style="top:{(666-h)//2}px;height:{h}px;border-color:{col(c)}"><span style="background:{col(c)}">{e(r)}:1</span></div>'
+        return (f'<div class="kick">{e(s.get("kick",""))}</div><div class="ratio"><div class="rimg" style="background-image:url({url(spec,s["rimg"])})"></div>{boxes}</div>'
+                f'<div class="h1" style="font-size:88px">{s["h1"]}</div><div class="sub" style="margin-top:22px">{s.get("sub","")}</div>')
+    if t == "letterbox":
+        r = float(s["ratio"]); w, h = 912, int(912 / r)
+        if h > 560:
+            h, w = 560, int(560 * r)
+        return (f'<div class="lab">{e(s["lab"])} &nbsp;·&nbsp; {e(s["ratio"])}:1</div><div class="lbx"><div style="width:{w}px;height:{h}px;background-image:url({url(spec,s["limg"])});background-position:{s.get("lpos","center")}"></div></div>'
+                f'<div class="txt" style="font-size:40px">{s["html"]}</div>')
+    if t == "quote":
+        return f'<div class="qm">“</div><div class="qt">{s["q"]}</div><div class="qb" lang="en">{e(s.get("by",""))}</div><div class="sub" style="margin-top:30px">{s.get("sub","")}</div>'
+    if t == "split":
+        return f'<div class="kick">{e(s.get("kick",""))}</div><div class="h1" lang="{s.get("lang","en")}" style="font-size:{s.get("h1size",96)}px">{s["h1"]}</div><div class="meta" lang="en" style="margin:20px 0 0">{e(s.get("meta",""))}</div><div class="sub">{s.get("sub","")}</div>'
+    if t == "index":
+        rows = "".join(f'<div><b>{i+1:02d}</b><span lang="en">{e(a)}</span><small>{e(b)}</small></div>' for i, (a, b) in enumerate(s["items"]))
+        return f'<div class="kick">{e(s.get("kick",""))}</div><div class="h1" style="font-size:84px;margin-bottom:34px">{s["h1"]}</div><div class="idx">{rows}</div>'
     raise ValueError(f"bilinmeyen slayt tipi: {t}")
 
 
@@ -297,14 +395,25 @@ def page(spec, s, idx, total):
     accent_dark = col(s.get("accent_dark")) or "#b8432f"
     bg = s.get("bg", "dark")
     ph = ""
-    if s.get("img") and s["type"] not in ("crop", "pair", "collage", "reveal"):
+    extra_cls = ""
+    if s["type"] == "split":
+        p = stills_path(spec, s["img"])
+        ph = f'<div class="sp" style="background-image:url(file://{p});background-position:{s.get("pos","center")}"></div>'
+        extra_cls = "split"
+    elif s.get("img") and s["type"] not in ("crop", "pair", "collage", "reveal"):
         p = stills_path(spec, s["img"])
         if p:
             blur = s.get("blur", 0)
-            f = f"filter:blur({blur}px) brightness(.8);transform:scale(1.08);" if blur else ""
-            full = " full" if s["type"] == "fullphoto" else ""
+            gray = "grayscale(1) " if s.get("gray") else ""
+            f = f"filter:{gray}blur({blur}px) brightness(.8);transform:scale(1.08);" if (blur or gray) else ""
+            full = " full" if s["type"] in ("fullphoto", "quote", "card") else ""
             ph = f'<div class="ph{full}" style="background-image:url(file://{p});background-position:{s.get("pos","center")};{f}"></div>'
-    cls = " ".join(x for x in [bg if bg != "dark" else "", "hasph" if ph else ""] if x)
+    if s["type"] == "quote":
+        extra_cls = "quote"
+    if s["type"] == "card":
+        extra_cls = "cardpage"
+    hp = "hasph" if ph and s["type"] not in ("split", "card") else ""
+    cls = " ".join(x for x in [bg if bg != "dark" else "", hp, extra_cls] if x)
     swipe = "<b>KAYDIR →</b>" if idx < total else ""
     return f"""<!doctype html><html lang="tr"><head><meta charset="utf-8"><style>{CSS}</style></head>
 <body class="{cls}" style="--a:{accent};--a2:{rgba(accent,.2)};--ad:{accent_dark}">{ph}<div class="glow"></div><div class="noise"></div>

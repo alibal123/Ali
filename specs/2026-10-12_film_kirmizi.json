@@ -1,0 +1,84 @@
+{
+  "id": "2026-10-12_film_kirmizi",
+  "theme": "red",
+  "pill": "FİLM",
+  "slides": [
+    {
+      "type": "poster",
+      "pimg": "fg_red_02.jpg",
+      "kick": "KIESLOWSKI · 1994",
+      "title": "Kırmızı",
+      "lang": "tr",
+      "meta": "Trois Couleurs: Rouge",
+      "line": "Bir köpek, bir yargıç ve hiç tanışmaması gereken iki insan."
+    },
+    {
+      "type": "text",
+      "lab": "Konu",
+      "img": "fg_red_07.jpg",
+      "html": "Cenevre'de yaşayan genç model Valentine, gece arabasıyla bir köpeğe çarpar. Sahibini bulduğunda karşısında emekli bir yargıç vardır: <b>komşularının telefonlarını gizlice dinleyen</b> yalnız bir adam."
+    },
+    {
+      "type": "number",
+      "lab": "Üçlemenin son filmi",
+      "big": "3",
+      "accent": "sky",
+      "accent_dark": "#2f5fb3",
+      "bg": "light",
+      "html": "Mavi, Beyaz, Kırmızı: Fransız bayrağının üç rengi ve üç ideali. Mavi <b>özgürlük</b>, Beyaz <b>eşitlik</b>, Kırmızı ise <b>kardeşlik</b>."
+    },
+    {
+      "type": "big",
+      "lab": "Neden izlemeli",
+      "img": "fg_red_05.jpg",
+      "accent": "amber",
+      "html": "Tesadüf gibi görünen her şeyin <b>görünmez bir iple</b> bağlı olduğu bir film."
+    },
+    {
+      "type": "bullets",
+      "lab": "İzlerken dikkat et",
+      "accent": "red",
+      "items": [
+        "Kırmızı renk neredeyse her karede: afişler, arabalar, bir sakız.",
+        "Valentine'in hiç tanışmadığı genç hukuk öğrencisi Auguste'ün hikâyesi.",
+        "Sonda üçlemenin diğer iki filminin karakterlerini ara."
+      ]
+    },
+    {
+      "type": "rows",
+      "lab": "Künye",
+      "accent": "coral",
+      "pairs": [
+        [
+          "Yönetmen",
+          "Krzysztof Kieślowski"
+        ],
+        [
+          "Oyuncular",
+          "Irène Jacob, Jean-Louis Trintignant"
+        ],
+        [
+          "Oscar",
+          "3 dal adaylık"
+        ],
+        [
+          "Süre",
+          "99 dakika"
+        ]
+      ],
+      "extra": "Kieślowski'nin son filmi. Mavi ve Beyaz'ı izlemeden de anlaşılır."
+    },
+    {
+      "type": "cta",
+      "bg": "solid",
+      "accent": "red",
+      "q": "Üçlemeden hangisini izledin? <b>Mavi, Beyaz, Kırmızı</b>",
+      "chips": [
+        "Kaydet",
+        "Paylaş"
+      ]
+    }
+  ],
+  "caption": "Kırmızı (1994), Cenevre'de yaşayan genç model Valentine'in bir gece arabasıyla bir köpeğe çarpmasıyla başlıyor. Köpeğin sahibini bulduğunda karşısına çıkan emekli yargıç, komşularının telefon konuşmalarını gizlice dinleyerek yaşayan yalnız bir adamdır.\n\nValentine bu adamın yaptığından tiksinir ama ona dönmeden de edemez. Aynı şehirde, birbirlerini hiç tanımayan bir hukuk öğrencisinin hayatı da sessizce onlarınkine dokunmaktadır. Film boyunca tesadüf sandığın her şey bir yere bağlanır.\n\nKrzysztof Kieślowski'nin Üç Renk üçlemesinin son filmi ve yönetmenin kendi son filmi. Mavi özgürlük, Beyaz eşitlik, Kırmızı kardeşlik. Diğer ikisini izlemeden de izleyebilirsin; ama izlediysen finali bambaşka okuyacaksın.\n\nYarın 20:00'de: Tamamen kafanın içinde geçen üç film.",
+  "stills_dir": "assets/stills"
+}

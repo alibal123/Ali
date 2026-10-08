@@ -1,0 +1,101 @@
+{
+  "id": "2026-10-21_liste-7-oneri",
+  "theme": "lime",
+  "pill": "LİSTE",
+  "slides": [
+    {
+      "type": "index",
+      "bg": "solid",
+      "accent": "lime",
+      "kick": "AYNI FİLMLERE BAKMAKTAN SIKILDIYSAN",
+      "h1": "7 öneri",
+      "items": [
+        [
+          "Stalker",
+          "1979"
+        ],
+        [
+          "Dark City",
+          "1998"
+        ],
+        [
+          "The Fall",
+          "2006"
+        ],
+        [
+          "Paprika",
+          "2006"
+        ],
+        [
+          "Timecrimes",
+          "2007"
+        ],
+        [
+          "Synecdoche, New York",
+          "2008"
+        ],
+        [
+          "Moon",
+          "2009"
+        ]
+      ]
+    },
+    {
+      "type": "rows",
+      "lab": "Kafa açanlar",
+      "accent": "violet",
+      "pairs": [
+        [
+          "Stalker",
+          "Bir odaya giden yolculuk, insanın gerçek arzusu"
+        ],
+        [
+          "Synecdoche, New York",
+          "Hayatını sahneye koyan bir yönetmen"
+        ],
+        [
+          "Paprika",
+          "Rüyalara giren bir cihaz"
+        ]
+      ]
+    },
+    {
+      "type": "rows",
+      "lab": "Gizemli ve karanlık",
+      "accent": "sky",
+      "pairs": [
+        [
+          "Dark City",
+          "Güneşin hiç doğmadığı bir şehir"
+        ],
+        [
+          "Timecrimes",
+          "Bir saatlik zaman döngüsü"
+        ],
+        [
+          "Moon",
+          "Ayda üç yıl yalnız kalan bir adam"
+        ]
+      ]
+    },
+    {
+      "type": "big",
+      "lab": "Görsel şölen",
+      "accent": "coral",
+      "html": "<span lang='en'>The Fall</span>: hastanede yatan bir dublörün küçük bir kıza anlattığı masal. <b>Görüntülerin çoğu gerçek mekânlarda çekildi.</b>"
+    },
+    {
+      "type": "cta",
+      "bg": "light",
+      "accent": "lime",
+      "accent_dark": "#5d7a12",
+      "q": "Listeye senin <b>8. önerin</b> ne olurdu?",
+      "chips": [
+        "Kaydet",
+        "Yorumla"
+      ]
+    }
+  ],
+  "caption": "Aynı filmlere bakmaktan sıkıldıysan 7 öneri. Hepsi bilinen listelerin dışında kalmış ama izleyeni etkilemiş filmler.\n\nStalker (1979), Dark City (1998), The Fall (2006), Paprika (2006), Timecrimes (2007), Synecdoche, New York (2008) ve Moon (2009). Kimi rüyalara giriyor, kimi zamanı döngüye sokuyor, kimi de ayda üç yıl yalnız kalan bir adamı anlatıyor.\n\nListeyi kaydet, birini bu hafta sonu aç. Senin sekizinci önerin ne olurdu?\n\nYarın 20:00'de yeni haftanın ilk gönderisiyle buradayız. Takipte kal.",
+  "stills_dir": "assets/stills"
+}

@@ -1,0 +1,72 @@
+{
+  "id": "2026-10-13_liste_kafanin-icinde",
+  "theme": "violet",
+  "pill": "LİSTE",
+  "slides": [
+    {
+      "type": "strip",
+      "imgs": [
+        {
+          "img": "fg_memento_12.jpg"
+        },
+        {
+          "img": "fg_malkovich_01.jpg"
+        },
+        {
+          "img": "fg_truman_04.jpg"
+        }
+      ],
+      "h1": "Kafanın <em>içinde</em> geçen 3 film",
+      "sub": "Hafıza, kimlik ve gerçeklik: üç farklı kapıdan aynı soru."
+    },
+    {
+      "type": "film",
+      "n": 1,
+      "title": "Memento",
+      "meta": "2000 · Christopher Nolan",
+      "img": "fg_memento_02.jpg",
+      "accent": "amber",
+      "konu": "Yeni anı oluşturamayan Leonard, karısının katilini polaroidler ve dövmelerle arıyor.",
+      "why": "Hikâye sondan başa anlatılıyor; sen de Leonard kadar az şey biliyorsun."
+    },
+    {
+      "type": "film",
+      "n": 2,
+      "title": "Being John Malkovich",
+      "meta": "1999 · Spike Jonze",
+      "img": "fg_malkovich_05.jpg",
+      "accent": "teal",
+      "konu": "İşsiz bir kuklacı, ofisteki küçük bir kapının ünlü bir oyuncunun zihnine açıldığını keşfediyor.",
+      "why": "Charlie Kaufman senaryosu: absürt başlıyor, kimlik üzerine ciddi bir soruya dönüşüyor."
+    },
+    {
+      "type": "film",
+      "n": 3,
+      "title": "The Truman Show",
+      "meta": "1998 · Peter Weir",
+      "img": "fg_truman_08.jpg",
+      "accent": "sky",
+      "konu": "Truman, doğduğu günden beri hayatının canlı yayında izlendiğini bilmiyor.",
+      "why": "Gerçeklik şovlarından ve sosyal medyadan önce çekilmiş, bugün daha da doğru."
+    },
+    {
+      "type": "big",
+      "lab": "Ortak nokta",
+      "bg": "light",
+      "accent": "violet",
+      "accent_dark": "#5b3fb8",
+      "html": "Üçünde de kahraman aynı şeyi soruyor: <b>Gördüğüm şey gerçekten benim mi?</b>"
+    },
+    {
+      "type": "cta",
+      "accent": "violet",
+      "q": "Bu listeye hangi filmi eklerdin?",
+      "chips": [
+        "Kaydet",
+        "Yorumla"
+      ]
+    }
+  ],
+  "caption": "Kafanın içinde geçen 3 film. Üçü de aynı soruyu farklı kapılardan soruyor: Gördüğüm şey gerçekten benim mi?\n\nMemento'da Leonard yeni anı oluşturamıyor ve hayatını polaroidlerle, vücuduna yazdığı notlarla kuruyor. Being John Malkovich'te bir ofis kapısı ünlü bir oyuncunun zihnine açılıyor. The Truman Show'da ise Truman, doğduğu günden beri hayatının canlı yayında izlendiğini bilmiyor.\n\nHafıza, kimlik ve gerçeklik üzerine düşündüren bu üç film, izledikten sonra kendi hayatına biraz şüpheyle bakmana neden olabilir. Hangisini izledin, hangisi listende?\n\nYarın 20:00'de: Uzaylılarla konuşmanın üç farklı yolu.",
+  "stills_dir": "assets/stills"
+}

@@ -1,0 +1,75 @@
+{
+  "id": "2026-10-14_karsilastirma_uzaylilarla-konusmak",
+  "theme": "cyan",
+  "pill": "KARŞILAŞTIRMA",
+  "slides": [
+    {
+      "type": "frame",
+      "fimg": "fg_closeenc_07.jpg",
+      "kick": "3 FİLM · 3 YÖNTEM",
+      "h1": "Uzaylılarla nasıl <em>konuşulur?</em>",
+      "sub": "Biri müzikle, biri matematikle, biri dille denedi."
+    },
+    {
+      "type": "split",
+      "img": "fg_closeenc_10.jpg",
+      "kick": "01 · MÜZİK",
+      "h1": "Close Encounters",
+      "meta": "1977 · Steven Spielberg",
+      "accent": "amber",
+      "sub": "Beş notalık bir melodi ve el işaretleri. İletişim, herkesin duyabileceği bir dille başlıyor.",
+      "h1size": 78
+    },
+    {
+      "type": "split",
+      "img": "fg_contact_09.jpg",
+      "kick": "02 · MATEMATİK",
+      "h1": "Contact",
+      "meta": "1997 · Robert Zemeckis",
+      "accent": "lime",
+      "sub": "Uzaydan gelen sinyal asal sayılardan oluşuyor. Evrensel olan şey dil değil, sayılar."
+    },
+    {
+      "type": "split",
+      "img": "fg_arrival_06.jpg",
+      "kick": "03 · DİL",
+      "h1": "Arrival",
+      "meta": "2016 · Denis Villeneuve",
+      "accent": "pink",
+      "sub": "Bir dilbilimci, dairesel sembollerle yazan varlıkların dilini öğreniyor. Dil, düşünme biçimini de değiştiriyor."
+    },
+    {
+      "type": "rows",
+      "lab": "Yan yana",
+      "bg": "solid",
+      "accent": "cyan",
+      "pairs": [
+        [
+          "Close Encounters",
+          "Müzik · merak"
+        ],
+        [
+          "Contact",
+          "Matematik · bilim ve inanç"
+        ],
+        [
+          "Arrival",
+          "Dil · zaman"
+        ]
+      ],
+      "extra": "Üçünde de asıl soru aynı: önce kendimizi anlayabiliyor muyuz?"
+    },
+    {
+      "type": "cta",
+      "accent": "cyan",
+      "q": "Sen olsan hangi yöntemi seçerdin?",
+      "chips": [
+        "Müzik",
+        "Matematik",
+        "Dil"
+      ]
+    }
+  ],
+  "caption": "Uzaylılarla nasıl konuşulur? Üç film, üç farklı cevap veriyor.\n\nClose Encounters of the Third Kind (1977), iletişimi beş notalık bir melodiyle kuruyor. Contact (1997), uzaydan gelen asal sayı dizisini evrensel bir dil olarak görüyor. Arrival (2016) ise bir dilbilimcinin dairesel sembollerle yazan varlıkların dilini öğrenirken kendi düşünme biçiminin değişmesini anlatıyor.\n\nMüzik, matematik ve dil. Üç film de uzaylılardan çok insanı anlatıyor: başkasını anlamaya çalışırken aslında kendimizi ne kadar anladığımızı. Sen hangi yöntemi seçerdin?\n\nYarın 20:00'de: Kişi başı 1.250 dolarlık bir akşam yemeği.",
+  "stills_dir": "assets/stills"
+}

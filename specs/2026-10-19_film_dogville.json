@@ -1,0 +1,57 @@
+{
+  "id": "2026-10-19_film_dogville",
+  "theme": "cream",
+  "pill": "FİLM",
+  "slides": [
+    {
+      "type": "split",
+      "img": "fg_dogville_09.jpg",
+      "kick": "LARS VON TRIER · 2003",
+      "h1": "Dogville",
+      "meta": "Nicole Kidman, Paul Bettany",
+      "sub": "Duvarları olmayan bir kasaba. Herkes her şeyi görüyor; kimse bir şey yapmıyor."
+    },
+    {
+      "type": "fullphoto",
+      "img": "fg_dogville_01.jpg",
+      "kick": "SET",
+      "title": "Tebeşir çizgileri",
+      "accent": "amber",
+      "line": "Kasaba bir stüdyonun siyah zeminine çizildi. Evlerin duvarı yok, kapılar hayalî."
+    },
+    {
+      "type": "text",
+      "lab": "Konu",
+      "img": "fg_dogville_03.jpg",
+      "accent": "amber",
+      "html": "1930'lar, Rocky Dağları'nda küçük bir kasaba. Gangsterlerden kaçan Grace'i kasabalılar saklamayı kabul ediyor. Ama karşılığında <b>bir şey</b> istiyorlar."
+    },
+    {
+      "type": "number",
+      "lab": "Yapı",
+      "big": "9",
+      "bg": "light",
+      "accent": "red",
+      "accent_dark": "#a33",
+      "html": "Bir önsöz ve dokuz bölüm. Film bir roman gibi bölüm bölüm anlatılıyor."
+    },
+    {
+      "type": "big",
+      "lab": "Neden izlemeli",
+      "img": "fg_dogville_12.jpg",
+      "accent": "amber",
+      "html": "Üç saat boyunca duvarsız bir sette izlediğin şeyin <b>aslında sen olduğunu</b> fark ettiren bir film."
+    },
+    {
+      "type": "cta",
+      "accent": "amber",
+      "q": "Grace'in yerinde olsan kalır mıydın?",
+      "chips": [
+        "Kalırdım",
+        "Giderdim"
+      ]
+    }
+  ],
+  "caption": "Dogville (2003), 1930'larda Rocky Dağları'ndaki küçük bir kasabada geçiyor. Gangsterlerden kaçan Grace'i kasabalılar saklamayı kabul ediyor, ama karşılığında ondan bir şey istiyorlar.\n\nLars von Trier filmi bir stüdyonun siyah zeminine çizilmiş tebeşir çizgileriyle çekti. Evlerin duvarı yok, kapılar hayalî, köpek bile yere çizilmiş. Herkes her şeyi görüyor ama kimse bir şey yapmıyor. Bir önsöz ve dokuz bölümle bir roman gibi anlatılıyor.\n\nNicole Kidman'ın Grace'iyle film, iyilik, minnet ve topluluk üzerine rahatsız edici bir soru soruyor. Kolay bir film değil, ama unutulacak bir film de değil.\n\nYarın 20:00'de: Siyah beyaz bir filmde tek bir renk.",
+  "stills_dir": "assets/stills"
+}

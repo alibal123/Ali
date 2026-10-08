@@ -1,0 +1,69 @@
+{
+  "id": "2026-10-18_film_kayip-balik-nemo",
+  "theme": "amber",
+  "pill": "YENİDEN İZLE",
+  "slides": [
+    {
+      "type": "quote",
+      "img": "fg_nemo_01.jpg",
+      "blur": 3,
+      "q": "Yüzmeye devam et.",
+      "by": "Finding Nemo · 2003",
+      "sub": "Çocukken komik bir replikti. Şimdi bir hayat tavsiyesi."
+    },
+    {
+      "type": "text",
+      "lab": "Hatırlatma",
+      "img": "fg_nemo_03.jpg",
+      "html": "Palyaço balığı Marlin, tek oğlu Nemo yakalanınca onu bulmak için okyanusu geçiyor. Yanında her şeyi unutan Dori var."
+    },
+    {
+      "type": "big",
+      "lab": "Yetişkin gözüyle",
+      "img": "fg_nemo_06.jpg",
+      "accent": "teal",
+      "html": "Bu bir kayıp çocuk hikâyesi değil. <b>Bırakmayı öğrenmek zorunda kalan bir babanın</b> hikâyesi."
+    },
+    {
+      "type": "bullets",
+      "lab": "Büyüyünce fark ettiklerin",
+      "accent": "coral",
+      "items": [
+        "Marlin'in aşırı korumacılığının nereden geldiğini ilk sahne anlatıyor.",
+        "Dori'nin unutkanlığı komik ama yalnızlığı gerçek.",
+        "Kaplumbağalar Marlin'e asıl dersi veriyor: çocuğuna güven."
+      ]
+    },
+    {
+      "type": "rows",
+      "lab": "Künye",
+      "accent": "sky",
+      "pairs": [
+        [
+          "Yönetmen",
+          "Andrew Stanton"
+        ],
+        [
+          "Stüdyo",
+          "Pixar"
+        ],
+        [
+          "Oscar",
+          "En İyi Animasyon"
+        ]
+      ],
+      "extra": "Türkçe adıyla Kayıp Balık Nemo."
+    },
+    {
+      "type": "cta",
+      "bg": "solid",
+      "accent": "amber",
+      "q": "Çocukken izleyip büyüyünce anladığın film hangisi?",
+      "chips": [
+        "Yorumla"
+      ]
+    }
+  ],
+  "caption": "Kayıp Balık Nemo (2003), palyaço balığı Marlin'in yakalanan oğlu Nemo'yu bulmak için okyanusu geçmesini anlatıyor. Yanında her şeyi birkaç saniyede unutan Dori var.\n\nÇocukken bu bir macera filmiydi. Yetişkin gözüyle izlediğinde ise başka bir hikâye görüyorsun: korkularından dolayı oğlunu dünyadan saklamaya çalışan ve sonunda bırakmayı öğrenmek zorunda kalan bir babanın hikâyesi.\n\nAndrew Stanton'ın Pixar için yönettiği film En İyi Animasyon Oscar'ını kazandı. Uzun zamandır izlemediysen bu hafta sonu yeniden aç; aynı film olmadığını göreceksin.\n\nYarın 20:00'de: Duvarları olmayan bir kasaba.",
+  "stills_dir": "assets/stills"
+}

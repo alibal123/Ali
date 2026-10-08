@@ -1,0 +1,108 @@
+{
+  "id": "2026-10-15_film_the-menu",
+  "theme": "orange",
+  "pill": "FİLM",
+  "slides": [
+    {
+      "type": "card",
+      "img": "fg_menu_07.jpg",
+      "blur": 6,
+      "kick": "BU AKŞAMIN MENÜSÜ",
+      "title": "The Menu",
+      "sub": "2022 · Mark Mylod",
+      "items": [
+        [
+          "I",
+          "Bir ada"
+        ],
+        [
+          "II",
+          "Seçilmiş misafirler"
+        ],
+        [
+          "III",
+          "Kişi başı 1.250 dolar"
+        ],
+        [
+          "IV",
+          "Bir şef ve bir planı"
+        ]
+      ],
+      "foot": "Rezervasyon iptal edilemez",
+      "accent_dark": "#b8432f"
+    },
+    {
+      "type": "text",
+      "lab": "Konu",
+      "img": "fg_menu_05.jpg",
+      "html": "Margot ve Tyler, ünlü şef Slowik'in ıssız bir adadaki restoranına gidiyor. Akşam yemeği başladığında her tabağın bir <b>mesaj</b> taşıdığı anlaşılıyor."
+    },
+    {
+      "type": "file",
+      "lab": "Misafir dosyası",
+      "bg": "light",
+      "accent": "orange",
+      "accent_dark": "#b8432f",
+      "title": "Hawthorn · Masa listesi",
+      "stamp": "GİZLİ",
+      "pairs": [
+        [
+          "Şef",
+          "Julian Slowik"
+        ],
+        [
+          "Misafirler",
+          "Eleştirmen, yatırımcılar, bir film yıldızı"
+        ],
+        [
+          "Davetsiz",
+          "Margot"
+        ],
+        [
+          "Fiyat",
+          "1.250 $ / kişi"
+        ]
+      ],
+      "note": "Masadaki herkes bu akşama bir nedenle davet edildi."
+    },
+    {
+      "type": "big",
+      "lab": "Neden izlemeli",
+      "img": "fg_menu_06.jpg",
+      "accent": "amber",
+      "html": "Lüks restoran kültürüne, sanata ve <b>tüketmeye</b> dair kara mizahla yazılmış bir gerilim."
+    },
+    {
+      "type": "rows",
+      "lab": "Künye",
+      "accent": "coral",
+      "pairs": [
+        [
+          "Oyuncular",
+          "Ralph Fiennes, Anya Taylor-Joy"
+        ],
+        [
+          "Tür",
+          "Kara komedi, gerilim"
+        ],
+        [
+          "Süre",
+          "107 dakika"
+        ]
+      ],
+      "extra": "Fiennes'in soğukkanlı şefi filmin yarısı demek."
+    },
+    {
+      "type": "cta",
+      "bg": "solid",
+      "accent": "orange",
+      "q": "Bu masaya oturur muydun?",
+      "chips": [
+        "Evet",
+        "Asla"
+      ]
+    }
+  ],
+  "caption": "The Menu (2022), Margot ve Tyler'ın ünlü şef Julian Slowik'in ıssız bir adadaki restoranına gitmesiyle başlıyor. Kişi başı 1.250 dolarlık bu akşam yemeğinin misafirleri özenle seçilmiş: bir eleştirmen, yatırımcılar, bir film yıldızı.\n\nYemekler servis edildikçe her tabağın bir mesaj taşıdığı ve masadaki herkesin bu akşama bir nedenle çağrıldığı anlaşılıyor. Davetsiz gelen tek kişi Margot ise şefin planında hiç hesaba katılmamış bir ayrıntı.\n\nRalph Fiennes'in soğukkanlı şefiyle film, lüks restoran kültürüyle, sanatla ve tüketme hırsıyla dalga geçen kara mizahlı bir gerilim. Aç karnına izleme.\n\nYarın 20:00'de: Bu haftaki gönderileri takip ettiysen bu oyun sana kolay gelecek.",
+  "stills_dir": "assets/stills"
+}

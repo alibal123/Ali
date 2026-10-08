@@ -1,0 +1,67 @@
+{
+  "id": "2026-10-20_film_schindler-tek-renk",
+  "theme": "red",
+  "pill": "SAHNE",
+  "slides": [
+    {
+      "type": "number",
+      "img": "fg_schindler_06.jpg",
+      "gray": 1,
+      "lab": "SCHINDLER'S LIST · 1993",
+      "big": "1",
+      "html": "Siyah beyaz bir filmde <b>tek bir renk</b>. Ve o rengin neden orada olduğu."
+    },
+    {
+      "type": "text",
+      "lab": "Film",
+      "img": "fg_schindler_07.jpg",
+      "html": "İkinci Dünya Savaşı'nda bir Alman fabrikatör, Oskar Schindler, fabrikasında çalıştırdığı <b>bin yüzü aşkın Yahudi'yi</b> ölümden kurtarıyor."
+    },
+    {
+      "type": "big",
+      "lab": "Kırmızı palto",
+      "bg": "solid",
+      "accent": "red",
+      "html": "Gri bir kalabalığın içinde kırmızı paltolu küçük bir kız. Schindler onu gördüğü an, <b>olanı görmezden gelemez</b> hâle geliyor."
+    },
+    {
+      "type": "text",
+      "lab": "Renkli sahneler",
+      "img": "fg_schindler_01.jpg",
+      "accent": "amber",
+      "html": "Film, renkli bir mum alevi sahnesiyle açılıyor ve gerçek hayatta kurtulanların yer aldığı renkli bir sahneyle kapanıyor. Arada her şey <b>siyah beyaz</b>."
+    },
+    {
+      "type": "rows",
+      "lab": "Künye",
+      "accent": "coral",
+      "pairs": [
+        [
+          "Yönetmen",
+          "Steven Spielberg"
+        ],
+        [
+          "Oyuncular",
+          "Liam Neeson, Ben Kingsley"
+        ],
+        [
+          "Oscar",
+          "7 ödül, En İyi Film dahil"
+        ]
+      ],
+      "extra": "Görüntü yönetmeni Janusz Kamiński."
+    },
+    {
+      "type": "cta",
+      "bg": "light",
+      "accent": "red",
+      "accent_dark": "#a3242f",
+      "q": "Sinemada rengi en anlamlı kullanan film sence hangisi?",
+      "chips": [
+        "Yorumla"
+      ]
+    }
+  ],
+  "caption": "Schindler's List (1993), İkinci Dünya Savaşı sırasında Alman fabrikatör Oskar Schindler'in fabrikasında çalıştırdığı bin yüzü aşkın Yahudi'yi ölümden kurtarmasını anlatıyor.\n\nSteven Spielberg filmi siyah beyaz çekti; ama tek bir istisna var. Gri bir kalabalığın içinde kırmızı paltolu küçük bir kız. Schindler onu gördüğü an, olan biteni artık görmezden gelemez hâle geliyor. Film ayrıca renkli bir mum alevi sahnesiyle açılıyor ve gerçek hayatta kurtulanların yer aldığı renkli bir sahneyle kapanıyor.\n\nEn İyi Film dahil 7 Oscar kazanan film, rengin bir anlam taşıyabileceğini gösteren en güçlü örneklerden biri. Ağır bir film, zamanını ayırarak izle.\n\nYarın 20:00'de: Aynı filmlere bakmaktan sıkılanlar için 7 öneri.",
+  "stills_dir": "assets/stills"
+}

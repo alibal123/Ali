@@ -1,0 +1,78 @@
+{
+  "id": "2026-10-17_sahne_grand-budapest-oranlar",
+  "theme": "pink",
+  "pill": "SAHNE",
+  "slides": [
+    {
+      "type": "ratio",
+      "rimg": "fg_budapest_12.jpg",
+      "kick": "THE GRAND BUDAPEST HOTEL · 2014",
+      "ratios": [
+        [
+          "1.37",
+          "pink"
+        ],
+        [
+          "1.85",
+          "amber"
+        ],
+        [
+          "2.40",
+          "cyan"
+        ]
+      ],
+      "h1": "Bir film, <em>üç</em> ekran boyu",
+      "sub": "Wes Anderson, her dönemi farklı bir en-boy oranında çekti."
+    },
+    {
+      "type": "text",
+      "lab": "Ne oluyor?",
+      "img": "fg_budapest_09.jpg",
+      "blur": 0,
+      "html": "Film üç ayrı zamanda geçiyor. Anderson, izleyici hangi yıldayken nerede olduğunu anlasın diye her döneme <b>o dönemin sinemasının</b> ekran oranını verdi."
+    },
+    {
+      "type": "letterbox",
+      "lab": "1930'lar",
+      "limg": "fg_budapest_04.jpg",
+      "ratio": "1.37",
+      "accent": "pink",
+      "html": "Otelin altın çağı. Neredeyse kare, eski Hollywood filmlerinin oranı."
+    },
+    {
+      "type": "letterbox",
+      "lab": "1960'lar",
+      "limg": "fg_budapest_05.jpg",
+      "ratio": "2.40",
+      "accent": "cyan",
+      "html": "Otelin çöküş yılları. Sinemanın geniş ekrana geçtiği dönemin oranı."
+    },
+    {
+      "type": "letterbox",
+      "lab": "1980'ler ve bugün",
+      "limg": "fg_budapest_01.jpg",
+      "ratio": "1.85",
+      "accent": "amber",
+      "html": "Hikâyeyi anlatan yazarın zamanı. Bugün hâlâ en yaygın sinema oranı."
+    },
+    {
+      "type": "big",
+      "lab": "Sonuç",
+      "bg": "light",
+      "accent": "pink",
+      "accent_dark": "#c2386f",
+      "html": "Film 4 Oscar kazandı. Ama asıl başarısı, <b>zamanı ekranın kendisiyle</b> anlatması."
+    },
+    {
+      "type": "cta",
+      "accent": "pink",
+      "q": "Bunu izlerken fark etmiş miydin?",
+      "chips": [
+        "Evet",
+        "Şimdi fark ettim"
+      ]
+    }
+  ],
+  "caption": "The Grand Budapest Hotel (2014), üç ayrı zamanda geçen bir hikâye anlatıyor: otelin altın çağı olan 1930'lar, çöküş yılları olan 1960'lar ve hikâyeyi anlatan yazarın zamanı.\n\nWes Anderson, izleyici hangi yılda olduğunu anlasın diye her dönemi o dönemin sinemasına ait bir ekran oranıyla çekti. 1930'lar neredeyse kare bir oranda, 1960'lar geniş ekranda, yazarın zamanı ise bugün de en yaygın olan oranda.\n\nFilm 4 Oscar kazandı ama asıl inceliği, zamanı ekranın kendi boyutuyla anlatması. Bir dahaki izleyişinde ekranın kenarlarına bak.\n\nYarın 20:00'de: Çocukken izlediğin bir animasyonu yetişkin gözüyle yeniden izlemek.",
+  "stills_dir": "assets/stills"
+}

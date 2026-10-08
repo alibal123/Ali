@@ -1,0 +1,138 @@
+{
+  "id": "2026-10-16_oyun-haftanin-detaylari",
+  "theme": "lime",
+  "pill": "OYUN",
+  "slides": [
+    {
+      "type": "mosaic",
+      "kick": "BU HAFTAYI TAKİP ETTİN Mİ?",
+      "h1": "Detaydan <em>filmi</em> bul",
+      "sub": "5 kare, 5 film. Cevaplar son slaytta.",
+      "tiles": [
+        {
+          "img": "fg_red_04.jpg",
+          "zoom": 2.4,
+          "focus": "45% 55%"
+        },
+        {
+          "img": "fg_memento_12.jpg",
+          "zoom": 2.2,
+          "focus": "50% 50%"
+        },
+        {
+          "img": "fg_menu_03.jpg",
+          "zoom": 2.4,
+          "focus": "50% 50%"
+        },
+        {
+          "img": "fg_malkovich_01.jpg",
+          "zoom": 2.4,
+          "focus": "55% 60%"
+        },
+        {
+          "img": "fg_matrixrev_10.jpg",
+          "zoom": 2.4,
+          "focus": "50% 50%"
+        },
+        {
+          "img": "fg_arrival_07.jpg",
+          "zoom": 2.4,
+          "focus": "50% 50%"
+        },
+        {
+          "img": "fg_contact_07.jpg",
+          "zoom": 2.4,
+          "focus": "50% 50%"
+        },
+        {
+          "img": "fg_truman_05.jpg",
+          "zoom": 2.2,
+          "focus": "50% 50%"
+        },
+        {
+          "img": "fg_closeenc_04.jpg",
+          "zoom": 2.4,
+          "focus": "50% 40%"
+        }
+      ]
+    },
+    {
+      "type": "crop",
+      "lab": "Kare 1",
+      "img": "fg_red_04.jpg",
+      "zoom": 2.2,
+      "focus": "45% 55%",
+      "hint": "Kırmızı her yerde. Bu sefer bir oyun makinesinde."
+    },
+    {
+      "type": "crop",
+      "lab": "Kare 2",
+      "img": "fg_memento_12.jpg",
+      "zoom": 1.8,
+      "focus": "60% 50%",
+      "hint": "Unutmamak için not almanın en kalıcı yolu."
+    },
+    {
+      "type": "crop",
+      "lab": "Kare 3",
+      "img": "fg_menu_03.jpg",
+      "zoom": 2.0,
+      "focus": "50% 50%",
+      "hint": "Bu tabak bir mesaj taşıyor."
+    },
+    {
+      "type": "crop",
+      "lab": "Kare 4",
+      "img": "fg_truman_05.jpg",
+      "zoom": 1.6,
+      "focus": "50% 50%",
+      "hint": "Bir yaka rozeti soruyor: Bu nasıl bitecek?"
+    },
+    {
+      "type": "crop",
+      "lab": "Kare 5",
+      "img": "fg_matrixrev_10.jpg",
+      "zoom": 2.0,
+      "focus": "50% 50%",
+      "hint": "Bu hafta hiç konuşmadık. Yeşil yağmur."
+    },
+    {
+      "type": "reveal",
+      "lab": "Cevaplar",
+      "items": [
+        {
+          "img": "fg_red_04.jpg",
+          "n": "1",
+          "answer": "Three Colors: Red",
+          "meta": "1994"
+        },
+        {
+          "img": "fg_memento_12.jpg",
+          "n": "2",
+          "answer": "Memento",
+          "meta": "2000"
+        },
+        {
+          "img": "fg_menu_03.jpg",
+          "n": "3",
+          "answer": "The Menu",
+          "meta": "2022"
+        },
+        {
+          "img": "fg_truman_05.jpg",
+          "n": "4",
+          "answer": "The Truman Show",
+          "meta": "1998"
+        },
+        {
+          "img": "fg_matrixrev_10.jpg",
+          "n": "5",
+          "answer": "The Matrix Revolutions",
+          "meta": "2003"
+        }
+      ]
+    }
+  ],
+  "caption": "Bu haftayı takip ettin mi? 5 kare, 5 film. Dördünü bu hafta konuştuk, biri sürpriz.\n\nKaydır, her kareye bak, cevabını yorumlara yaz. Cevaplar son slaytta, bakmadan önce tahminini yap.\n\nKaç tanesini bildin?\n\nYarın 20:00'de: Bir filmde ekranın boyu neden üç kez değişir?",
+  "stills_dir": "assets/stills"
+}
