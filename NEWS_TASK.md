@@ -5,6 +5,10 @@ Amaç: o gün **14:00'te** paylaşılacak, güncel sinema dünyasından **tek bi
 takvime eklemek ve paylaşımın çıktığını doğrulamak. Kullanıcı (Ali) **tamamen otomatik** istedi: onay bekleme.
 20:00 gönderilerine (WEEKLY_TASK.md) dokunma.
 
+## 0. Önce kontrol et
+`schedule.json`'da bugünün tarihiyle `"kind": "haber"` olan bir kayıt zaten varsa YENİ haber hazırlama:
+yalnızca 5. bölümdeki 3–4. adımları uygula (iş akışını tetikle, 14:00 paylaşımını doğrula, Ali'ye bildir).
+
 ## 1. Haberi bul (12:48–13:15)
 - WebSearch (`mode: "extended"`) ile son 48 saatin sinema haberlerini tara. Aynı turda birkaç arama gönder:
   İngilizce (Variety, The Hollywood Reporter, Deadline, IndieWire, Screen Daily, Netflix/Mubi resmi duyuruları) ve
