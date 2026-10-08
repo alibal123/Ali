@@ -455,12 +455,12 @@ def render(spec_path, preview=False):
     out = os.path.join(REPO, "posts", spec["id"])
     os.makedirs(out, exist_ok=True)
     for f in os.listdir(out):
-        if f.endswith(".jpg"):
+        if f.endswith((".jpg", ".mp4")):
             os.remove(os.path.join(out, f))
     slides = spec["slides"]
     assert 2 <= len(slides) <= 10, "karusel 2–10 slayt olmalı"
     for s in slides:
-        for k in ("img",):
+        for k in ("img", "nimg", "pimg", "fimg"):
             if s.get(k) and not stills_path(spec, s[k]):
                 print(f"UYARI: görsel bulunamadı: {s[k]}")
     tmp = os.path.join(out, "_tmp.html")
@@ -468,6 +468,12 @@ def render(spec_path, preview=False):
         b = p.chromium.launch()
         pg = b.new_page(viewport={"width": 1080, "height": 1350})
         for i, s in enumerate(slides, 1):
+            if s["type"] == "video":
+                sys.path.insert(0, HERE)
+                from video_slide import make_video_slide
+                src = os.path.join(REPO, "assets", "clips", s["video"])
+                make_video_slide(src, os.path.join(out, f"{i:02d}.mp4"), spec, s, i, len(slides), page=pg)
+                continue
             open(tmp, "w", encoding="utf-8").write(page(spec, s, i, len(slides)))
             pg.goto("file://" + tmp, wait_until="networkidle")
             pg.evaluate("document.fonts.ready.then(()=>1)")

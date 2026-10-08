@@ -34,8 +34,13 @@ def call(method, path, **params):
         raise RuntimeError(f"{method} {path}: {e.code} {e.read().decode()[:500]}")
 
 
-def wait_ready(container_id):
-    for _ in range(30):
+SHA = os.environ.get("GITHUB_SHA", BRANCH)
+# Videoları Instagram'ın doğru içerik türüyle (video/mp4) çekebilmesi için jsDelivr üzerinden ver
+CDN = f"https://cdn.jsdelivr.net/gh/{REPO}@{SHA}"
+
+
+def wait_ready(container_id, tries=30):
+    for _ in range(tries):
         s = call("GET", container_id, fields="status_code,status").get("status_code")
         if s == "FINISHED":
             return
@@ -47,19 +52,26 @@ def wait_ready(container_id):
 
 def publish_instagram(post):
     folder = post["folder"]
-    images = sorted(f for f in os.listdir(folder) if f.lower().endswith((".jpg", ".jpeg")))[:10]
+    items = sorted(f for f in os.listdir(folder) if f.lower().endswith((".jpg", ".jpeg", ".mp4")))[:10]
     caption = open(os.path.join(folder, "caption.txt"), encoding="utf-8").read().strip()
-    urls = [f"{RAW}/{folder}/{urllib.parse.quote(f)}" for f in images]
-    print(f"[{post['id']}] {len(urls)} görsel, açıklama {len(caption)} karakter")
+    def url_of(f):
+        base = CDN if f.lower().endswith(".mp4") else RAW
+        return f"{base}/{folder}/{urllib.parse.quote(f)}"
+    urls = [url_of(f) for f in items]
+    print(f"[{post['id']}] {len(urls)} öğe ({sum(f.endswith('.mp4') for f in items)} video), açıklama {len(caption)} karakter")
     if DRY:
         return "dry-run"
-    if len(urls) == 1:
+    if len(urls) == 1 and not items[0].endswith(".mp4"):
         c = call("POST", f"{IG_USER}/media", image_url=urls[0], caption=caption)["id"]
     else:
         children = []
-        for u in urls:
-            cid = call("POST", f"{IG_USER}/media", image_url=u, is_carousel_item="true")["id"]
-            wait_ready(cid)
+        for f, u in zip(items, urls):
+            if f.lower().endswith(".mp4"):
+                cid = call("POST", f"{IG_USER}/media", media_type="VIDEO", video_url=u, is_carousel_item="true")["id"]
+                wait_ready(cid, tries=72)  # video işlenmesi birkaç dakika sürebilir
+            else:
+                cid = call("POST", f"{IG_USER}/media", image_url=u, is_carousel_item="true")["id"]
+                wait_ready(cid)
             children.append(cid)
         c = call("POST", f"{IG_USER}/media", media_type="CAROUSEL", children=",".join(children), caption=caption)["id"]
     wait_ready(c)
@@ -102,6 +114,13 @@ def check():
         u = f"{RAW}/{post['folder']}/{f}"
         with urllib.request.urlopen(urllib.request.Request(u, method="HEAD"), timeout=30) as r:
             print(f"[{post['id']}] {post['publish_at']} → görsel erişilebilir ({r.status}, {r.headers.get('Content-Type')})")
+        for v in sorted(x for x in os.listdir(post["folder"]) if x.endswith(".mp4")):
+            vu = f"{CDN}/{post['folder']}/{v}"
+            try:
+                with urllib.request.urlopen(urllib.request.Request(vu, method="HEAD"), timeout=60) as r:
+                    print(f"   video {v}: {r.status} {r.headers.get('Content-Type')} {r.headers.get('Content-Length')} bayt")
+            except Exception as ex:
+                print(f"   UYARI video {v} erişilemedi: {ex}")
     for post in sched["posts"]:
         if post.get("status") == "published":
             found = already_on_instagram(post)
