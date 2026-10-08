@@ -40,16 +40,11 @@ Veri kaynakları (hesaba uygun film seçimi):
   Mac erişilebilirse buradan seç; değilse `history.json` ve kendi bilgine dayan.
 - Kullanıcının indirdiği filmler: `~/Downloads/FİLMLER/` (ffmpeg ile gerçek kare çıkarılabilir — OYUN için ideal).
 
-### Tasarım stüdyosu (tools/studio.py) — her gönderi ayrı bir tasarım dili
-Kullanıcı "birbirinin kopyası AI gönderiler gibi durmasın" dedi. 12–21 Ekim gönderileri `specs/studio/*.py` ile yapıldı;
-her biri kendi HTML/CSS'iyle farklı bir dünyadan geliyor: ebru + minyatür, polaroid/motel duvarı, tebeşir zemin,
-eski gazete, tarot kartları, mavi baskı (blueprint), kontak baskı/film negatifi, vitray, İsviçre grafik, 90'lar elle boyanmış sinema afişi.
-Yeni hafta için render.py şablonlarına ek olarak en az 2–3 gönderiyi studio.py ile, bu listede OLMAYAN yeni bir görsel dille yap
-(ör. VHS kutusu, sinema bileti/programı, risograf, çizgi roman, dergi röportajı, senaryo sayfası).
-- Sahne kareleri: TMDB sitesi Actions'tan da engelli. film-grab.com galerilerini WebFetch ile bul, adresleri `assets/stills/request.json`'a ekle.
-- Higgsfield (bağlıysa): `media_import_url` + `upscale_image` (2k, ~2 kredi) ile küçük kareleri büyüt; özgün illüstrasyon için
-  `nano_banana_pro` (2k, ~2 kredi). Sonuç adreslerini de request.json'a ekle (bulut ortamı CDN'e doğrudan erişemiyor, iş akışı indirir).
-  İllüstrasyonlarda insan yüzü/gerçek kişi çizdirme; baskı tekniği, nesne ve mekân çizdir. Telifli karakter/logo/afiş çizdirme.
+### Tasarım tarzı (bağlayıcı)
+Kullanıcı 12–21 Ekim için studio.py + Higgsfield ile yapılan 10 farklı tasarım dilindeki gönderileri beğenmedi ve sildirdi.
+Gönderileri YALNIZCA tools/render.py ile, 1–11 Ekim gönderilerinin (specs/2026-10-0*.json, 2026-10-1[01]) genel tarzında yap: koyu zemin + sahne karesi,
+Oswald/Inter/Playfair, vurgu renkleri gönderiden gönderiye değişir. tools/studio.py ve Higgsfield (illüstrasyon/upscale) KULLANMA.
+Sahne kareleri gerçek film kareleri olsun (TMDB/film-grab adresleri request.json ile).
 
 ## 3. Metin kuralları
 - Türkçe, sade, merak uyandıran. Slayt metinleri kısa; `big` en fazla ~45 kelime.
