@@ -325,5 +325,13 @@
     "Interstellar",
     "Fight Club",
     "The Matrix Revolutions"
+  ],
+  "news": [
+    {
+      "date": "2026-10-08",
+      "title": "Lee Chang-dong'un Possible Love'ı 6 Kasım'da Netflix'te",
+      "film": "Possible Love",
+      "post": "2026-10-08_haber_possible-love"
+    }
   ]
 }
