@@ -1,0 +1,428 @@
+{
+ "generated_at": "2026-10-10T18:12+00:00",
+ "followers": 27331,
+ "scoring": "beğeni + 3×yorum; 48 saatten genç gönderiler hariç",
+ "formats": {
+  "BELGESEL": {
+   "n": 1,
+   "median": 7,
+   "best": 7,
+   "adjusted": 14.3
+  },
+  "EŞLEŞTİRME": {
+   "n": 1,
+   "median": 17,
+   "best": 17,
+   "adjusted": 17.7
+  },
+  "FİLM": {
+   "n": 3,
+   "median": 18,
+   "best": 39,
+   "adjusted": 18.0
+  },
+  "HABER": {
+   "n": 1,
+   "median": 16,
+   "best": 16,
+   "adjusted": 17.3
+  },
+  "LİSTE": {
+   "n": 2,
+   "median": 503.5,
+   "best": 928,
+   "adjusted": 260.8
+  },
+  "OYUN": {
+   "n": 1,
+   "median": 40,
+   "best": 40,
+   "adjusted": 25.3
+  },
+  "VERİ": {
+   "n": 0,
+   "median": null,
+   "best": null,
+   "adjusted": 18
+  }
+ },
+ "evening_weights": {
+  "BELGESEL": 0.067,
+  "EŞLEŞTİRME": 0.079,
+  "FİLM": 0.08,
+  "LİSTE": 0.592,
+  "OYUN": 0.103,
+  "VERİ": 0.08
+ },
+ "weekly_plan_20_00": {
+  "LİSTE": 3,
+  "OYUN": 1,
+  "FİLM": 1,
+  "VERİ": 1,
+  "EŞLEŞTİRME": 1
+ },
+ "ranking": [
+  "LİSTE",
+  "OYUN",
+  "FİLM",
+  "VERİ",
+  "EŞLEŞTİRME",
+  "BELGESEL"
+ ],
+ "media_types": {
+  "CAROUSEL_ALBUM": {
+   "n": 35,
+   "median": 17,
+   "mean": 53
+  },
+  "REELS": {
+   "n": 165,
+   "median": 78,
+   "mean": 1468
+  }
+ },
+ "posts": [
+  {
+   "id": "gun1_liste",
+   "format": "LİSTE",
+   "slot": "20:00",
+   "likes": 721,
+   "comments": 69,
+   "score": 928,
+   "age_h": 216,
+   "mature": true
+  },
+  {
+   "id": "gun2_incendies",
+   "format": "FİLM",
+   "slot": "20:00",
+   "likes": 18,
+   "comments": 0,
+   "score": 18,
+   "age_h": 193,
+   "mature": true
+  },
+  {
+   "id": "gun3_belgesel",
+   "format": "BELGESEL",
+   "slot": "20:00",
+   "likes": 7,
+   "comments": 0,
+   "score": 7,
+   "age_h": 169,
+   "mature": true
+  },
+  {
+   "id": "gun4_oyun",
+   "format": "OYUN",
+   "slot": "20:00",
+   "likes": 19,
+   "comments": 7,
+   "score": 40,
+   "age_h": 145,
+   "mature": true
+  },
+  {
+   "id": "gun5_jagten",
+   "format": "FİLM",
+   "slot": "20:00",
+   "likes": 39,
+   "comments": 0,
+   "score": 39,
+   "age_h": 121,
+   "mature": true
+  },
+  {
+   "id": "2026-10-06_liste_turk-sinemasi",
+   "format": "LİSTE",
+   "slot": "18:40",
+   "likes": 61,
+   "comments": 6,
+   "score": 79,
+   "age_h": 98,
+   "mature": true
+  },
+  {
+   "id": "2026-10-07_eslesme_sevdiysen",
+   "format": "EŞLEŞTİRME",
+   "slot": "20:00",
+   "likes": 17,
+   "comments": 0,
+   "score": 17,
+   "age_h": 73,
+   "mature": true
+  },
+  {
+   "id": "2026-10-08_haber_possible-love",
+   "format": "HABER",
+   "slot": "14:00",
+   "likes": 10,
+   "comments": 2,
+   "score": 16,
+   "age_h": 55,
+   "mature": true
+  },
+  {
+   "id": "2026-10-08_film_memories-of-murder",
+   "format": "FİLM",
+   "slot": "20:00",
+   "likes": 13,
+   "comments": 0,
+   "score": 13,
+   "age_h": 49,
+   "mature": true
+  },
+  {
+   "id": "2026-10-09_haber_primetime",
+   "format": "HABER",
+   "slot": "14:00",
+   "likes": 5,
+   "comments": 0,
+   "score": 5,
+   "age_h": 31,
+   "mature": false
+  },
+  {
+   "id": "2026-10-09_oyun_detaydan-filmi-bul",
+   "format": "OYUN",
+   "slot": "20:00",
+   "likes": 5,
+   "comments": 0,
+   "score": 5,
+   "age_h": 25,
+   "mature": false
+  },
+  {
+   "id": "2026-10-10_haber_ask-ve-yasam",
+   "format": "HABER",
+   "slot": "14:00",
+   "likes": 4,
+   "comments": 0,
+   "score": 4,
+   "age_h": 7,
+   "mature": false
+  },
+  {
+   "id": "2026-10-10_veri_izleyici-elestirmen",
+   "format": "VERİ",
+   "slot": "20:00",
+   "likes": 2,
+   "comments": 1,
+   "score": 5,
+   "age_h": 1,
+   "mature": false
+  }
+ ],
+ "top_all": [
+  {
+   "date": "2026-04-27",
+   "type": "REELS",
+   "likes": 58961,
+   "comments": 165,
+   "caption": "Four Lions",
+   "permalink": "https://www.instagram.com/reel/DXoUsCyMfXm/"
+  },
+  {
+   "date": "2026-04-06",
+   "type": "REELS",
+   "likes": 37809,
+   "comments": 165,
+   "caption": "Shrek the Third (2007), taht meselesi yüzünden istemediği bir sorumluluğun eşiğine gelen bir karakterin, kendi",
+   "permalink": "https://www.instagram.com/reel/DWyNvIpDP-z/"
+  },
+  {
+   "date": "2026-03-20",
+   "type": "REELS",
+   "likes": 34450,
+   "comments": 144,
+   "caption": "Kabadayı 2007",
+   "permalink": "https://www.instagram.com/reel/DWHbxoBjIB0/"
+  },
+  {
+   "date": "2026-04-03",
+   "type": "REELS",
+   "likes": 24672,
+   "comments": 115,
+   "caption": "Fantastic Mr. Fox (2009), sakin bir aile hayatı kurmaya çalışırken eski içgüdülerinden vazgeçemeyen bir tilkin",
+   "permalink": "https://www.instagram.com/reel/DWqebDiDLC3/"
+  },
+  {
+   "date": "2026-06-13",
+   "type": "REELS",
+   "likes": 14317,
+   "comments": 96,
+   "caption": "964 Pinocchio (1991), hafızası silinmiş ve sokağa terk edilmiş bir sibernetik insanın, kim olduğunu anlamaya ç",
+   "permalink": "https://www.instagram.com/reel/DZhX_PYs05V/"
+  },
+  {
+   "date": "2026-04-05",
+   "type": "REELS",
+   "likes": 7493,
+   "comments": 185,
+   "caption": "Duvara Karşı (2004), hayatla bağı zayıflamış iki insanın tesadüfi biçimde aynı noktada buluşmasını anlatırken,",
+   "permalink": "https://www.instagram.com/reel/DWvqozNjO8n/"
+  },
+  {
+   "date": "2026-06-23",
+   "type": "REELS",
+   "likes": 6933,
+   "comments": 203,
+   "caption": "Narın Rengi (1969), ünlü bir ozanın hayatını alışılmış bir biyografi gibi anlatmak yerine, onun dünyasını şiir",
+   "permalink": "https://www.instagram.com/reel/DZ7N93CsO3n/"
+  },
+  {
+   "date": "2026-07-16",
+   "type": "REELS",
+   "likes": 4331,
+   "comments": 17,
+   "caption": "İstanbul Hatırası: Köprüyü Geçmek (2005), İstanbul’u tarihî yapıları ya da turistik noktalarıyla değil, müziği",
+   "permalink": "https://www.instagram.com/reel/Da2ctorsDpj/"
+  },
+  {
+   "date": "2026-06-29",
+   "type": "REELS",
+   "likes": 3818,
+   "comments": 25,
+   "caption": "Bir Koyun Polisiyesi (2026), sessiz ve huzurlu bir köyde yaşayan koyunların, çobanlarının esrarengiz şekilde o",
+   "permalink": "https://www.instagram.com/reel/DaKhUprM6Rw/"
+  },
+  {
+   "date": "2026-03-25",
+   "type": "REELS",
+   "likes": 3276,
+   "comments": 27,
+   "caption": "Duvara Karşı (2004)",
+   "permalink": "https://www.instagram.com/reel/DWTS36RDDoR/"
+  },
+  {
+   "date": "2026-05-08",
+   "type": "REELS",
+   "likes": 3032,
+   "comments": 37,
+   "caption": "Yeti (2026), Himalayalar’da kaybolan bir ekibi aramak için dağa çıkan insanların yaşadığı korku dolu olayları ",
+   "permalink": "https://www.instagram.com/reel/DYFHzdjM7XY/"
+  },
+  {
+   "date": "2026-03-21",
+   "type": "REELS",
+   "likes": 3100,
+   "comments": 2,
+   "caption": "Fantastic Mr. Fox (2009)",
+   "permalink": "https://www.instagram.com/reel/DWJJHBOjO73/"
+  },
+  {
+   "date": "2026-03-25",
+   "type": "REELS",
+   "likes": 2544,
+   "comments": 67,
+   "caption": "30 Gün 30 Film — Gün 17",
+   "permalink": "https://www.instagram.com/reel/DWTtjsgDAp3/"
+  },
+  {
+   "date": "2026-06-02",
+   "type": "REELS",
+   "likes": 2539,
+   "comments": 38,
+   "caption": "They Will Kill You (2026)",
+   "permalink": "https://www.instagram.com/reel/DZFA-9IswUS/"
+  },
+  {
+   "date": "2026-05-06",
+   "type": "REELS",
+   "likes": 1976,
+   "comments": 12,
+   "caption": "9 (2009), insanlığın yok olduğu bir dünyada, küçük bez kuklaların hayatta kalma mücadelesini anlatır. Film, gö",
+   "permalink": "https://www.instagram.com/reel/DX_bwb-shst/"
+  },
+  {
+   "date": "2026-08-10",
+   "type": "REELS",
+   "likes": 1787,
+   "comments": 67,
+   "caption": "The Invite (2026), evlilikleri sorunlu bir çiftin üst kattaki komşularını akşam yemeğine davet etmesiyle başlı",
+   "permalink": "https://www.instagram.com/reel/Db3g4FGsHLo/"
+  },
+  {
+   "date": "2026-04-01",
+   "type": "REELS",
+   "likes": 1267,
+   "comments": 10,
+   "caption": "Four Lions (2010), son derece ciddi bir konuyu absürt mizah üzerinden ele alarak radikal düşüncenin içindeki ç",
+   "permalink": "https://www.instagram.com/reel/DWmPUkRjDIj/"
+  },
+  {
+   "date": "2026-05-02",
+   "type": "REELS",
+   "likes": 1242,
+   "comments": 7,
+   "caption": "Kagemusha (1980), bir savaş lordunun ölümünün gizlenmesi için ona tıpatıp benzeyen bir hırsızın yerine geçiril",
+   "permalink": "https://www.instagram.com/reel/DX1O9_HMhmc/"
+  },
+  {
+   "date": "2026-07-13",
+   "type": "REELS",
+   "likes": 1170,
+   "comments": 18,
+   "caption": "Entergalactic (2022), hayallerinin peşinden gitmeye çalışan genç bir çizerin, yeni taşındığı apartmanda tanışt",
+   "permalink": "https://www.instagram.com/reel/DaumrWNsbZg/"
+  },
+  {
+   "date": "2026-07-05",
+   "type": "REELS",
+   "likes": 1161,
+   "comments": 16,
+   "caption": "Watchmen (2009), maskeli kahramanların yasaklandığı alternatif bir dünyada geçiyor. Eski kahramanlardan birini",
+   "permalink": "https://www.instagram.com/reel/DaZ8TmXMyby/"
+  }
+ ],
+ "top_carousels": [
+  {
+   "date": "2026-10-01",
+   "likes": 721,
+   "comments": 69,
+   "caption": "Sonunu kimseye anlatamayacağın 5 film. Hepsinin ortak noktası şu: izlerken her şeyi anladığını düşünüyorsun, b"
+  },
+  {
+   "date": "2026-06-04",
+   "likes": 112,
+   "comments": 8,
+   "caption": "Animasyon devi Pixar son yıllarda ciddi bir krizle boğuşuyor. Bir zamanlar her yeni filmiyle gişeyi domine ede"
+  },
+  {
+   "date": "2026-05-05",
+   "likes": 78,
+   "comments": 3,
+   "caption": "Üç Renk: Kırmızı (1994), basit gibi başlayan bir karşılaşmanın, iki insanın hayatını yavaş yavaş değiştirmesin"
+  },
+  {
+   "date": "2026-06-06",
+   "likes": 41,
+   "comments": 14,
+   "caption": "Odyssey neden bu kadar eleştirildi?"
+  },
+  {
+   "date": "2026-10-06",
+   "likes": 61,
+   "comments": 6,
+   "caption": "Türk sinemasının sessiz başyapıtları. Gişe rekoru kırmadılar, televizyonda pek dönmediler ama festivallerde öd"
+  },
+  {
+   "date": "2026-07-12",
+   "likes": 55,
+   "comments": 2,
+   "caption": "Dogville (2003), peşindeki insanlardan kaçan genç bir kadının, dağların arasında bulunan küçük bir kasabaya sı"
+  },
+  {
+   "date": "2026-10-04",
+   "likes": 19,
+   "comments": 7,
+   "caption": "Emojilerden filmi bul. 5 emoji, 5 film."
+  },
+  {
+   "date": "2026-10-05",
+   "likes": 39,
+   "comments": 0,
+   "caption": "Jagten (2012), küçük bir Danimarka kasabasında anaokulu öğretmeni olarak çalışan Lucas'ın hikâyesini anlatıyor"
+  }
+ ]
+}

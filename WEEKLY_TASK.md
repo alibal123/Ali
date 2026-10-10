@@ -10,6 +10,20 @@ Kullanıcı **tamamen otomatik** istedi: onay bekleme, hazırla ve zamanla; sonu
   `npm i --prefix tools @fontsource/oswald @fontsource/inter @fontsource/playfair-display`.
 - `schedule.json`, `history.json`, `specs/` klasöründeki önceki spec'leri oku (ton ve format için örnek).
 
+## 0.5 Önce analiz et (Ali'nin isteği: tutan tarza ağırlık ver)
+- `python3 scripts/analyze.py` çalıştır (insights/media.json her sabah 07:17'de güncellenir) ve `insights/RAPOR.md` + `insights/strategy.json`'u oku.
+- **Format dağılımı:** Haftanın 20:00 gönderilerinde `strategy.json → weekly_plan_20_00` sayılarına uy (ör. LİSTE 3, OYUN 1, FİLM 1 …).
+  Bu plan 2. bölümdeki "en az 5 format" kuralının ve eski sabit gün döngüsünün (Pzt FİLM, Sal LİSTE, Çar BELGESEL, Per FİLM, Cum OYUN,
+  Cmt RADAR, Paz LİSTE) yerine geçer — Ali 10 Ekim 2026'da etkileşime göre seçilmesini istedi; yalnızca "art arda aynı format yok" kuralı geçerli kalır.
+  Planda olmayan formatı (puanı en düşük olanlar) bu hafta kullanma.
+- **Tema:** `top_carousels` ve `top_all` listelerine bak; en çok tutan gönderilerin ortak yönünü (konu, kanca cümlesi, film türü) bu haftanın
+  gönderilerine taşı. Şimdiye kadarki örüntü: "Sonunu kimseye anlatamayacağın 5 film" gibi **merak/akıl oyunu kancalı listeler**
+  (karusel rekoru, 721 beğeni / 69 yorum), **Türk sineması** listeleri, kült/tuhaf/animasyon filmler (Four Lions, Shrek, Fantastic Mr. Fox,
+  964 Pinocchio, Kabadayı, Duvara Karşı). Kapak başlığı ve açıklamanın ilk cümlesi güçlü bir kanca olsun (ilk satır akışta görünen tek yer).
+- **Yorum kancası:** Yorumlar puanda 3 kat sayılır. Her açıklamanın sonuna izleyiciyi yoruma çeken tek bir soru koy
+  (ör. "Listede olmayan hangisini eklerdin?").
+- Kullanıcıya gönderdiğin haftalık raporun başına 2–3 satırlık özet ekle: geçen haftanın en iyi/en kötü gönderisi ve bu hafta neyi neden artırdığın.
+
 ## 1. Hangi günler?
 - `schedule.json`'daki en son `publish_at` tarihinden **sonraki gün** başla, **gelecek pazar** (dahil) bitir.
   Normalde bu, pazartesi–pazar 7 gün eder. Zaten dolu günleri atla. Saat her zaman `T20:00`.
@@ -19,7 +33,7 @@ Kullanıcı açıkça istedi: **tek renk kullanma, gönderiler birbirinin aynıs
 gönderi içinde de slaytlar arasında vurgu rengini değiştir (`accent`), en az bir slaytta `bg: "light"` (krem) ya da `"solid"` kullan.
 Kullanılabilir renkler: red, orange, amber, lime, teal, cyan, sky, violet, pink, coral (tools/render.py THEMES).
 
-Haftalık format havuzu (her hafta hepsinden en az 5'i, art arda aynı format yok):
+Haftalık format havuzu (hangi formattan kaç tane: 0.5'teki `weekly_plan_20_00`; art arda aynı format yok):
 | Format (pill) | Slayt tipleri | Örnek |
 |---|---|---|
 | LİSTE | collage kapak → film ×5 → cta (light) | 2026-10-06 Türk sineması |
@@ -34,7 +48,7 @@ Okunabilirlik: uzun metinde **`text`** tipini kullan (düz yazı; `<i>` yalnızc
 ≤25 kelimelik kısa cümleler için. Render çıktısında "metni taşıyor" uyarısı varsa metni kısalt.
 
 Veri kaynakları (hesaba uygun film seçimi):
-- `insights/media.json`: hesabın gönderi performansı (her pazar 08:17'de güncellenir). En çok tutanlar: kült/tuhaf/animasyon
+- `insights/media.json`: hesabın gönderi performansı (her gün 07:17'de güncellenir; analiz için 0.5'e bak). En çok tutanlar: kült/tuhaf/animasyon
   (Four Lions, Shrek, Fantastic Mr. Fox, 964 Pinocchio), Türk filmleri (Kabadayı, Duvara Karşı) ve liste karuselleri.
 - Kullanıcının izleme listesi: Mac'te `~/Downloads/DERECE FİLM/İzlenecek Filmler Listesi.pdf` (469 film, türlere göre, IMDb/RT puanlı).
   Mac erişilebilirse buradan seç; değilse `history.json` ve kendi bilgine dayan.

@@ -19,6 +19,9 @@ yalnızca 5. bölümdeki 3–4. adımları uygula (iş akışını tetikle, 14:0
   Sıradan magazin, dedikodu, siyaset, ölüm/hastalık haberi, söylenti ve doğrulanmamış iddia **SEÇME**.
 - **Doğrulama zorunlu:** Gönderideki her olgu (tarih, isim, platform, ödül) en az **iki bağımsız kaynakta** (biri resmi olabilir) geçmeli.
   Emin olmadığın bilgiyi yazma. Haber 48 saatten eski olmasın.
+- **Etkileşim önceliği:** `insights/strategy.json` → `top_all`/`top_carousels`'a bak. Haber gönderileri şu an düşük etkileşim alıyor;
+  birden fazla aday varsa hesabın en çok tutan temalarına yakın olanı seç (Türk sineması, kült/tuhaf filmler, animasyon,
+  izleyicinin bildiği/sevdiği bir filmin devamı ya da yönetmeni). Açıklamanın sonuna yoruma çeken tek bir soru ekle.
 - `history.json` → `news` listesindeki konuları tekrar etme. Aynı filme ait bir haberi 30 gün içinde tekrar seçme.
 
 ## 2. Görsel
