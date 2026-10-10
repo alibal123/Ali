@@ -17,7 +17,8 @@ BRANCH = os.environ.get("GITHUB_REF_NAME", "main")
 RAW = f"https://raw.githubusercontent.com/{REPO}/{BRANCH}"
 DRY = os.environ.get("DRY_RUN") == "1"
 WAIT_AHEAD = timedelta(hours=5, minutes=45)  # GitHub zamanlayıcısı saatlerce susabildiği için: öğleden sonra gelen ilk çalışma 20:00'ye kadar bekler
-LATE_LIMIT = timedelta(hours=6)  # 6 saatten fazla gecikmiş gönderiyi atla, kullanıcıya bırak
+LATE_LIMIT = timedelta(hours=12)  # gecikse de paylaş (Ali: kaçırılmasın); 12 saati geçerse atla
+MAX_TRIES = 6  # hata alan gönderi sonraki çalışmalarda tekrar denenir; 6 denemeden sonra "failed"
 
 
 def call(method, path, **params):
@@ -168,11 +169,13 @@ def main():
                 else:
                     results["instagram"] = publish_instagram(post)
             post["status"] = "published"
+            post.pop("error", None)
             post["published_at"] = now.isoformat(timespec="minutes")
         except Exception as e:
-            post["status"] = "failed"
+            post["tries"] = post.get("tries", 0) + 1
             post["error"] = str(e)[:500]
-            print(f"[{post['id']}] HATA: {e}", file=sys.stderr)
+            post["status"] = "failed" if post["tries"] >= MAX_TRIES else "planned"
+            print(f"[{post['id']}] HATA (deneme {post['tries']}/{MAX_TRIES}): {e}", file=sys.stderr)
         changed = True
     if changed and not DRY:
         json.dump(sched, open("schedule.json", "w", encoding="utf-8"), ensure_ascii=False, indent=2)
