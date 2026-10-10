@@ -167,7 +167,11 @@
       "platforms": [
         "instagram"
       ],
-      "status": "planned"
+      "status": "published",
+      "results": {
+        "instagram": "18108735262916872"
+      },
+      "published_at": "2026-10-10T20:00+03:00"
     },
     {
       "id": "2026-10-11_haber_digger",
