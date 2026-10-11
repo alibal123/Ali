@@ -180,8 +180,12 @@
       "platforms": [
         "instagram"
       ],
-      "status": "planned",
-      "kind": "haber"
+      "status": "published",
+      "kind": "haber",
+      "results": {
+        "instagram": "18087486077318472"
+      },
+      "published_at": "2026-10-11T14:00+03:00"
     },
     {
       "id": "2026-10-11_liste_kara-komedi",
