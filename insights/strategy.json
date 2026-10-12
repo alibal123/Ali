@@ -1,84 +1,84 @@
 {
- "generated_at": "2026-10-11T04:36+00:00",
- "followers": 27340,
+ "generated_at": "2026-10-12T04:40+00:00",
+ "followers": 27344,
  "scoring": "beğeni + 3×yorum; 48 saatten genç gönderiler hariç",
  "formats": {
   "BELGESEL": {
    "n": 1,
-   "median": 7,
-   "best": 7,
-   "adjusted": 17.0
+   "median": 8,
+   "best": 8,
+   "adjusted": 14.7
   },
   "EŞLEŞTİRME": {
    "n": 1,
-   "median": 17,
-   "best": 17,
-   "adjusted": 20.3
+   "median": 18,
+   "best": 18,
+   "adjusted": 18.0
   },
   "FİLM": {
    "n": 3,
-   "median": 22,
-   "best": 40,
-   "adjusted": 22.0
+   "median": 26,
+   "best": 41,
+   "adjusted": 22.8
   },
   "HABER": {
-   "n": 1,
-   "median": 16,
+   "n": 2,
+   "median": 11.5,
    "best": 16,
-   "adjusted": 20.0
+   "adjusted": 14.8
   },
   "LİSTE": {
    "n": 2,
-   "median": 515.0,
-   "best": 942,
-   "adjusted": 268.5
+   "median": 555.0,
+   "best": 994,
+   "adjusted": 286.5
   },
   "OYUN": {
-   "n": 1,
-   "median": 41,
-   "best": 41,
-   "adjusted": 28.3
+   "n": 2,
+   "median": 24.5,
+   "best": 43,
+   "adjusted": 21.2
   },
   "VERİ": {
    "n": 0,
    "median": null,
    "best": null,
-   "adjusted": 22
+   "adjusted": 18
   }
  },
  "evening_weights": {
-  "BELGESEL": 0.072,
-  "EŞLEŞTİRME": 0.082,
-  "FİLM": 0.087,
-  "LİSTE": 0.568,
-  "OYUN": 0.105,
-  "VERİ": 0.087
+  "BELGESEL": 0.065,
+  "EŞLEŞTİRME": 0.076,
+  "FİLM": 0.091,
+  "LİSTE": 0.606,
+  "OYUN": 0.086,
+  "VERİ": 0.076
  },
  "weekly_plan_20_00": {
   "LİSTE": 3,
-  "OYUN": 1,
   "FİLM": 1,
-  "VERİ": 1,
-  "EŞLEŞTİRME": 1
+  "OYUN": 1,
+  "EŞLEŞTİRME": 1,
+  "VERİ": 1
  },
  "ranking": [
   "LİSTE",
-  "OYUN",
   "FİLM",
-  "VERİ",
+  "OYUN",
   "EŞLEŞTİRME",
+  "VERİ",
   "BELGESEL"
  ],
  "media_types": {
   "CAROUSEL_ALBUM": {
-   "n": 35,
-   "median": 17,
-   "mean": 53
+   "n": 37,
+   "median": 18,
+   "mean": 54
   },
   "REELS": {
-   "n": 165,
+   "n": 163,
    "median": 78,
-   "mean": 1468
+   "mean": 1485
   }
  },
  "posts": [
@@ -86,70 +86,70 @@
    "id": "gun1_liste",
    "format": "LİSTE",
    "slot": "20:00",
-   "likes": 735,
-   "comments": 69,
-   "score": 942,
-   "age_h": 227,
+   "likes": 784,
+   "comments": 70,
+   "score": 994,
+   "age_h": 251,
    "mature": true
   },
   {
    "id": "gun2_incendies",
    "format": "FİLM",
    "slot": "20:00",
-   "likes": 19,
-   "comments": 1,
-   "score": 22,
-   "age_h": 203,
+   "likes": 20,
+   "comments": 2,
+   "score": 26,
+   "age_h": 227,
    "mature": true
   },
   {
    "id": "gun3_belgesel",
    "format": "BELGESEL",
    "slot": "20:00",
-   "likes": 7,
+   "likes": 8,
    "comments": 0,
-   "score": 7,
-   "age_h": 179,
+   "score": 8,
+   "age_h": 203,
    "mature": true
   },
   {
    "id": "gun4_oyun",
    "format": "OYUN",
    "slot": "20:00",
-   "likes": 20,
+   "likes": 22,
    "comments": 7,
-   "score": 41,
-   "age_h": 155,
+   "score": 43,
+   "age_h": 179,
    "mature": true
   },
   {
    "id": "gun5_jagten",
    "format": "FİLM",
    "slot": "20:00",
-   "likes": 40,
+   "likes": 41,
    "comments": 0,
-   "score": 40,
-   "age_h": 131,
+   "score": 41,
+   "age_h": 155,
    "mature": true
   },
   {
    "id": "2026-10-06_liste_turk-sinemasi",
    "format": "LİSTE",
    "slot": "18:40",
-   "likes": 64,
-   "comments": 8,
-   "score": 88,
-   "age_h": 108,
+   "likes": 71,
+   "comments": 15,
+   "score": 116,
+   "age_h": 132,
    "mature": true
   },
   {
    "id": "2026-10-07_eslesme_sevdiysen",
    "format": "EŞLEŞTİRME",
    "slot": "20:00",
-   "likes": 17,
+   "likes": 18,
    "comments": 0,
-   "score": 17,
-   "age_h": 83,
+   "score": 18,
+   "age_h": 107,
    "mature": true
   },
   {
@@ -159,7 +159,7 @@
    "likes": 10,
    "comments": 2,
    "score": 16,
-   "age_h": 65,
+   "age_h": 89,
    "mature": true
   },
   {
@@ -169,11 +169,31 @@
    "likes": 13,
    "comments": 0,
    "score": 13,
-   "age_h": 59,
+   "age_h": 83,
    "mature": true
   },
   {
    "id": "2026-10-09_haber_primetime",
+   "format": "HABER",
+   "slot": "14:00",
+   "likes": 7,
+   "comments": 0,
+   "score": 7,
+   "age_h": 65,
+   "mature": true
+  },
+  {
+   "id": "2026-10-09_oyun_detaydan-filmi-bul",
+   "format": "OYUN",
+   "slot": "20:00",
+   "likes": 6,
+   "comments": 0,
+   "score": 6,
+   "age_h": 59,
+   "mature": true
+  },
+  {
+   "id": "2026-10-10_haber_ask-ve-yasam",
    "format": "HABER",
    "slot": "14:00",
    "likes": 5,
@@ -183,32 +203,32 @@
    "mature": false
   },
   {
-   "id": "2026-10-09_oyun_detaydan-filmi-bul",
-   "format": "OYUN",
+   "id": "2026-10-10_veri_izleyici-elestirmen",
+   "format": "VERİ",
    "slot": "20:00",
    "likes": 5,
-   "comments": 0,
-   "score": 5,
+   "comments": 3,
+   "score": 14,
    "age_h": 35,
    "mature": false
   },
   {
-   "id": "2026-10-10_haber_ask-ve-yasam",
+   "id": "2026-10-11_haber_digger",
    "format": "HABER",
    "slot": "14:00",
-   "likes": 4,
+   "likes": 6,
    "comments": 0,
-   "score": 4,
+   "score": 6,
    "age_h": 17,
    "mature": false
   },
   {
-   "id": "2026-10-10_veri_izleyici-elestirmen",
-   "format": "VERİ",
+   "id": "2026-10-11_liste_kara-komedi",
+   "format": "LİSTE",
    "slot": "20:00",
-   "likes": 4,
-   "comments": 1,
-   "score": 7,
+   "likes": 14,
+   "comments": 2,
+   "score": 20,
    "age_h": 11,
    "mature": false
   }
@@ -217,7 +237,7 @@
   {
    "date": "2026-04-27",
    "type": "REELS",
-   "likes": 58961,
+   "likes": 58962,
    "comments": 165,
    "caption": "Four Lions",
    "permalink": "https://www.instagram.com/reel/DXoUsCyMfXm/"
@@ -225,7 +245,7 @@
   {
    "date": "2026-04-06",
    "type": "REELS",
-   "likes": 37809,
+   "likes": 37807,
    "comments": 165,
    "caption": "Shrek the Third (2007), taht meselesi yüzünden istemediği bir sorumluluğun eşiğine gelen bir karakterin, kendi",
    "permalink": "https://www.instagram.com/reel/DWyNvIpDP-z/"
@@ -233,7 +253,7 @@
   {
    "date": "2026-03-20",
    "type": "REELS",
-   "likes": 34449,
+   "likes": 34447,
    "comments": 144,
    "caption": "Kabadayı 2007",
    "permalink": "https://www.instagram.com/reel/DWHbxoBjIB0/"
@@ -241,7 +261,7 @@
   {
    "date": "2026-04-03",
    "type": "REELS",
-   "likes": 24669,
+   "likes": 24668,
    "comments": 115,
    "caption": "Fantastic Mr. Fox (2009), sakin bir aile hayatı kurmaya çalışırken eski içgüdülerinden vazgeçemeyen bir tilkin",
    "permalink": "https://www.instagram.com/reel/DWqebDiDLC3/"
@@ -249,7 +269,7 @@
   {
    "date": "2026-06-13",
    "type": "REELS",
-   "likes": 14318,
+   "likes": 14322,
    "comments": 96,
    "caption": "964 Pinocchio (1991), hafızası silinmiş ve sokağa terk edilmiş bir sibernetik insanın, kim olduğunu anlamaya ç",
    "permalink": "https://www.instagram.com/reel/DZhX_PYs05V/"
@@ -257,7 +277,7 @@
   {
    "date": "2026-04-05",
    "type": "REELS",
-   "likes": 7493,
+   "likes": 7492,
    "comments": 185,
    "caption": "Duvara Karşı (2004), hayatla bağı zayıflamış iki insanın tesadüfi biçimde aynı noktada buluşmasını anlatırken,",
    "permalink": "https://www.instagram.com/reel/DWvqozNjO8n/"
@@ -265,7 +285,7 @@
   {
    "date": "2026-06-23",
    "type": "REELS",
-   "likes": 6933,
+   "likes": 6932,
    "comments": 203,
    "caption": "Narın Rengi (1969), ünlü bir ozanın hayatını alışılmış bir biyografi gibi anlatmak yerine, onun dünyasını şiir",
    "permalink": "https://www.instagram.com/reel/DZ7N93CsO3n/"
@@ -337,8 +357,8 @@
   {
    "date": "2026-08-10",
    "type": "REELS",
-   "likes": 1794,
-   "comments": 68,
+   "likes": 1800,
+   "comments": 69,
    "caption": "The Invite (2026), evlilikleri sorunlu bir çiftin üst kattaki komşularını akşam yemeğine davet etmesiyle başlı",
    "permalink": "https://www.instagram.com/reel/Db3g4FGsHLo/"
   },
@@ -378,8 +398,8 @@
  "top_carousels": [
   {
    "date": "2026-10-01",
-   "likes": 735,
-   "comments": 69,
+   "likes": 784,
+   "comments": 70,
    "caption": "Sonunu kimseye anlatamayacağın 5 film. Hepsinin ortak noktası şu: izlerken her şeyi anladığını düşünüyorsun, b"
   },
   {
@@ -390,8 +410,8 @@
   },
   {
    "date": "2026-10-06",
-   "likes": 64,
-   "comments": 8,
+   "likes": 71,
+   "comments": 15,
    "caption": "Türk sinemasının sessiz başyapıtları. Gişe rekoru kırmadılar, televizyonda pek dönmediler ama festivallerde öd"
   },
   {
@@ -414,13 +434,13 @@
   },
   {
    "date": "2026-10-04",
-   "likes": 20,
+   "likes": 22,
    "comments": 7,
    "caption": "Emojilerden filmi bul. 5 emoji, 5 film."
   },
   {
    "date": "2026-10-05",
-   "likes": 40,
+   "likes": 41,
    "comments": 0,
    "caption": "Jagten (2012), küçük bir Danimarka kasabasında anaokulu öğretmeni olarak çalışan Lucas'ın hikâyesini anlatıyor"
   }
