@@ -207,11 +207,13 @@
       "platforms": [
         "instagram"
       ],
-      "status": "planned",
+      "status": "published",
       "kind": "haber",
-      "results": {},
+      "results": {
+        "instagram": "17987239995097526"
+      },
       "tries": 1,
-      "error": "POST 17841477355117177/media_publish: 400 {\"error\":{\"message\":\"Service temporarily unavailable\",\"type\":\"OAuthException\",\"is_transient\":true,\"code\":2,\"error_subcode\":2207031,\"error_user_title\":\"Temporary Error\",\"error_user_msg\":\"We have experienced a temporary error for your request. Please try later\",\"fbtrace_id\":\"A6rBlg-rAV8N4aoSW6jwX2W\"}}"
+      "published_at": "2026-10-12T14:03+03:00"
     },
     {
       "id": "2026-10-12_film_kirmizi",
