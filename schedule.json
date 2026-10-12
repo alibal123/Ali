@@ -208,7 +208,10 @@
         "instagram"
       ],
       "status": "planned",
-      "kind": "haber"
+      "kind": "haber",
+      "results": {},
+      "tries": 1,
+      "error": "POST 17841477355117177/media_publish: 400 {\"error\":{\"message\":\"Service temporarily unavailable\",\"type\":\"OAuthException\",\"is_transient\":true,\"code\":2,\"error_subcode\":2207031,\"error_user_title\":\"Temporary Error\",\"error_user_msg\":\"We have experienced a temporary error for your request. Please try later\",\"fbtrace_id\":\"A6rBlg-rAV8N4aoSW6jwX2W\"}}"
     },
     {
       "id": "2026-10-12_film_kirmizi",
