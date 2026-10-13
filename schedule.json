@@ -235,8 +235,12 @@
       "platforms": [
         "instagram"
       ],
-      "status": "planned",
-      "kind": "haber"
+      "status": "published",
+      "kind": "haber",
+      "results": {
+        "instagram": "18126149827887606"
+      },
+      "published_at": "2026-10-13T14:00+03:00"
     },
     {
       "id": "2026-10-13_liste_kafanin-icinde",
