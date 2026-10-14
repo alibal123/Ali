@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-10-13T04:41+00:00",
- "followers": 27355,
+ "generated_at": "2026-10-14T04:53+00:00",
+ "followers": 27376,
  "scoring": "beğeni + 3×yorum; 48 saatten genç gönderiler hariç",
  "formats": {
   "BELGESEL": {
@@ -18,20 +18,20 @@
   "FİLM": {
    "n": 3,
    "median": 26,
-   "best": 44,
+   "best": 45,
    "adjusted": 22.0
   },
   "HABER": {
-   "n": 3,
-   "median": 7,
+   "n": 4,
+   "median": 9.0,
    "best": 16,
-   "adjusted": 10.6
+   "adjusted": 11.3
   },
   "LİSTE": {
-   "n": 2,
-   "median": 582.0,
-   "best": 1044,
-   "adjusted": 299.0
+   "n": 3,
+   "median": 125,
+   "best": 1084,
+   "adjusted": 81.4
   },
   "OYUN": {
    "n": 2,
@@ -41,18 +41,18 @@
   },
   "VERİ": {
    "n": 1,
-   "median": 15,
-   "best": 15,
-   "adjusted": 15.7
+   "median": 16,
+   "best": 16,
+   "adjusted": 16.0
   }
  },
  "evening_weights": {
-  "BELGESEL": 0.061,
-  "EŞLEŞTİRME": 0.073,
-  "FİLM": 0.088,
-  "LİSTE": 0.626,
-  "OYUN": 0.083,
-  "VERİ": 0.069
+  "BELGESEL": 0.099,
+  "EŞLEŞTİRME": 0.119,
+  "FİLM": 0.145,
+  "LİSTE": 0.386,
+  "OYUN": 0.136,
+  "VERİ": 0.114
  },
  "weekly_plan_20_00": {
   "LİSTE": 3,
@@ -71,14 +71,14 @@
  ],
  "media_types": {
   "CAROUSEL_ALBUM": {
-   "n": 39,
-   "median": 16,
+   "n": 40,
+   "median": 16.0,
    "mean": 53
   },
   "REELS": {
-   "n": 161,
-   "median": 77,
-   "mean": 1498
+   "n": 160,
+   "median": 77.5,
+   "mean": 1507
   }
  },
  "posts": [
@@ -86,10 +86,10 @@
    "id": "gun1_liste",
    "format": "LİSTE",
    "slot": "20:00",
-   "likes": 831,
-   "comments": 71,
-   "score": 1044,
-   "age_h": 275,
+   "likes": 862,
+   "comments": 74,
+   "score": 1084,
+   "age_h": 299,
    "mature": true
   },
   {
@@ -99,7 +99,7 @@
    "likes": 20,
    "comments": 2,
    "score": 26,
-   "age_h": 251,
+   "age_h": 275,
    "mature": true
   },
   {
@@ -109,7 +109,7 @@
    "likes": 8,
    "comments": 0,
    "score": 8,
-   "age_h": 227,
+   "age_h": 251,
    "mature": true
   },
   {
@@ -119,27 +119,27 @@
    "likes": 22,
    "comments": 7,
    "score": 43,
-   "age_h": 203,
+   "age_h": 227,
    "mature": true
   },
   {
    "id": "gun5_jagten",
    "format": "FİLM",
    "slot": "20:00",
-   "likes": 44,
+   "likes": 45,
    "comments": 0,
-   "score": 44,
-   "age_h": 179,
+   "score": 45,
+   "age_h": 203,
    "mature": true
   },
   {
    "id": "2026-10-06_liste_turk-sinemasi",
    "format": "LİSTE",
    "slot": "18:40",
-   "likes": 75,
+   "likes": 80,
    "comments": 15,
-   "score": 120,
-   "age_h": 156,
+   "score": 125,
+   "age_h": 180,
    "mature": true
   },
   {
@@ -149,7 +149,7 @@
    "likes": 19,
    "comments": 0,
    "score": 19,
-   "age_h": 131,
+   "age_h": 155,
    "mature": true
   },
   {
@@ -159,17 +159,17 @@
    "likes": 10,
    "comments": 2,
    "score": 16,
-   "age_h": 113,
+   "age_h": 137,
    "mature": true
   },
   {
    "id": "2026-10-08_film_memories-of-murder",
    "format": "FİLM",
    "slot": "20:00",
-   "likes": 15,
+   "likes": 16,
    "comments": 0,
-   "score": 15,
-   "age_h": 107,
+   "score": 16,
+   "age_h": 131,
    "mature": true
   },
   {
@@ -179,7 +179,7 @@
    "likes": 7,
    "comments": 0,
    "score": 7,
-   "age_h": 89,
+   "age_h": 113,
    "mature": true
   },
   {
@@ -189,7 +189,7 @@
    "likes": 6,
    "comments": 0,
    "score": 6,
-   "age_h": 83,
+   "age_h": 107,
    "mature": true
   },
   {
@@ -199,52 +199,72 @@
    "likes": 5,
    "comments": 0,
    "score": 5,
-   "age_h": 65,
+   "age_h": 89,
    "mature": true
   },
   {
    "id": "2026-10-10_veri_izleyici-elestirmen",
    "format": "VERİ",
    "slot": "20:00",
-   "likes": 6,
+   "likes": 7,
    "comments": 3,
-   "score": 15,
-   "age_h": 59,
+   "score": 16,
+   "age_h": 83,
    "mature": true
   },
   {
    "id": "2026-10-11_haber_digger",
    "format": "HABER",
    "slot": "14:00",
-   "likes": 9,
+   "likes": 11,
    "comments": 0,
-   "score": 9,
-   "age_h": 41,
-   "mature": false
+   "score": 11,
+   "age_h": 65,
+   "mature": true
   },
   {
    "id": "2026-10-11_liste_kara-komedi",
    "format": "LİSTE",
    "slot": "20:00",
-   "likes": 20,
+   "likes": 24,
    "comments": 3,
-   "score": 29,
-   "age_h": 35,
-   "mature": false
+   "score": 33,
+   "age_h": 59,
+   "mature": true
   },
   {
    "id": "2026-10-12_haber_fatherland",
    "format": "HABER",
    "slot": "14:00",
-   "likes": 3,
+   "likes": 5,
    "comments": 1,
-   "score": 6,
-   "age_h": 17,
+   "score": 8,
+   "age_h": 41,
    "mature": false
   },
   {
    "id": "2026-10-12_film_kirmizi",
    "format": "FİLM",
+   "slot": "20:00",
+   "likes": 9,
+   "comments": 0,
+   "score": 9,
+   "age_h": 35,
+   "mature": false
+  },
+  {
+   "id": "2026-10-13_haber_clayface",
+   "format": "HABER",
+   "slot": "14:00",
+   "likes": 5,
+   "comments": 0,
+   "score": 5,
+   "age_h": 17,
+   "mature": false
+  },
+  {
+   "id": "2026-10-13_liste_kafanin-icinde",
+   "format": "LİSTE",
    "slot": "20:00",
    "likes": 7,
    "comments": 0,
@@ -257,8 +277,8 @@
   {
    "date": "2026-04-27",
    "type": "REELS",
-   "likes": 58965,
-   "comments": 165,
+   "likes": 58974,
+   "comments": 164,
    "caption": "Four Lions",
    "permalink": "https://www.instagram.com/reel/DXoUsCyMfXm/"
   },
@@ -289,7 +309,7 @@
   {
    "date": "2026-06-13",
    "type": "REELS",
-   "likes": 14325,
+   "likes": 14328,
    "comments": 96,
    "caption": "964 Pinocchio (1991), hafızası silinmiş ve sokağa terk edilmiş bir sibernetik insanın, kim olduğunu anlamaya ç",
    "permalink": "https://www.instagram.com/reel/DZhX_PYs05V/"
@@ -297,7 +317,7 @@
   {
    "date": "2026-04-05",
    "type": "REELS",
-   "likes": 7490,
+   "likes": 7491,
    "comments": 185,
    "caption": "Duvara Karşı (2004), hayatla bağı zayıflamış iki insanın tesadüfi biçimde aynı noktada buluşmasını anlatırken,",
    "permalink": "https://www.instagram.com/reel/DWvqozNjO8n/"
@@ -305,7 +325,7 @@
   {
    "date": "2026-06-23",
    "type": "REELS",
-   "likes": 6929,
+   "likes": 6928,
    "comments": 203,
    "caption": "Narın Rengi (1969), ünlü bir ozanın hayatını alışılmış bir biyografi gibi anlatmak yerine, onun dünyasını şiir",
    "permalink": "https://www.instagram.com/reel/DZ7N93CsO3n/"
@@ -337,7 +357,7 @@
   {
    "date": "2026-05-08",
    "type": "REELS",
-   "likes": 3032,
+   "likes": 3033,
    "comments": 37,
    "caption": "Yeti (2026), Himalayalar’da kaybolan bir ekibi aramak için dağa çıkan insanların yaşadığı korku dolu olayları ",
    "permalink": "https://www.instagram.com/reel/DYFHzdjM7XY/"
@@ -369,7 +389,7 @@
   {
    "date": "2026-08-10",
    "type": "REELS",
-   "likes": 1808,
+   "likes": 1821,
    "comments": 69,
    "caption": "The Invite (2026), evlilikleri sorunlu bir çiftin üst kattaki komşularını akşam yemeğine davet etmesiyle başlı",
    "permalink": "https://www.instagram.com/reel/Db3g4FGsHLo/"
@@ -385,7 +405,7 @@
   {
    "date": "2026-04-01",
    "type": "REELS",
-   "likes": 1268,
+   "likes": 1270,
    "comments": 10,
    "caption": "Four Lions (2010), son derece ciddi bir konuyu absürt mizah üzerinden ele alarak radikal düşüncenin içindeki ç",
    "permalink": "https://www.instagram.com/reel/DWmPUkRjDIj/"
@@ -401,7 +421,7 @@
   {
    "date": "2026-07-13",
    "type": "REELS",
-   "likes": 1170,
+   "likes": 1171,
    "comments": 18,
    "caption": "Entergalactic (2022), hayallerinin peşinden gitmeye çalışan genç bir çizerin, yeni taşındığı apartmanda tanışt",
    "permalink": "https://www.instagram.com/reel/DaumrWNsbZg/"
@@ -418,8 +438,8 @@
  "top_carousels": [
   {
    "date": "2026-10-01",
-   "likes": 831,
-   "comments": 71,
+   "likes": 862,
+   "comments": 74,
    "caption": "Sonunu kimseye anlatamayacağın 5 film. Hepsinin ortak noktası şu: izlerken her şeyi anladığını düşünüyorsun, b"
   },
   {
@@ -430,7 +450,7 @@
   },
   {
    "date": "2026-10-06",
-   "likes": 75,
+   "likes": 80,
    "comments": 15,
    "caption": "Türk sinemasının sessiz başyapıtları. Gişe rekoru kırmadılar, televizyonda pek dönmediler ama festivallerde öd"
   },
@@ -454,7 +474,7 @@
   },
   {
    "date": "2026-10-05",
-   "likes": 44,
+   "likes": 45,
    "comments": 0,
    "caption": "Jagten (2012), küçük bir Danimarka kasabasında anaokulu öğretmeni olarak çalışan Lucas'ın hikâyesini anlatıyor"
   },
