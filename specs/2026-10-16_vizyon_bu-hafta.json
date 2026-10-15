@@ -1,0 +1,95 @@
+{
+  "id": "2026-10-16_vizyon_bu-hafta",
+  "theme": "coral",
+  "pill": "VİZYON",
+  "slides": [
+    {
+      "type": "cover",
+      "kick": "BU HAFTA VİZYONDA · 16 EKİM",
+      "h1": "Cuma günü <em>9 yeni film</em> sinemada",
+      "sub": "Dört yerli, beş yabancı yapım: komedi, korku, animasyon, dram ve aksiyon."
+    },
+    {
+      "type": "film",
+      "n": 1,
+      "title": "Whalefall",
+      "meta": "Balina Düşüşü · Brian Duffield",
+      "accent": "teal",
+      "konu": "Babasının kalıntılarını aramak için Pasifik'e dalan Jay, dev bir ispermeçet balinasının içine düşüyor. Oksijeni bitmeden çıkması gerekiyor.",
+      "why": "Oyuncular: Austin Abrams, Josh Brolin, Elisabeth Shue."
+    },
+    {
+      "type": "film",
+      "n": 2,
+      "title": "Sense and Sensibility",
+      "meta": "Aşk ve Yaşam · Georgia Oakley",
+      "accent": "pink",
+      "bg": "light",
+      "konu": "Jane Austen'ın romanının yeni uyarlaması: Dashwood kardeşler malikânelerinden ayrılıp mütevazı bir hayata alışmaya çalışıyor.",
+      "why": "Daisy Edgar-Jones, Esmé Creed-Miles ve Caitríona Balfe oynuyor."
+    },
+    {
+      "type": "film",
+      "n": 3,
+      "title": "Street Fighter",
+      "meta": "Street Fighter · Kitao Sakurai",
+      "accent": "red",
+      "konu": "Aynı adlı video oyunu serisinin uyarlaması: Ryu ve Ken, dünyanın dört bir yanından dövüşçülerin katıldığı bir turnuvada.",
+      "why": "Başrollerde Noah Centineo ve Andrew Koji var."
+    },
+    {
+      "type": "film",
+      "n": 4,
+      "title": "Atonement",
+      "meta": "Kefaret · Reed Van Dyk",
+      "accent": "amber",
+      "konu": "Irak Savaşı sırasında bir Ermeni aile, ABD askerleriyle silahlı grupların çatışmasının ortasında kalıyor. Yıllar sonra olayda payı olan bir asker geçmişiyle yüzleşmek istiyor.",
+      "why": "Kenneth Branagh, Hiam Abbass ve Boyd Holbrook oynuyor."
+    },
+    {
+      "type": "film",
+      "n": 5,
+      "title": "Dondurmam Gaymak: Gapital",
+      "meta": "Eyüp Boz",
+      "accent": "sky",
+      "bg": "solid",
+      "konu": "Amerika'da finans sektöründe çalışan Kamil, çocukluğunun geçtiği Ula'ya dönüp borç içindeki dondurma işletmesini kurtarmaya çalışıyor.",
+      "why": "Cengiz Bozkurt, Okan Çabalar ve Atakan Çelik oynuyor."
+    },
+    {
+      "type": "rows",
+      "lab": "Bu hafta bir de",
+      "accent": "violet",
+      "pairs": [
+        [
+          "Hasip ile Nasip",
+          "Komedi · Özgür Bakar"
+        ],
+        [
+          "Cin Hikayeleri: Zulman",
+          "Korku · Kemal Danacı"
+        ],
+        [
+          "Kanlı Gece",
+          "Korku · Raymond Creamer"
+        ],
+        [
+          "Emiray: Macera Yolcusu",
+          "Animasyon · Kenan Aktaşın"
+        ]
+      ],
+      "extra": "Hasip ile Nasip'te iki eski dostun belediye başkanlığı rekabeti, Zulman'da Zonguldak'ta bir maden işçisi ve bir cin var."
+    },
+    {
+      "type": "cta",
+      "bg": "solid",
+      "accent": "coral",
+      "q": "Bu hafta sinemaya gidersen <em>hangisini</em> seçersin?",
+      "chips": [
+        "Yorumla",
+        "Kaydet"
+      ]
+    }
+  ],
+  "caption": "Bu Cuma, 16 Ekim'de sinemalarda 9 yeni film var.\n\nYabancı tarafta Balina Düşüşü (Whalefall), Aşk ve Yaşam (Sense and Sensibility), Street Fighter ve Kefaret (Atonement) öne çıkıyor. Yerli tarafta Dondurmam Gaymak: Gapital ve Hasip ile Nasip komedileri, Cin Hikayeleri: Zulman korkusu ve çocuklara yönelik Emiray: Macera Yolcusu animasyonu geliyor. Kanlı Gece de korku seçeneklerinden biri.\n\nSeans saatleri şehre ve salona göre değişiyor, gitmeden önce sinemanın güncel programına bakmak iyi olur.\n\nBu hafta hangisini izlerdin? Yoruma yaz.\n\nKaynak: Beyazperde, Onedio, Doğayı Dinle"
+}

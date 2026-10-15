@@ -307,6 +307,16 @@
       "status": "planned"
     },
     {
+      "id": "2026-10-16_vizyon_bu-hafta",
+      "folder": "posts/2026-10-16_vizyon_bu-hafta",
+      "publish_at": "2026-10-16T12:00",
+      "platforms": [
+        "instagram"
+      ],
+      "status": "planned",
+      "kind": "vizyon"
+    },
+    {
       "id": "2026-10-16_oyun-haftanin-detaylari",
       "folder": "posts/2026-10-16_oyun-haftanin-detaylari",
       "publish_at": "2026-10-16T20:00",
