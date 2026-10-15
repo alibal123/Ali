@@ -67,5 +67,29 @@
  },
  "matrix": {
   "error": "HTTP Error 403: Forbidden"
+ },
+ "vz_whalefall": {
+  "error": "HTTP Error 403: Forbidden"
+ },
+ "vz_streetfighter": {
+  "error": "HTTP Error 403: Forbidden"
+ },
+ "vz_sense": {
+  "error": "HTTP Error 403: Forbidden"
+ },
+ "vz_hasip": {
+  "error": "HTTP Error 429: Too Many Requests"
+ },
+ "vz_gaymak": {
+  "error": "HTTP Error 429: Too Many Requests"
+ },
+ "vz_zulman": {
+  "error": "HTTP Error 429: Too Many Requests"
+ },
+ "vz_kefaret": {
+  "error": "HTTP Error 429: Too Many Requests"
+ },
+ "vz_kanli": {
+  "error": "HTTP Error 429: Too Many Requests"
  }
 }
