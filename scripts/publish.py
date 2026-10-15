@@ -68,8 +68,15 @@ def publish_instagram(post):
         children = []
         for f, u in zip(items, urls):
             if f.lower().endswith(".mp4"):
-                cid = call("POST", f"{IG_USER}/media", media_type="VIDEO", video_url=u, is_carousel_item="true")["id"]
-                wait_ready(cid, tries=72)  # video işlenmesi birkaç dakika sürebilir
+                try:
+                    cid = call("POST", f"{IG_USER}/media", media_type="VIDEO", video_url=u, is_carousel_item="true")["id"]
+                    wait_ready(cid, tries=72)  # video işlenmesi birkaç dakika sürebilir
+                except RuntimeError as ex:
+                    # jsDelivr yolu hata verdiyse aynı videoyu doğrudan GitHub adresinden dene
+                    print(f"video {f} jsDelivr ile hata verdi ({ex}); GitHub raw adresiyle yeniden deneniyor")
+                    ru = f"{RAW}/{folder}/{urllib.parse.quote(f)}"
+                    cid = call("POST", f"{IG_USER}/media", media_type="VIDEO", video_url=ru, is_carousel_item="true")["id"]
+                    wait_ready(cid, tries=72)
             else:
                 cid = call("POST", f"{IG_USER}/media", image_url=u, is_carousel_item="true")["id"]
                 wait_ready(cid)
