@@ -139,8 +139,9 @@ def main():
     # GitHub zamanlayıcısı gecikebildiği için iş erken başlar; yakında saati gelecek gönderi varsa tam saatine kadar bekle.
     upcoming = [datetime.fromisoformat(p["publish_at"]).replace(tzinfo=tz) for p in sched["posts"]
                 if p.get("status") == "planned"]
+    overdue = [p for p in sched["posts"] if p.get("status") == "planned" and datetime.fromisoformat(p["publish_at"]).replace(tzinfo=tz) <= now]
     soon = [t for t in upcoming if now < t <= now + WAIT_AHEAD]
-    if soon:
+    if soon and not overdue:  # gecikmiş gönderi varsa beklemeden önce onu paylaş
         wait = (min(soon) - now).total_seconds()
         print(f"{min(soon):%H:%M} gönderisi için {int(wait)} sn bekleniyor…")
         time.sleep(wait + 5)
