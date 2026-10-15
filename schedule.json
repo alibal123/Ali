@@ -289,11 +289,13 @@
       "platforms": [
         "instagram"
       ],
-      "status": "planned",
+      "status": "published",
       "kind": "haber",
-      "results": {},
+      "results": {
+        "instagram": "18025523351878796"
+      },
       "tries": 3,
-      "error": "container 17907395226578504 durumu: ERROR"
+      "published_at": "2026-10-15T15:51+03:00"
     },
     {
       "id": "2026-10-15_film_the-menu",
