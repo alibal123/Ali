@@ -4,10 +4,11 @@
   "pill": "VİZYON",
   "slides": [
     {
-      "type": "cover",
+      "type": "fullphoto",
+      "img": "vz_whalefall_1.jpg",
       "kick": "BU HAFTA VİZYONDA · 16 EKİM",
-      "h1": "Cuma günü <em>9 yeni film</em> sinemada",
-      "sub": "Dört yerli, beş yabancı yapım: komedi, korku, animasyon, dram ve aksiyon."
+      "title": "Cuma günü <em>5 yabancı film</em> sinemada",
+      "line": "Gerilim, aşk, aksiyon, savaş ve korku: bu haftanın vizyon listesi."
     },
     {
       "type": "film",
@@ -48,37 +49,12 @@
     },
     {
       "type": "film",
-      "n": 5,
-      "title": "Dondurmam Gaymak: Gapital",
-      "meta": "Eyüp Boz",
-      "accent": "sky",
-      "bg": "solid",
-      "konu": "Amerika'da finans sektöründe çalışan Kamil, çocukluğunun geçtiği Ula'ya dönüp borç içindeki dondurma işletmesini kurtarmaya çalışıyor.",
-      "why": "Cengiz Bozkurt, Okan Çabalar ve Atakan Çelik oynuyor."
-    },
-    {
-      "type": "rows",
-      "lab": "Bu hafta bir de",
+      "title": "Goody Goody",
+      "meta": "Kanlı Gece · Raymond Creamer",
       "accent": "violet",
-      "pairs": [
-        [
-          "Hasip ile Nasip",
-          "Komedi · Özgür Bakar"
-        ],
-        [
-          "Cin Hikayeleri: Zulman",
-          "Korku · Kemal Danacı"
-        ],
-        [
-          "Kanlı Gece",
-          "Korku · Raymond Creamer"
-        ],
-        [
-          "Emiray: Macera Yolcusu",
-          "Animasyon · Kenan Aktaşın"
-        ]
-      ],
-      "extra": "Hasip ile Nasip'te iki eski dostun belediye başkanlığı rekabeti, Zulman'da Zonguldak'ta bir maden işçisi ve bir cin var."
+      "konu": "Evde yapılan bir doğum, kar fırtınası yüzünden dış dünyayla bağlantısı kesilen anne, baba ve ebe için giderek tehlikeli bir hâle geliyor.",
+      "why": "Samantha Robinson ve Colby Hollman oynuyor.",
+      "n": 5
     },
     {
       "type": "cta",
@@ -91,5 +67,5 @@
       ]
     }
   ],
-  "caption": "Bu Cuma, 16 Ekim'de sinemalarda 9 yeni film var.\n\nYabancı tarafta Balina Düşüşü (Whalefall), Aşk ve Yaşam (Sense and Sensibility), Street Fighter ve Kefaret (Atonement) öne çıkıyor. Yerli tarafta Dondurmam Gaymak: Gapital ve Hasip ile Nasip komedileri, Cin Hikayeleri: Zulman korkusu ve çocuklara yönelik Emiray: Macera Yolcusu animasyonu geliyor. Kanlı Gece de korku seçeneklerinden biri.\n\nSeans saatleri şehre ve salona göre değişiyor, gitmeden önce sinemanın güncel programına bakmak iyi olur.\n\nBu hafta hangisini izlerdin? Yoruma yaz.\n\nKaynak: Beyazperde, Onedio, Doğayı Dinle"
+  "caption": "Bu Cuma, 16 Ekim'de sinemalarda 5 yeni yabancı film var.\n\nWhalefall (Balina Düşüşü), dev bir ispermeçet balinasının içine düşen genç bir dalgıcın oksijeni bitmeden çıkma mücadelesini anlatıyor. Jane Austen'ın romanından uyarlanan Sense and Sensibility (Aşk ve Yaşam), Street Fighter, Irak Savaşı'nda geçen Atonement (Kefaret) ve evde yapılan bir doğumun kabusa dönüştüğü Goody Goody (Kanlı Gece) de aynı hafta vizyonda.\n\nSeans saatleri şehre ve salona göre değişiyor, gitmeden önce sinemanın güncel programına bakmak iyi olur.\n\nBu hafta hangisini izlerdin? Yoruma yaz.\n\nKaynak: Beyazperde, Onedio, Doğayı Dinle"
 }

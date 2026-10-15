@@ -1,3 +1,5 @@
+> **15 Ekim 2026'dan itibaren bu görev DEVRE DIŞI:** 14:00 gönderisi artık VIZYON_TASK.md ile yabancı vizyon filmleri olarak hazırlanıyor. Bu dosyaya göre yeni haber gönderisi HAZIRLAMA; schedule.json'da bugün için `T14:00` kaydı (kind: vizyon dahil) varsa ya da bu not durduğu sürece hiçbir şey yapma.
+
 # Günlük haber görevi — derecefilm (her gün 14:00)
 
 Bu dosya, her gün **12:48 (İstanbul)** çalışan zamanlanmış Claude görevinin talimatıdır.
