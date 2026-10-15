@@ -292,8 +292,8 @@
       "status": "planned",
       "kind": "haber",
       "results": {},
-      "tries": 2,
-      "error": "container 17907378951578504 durumu: ERROR"
+      "tries": 3,
+      "error": "container 17907395226578504 durumu: ERROR"
     },
     {
       "id": "2026-10-15_film_the-menu",
