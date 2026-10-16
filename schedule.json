@@ -317,8 +317,12 @@
       "platforms": [
         "instagram"
       ],
-      "status": "planned",
-      "kind": "vizyon"
+      "status": "published",
+      "kind": "vizyon",
+      "results": {
+        "instagram": "18012933974975806"
+      },
+      "published_at": "2026-10-16T14:00+03:00"
     },
     {
       "id": "2026-10-16_oyun-haftanin-detaylari",
