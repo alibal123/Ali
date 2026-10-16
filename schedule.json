@@ -331,7 +331,11 @@
       "platforms": [
         "instagram"
       ],
-      "status": "planned"
+      "status": "published",
+      "results": {
+        "instagram": "18209463715370046"
+      },
+      "published_at": "2026-10-16T20:00+03:00"
     },
     {
       "id": "2026-10-17_sahne_grand-budapest-oranlar",
