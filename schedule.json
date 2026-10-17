@@ -344,7 +344,11 @@
       "platforms": [
         "instagram"
       ],
-      "status": "planned"
+      "status": "published",
+      "results": {
+        "instagram": "17986925085111010"
+      },
+      "published_at": "2026-10-17T20:00+03:00"
     },
     {
       "id": "2026-10-18_film_kayip-balik-nemo",
