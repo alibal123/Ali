@@ -1,12 +1,32 @@
 {
  "account": {
   "username": "derecefilm",
-  "followers_count": 27385,
-  "follows_count": 21,
-  "media_count": 690,
+  "followers_count": 27368,
+  "follows_count": 22,
+  "media_count": 692,
   "id": "28033687206311176"
  },
  "media": [
+  {
+   "id": "18209463715370046",
+   "caption": "Bu haftayı takip ettin mi? 5 kare, 5 film. Dördünü bu hafta konuştuk, biri sürpriz.\n\nKaydır, her kareye bak, cevabını yorumlara yaz. Cevaplar son slaytta, bakmadan önce tahminini yap.\n\nKaç tanesini bildin?\n\nYarın 20:00'de: Bir filmde ekranın boyu neden üç kez değişir?",
+   "media_type": "CAROUSEL_ALBUM",
+   "media_product_type": "FEED",
+   "timestamp": "2026-10-16T17:01:05+0000",
+   "like_count": 3,
+   "comments_count": 0,
+   "permalink": "https://www.instagram.com/p/DekBWPSkeIs/"
+  },
+  {
+   "id": "18012933974975806",
+   "caption": "Bu Cuma, 16 Ekim'de sinemalarda 5 yeni yabancı film var.\n\nWhalefall (Balina Düşüşü), dev bir ispermeçet balinasının içine düşen genç bir dalgıcın oksijeni bitmeden çıkma mücadelesini anlatıyor. Jane Austen'ın romanından uyarlanan Sense and Sensibility (Aşk ve Yaşam), Street Fighter, Irak Savaşı'nda geçen Atonement (Kefaret) ve evde yapılan bir doğumun kabusa dönüştüğü Goody Goody (Kanlı Gece) de a",
+   "media_type": "CAROUSEL_ALBUM",
+   "media_product_type": "FEED",
+   "timestamp": "2026-10-16T11:01:11+0000",
+   "like_count": 8,
+   "comments_count": 0,
+   "permalink": "https://www.instagram.com/p/DejYKR_G7au/"
+  },
   {
    "id": "17989203153113852",
    "caption": "The Menu (2022), Margot ve Tyler'ın ünlü şef Julian Slowik'in ıssız bir adadaki restoranına gitmesiyle başlıyor. Kişi başı 1.250 dolarlık bu akşam yemeğinin misafirleri özenle seçilmiş: bir eleştirmen, yatırımcılar, bir film yıldızı.\n\nYemekler servis edildikçe her tabağın bir mesaj taşıdığı ve masadaki herkesin bu akşama bir nedenle çağrıldığı anlaşılıyor. Davetsiz gelen tek kişi Margot ise şefin ",
@@ -33,7 +53,7 @@
    "media_type": "CAROUSEL_ALBUM",
    "media_product_type": "FEED",
    "timestamp": "2026-10-14T17:01:04+0000",
-   "like_count": 5,
+   "like_count": 6,
    "comments_count": 0,
    "permalink": "https://www.instagram.com/p/Dee3wTIIEJi/"
   },
@@ -43,7 +63,7 @@
    "media_type": "CAROUSEL_ALBUM",
    "media_product_type": "FEED",
    "timestamp": "2026-10-14T11:02:15+0000",
-   "like_count": 1,
+   "like_count": 2,
    "comments_count": 0,
    "permalink": "https://www.instagram.com/p/DeeOsz6jtsN/"
   },
@@ -53,7 +73,7 @@
    "media_type": "CAROUSEL_ALBUM",
    "media_product_type": "FEED",
    "timestamp": "2026-10-13T17:01:02+0000",
-   "like_count": 15,
+   "like_count": 17,
    "comments_count": 0,
    "permalink": "https://www.instagram.com/p/DecS9OfGg2x/"
   },
@@ -83,7 +103,7 @@
    "media_type": "CAROUSEL_ALBUM",
    "media_product_type": "FEED",
    "timestamp": "2026-10-12T11:05:18+0000",
-   "like_count": 5,
+   "like_count": 6,
    "comments_count": 4,
    "permalink": "https://www.instagram.com/p/DeZFcvgirmO/"
   },
@@ -93,8 +113,8 @@
    "media_type": "CAROUSEL_ALBUM",
    "media_product_type": "FEED",
    "timestamp": "2026-10-11T17:01:21+0000",
-   "like_count": 32,
-   "comments_count": 9,
+   "like_count": 37,
+   "comments_count": 10,
    "permalink": "https://www.instagram.com/p/DeXJZusoCCM/"
   },
   {
@@ -143,7 +163,7 @@
    "media_type": "CAROUSEL_ALBUM",
    "media_product_type": "FEED",
    "timestamp": "2026-10-09T11:01:57+0000",
-   "like_count": 8,
+   "like_count": 9,
    "comments_count": 0,
    "permalink": "https://www.instagram.com/p/DeRWsU-D4_g/"
   },
@@ -153,7 +173,7 @@
    "media_type": "CAROUSEL_ALBUM",
    "media_product_type": "FEED",
    "timestamp": "2026-10-08T17:01:37+0000",
-   "like_count": 18,
+   "like_count": 19,
    "comments_count": 0,
    "permalink": "https://www.instagram.com/p/DePbDH8Fj2g/"
   },
@@ -163,7 +183,7 @@
    "media_type": "CAROUSEL_ALBUM",
    "media_product_type": "FEED",
    "timestamp": "2026-10-08T11:00:47+0000",
-   "like_count": 10,
+   "like_count": 11,
    "comments_count": 2,
    "permalink": "https://www.instagram.com/p/DeOxwQskebf/"
   },
@@ -184,7 +204,7 @@
    "media_product_type": "FEED",
    "timestamp": "2026-10-06T16:02:38+0000",
    "like_count": 84,
-   "comments_count": 19,
+   "comments_count": 21,
    "permalink": "https://www.instagram.com/p/DeKKuAqm2li/"
   },
   {
@@ -233,7 +253,7 @@
    "media_type": "CAROUSEL_ALBUM",
    "media_product_type": "FEED",
    "timestamp": "2026-10-01T17:20:25+0000",
-   "like_count": 911,
+   "like_count": 912,
    "comments_count": 84,
    "permalink": "https://www.instagram.com/p/Dd9boxgnPJs/"
   },
@@ -343,7 +363,7 @@
    "media_type": "VIDEO",
    "media_product_type": "REELS",
    "timestamp": "2026-08-10T17:08:31+0000",
-   "like_count": 1852,
+   "like_count": 1861,
    "comments_count": 69,
    "permalink": "https://www.instagram.com/reel/Db3g4FGsHLo/"
   },
@@ -463,7 +483,7 @@
    "media_type": "VIDEO",
    "media_product_type": "REELS",
    "timestamp": "2026-07-13T09:34:43+0000",
-   "like_count": 1171,
+   "like_count": 1169,
    "comments_count": 18,
    "permalink": "https://www.instagram.com/reel/DaumrWNsbZg/"
   },
@@ -543,8 +563,8 @@
    "media_type": "VIDEO",
    "media_product_type": "REELS",
    "timestamp": "2026-06-29T09:15:25+0000",
-   "like_count": 3817,
-   "comments_count": 25,
+   "like_count": 3816,
+   "comments_count": 26,
    "permalink": "https://www.instagram.com/reel/DaKhUprM6Rw/"
   },
   {
@@ -573,7 +593,7 @@
    "media_type": "VIDEO",
    "media_product_type": "REELS",
    "timestamp": "2026-06-23T10:50:18+0000",
-   "like_count": 6927,
+   "like_count": 6926,
    "comments_count": 203,
    "permalink": "https://www.instagram.com/reel/DZ7N93CsO3n/"
   },
@@ -633,7 +653,7 @@
    "media_type": "VIDEO",
    "media_product_type": "REELS",
    "timestamp": "2026-06-13T09:45:22+0000",
-   "like_count": 14326,
+   "like_count": 14327,
    "comments_count": 96,
    "permalink": "https://www.instagram.com/reel/DZhX_PYs05V/"
   },
@@ -913,7 +933,7 @@
    "media_type": "VIDEO",
    "media_product_type": "REELS",
    "timestamp": "2026-05-15T08:24:53+0000",
-   "like_count": 426,
+   "like_count": 425,
    "comments_count": 2,
    "permalink": "https://www.instagram.com/reel/DYWjyCcsnAD/"
   },
@@ -1003,7 +1023,7 @@
    "media_type": "VIDEO",
    "media_product_type": "REELS",
    "timestamp": "2026-05-07T09:10:57+0000",
-   "like_count": 98,
+   "like_count": 99,
    "comments_count": 7,
    "permalink": "https://www.instagram.com/reel/DYCCle6MVnp/"
   },
@@ -1113,7 +1133,7 @@
    "media_type": "VIDEO",
    "media_product_type": "REELS",
    "timestamp": "2026-04-27T09:27:56+0000",
-   "like_count": 58962,
+   "like_count": 58957,
    "comments_count": 164,
    "permalink": "https://www.instagram.com/reel/DXoUsCyMfXm/"
   },
@@ -1493,7 +1513,7 @@
    "media_type": "VIDEO",
    "media_product_type": "REELS",
    "timestamp": "2026-04-06T09:08:24+0000",
-   "like_count": 37790,
+   "like_count": 37781,
    "comments_count": 165,
    "permalink": "https://www.instagram.com/reel/DWyNvIpDP-z/"
   },
@@ -1513,7 +1533,7 @@
    "media_type": "VIDEO",
    "media_product_type": "REELS",
    "timestamp": "2026-04-05T09:22:52+0000",
-   "like_count": 7491,
+   "like_count": 7490,
    "comments_count": 185,
    "permalink": "https://www.instagram.com/reel/DWvqozNjO8n/"
   },
@@ -1573,7 +1593,7 @@
    "media_type": "VIDEO",
    "media_product_type": "REELS",
    "timestamp": "2026-04-03T09:02:50+0000",
-   "like_count": 24655,
+   "like_count": 24649,
    "comments_count": 115,
    "permalink": "https://www.instagram.com/reel/DWqebDiDLC3/"
   },
@@ -1843,7 +1863,7 @@
    "media_type": "VIDEO",
    "media_product_type": "REELS",
    "timestamp": "2026-03-25T08:57:03+0000",
-   "like_count": 3274,
+   "like_count": 3273,
    "comments_count": 27,
    "permalink": "https://www.instagram.com/reel/DWTS36RDDoR/"
   },
@@ -1903,7 +1923,7 @@
    "media_type": "VIDEO",
    "media_product_type": "REELS",
    "timestamp": "2026-03-23T09:50:54+0000",
-   "like_count": 375,
+   "like_count": 374,
    "comments_count": 1,
    "permalink": "https://www.instagram.com/reel/DWOPbWADJfo/"
   },
@@ -1963,7 +1983,7 @@
    "media_type": "VIDEO",
    "media_product_type": "REELS",
    "timestamp": "2026-03-21T10:18:58+0000",
-   "like_count": 3097,
+   "like_count": 3096,
    "comments_count": 2,
    "permalink": "https://www.instagram.com/reel/DWJJHBOjO73/"
   },
@@ -1973,7 +1993,7 @@
    "media_type": "VIDEO",
    "media_product_type": "REELS",
    "timestamp": "2026-03-20T18:23:47+0000",
-   "like_count": 34430,
+   "like_count": 34424,
    "comments_count": 144,
    "permalink": "https://www.instagram.com/reel/DWHbxoBjIB0/"
   },
@@ -1986,26 +2006,6 @@
    "like_count": 16,
    "comments_count": 0,
    "permalink": "https://www.instagram.com/reel/DWGyqUZjLcn/"
-  },
-  {
-   "id": "18097841947789983",
-   "caption": "(500) Days of Summer\n\nAşkı hayatının merkezine koyan ve ilişkilerde anlam arayan Tom Hansen, çalıştığı ofiste tanıştığı Summer Finn’e kısa sürede güçlü bir yakınlık hissetmeye başlar. Summer’ın özgür tavırları, kurallara bağlı olmayan bakışı ve ilişkilere mesafeli yaklaşımı, Tom’un romantik beklentileriyle sürekli çelişir. Birlikte geçirilen zamanlar Tom için unutulmaz anılara dönüşürken, aynı ili",
-   "media_type": "VIDEO",
-   "media_product_type": "REELS",
-   "timestamp": "2026-03-20T09:23:15+0000",
-   "like_count": 55,
-   "comments_count": 1,
-   "permalink": "https://www.instagram.com/reel/DWGd91RDKLC/"
-  },
-  {
-   "id": "18177240745382986",
-   "caption": "Saltburn (2023)\n\n2000’lerin ortasında, içine kapanık ve maddi olarak sıradan bir üniversite öğrencisi olan Oliver Quick, okulun en dikkat çekici ve ayrıcalıklı öğrencilerinden Felix Catton ile yakınlaşır. Felix’in hayatındaki rahatlık, çevresindeki özgüven ve ait olduğu sınıf Oliver için yalnızca hayranlık uyandıran bir dünya değildir; aynı zamanda içine girmek istediği başka bir hayatın kapısını ",
-   "media_type": "VIDEO",
-   "media_product_type": "REELS",
-   "timestamp": "2026-03-19T17:20:43+0000",
-   "like_count": 36,
-   "comments_count": 2,
-   "permalink": "https://www.instagram.com/reel/DWEv0bZDAot/"
   }
  ]
 }

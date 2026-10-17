@@ -1,72 +1,79 @@
 {
- "generated_at": "2026-10-16T04:54+00:00",
- "followers": 27385,
+ "generated_at": "2026-10-17T04:50+00:00",
+ "followers": 27368,
  "scoring": "beğeni + 3×yorum; 48 saatten genç gönderiler hariç",
  "formats": {
   "BELGESEL": {
    "n": 1,
    "median": 8,
    "best": 8,
-   "adjusted": 13.3
+   "adjusted": 14.0
+  },
+  "DİĞER": {
+   "n": 0,
+   "median": null,
+   "best": null,
+   "adjusted": 17
   },
   "EŞLEŞTİRME": {
    "n": 1,
    "median": 19,
    "best": 19,
-   "adjusted": 17.0
+   "adjusted": 17.7
   },
   "FİLM": {
    "n": 4,
-   "median": 22.0,
+   "median": 22.5,
    "best": 52,
-   "adjusted": 20.0
+   "adjusted": 20.7
   },
   "HABER": {
-   "n": 6,
-   "median": 10.0,
-   "best": 17,
-   "adjusted": 11.5
+   "n": 7,
+   "median": 9,
+   "best": 18,
+   "adjusted": 10.8
   },
   "KARŞILAŞTIRMA": {
-   "n": 0,
-   "median": null,
-   "best": null,
-   "adjusted": 16
+   "n": 1,
+   "median": 6,
+   "best": 6,
+   "adjusted": 13.3
   },
   "LİSTE": {
    "n": 4,
-   "median": 100.0,
-   "best": 1163,
-   "adjusted": 72.0
+   "median": 107.0,
+   "best": 1164,
+   "adjusted": 77.0
   },
   "OYUN": {
    "n": 2,
    "median": 25.0,
    "best": 43,
-   "adjusted": 20.5
+   "adjusted": 21.0
   },
   "VERİ": {
    "n": 1,
    "median": 16,
    "best": 16,
-   "adjusted": 16.0
+   "adjusted": 16.7
   }
  },
  "evening_weights": {
-  "BELGESEL": 0.093,
-  "EŞLEŞTİRME": 0.111,
-  "FİLM": 0.126,
-  "KARŞILAŞTIRMA": 0.106,
-  "LİSTE": 0.329,
-  "OYUN": 0.128,
-  "VERİ": 0.106
+  "BELGESEL": 0.085,
+  "DİĞER": 0.099,
+  "EŞLEŞTİRME": 0.102,
+  "FİLM": 0.114,
+  "KARŞILAŞTIRMA": 0.082,
+  "LİSTE": 0.306,
+  "OYUN": 0.115,
+  "VERİ": 0.097
  },
  "weekly_plan_20_00": {
   "LİSTE": 2,
   "OYUN": 1,
   "FİLM": 1,
   "EŞLEŞTİRME": 1,
-  "KARŞILAŞTIRMA": 1,
+  "DİĞER": 1,
   "VERİ": 1
  },
  "ranking": [
@@ -74,20 +81,21 @@
   "OYUN",
   "FİLM",
   "EŞLEŞTİRME",
-  "KARŞILAŞTIRMA",
+  "DİĞER",
   "VERİ",
-  "BELGESEL"
+  "BELGESEL",
+  "KARŞILAŞTIRMA"
  ],
  "media_types": {
   "CAROUSEL_ALBUM": {
-   "n": 44,
+   "n": 46,
    "median": 16.0,
-   "mean": 52
+   "mean": 51
   },
   "REELS": {
-   "n": 156,
-   "median": 80.5,
-   "mean": 1544
+   "n": 154,
+   "median": 83.5,
+   "mean": 1563
   }
  },
  "posts": [
@@ -95,10 +103,10 @@
    "id": "gun1_liste",
    "format": "LİSTE",
    "slot": "20:00",
-   "likes": 911,
+   "likes": 912,
    "comments": 84,
-   "score": 1163,
-   "age_h": 347,
+   "score": 1164,
+   "age_h": 371,
    "mature": true
   },
   {
@@ -108,7 +116,7 @@
    "likes": 20,
    "comments": 2,
    "score": 26,
-   "age_h": 323,
+   "age_h": 347,
    "mature": true
   },
   {
@@ -118,7 +126,7 @@
    "likes": 8,
    "comments": 0,
    "score": 8,
-   "age_h": 299,
+   "age_h": 323,
    "mature": true
   },
   {
@@ -128,7 +136,7 @@
    "likes": 22,
    "comments": 7,
    "score": 43,
-   "age_h": 275,
+   "age_h": 299,
    "mature": true
   },
   {
@@ -138,7 +146,7 @@
    "likes": 46,
    "comments": 2,
    "score": 52,
-   "age_h": 251,
+   "age_h": 275,
    "mature": true
   },
   {
@@ -146,9 +154,9 @@
    "format": "LİSTE",
    "slot": "18:40",
    "likes": 84,
-   "comments": 19,
-   "score": 141,
-   "age_h": 228,
+   "comments": 21,
+   "score": 147,
+   "age_h": 252,
    "mature": true
   },
   {
@@ -158,37 +166,37 @@
    "likes": 19,
    "comments": 0,
    "score": 19,
-   "age_h": 203,
+   "age_h": 227,
    "mature": true
   },
   {
    "id": "2026-10-08_haber_possible-love",
    "format": "HABER",
    "slot": "14:00",
-   "likes": 10,
+   "likes": 11,
    "comments": 2,
-   "score": 16,
-   "age_h": 185,
+   "score": 17,
+   "age_h": 209,
    "mature": true
   },
   {
    "id": "2026-10-08_film_memories-of-murder",
    "format": "FİLM",
    "slot": "20:00",
-   "likes": 18,
+   "likes": 19,
    "comments": 0,
-   "score": 18,
-   "age_h": 179,
+   "score": 19,
+   "age_h": 203,
    "mature": true
   },
   {
    "id": "2026-10-09_haber_primetime",
    "format": "HABER",
    "slot": "14:00",
-   "likes": 8,
+   "likes": 9,
    "comments": 0,
-   "score": 8,
-   "age_h": 161,
+   "score": 9,
+   "age_h": 185,
    "mature": true
   },
   {
@@ -198,7 +206,7 @@
    "likes": 7,
    "comments": 0,
    "score": 7,
-   "age_h": 155,
+   "age_h": 179,
    "mature": true
   },
   {
@@ -208,7 +216,7 @@
    "likes": 6,
    "comments": 0,
    "score": 6,
-   "age_h": 137,
+   "age_h": 161,
    "mature": true
   },
   {
@@ -218,7 +226,7 @@
    "likes": 7,
    "comments": 3,
    "score": 16,
-   "age_h": 131,
+   "age_h": 155,
    "mature": true
   },
   {
@@ -228,27 +236,27 @@
    "likes": 11,
    "comments": 0,
    "score": 11,
-   "age_h": 113,
+   "age_h": 137,
    "mature": true
   },
   {
    "id": "2026-10-11_liste_kara-komedi",
    "format": "LİSTE",
    "slot": "20:00",
-   "likes": 32,
-   "comments": 9,
-   "score": 59,
-   "age_h": 107,
+   "likes": 37,
+   "comments": 10,
+   "score": 67,
+   "age_h": 131,
    "mature": true
   },
   {
    "id": "2026-10-12_haber_fatherland",
    "format": "HABER",
    "slot": "14:00",
-   "likes": 5,
+   "likes": 6,
    "comments": 4,
-   "score": 17,
-   "age_h": 89,
+   "score": 18,
+   "age_h": 113,
    "mature": true
   },
   {
@@ -258,7 +266,7 @@
    "likes": 10,
    "comments": 0,
    "score": 10,
-   "age_h": 83,
+   "age_h": 107,
    "mature": true
   },
   {
@@ -268,38 +276,38 @@
    "likes": 9,
    "comments": 0,
    "score": 9,
-   "age_h": 65,
+   "age_h": 89,
    "mature": true
   },
   {
    "id": "2026-10-13_liste_kafanin-icinde",
    "format": "LİSTE",
    "slot": "20:00",
-   "likes": 15,
+   "likes": 17,
    "comments": 0,
-   "score": 15,
-   "age_h": 59,
+   "score": 17,
+   "age_h": 83,
    "mature": true
   },
   {
    "id": "2026-10-14_haber_wildwood",
    "format": "HABER",
    "slot": "14:00",
-   "likes": 1,
+   "likes": 2,
    "comments": 0,
-   "score": 1,
-   "age_h": 41,
-   "mature": false
+   "score": 2,
+   "age_h": 65,
+   "mature": true
   },
   {
    "id": "2026-10-14_karsilastirma_uzaylilarla-konusmak",
    "format": "KARŞILAŞTIRMA",
    "slot": "20:00",
-   "likes": 5,
+   "likes": 6,
    "comments": 0,
-   "score": 5,
-   "age_h": 35,
-   "mature": false
+   "score": 6,
+   "age_h": 59,
+   "mature": true
   },
   {
    "id": "2026-10-15_haber_you-can-see-everything",
@@ -308,12 +316,32 @@
    "likes": 3,
    "comments": 0,
    "score": 3,
-   "age_h": 16,
+   "age_h": 39,
    "mature": false
   },
   {
    "id": "2026-10-15_film_the-menu",
    "format": "FİLM",
+   "slot": "20:00",
+   "likes": 3,
+   "comments": 0,
+   "score": 3,
+   "age_h": 35,
+   "mature": false
+  },
+  {
+   "id": "2026-10-16_vizyon_bu-hafta",
+   "format": "DİĞER",
+   "slot": "14:00",
+   "likes": 8,
+   "comments": 0,
+   "score": 8,
+   "age_h": 17,
+   "mature": false
+  },
+  {
+   "id": "2026-10-16_oyun-haftanin-detaylari",
+   "format": "OYUN",
    "slot": "20:00",
    "likes": 3,
    "comments": 0,
@@ -326,7 +354,7 @@
   {
    "date": "2026-04-27",
    "type": "REELS",
-   "likes": 58962,
+   "likes": 58957,
    "comments": 164,
    "caption": "Four Lions",
    "permalink": "https://www.instagram.com/reel/DXoUsCyMfXm/"
@@ -334,7 +362,7 @@
   {
    "date": "2026-04-06",
    "type": "REELS",
-   "likes": 37790,
+   "likes": 37781,
    "comments": 165,
    "caption": "Shrek the Third (2007), taht meselesi yüzünden istemediği bir sorumluluğun eşiğine gelen bir karakterin, kendi",
    "permalink": "https://www.instagram.com/reel/DWyNvIpDP-z/"
@@ -342,7 +370,7 @@
   {
    "date": "2026-03-20",
    "type": "REELS",
-   "likes": 34430,
+   "likes": 34424,
    "comments": 144,
    "caption": "Kabadayı 2007",
    "permalink": "https://www.instagram.com/reel/DWHbxoBjIB0/"
@@ -350,7 +378,7 @@
   {
    "date": "2026-04-03",
    "type": "REELS",
-   "likes": 24655,
+   "likes": 24649,
    "comments": 115,
    "caption": "Fantastic Mr. Fox (2009), sakin bir aile hayatı kurmaya çalışırken eski içgüdülerinden vazgeçemeyen bir tilkin",
    "permalink": "https://www.instagram.com/reel/DWqebDiDLC3/"
@@ -358,7 +386,7 @@
   {
    "date": "2026-06-13",
    "type": "REELS",
-   "likes": 14326,
+   "likes": 14327,
    "comments": 96,
    "caption": "964 Pinocchio (1991), hafızası silinmiş ve sokağa terk edilmiş bir sibernetik insanın, kim olduğunu anlamaya ç",
    "permalink": "https://www.instagram.com/reel/DZhX_PYs05V/"
@@ -366,7 +394,7 @@
   {
    "date": "2026-04-05",
    "type": "REELS",
-   "likes": 7491,
+   "likes": 7490,
    "comments": 185,
    "caption": "Duvara Karşı (2004), hayatla bağı zayıflamış iki insanın tesadüfi biçimde aynı noktada buluşmasını anlatırken,",
    "permalink": "https://www.instagram.com/reel/DWvqozNjO8n/"
@@ -374,7 +402,7 @@
   {
    "date": "2026-06-23",
    "type": "REELS",
-   "likes": 6927,
+   "likes": 6926,
    "comments": 203,
    "caption": "Narın Rengi (1969), ünlü bir ozanın hayatını alışılmış bir biyografi gibi anlatmak yerine, onun dünyasını şiir",
    "permalink": "https://www.instagram.com/reel/DZ7N93CsO3n/"
@@ -390,15 +418,15 @@
   {
    "date": "2026-06-29",
    "type": "REELS",
-   "likes": 3817,
-   "comments": 25,
+   "likes": 3816,
+   "comments": 26,
    "caption": "Bir Koyun Polisiyesi (2026), sessiz ve huzurlu bir köyde yaşayan koyunların, çobanlarının esrarengiz şekilde o",
    "permalink": "https://www.instagram.com/reel/DaKhUprM6Rw/"
   },
   {
    "date": "2026-03-25",
    "type": "REELS",
-   "likes": 3274,
+   "likes": 3273,
    "comments": 27,
    "caption": "Duvara Karşı (2004)",
    "permalink": "https://www.instagram.com/reel/DWTS36RDDoR/"
@@ -414,7 +442,7 @@
   {
    "date": "2026-03-21",
    "type": "REELS",
-   "likes": 3097,
+   "likes": 3096,
    "comments": 2,
    "caption": "Fantastic Mr. Fox (2009)",
    "permalink": "https://www.instagram.com/reel/DWJJHBOjO73/"
@@ -438,7 +466,7 @@
   {
    "date": "2026-08-10",
    "type": "REELS",
-   "likes": 1852,
+   "likes": 1861,
    "comments": 69,
    "caption": "The Invite (2026), evlilikleri sorunlu bir çiftin üst kattaki komşularını akşam yemeğine davet etmesiyle başlı",
    "permalink": "https://www.instagram.com/reel/Db3g4FGsHLo/"
@@ -470,7 +498,7 @@
   {
    "date": "2026-07-13",
    "type": "REELS",
-   "likes": 1171,
+   "likes": 1169,
    "comments": 18,
    "caption": "Entergalactic (2022), hayallerinin peşinden gitmeye çalışan genç bir çizerin, yeni taşındığı apartmanda tanışt",
    "permalink": "https://www.instagram.com/reel/DaumrWNsbZg/"
@@ -487,14 +515,14 @@
  "top_carousels": [
   {
    "date": "2026-10-01",
-   "likes": 911,
+   "likes": 912,
    "comments": 84,
    "caption": "Sonunu kimseye anlatamayacağın 5 film. Hepsinin ortak noktası şu: izlerken her şeyi anladığını düşünüyorsun, b"
   },
   {
    "date": "2026-10-06",
    "likes": 84,
-   "comments": 19,
+   "comments": 21,
    "caption": "Türk sinemasının sessiz başyapıtları. Gişe rekoru kırmadılar, televizyonda pek dönmediler ama festivallerde öd"
   },
   {
@@ -516,16 +544,16 @@
    "caption": "Odyssey neden bu kadar eleştirildi?"
   },
   {
+   "date": "2026-10-11",
+   "likes": 37,
+   "comments": 10,
+   "caption": "Gülerken suçlu hissettiren 5 kara komedi. Hepsinde ciddi, hatta korkunç bir mesele var; ama film seni o mesele"
+  },
+  {
    "date": "2026-07-12",
    "likes": 55,
    "comments": 2,
    "caption": "Dogville (2003), peşindeki insanlardan kaçan genç bir kadının, dağların arasında bulunan küçük bir kasabaya sı"
-  },
-  {
-   "date": "2026-10-11",
-   "likes": 32,
-   "comments": 9,
-   "caption": "Gülerken suçlu hissettiren 5 kara komedi. Hepsinde ciddi, hatta korkunç bir mesele var; ama film seni o mesele"
   },
   {
    "date": "2026-10-05",
