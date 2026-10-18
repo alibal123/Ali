@@ -1,19 +1,29 @@
 {
  "account": {
   "username": "derecefilm",
-  "followers_count": 27368,
+  "followers_count": 27360,
   "follows_count": 22,
-  "media_count": 692,
+  "media_count": 693,
   "id": "28033687206311176"
  },
  "media": [
+  {
+   "id": "17986925085111010",
+   "caption": "The Grand Budapest Hotel (2014), üç ayrı zamanda geçen bir hikâye anlatıyor: otelin altın çağı olan 1930'lar, çöküş yılları olan 1960'lar ve hikâyeyi anlatan yazarın zamanı.\n\nWes Anderson, izleyici hangi yılda olduğunu anlasın diye her dönemi o dönemin sinemasına ait bir ekran oranıyla çekti. 1930'lar neredeyse kare bir oranda, 1960'lar geniş ekranda, yazarın zamanı ise bugün de en yaygın olan ora",
+   "media_type": "CAROUSEL_ALBUM",
+   "media_product_type": "FEED",
+   "timestamp": "2026-10-17T17:01:19+0000",
+   "like_count": 8,
+   "comments_count": 0,
+   "permalink": "https://www.instagram.com/p/DemmK0YFkbm/"
+  },
   {
    "id": "18209463715370046",
    "caption": "Bu haftayı takip ettin mi? 5 kare, 5 film. Dördünü bu hafta konuştuk, biri sürpriz.\n\nKaydır, her kareye bak, cevabını yorumlara yaz. Cevaplar son slaytta, bakmadan önce tahminini yap.\n\nKaç tanesini bildin?\n\nYarın 20:00'de: Bir filmde ekranın boyu neden üç kez değişir?",
    "media_type": "CAROUSEL_ALBUM",
    "media_product_type": "FEED",
    "timestamp": "2026-10-16T17:01:05+0000",
-   "like_count": 3,
+   "like_count": 6,
    "comments_count": 0,
    "permalink": "https://www.instagram.com/p/DekBWPSkeIs/"
   },
@@ -23,7 +33,7 @@
    "media_type": "CAROUSEL_ALBUM",
    "media_product_type": "FEED",
    "timestamp": "2026-10-16T11:01:11+0000",
-   "like_count": 8,
+   "like_count": 9,
    "comments_count": 0,
    "permalink": "https://www.instagram.com/p/DejYKR_G7au/"
   },
@@ -93,7 +103,7 @@
    "media_type": "CAROUSEL_ALBUM",
    "media_product_type": "FEED",
    "timestamp": "2026-10-12T17:01:16+0000",
-   "like_count": 10,
+   "like_count": 13,
    "comments_count": 0,
    "permalink": "https://www.instagram.com/p/DeZuL_6oGqA/"
   },
@@ -113,8 +123,8 @@
    "media_type": "CAROUSEL_ALBUM",
    "media_product_type": "FEED",
    "timestamp": "2026-10-11T17:01:21+0000",
-   "like_count": 37,
-   "comments_count": 10,
+   "like_count": 43,
+   "comments_count": 11,
    "permalink": "https://www.instagram.com/p/DeXJZusoCCM/"
   },
   {
@@ -143,7 +153,7 @@
    "media_type": "CAROUSEL_ALBUM",
    "media_product_type": "FEED",
    "timestamp": "2026-10-10T11:02:00+0000",
-   "like_count": 6,
+   "like_count": 7,
    "comments_count": 0,
    "permalink": "https://www.instagram.com/p/DeT7e6agjTj/"
   },
@@ -163,7 +173,7 @@
    "media_type": "CAROUSEL_ALBUM",
    "media_product_type": "FEED",
    "timestamp": "2026-10-09T11:01:57+0000",
-   "like_count": 9,
+   "like_count": 10,
    "comments_count": 0,
    "permalink": "https://www.instagram.com/p/DeRWsU-D4_g/"
   },
@@ -203,8 +213,8 @@
    "media_type": "CAROUSEL_ALBUM",
    "media_product_type": "FEED",
    "timestamp": "2026-10-06T16:02:38+0000",
-   "like_count": 84,
-   "comments_count": 21,
+   "like_count": 87,
+   "comments_count": 23,
    "permalink": "https://www.instagram.com/p/DeKKuAqm2li/"
   },
   {
@@ -233,7 +243,7 @@
    "media_type": "CAROUSEL_ALBUM",
    "media_product_type": "FEED",
    "timestamp": "2026-10-03T17:04:06+0000",
-   "like_count": 8,
+   "like_count": 9,
    "comments_count": 0,
    "permalink": "https://www.instagram.com/p/DeCjXBQFEo-/"
   },
@@ -253,7 +263,7 @@
    "media_type": "CAROUSEL_ALBUM",
    "media_product_type": "FEED",
    "timestamp": "2026-10-01T17:20:25+0000",
-   "like_count": 912,
+   "like_count": 915,
    "comments_count": 84,
    "permalink": "https://www.instagram.com/p/Dd9boxgnPJs/"
   },
@@ -363,8 +373,8 @@
    "media_type": "VIDEO",
    "media_product_type": "REELS",
    "timestamp": "2026-08-10T17:08:31+0000",
-   "like_count": 1861,
-   "comments_count": 69,
+   "like_count": 1878,
+   "comments_count": 70,
    "permalink": "https://www.instagram.com/reel/Db3g4FGsHLo/"
   },
   {
@@ -473,7 +483,7 @@
    "media_type": "VIDEO",
    "media_product_type": "REELS",
    "timestamp": "2026-07-16T10:45:30+0000",
-   "like_count": 4329,
+   "like_count": 4330,
    "comments_count": 17,
    "permalink": "https://www.instagram.com/reel/Da2ctorsDpj/"
   },
@@ -533,7 +543,7 @@
    "media_type": "VIDEO",
    "media_product_type": "REELS",
    "timestamp": "2026-07-05T09:00:29+0000",
-   "like_count": 1160,
+   "like_count": 1159,
    "comments_count": 16,
    "permalink": "https://www.instagram.com/reel/DaZ8TmXMyby/"
   },
@@ -563,7 +573,7 @@
    "media_type": "VIDEO",
    "media_product_type": "REELS",
    "timestamp": "2026-06-29T09:15:25+0000",
-   "like_count": 3816,
+   "like_count": 3815,
    "comments_count": 26,
    "permalink": "https://www.instagram.com/reel/DaKhUprM6Rw/"
   },
@@ -653,7 +663,7 @@
    "media_type": "VIDEO",
    "media_product_type": "REELS",
    "timestamp": "2026-06-13T09:45:22+0000",
-   "like_count": 14327,
+   "like_count": 14328,
    "comments_count": 96,
    "permalink": "https://www.instagram.com/reel/DZhX_PYs05V/"
   },
@@ -743,7 +753,7 @@
    "media_type": "VIDEO",
    "media_product_type": "REELS",
    "timestamp": "2026-06-02T09:25:31+0000",
-   "like_count": 2539,
+   "like_count": 2538,
    "comments_count": 38,
    "permalink": "https://www.instagram.com/reel/DZFA-9IswUS/"
   },
@@ -873,7 +883,7 @@
    "media_type": "VIDEO",
    "media_product_type": "REELS",
    "timestamp": "2026-05-19T15:52:38+0000",
-   "like_count": 172,
+   "like_count": 176,
    "comments_count": 0,
    "permalink": "https://www.instagram.com/reel/DYhqElHs9GE/"
   },
@@ -933,7 +943,7 @@
    "media_type": "VIDEO",
    "media_product_type": "REELS",
    "timestamp": "2026-05-15T08:24:53+0000",
-   "like_count": 425,
+   "like_count": 424,
    "comments_count": 2,
    "permalink": "https://www.instagram.com/reel/DYWjyCcsnAD/"
   },
@@ -1013,7 +1023,7 @@
    "media_type": "VIDEO",
    "media_product_type": "REELS",
    "timestamp": "2026-05-08T13:54:12+0000",
-   "like_count": 3032,
+   "like_count": 3034,
    "comments_count": 37,
    "permalink": "https://www.instagram.com/reel/DYFHzdjM7XY/"
   },
@@ -1023,7 +1033,7 @@
    "media_type": "VIDEO",
    "media_product_type": "REELS",
    "timestamp": "2026-05-07T09:10:57+0000",
-   "like_count": 99,
+   "like_count": 100,
    "comments_count": 7,
    "permalink": "https://www.instagram.com/reel/DYCCle6MVnp/"
   },
@@ -1043,7 +1053,7 @@
    "media_type": "CAROUSEL_ALBUM",
    "media_product_type": "FEED",
    "timestamp": "2026-05-05T17:02:06+0000",
-   "like_count": 78,
+   "like_count": 77,
    "comments_count": 3,
    "permalink": "https://www.instagram.com/p/DX9vHLMDFg5/"
   },
@@ -1103,7 +1113,7 @@
    "media_type": "VIDEO",
    "media_product_type": "REELS",
    "timestamp": "2026-04-30T09:10:36+0000",
-   "like_count": 886,
+   "like_count": 885,
    "comments_count": 14,
    "permalink": "https://www.instagram.com/reel/DXwBAwwMiRn/"
   },
@@ -1133,7 +1143,7 @@
    "media_type": "VIDEO",
    "media_product_type": "REELS",
    "timestamp": "2026-04-27T09:27:56+0000",
-   "like_count": 58957,
+   "like_count": 58950,
    "comments_count": 164,
    "permalink": "https://www.instagram.com/reel/DXoUsCyMfXm/"
   },
@@ -1213,7 +1223,7 @@
    "media_type": "VIDEO",
    "media_product_type": "REELS",
    "timestamp": "2026-04-19T09:19:11+0000",
-   "like_count": 91,
+   "like_count": 90,
    "comments_count": 0,
    "permalink": "https://www.instagram.com/reel/DXTtWf6sKqF/"
   },
@@ -1513,7 +1523,7 @@
    "media_type": "VIDEO",
    "media_product_type": "REELS",
    "timestamp": "2026-04-06T09:08:24+0000",
-   "like_count": 37781,
+   "like_count": 37775,
    "comments_count": 165,
    "permalink": "https://www.instagram.com/reel/DWyNvIpDP-z/"
   },
@@ -1533,7 +1543,7 @@
    "media_type": "VIDEO",
    "media_product_type": "REELS",
    "timestamp": "2026-04-05T09:22:52+0000",
-   "like_count": 7490,
+   "like_count": 7489,
    "comments_count": 185,
    "permalink": "https://www.instagram.com/reel/DWvqozNjO8n/"
   },
@@ -1593,7 +1603,7 @@
    "media_type": "VIDEO",
    "media_product_type": "REELS",
    "timestamp": "2026-04-03T09:02:50+0000",
-   "like_count": 24649,
+   "like_count": 24645,
    "comments_count": 115,
    "permalink": "https://www.instagram.com/reel/DWqebDiDLC3/"
   },
@@ -1793,7 +1803,7 @@
    "media_type": "VIDEO",
    "media_product_type": "REELS",
    "timestamp": "2026-03-27T12:54:32+0000",
-   "like_count": 583,
+   "like_count": 582,
    "comments_count": 11,
    "permalink": "https://www.instagram.com/reel/DWY2pGIDG6B/"
   },
@@ -1853,7 +1863,7 @@
    "media_type": "VIDEO",
    "media_product_type": "REELS",
    "timestamp": "2026-03-25T12:53:57+0000",
-   "like_count": 2543,
+   "like_count": 2542,
    "comments_count": 67,
    "permalink": "https://www.instagram.com/reel/DWTtjsgDAp3/"
   },
@@ -1863,7 +1873,7 @@
    "media_type": "VIDEO",
    "media_product_type": "REELS",
    "timestamp": "2026-03-25T08:57:03+0000",
-   "like_count": 3273,
+   "like_count": 3271,
    "comments_count": 27,
    "permalink": "https://www.instagram.com/reel/DWTS36RDDoR/"
   },
@@ -1983,7 +1993,7 @@
    "media_type": "VIDEO",
    "media_product_type": "REELS",
    "timestamp": "2026-03-21T10:18:58+0000",
-   "like_count": 3096,
+   "like_count": 3093,
    "comments_count": 2,
    "permalink": "https://www.instagram.com/reel/DWJJHBOjO73/"
   },
@@ -1993,19 +2003,9 @@
    "media_type": "VIDEO",
    "media_product_type": "REELS",
    "timestamp": "2026-03-20T18:23:47+0000",
-   "like_count": 34424,
+   "like_count": 34415,
    "comments_count": 144,
    "permalink": "https://www.instagram.com/reel/DWHbxoBjIB0/"
-  },
-  {
-   "id": "17973559712855723",
-   "caption": "30 Gün 30 Film — Gün 12\nBugünün filmi: Spring Breakers\n\nHer gün bir film üzerinden sinema hakkında kısa bir yolculuk yapıyoruz.\nBazen bir film parlak renklerin ve yüksek müziğin altında çok daha karanlık bir hikâye saklar.\n\nBugün konuştuğumuz film, tatil hayali kuran dört genç kadının para bulabilmek için yaptıkları küçük bir soygunla başlayan yolculuğunu anlatıyor. Florida’ya ulaştıklarında her ş",
-   "media_type": "VIDEO",
-   "media_product_type": "REELS",
-   "timestamp": "2026-03-20T12:24:51+0000",
-   "like_count": 16,
-   "comments_count": 0,
-   "permalink": "https://www.instagram.com/reel/DWGyqUZjLcn/"
   }
  ]
 }
