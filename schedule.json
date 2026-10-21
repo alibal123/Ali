@@ -396,7 +396,11 @@
       "platforms": [
         "instagram"
       ],
-      "status": "planned"
+      "status": "published",
+      "results": {
+        "instagram": "18634536319058324"
+      },
+      "published_at": "2026-10-21T20:00+03:00"
     }
   ]
 }
