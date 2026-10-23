@@ -6,54 +6,42 @@
   "caption": "İzledikten sonra günlerce peşini bırakmayan 5 film. Hepsinin ortak noktası: bitince ekranı kapatıyorsun ama aklın hâlâ o filmde kalıyor.\n\nOldboy sebepsizce hapsedilen bir adamı, Prisoners kaybolan iki kızın peşindeki bir babayı, Burning gizemli bir üçgene sıkışan genç bir yazarı anlatıyor. Zodiac gerçek bir seri katil vakasını, Mulholland Drive ise hafızasını kaybeden bir kadının hikâyesini.\n\nBu listeyi kaydet, hafta sonu sırayla izle. Seni en uzun süre rahat bırakmayan film hangisiydi?\n\nYarın 18:00'de: yeni bir film listesiyle buradayız.",
   "slides": [
     {
-      "type": "collage",
-      "kick": "Kaydet, bu gece lazım olacak",
-      "imgs": [
-        {
-          "img": "lc_oldboy_5.jpg",
-          "label": "Oldboy"
-        },
-        {
-          "img": "lc_prisoners_8b.jpg",
-          "label": "Prisoners"
-        },
-        {
-          "img": "lc_burning_5.jpg",
-          "label": "Burning"
-        },
-        {
-          "img": "lc_zodiac_4.jpg",
-          "label": "Zodiac"
-        },
-        {
-          "img": "lc_mulholland_6.jpg",
-          "label": "Mulholland Drive"
-        }
-      ],
-      "h1": "Günlerce peşini bırakmayan <em>5 film</em>",
-      "sub": "İzledikten sonra bile aklından çıkmayanlar."
+      "type": "hero",
+      "img": "lc_prisoners_9.jpg",
+      "pos": "center 20%",
+      "accent": "amber",
+      "kick": "5 film · Kaydet",
+      "title": "Bitince bile seni<br><em>bırakmayan</em><br>5 film",
+      "sub": "Ekranı kapatırsın, film seni bırakmaz.",
+      "names": [
+        "Oldboy",
+        "Prisoners",
+        "Burning",
+        "Zodiac",
+        "Mulholland Drive"
+      ]
     },
     {
       "type": "film",
       "n": 1,
       "accent": "red",
-      "img": "lc_oldboy_2.jpg",
+      "img": "lc_oldboy_7.jpg",
       "title": "Oldboy",
       "meta": "2003 · Park Chan-wook",
       "konu": "Sıradan bir iş adamı, nedenini bilmeden bir odaya kapatılır ve tam 15 yıl sonra aniden serbest bırakılır. Bu kez kim yaptı ve neden sorusunun peşine düşer.",
       "why": "Cannes'da Jüri Büyük Ödülü'nü aldı.",
-      "pos": "center 88%"
+      "pos": "center 35%"
     },
     {
       "type": "film",
       "n": 2,
       "accent": "sky",
-      "img": "lc_prisoners_9.jpg",
+      "img": "lc_prisoners_6.jpg",
       "title": "Prisoners",
       "meta": "2013 · Denis Villeneuve",
       "konu": "Şükran Günü'nde iki küçük kız kaybolur. Polis ilerleyemeyince kızlardan birinin babası meseleyi kendi eline almaya karar verir.",
       "why": "Hugh Jackman ve Jake Gyllenhaal'ın başrolde olduğu, bitince insanı susturan bir gerilim.",
-      "pos": "center 22%"
+      "pos": "center 30%"
     },
     {
       "type": "film",

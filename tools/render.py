@@ -160,6 +160,16 @@ body.solid .cta div{{border-color:#111;color:#111}}
 .arrow{{font-family:Oswald;font-size:40px;color:var(--a);text-align:center;margin:-6px 0}}
 .pwhy{{margin-top:30px;font-family:Inter;font-weight:500;font-size:36px;line-height:1.42}}
 .pwhy b{{color:var(--a)}}
+/* kapak (hero) */
+.ph.full.herophoto::after{{background:linear-gradient(180deg,rgba(0,0,0,.5) 0%,rgba(0,0,0,0) 16%,rgba(0,0,0,.05) 38%,rgba(0,0,0,.78) 64%,rgba(0,0,0,.96) 100%)}}
+.hero{{margin-top:auto;padding-bottom:6px}}
+.hr-kick{{font-family:Oswald;font-weight:500;font-size:32px;letter-spacing:.32em;text-transform:uppercase;color:var(--a);margin-bottom:26px;display:flex;align-items:center;gap:20px}}
+.hr-kick::before{{content:'';width:64px;height:4px;background:var(--a)}}
+.hr-title{{font-family:Oswald;font-weight:700;font-size:116px;line-height:1;letter-spacing:.005em;text-transform:uppercase;color:#fff;text-shadow:0 6px 40px rgba(0,0,0,.55)}}
+.hr-title em{{font-style:normal;color:var(--a)}}
+.hr-bar{{width:150px;height:9px;background:var(--a);margin:34px 0 28px}}
+.hr-sub{{font-family:'Playfair Display';font-style:italic;font-weight:500;font-size:44px;line-height:1.3;color:#f2efe9;max-width:860px}}
+.hr-names{{font-family:Oswald;font-weight:400;font-size:27px;letter-spacing:.16em;text-transform:uppercase;color:rgba(242,239,233,.72);margin-top:34px;padding-top:24px;border-top:2px solid rgba(255,255,255,.22)}}
 /* tam fotoğraf */
 .fp-title{{font-family:'DM Serif Display';font-size:120px;line-height:1;letter-spacing:-.01em}}
 .fp-line{{font-family:Inter;font-weight:500;font-size:40px;line-height:1.38;margin-top:26px;max-width:880px;opacity:.92}}
@@ -335,6 +345,12 @@ def body_for(spec, s):
                 f'<div class="arrow">↓</div>'
                 f'<div class="pcard b" style="background-image:url({url(spec,b["img"])});background-position:{b.get("pos","center")}"><div class="in"><span class="tag">BUNU İZLE</span><div class="t" lang="en">{e(b["title"])}</div><div class="m" lang="en">{e(b["meta"])}</div></div></div>'
                 f'</div><div class="pwhy">{s["why"]}</div>')
+    if t == "hero":
+        names = " · ".join(e(x) for x in s.get("names", []))
+        nm = f'<div class="hr-names" lang="en">{names}</div>' if names else ""
+        return (f'<div class="hero"><div class="hr-kick">{e(s.get("kick",""))}</div>'
+                f'<div class="hr-title">{s["title"]}</div><div class="hr-bar"></div>'
+                f'<div class="hr-sub">{s.get("sub","")}</div>{nm}</div>')
     if t == "fullphoto":
         return (f'<div class="kick">{e(s.get("kick",""))}</div><div class="fp-title" lang="en">{s["title"]}</div>'
                 f'<div class="fp-line">{s.get("line","")}</div>')
@@ -431,8 +447,8 @@ def page(spec, s, idx, total):
             blur = s.get("blur", 0)
             gray = "grayscale(1) " if s.get("gray") else ""
             f = f"filter:{gray}blur({blur}px) brightness(.8);transform:scale(1.08);" if (blur or gray) else ""
-            full = " full" if s["type"] in ("fullphoto", "quote", "card") else ""
-            ph = f'<div class="ph{full}" style="background-image:url(file://{p});background-position:{s.get("pos","center")};{f}"></div>'
+            full = " full" if s["type"] in ("fullphoto", "hero", "quote", "card") else ""
+            ph = f'<div class="ph{full}{" herophoto" if s["type"]=="hero" else ""}" style="background-image:url(file://{p});background-position:{s.get("pos","center")};{f}"></div>'
     if s["type"] == "quote":
         extra_cls = "quote"
     if s["type"] == "card":

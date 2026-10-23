@@ -7,7 +7,7 @@ Kullanıcı **tamamen otomatik** istedi: onay bekleme, hazırla ve zamanla; sonu
 ## 0. Hazırlık
 - Depo: `alibal123/Ali` (Claude'un yazma izni var). Klonla, `main` dalında çalış.
 - Kurulum: `pip install playwright pillow --break-system-packages` (gerekirse) ve
-  `npm i --prefix tools @fontsource/oswald @fontsource/inter @fontsource/playfair-display`.
+  `npm i --prefix tools @fontsource/oswald @fontsource/inter @fontsource/playfair-display @fontsource/courier-prime @fontsource/dm-serif-display` (HEPSİ şart; eksikse başlıklar yedek yazı tipiyle çıkar).
 - `schedule.json`, `history.json`, `specs/` klasöründeki önceki spec'leri oku (ton ve format için örnek).
 
 ## 0.5 Önce analiz et (Ali'nin isteği: tutan tarza ağırlık ver)
@@ -115,3 +115,4 @@ Sahne kareleri gerçek film kareleri olsun (TMDB/film-grab adresleri request.jso
   Bu sayfadaki backdroplar çoğunlukla afiş/başlık yazılıdır: `request.json`'a `/original/` adresiyle ekle, indirilince PIL ile yazı olmayan bölgeyi kırp
   (`assets/stills/lc_<ad>.jpg`), kontrol sayfasında yazı kalmadığından emin ol. Kapak kolajı ile film slaytı için aynı filmin FARKLI kareleri kullanılsın.
 - Örnek: `specs/2026-10-23_liste_gunlerce-pesini-birakmayan.json`.
+- Kapak için `"type":"hero"` slaytı kullan: tam sayfa fotoğraf (`img`, `pos`), `kick`, `title` (`<br>` ve `<em>` ile), `sub`, `names` (5 film adı).
