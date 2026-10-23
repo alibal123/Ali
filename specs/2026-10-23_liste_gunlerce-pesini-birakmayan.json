@@ -1,0 +1,105 @@
+{
+  "id": "2026-10-23_liste_gunlerce-pesini-birakmayan",
+  "theme": "violet",
+  "pill": "LİSTE",
+  "stills_dir": "assets/stills",
+  "caption": "İzledikten sonra günlerce peşini bırakmayan 5 film. Hepsinin ortak noktası: bitince ekranı kapatıyorsun ama aklın hâlâ o filmde kalıyor.\n\nOldboy sebepsizce hapsedilen bir adamı, Prisoners kaybolan iki kızın peşindeki bir babayı, Burning gizemli bir üçgene sıkışan genç bir yazarı anlatıyor. Zodiac gerçek bir seri katil vakasını, Mulholland Drive ise hafızasını kaybeden bir kadının hikâyesini.\n\nBu listeyi kaydet, hafta sonu sırayla izle. Seni en uzun süre rahat bırakmayan film hangisiydi?\n\nYarın 18:00'de: yeni bir film listesiyle buradayız.",
+  "slides": [
+    {
+      "type": "collage",
+      "kick": "Kaydet, bu gece lazım olacak",
+      "imgs": [
+        {
+          "img": "lc_oldboy_5.jpg",
+          "label": "Oldboy"
+        },
+        {
+          "img": "lc_prisoners_8b.jpg",
+          "label": "Prisoners"
+        },
+        {
+          "img": "lc_burning_5.jpg",
+          "label": "Burning"
+        },
+        {
+          "img": "lc_zodiac_4.jpg",
+          "label": "Zodiac"
+        },
+        {
+          "img": "lc_mulholland_6.jpg",
+          "label": "Mulholland Drive"
+        }
+      ],
+      "h1": "Günlerce peşini bırakmayan <em>5 film</em>",
+      "sub": "İzledikten sonra bile aklından çıkmayanlar."
+    },
+    {
+      "type": "film",
+      "n": 1,
+      "accent": "red",
+      "img": "lc_oldboy_2.jpg",
+      "title": "Oldboy",
+      "meta": "2003 · Park Chan-wook",
+      "konu": "Sıradan bir iş adamı, nedenini bilmeden bir odaya kapatılır ve tam 15 yıl sonra aniden serbest bırakılır. Bu kez kim yaptı ve neden sorusunun peşine düşer.",
+      "why": "Cannes'da Jüri Büyük Ödülü'nü aldı.",
+      "pos": "center 88%"
+    },
+    {
+      "type": "film",
+      "n": 2,
+      "accent": "sky",
+      "img": "lc_prisoners_9.jpg",
+      "title": "Prisoners",
+      "meta": "2013 · Denis Villeneuve",
+      "konu": "Şükran Günü'nde iki küçük kız kaybolur. Polis ilerleyemeyince kızlardan birinin babası meseleyi kendi eline almaya karar verir.",
+      "why": "Hugh Jackman ve Jake Gyllenhaal'ın başrolde olduğu, bitince insanı susturan bir gerilim.",
+      "pos": "center 22%"
+    },
+    {
+      "type": "film",
+      "n": 3,
+      "accent": "amber",
+      "img": "lc_burning_6.jpg",
+      "title": "Burning",
+      "meta": "2018 · Lee Chang-dong",
+      "konu": "Genç bir yazar adayı çocukluk arkadaşıyla karşılaşır. Kadın Afrika gezisinden, zengin ve gizemli bir adamla döner. Sonrası yavaş yavaş huzursuzluğa dönüşür.",
+      "why": "Murakami'nin bir öyküsünden uyarlandı, Cannes'da FIPRESCI ödülünü kazandı.",
+      "pos": "center 22%"
+    },
+    {
+      "type": "film",
+      "n": 4,
+      "accent": "lime",
+      "img": "lc_zodiac_3.jpg",
+      "title": "Zodiac",
+      "meta": "2007 · David Fincher",
+      "konu": "San Francisco'da kendine Zodiac diyen bir katil gazetelere şifreli mektuplar yollar. Bir karikatürist ve bir muhabir yıllarca onun peşini bırakmaz.",
+      "why": "Gerçek bir seri katil vakasına dayanıyor.",
+      "pos": "center 35%"
+    },
+    {
+      "type": "film",
+      "n": 5,
+      "accent": "violet",
+      "img": "lc_mulholland_3.jpg",
+      "title": "Mulholland Drive",
+      "meta": "2001 · David Lynch",
+      "konu": "Bir araba kazasından sağ kurtulan kadın hafızasını kaybeder. Hollywood'a yeni gelmiş genç bir oyuncuyla birlikte kim olduğunu bulmaya çalışır.",
+      "why": "Lynch bu filmle Cannes'da En İyi Yönetmen ödülünü aldı.",
+      "pos": "center 30%"
+    },
+    {
+      "type": "cta",
+      "bg": "light",
+      "accent": "violet",
+      "accent_dark": "#5b3fb0",
+      "lab": "Sıra sende",
+      "q": "Seni en uzun süre <b>rahat bırakmayan film</b> hangisiydi? Yorumlara yaz, en çok önerileni bir sonraki listeye koyalım.",
+      "chips": [
+        "Kaydet",
+        "Yorumlara yaz",
+        "Arkadaşına gönder"
+      ]
+    }
+  ]
+}

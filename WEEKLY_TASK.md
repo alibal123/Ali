@@ -1,7 +1,7 @@
 # Haftalık içerik görevi — derecefilm
 
 Bu dosya, her **pazar 11:00 (İstanbul)** çalışan zamanlanmış Claude görevinin talimatıdır.
-Amaç: gelecek haftanın her günü için **20:00'de** paylaşılacak birer Instagram karuseli hazırlamak, depoya eklemek ve zamanlamak.
+Amaç: gelecek haftanın her günü için **18:00'de** paylaşılacak birer Instagram karuseli hazırlamak, depoya eklemek ve zamanlamak.
 Kullanıcı **tamamen otomatik** istedi: onay bekleme, hazırla ve zamanla; sonunda önizlemeyi kullanıcıya gönder.
 
 ## 0. Hazırlık
@@ -12,7 +12,7 @@ Kullanıcı **tamamen otomatik** istedi: onay bekleme, hazırla ve zamanla; sonu
 
 ## 0.5 Önce analiz et (Ali'nin isteği: tutan tarza ağırlık ver)
 - `python3 scripts/analyze.py` çalıştır (insights/media.json her sabah 07:17'de güncellenir) ve `insights/RAPOR.md` + `insights/strategy.json`'u oku.
-- **Format dağılımı:** Haftanın 20:00 gönderilerinde `strategy.json → weekly_plan_20_00` sayılarına uy (ör. LİSTE 3, OYUN 1, FİLM 1 …).
+- **Format dağılımı:** Haftanın 18:00 gönderilerinde `strategy.json → weekly_plan_20_00` sayılarına uy (ör. LİSTE 3, OYUN 1, FİLM 1 …).
   Bu plan 2. bölümdeki "en az 5 format" kuralının ve eski sabit gün döngüsünün (Pzt FİLM, Sal LİSTE, Çar BELGESEL, Per FİLM, Cum OYUN,
   Cmt RADAR, Paz LİSTE) yerine geçer — Ali 10 Ekim 2026'da etkileşime göre seçilmesini istedi; yalnızca "art arda aynı format yok" kuralı geçerli kalır.
   Planda olmayan formatı (puanı en düşük olanlar) bu hafta kullanma.
@@ -26,7 +26,7 @@ Kullanıcı **tamamen otomatik** istedi: onay bekleme, hazırla ve zamanla; sonu
 
 ## 1. Hangi günler?
 - `schedule.json`'daki en son `publish_at` tarihinden **sonraki gün** başla, **gelecek pazar** (dahil) bitir.
-  Normalde bu, pazartesi–pazar 7 gün eder. Zaten dolu günleri atla. Saat her zaman `T20:00`.
+  Normalde bu, pazartesi–pazar 7 gün eder. Zaten dolu günleri atla. Saat her zaman `T18:00`.
 
 ## 2. Haftalık içerik ve tasarım çeşitliliği
 Kullanıcı açıkça istedi: **tek renk kullanma, gönderiler birbirinin aynısı olmasın.** Her gün farklı format ve renk paleti;
@@ -69,8 +69,8 @@ Sahne kareleri gerçek film kareleri olsun (TMDB/film-grab adresleri request.jso
   Sonunda kısa bir soru olabilir. Hashtag kullanma. Oyun gününde kısa açıklama.
 
 - **Devamlılık:** Her açıklamanın son satırı bir sonraki günün gönderisini haber versin:
-  `Yarın 20:00'de: <bir cümlelik merak uyandıran tanıtım>`. Haftanın son gönderisinde
-  `Yarın 20:00'de yeni haftanın ilk gönderisiyle buradayız. Takipte kal.` yaz. Yeni haftaya başlarken önceki haftanın
+  `Yarın 18:00'de: <bir cümlelik merak uyandıran tanıtım>`. Haftanın son gönderisinde
+  `Yarın 18:00'de yeni haftanın ilk gönderisiyle buradayız. Takipte kal.` yaz. Yeni haftaya başlarken önceki haftanın
   son açıklaması zaten bu genel satırla bittiği için ona dokunma.
 
 ## 4. Sahne fotoğrafları
@@ -91,7 +91,7 @@ Sahne kareleri gerçek film kareleri olsun (TMDB/film-grab adresleri request.jso
 3. Üretilen slaytlardan bir **iletişim sayfası (contact sheet)** yap ve gözle kontrol et: taşan metin, "İ" hatası, okunmayan metin, yanlış fotoğraf.
    Sorun varsa spec'i düzeltip yeniden üret.
 4. `schedule.json`'a her gün için ekle:
-   `{"id": "<id>", "folder": "posts/<id>", "publish_at": "YYYY-MM-DDT20:00", "platforms": ["instagram"], "status": "planned"}`
+   `{"id": "<id>", "folder": "posts/<id>", "publish_at": "YYYY-MM-DDT18:00", "platforms": ["instagram"], "status": "planned"}`
 5. `history.json`'a kullanılan filmleri ekle.
 6. `git add -A && git commit` (mesajın sonuna oturum atıf satırlarını ekle) ve `git push`. Push'tan önce `git pull --rebase`
    (paylaşım botu `schedule.json`'u güncelliyor olabilir).
@@ -106,3 +106,12 @@ Sahne kareleri gerçek film kareleri olsun (TMDB/film-grab adresleri request.jso
 ## Sınırlar
 - Instagram API: günde en fazla 100 paylaşım, karusel en fazla 10 görsel, JPG.
 - TikTok bu otomatik akışın dışında (TikTok her paylaşımda kullanıcının onay formunu zorunlu tutuyor).
+
+## YENİ PLAN (23 Ekim 2026, Ali): saat 18:00 ve film listeleri
+- Gönderi saati artık **18:00** (`T18:00`). Eski 20:00 kayıtlarına dokunma.
+- Her gün **farklı, ilgi çekici başlıklı bir film LİSTESİ** (5 film): kapak kolajı + her film için ayrı slayt + cta. Her kapak başlığı bir öncekinden farklı bir kancayla başlasın.
+- **Kapakta ve her film slaytında sahne karesi şart.** Görseller yazısız/logosuz olmalı. TMDB'den görsel adresi bulmak için WebFetch ile
+  `https://wrathofhobo.duckdns.org/movie/<TMDB-id>` sayfasını oku (backdrop adreslerini verir; film adı+yıl ile WebSearch'ten sayfa/id bul).
+  Bu sayfadaki backdroplar çoğunlukla afiş/başlık yazılıdır: `request.json`'a `/original/` adresiyle ekle, indirilince PIL ile yazı olmayan bölgeyi kırp
+  (`assets/stills/lc_<ad>.jpg`), kontrol sayfasında yazı kalmadığından emin ol. Kapak kolajı ile film slaytı için aynı filmin FARKLI kareleri kullanılsın.
+- Örnek: `specs/2026-10-23_liste_gunlerce-pesini-birakmayan.json`.
