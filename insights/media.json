@@ -1,7 +1,7 @@
 {
  "account": {
   "username": "derecefilm",
-  "followers_count": 27343,
+  "followers_count": 27332,
   "follows_count": 21,
   "media_count": 697,
   "id": "28033687206311176"
@@ -13,7 +13,7 @@
    "media_type": "CAROUSEL_ALBUM",
    "media_product_type": "FEED",
    "timestamp": "2026-10-21T17:00:55+0000",
-   "like_count": 12,
+   "like_count": 16,
    "comments_count": 0,
    "permalink": "https://www.instagram.com/p/Dew5TaylKiF/"
   },
@@ -23,7 +23,7 @@
    "media_type": "CAROUSEL_ALBUM",
    "media_product_type": "FEED",
    "timestamp": "2026-10-20T17:01:08+0000",
-   "like_count": 17,
+   "like_count": 20,
    "comments_count": 3,
    "permalink": "https://www.instagram.com/p/DeuUiIMGyt2/"
   },
@@ -143,7 +143,7 @@
    "media_type": "CAROUSEL_ALBUM",
    "media_product_type": "FEED",
    "timestamp": "2026-10-12T17:01:16+0000",
-   "like_count": 13,
+   "like_count": 14,
    "comments_count": 0,
    "permalink": "https://www.instagram.com/p/DeZuL_6oGqA/"
   },
@@ -163,7 +163,7 @@
    "media_type": "CAROUSEL_ALBUM",
    "media_product_type": "FEED",
    "timestamp": "2026-10-11T17:01:21+0000",
-   "like_count": 64,
+   "like_count": 68,
    "comments_count": 13,
    "permalink": "https://www.instagram.com/p/DeXJZusoCCM/"
   },
@@ -184,7 +184,7 @@
    "media_product_type": "FEED",
    "timestamp": "2026-10-10T17:00:56+0000",
    "like_count": 7,
-   "comments_count": 3,
+   "comments_count": 4,
    "permalink": "https://www.instagram.com/p/DeUkj0EFKAy/"
   },
   {
@@ -193,7 +193,7 @@
    "media_type": "CAROUSEL_ALBUM",
    "media_product_type": "FEED",
    "timestamp": "2026-10-10T11:02:00+0000",
-   "like_count": 7,
+   "like_count": 8,
    "comments_count": 0,
    "permalink": "https://www.instagram.com/p/DeT7e6agjTj/"
   },
@@ -253,7 +253,7 @@
    "media_type": "CAROUSEL_ALBUM",
    "media_product_type": "FEED",
    "timestamp": "2026-10-06T16:02:38+0000",
-   "like_count": 96,
+   "like_count": 101,
    "comments_count": 26,
    "permalink": "https://www.instagram.com/p/DeKKuAqm2li/"
   },
@@ -263,7 +263,7 @@
    "media_type": "CAROUSEL_ALBUM",
    "media_product_type": "FEED",
    "timestamp": "2026-10-05T17:00:51+0000",
-   "like_count": 47,
+   "like_count": 48,
    "comments_count": 2,
    "permalink": "https://www.instagram.com/p/DeHsk8XHN39/"
   },
@@ -313,7 +313,7 @@
    "media_type": "VIDEO",
    "media_product_type": "REELS",
    "timestamp": "2026-09-21T17:12:16+0000",
-   "like_count": 71,
+   "like_count": 72,
    "comments_count": 2,
    "permalink": "https://www.instagram.com/reel/DdjqlL-MwX7/"
   },
@@ -333,7 +333,7 @@
    "media_type": "VIDEO",
    "media_product_type": "REELS",
    "timestamp": "2026-09-08T15:47:37+0000",
-   "like_count": 25,
+   "like_count": 26,
    "comments_count": 0,
    "permalink": "https://www.instagram.com/reel/DdCCm51sXmv/"
   },
@@ -353,7 +353,7 @@
    "media_type": "VIDEO",
    "media_product_type": "REELS",
    "timestamp": "2026-08-27T14:53:12+0000",
-   "like_count": 707,
+   "like_count": 705,
    "comments_count": 6,
    "permalink": "https://www.instagram.com/reel/DcjC487s2Mo/"
   },
@@ -413,8 +413,8 @@
    "media_type": "VIDEO",
    "media_product_type": "REELS",
    "timestamp": "2026-08-10T17:08:31+0000",
-   "like_count": 1907,
-   "comments_count": 72,
+   "like_count": 1922,
+   "comments_count": 71,
    "permalink": "https://www.instagram.com/reel/Db3g4FGsHLo/"
   },
   {
@@ -613,7 +613,7 @@
    "media_type": "VIDEO",
    "media_product_type": "REELS",
    "timestamp": "2026-06-29T09:15:25+0000",
-   "like_count": 3814,
+   "like_count": 3813,
    "comments_count": 26,
    "permalink": "https://www.instagram.com/reel/DaKhUprM6Rw/"
   },
@@ -643,7 +643,7 @@
    "media_type": "VIDEO",
    "media_product_type": "REELS",
    "timestamp": "2026-06-23T10:50:18+0000",
-   "like_count": 6924,
+   "like_count": 6923,
    "comments_count": 203,
    "permalink": "https://www.instagram.com/reel/DZ7N93CsO3n/"
   },
@@ -703,7 +703,7 @@
    "media_type": "VIDEO",
    "media_product_type": "REELS",
    "timestamp": "2026-06-13T09:45:22+0000",
-   "like_count": 14322,
+   "like_count": 14319,
    "comments_count": 96,
    "permalink": "https://www.instagram.com/reel/DZhX_PYs05V/"
   },
@@ -923,7 +923,7 @@
    "media_type": "VIDEO",
    "media_product_type": "REELS",
    "timestamp": "2026-05-19T15:52:38+0000",
-   "like_count": 181,
+   "like_count": 182,
    "comments_count": 0,
    "permalink": "https://www.instagram.com/reel/DYhqElHs9GE/"
   },
@@ -1083,7 +1083,7 @@
    "media_type": "VIDEO",
    "media_product_type": "REELS",
    "timestamp": "2026-05-06T08:53:44+0000",
-   "like_count": 1976,
+   "like_count": 1975,
    "comments_count": 12,
    "permalink": "https://www.instagram.com/reel/DX_bwb-shst/"
   },
@@ -1113,7 +1113,7 @@
    "media_type": "VIDEO",
    "media_product_type": "REELS",
    "timestamp": "2026-05-04T09:46:55+0000",
-   "like_count": 234,
+   "like_count": 233,
    "comments_count": 0,
    "permalink": "https://www.instagram.com/reel/DX6YLiWsp21/"
   },
@@ -1183,7 +1183,7 @@
    "media_type": "VIDEO",
    "media_product_type": "REELS",
    "timestamp": "2026-04-27T09:27:56+0000",
-   "like_count": 58958,
+   "like_count": 58961,
    "comments_count": 164,
    "permalink": "https://www.instagram.com/reel/DXoUsCyMfXm/"
   },
@@ -1433,7 +1433,7 @@
    "media_type": "VIDEO",
    "media_product_type": "REELS",
    "timestamp": "2026-04-10T13:00:49+0000",
-   "like_count": 63,
+   "like_count": 64,
    "comments_count": 1,
    "permalink": "https://www.instagram.com/reel/DW87MBTMDP0/"
   },
@@ -1563,7 +1563,7 @@
    "media_type": "VIDEO",
    "media_product_type": "REELS",
    "timestamp": "2026-04-06T09:08:24+0000",
-   "like_count": 37759,
+   "like_count": 37752,
    "comments_count": 165,
    "permalink": "https://www.instagram.com/reel/DWyNvIpDP-z/"
   },
@@ -1643,7 +1643,7 @@
    "media_type": "VIDEO",
    "media_product_type": "REELS",
    "timestamp": "2026-04-03T09:02:50+0000",
-   "like_count": 24635,
+   "like_count": 24627,
    "comments_count": 115,
    "permalink": "https://www.instagram.com/reel/DWqebDiDLC3/"
   },
@@ -1683,7 +1683,7 @@
    "media_type": "VIDEO",
    "media_product_type": "REELS",
    "timestamp": "2026-04-01T17:31:05+0000",
-   "like_count": 1278,
+   "like_count": 1281,
    "comments_count": 10,
    "permalink": "https://www.instagram.com/reel/DWmPUkRjDIj/"
   },
@@ -1893,7 +1893,7 @@
    "media_type": "VIDEO",
    "media_product_type": "REELS",
    "timestamp": "2026-03-25T17:31:42+0000",
-   "like_count": 84,
+   "like_count": 85,
    "comments_count": 2,
    "permalink": "https://www.instagram.com/reel/DWUNycgDE0S/"
   },
