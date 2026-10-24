@@ -1,79 +1,79 @@
 {
- "generated_at": "2026-10-23T04:52+00:00",
- "followers": 27332,
+ "generated_at": "2026-10-24T04:50+00:00",
+ "followers": 27330,
  "scoring": "beğeni + 3×yorum; 48 saatten genç gönderiler hariç",
  "formats": {
   "BELGESEL": {
    "n": 1,
    "median": 9,
    "best": 9,
-   "adjusted": 13.0
+   "adjusted": 13.3
   },
   "DİĞER": {
    "n": 1,
    "median": 11,
    "best": 11,
-   "adjusted": 13.7
+   "adjusted": 14.0
   },
   "EŞLEŞTİRME": {
    "n": 1,
    "median": 20,
    "best": 20,
-   "adjusted": 16.7
+   "adjusted": 17.0
   },
   "FİLM": {
    "n": 8,
    "median": 18.5,
-   "best": 54,
-   "adjusted": 17.8
+   "best": 55,
+   "adjusted": 17.9
   },
   "HABER": {
    "n": 8,
    "median": 10.0,
-   "best": 20,
-   "adjusted": 11.0
+   "best": 21,
+   "adjusted": 11.1
   },
   "KARŞILAŞTIRMA": {
    "n": 1,
    "median": 6,
    "best": 6,
-   "adjusted": 12.0
+   "adjusted": 12.3
   },
   "LİSTE": {
-   "n": 4,
-   "median": 143.0,
+   "n": 5,
+   "median": 112,
    "best": 1167,
-   "adjusted": 100.3
+   "adjusted": 84.4
   },
   "OYUN": {
    "n": 3,
    "median": 7,
    "best": 44,
-   "adjusted": 10.2
+   "adjusted": 10.4
   },
   "SAHNE": {
    "n": 1,
-   "median": 16,
-   "best": 16,
-   "adjusted": 15.3
+   "median": 17,
+   "best": 17,
+   "adjusted": 16.0
   },
   "VERİ": {
    "n": 1,
    "median": 19,
    "best": 19,
-   "adjusted": 16.3
+   "adjusted": 16.7
   }
  },
  "evening_weights": {
-  "BELGESEL": 0.076,
-  "DİĞER": 0.079,
-  "EŞLEŞTİRME": 0.091,
-  "FİLM": 0.096,
-  "KARŞILAŞTIRMA": 0.071,
-  "LİSTE": 0.35,
-  "OYUN": 0.063,
-  "SAHNE": 0.085,
-  "VERİ": 0.09
+  "BELGESEL": 0.079,
+  "DİĞER": 0.082,
+  "EŞLEŞTİRME": 0.095,
+  "FİLM": 0.099,
+  "KARŞILAŞTIRMA": 0.075,
+  "LİSTE": 0.317,
+  "OYUN": 0.066,
+  "SAHNE": 0.091,
+  "VERİ": 0.094
  },
  "weekly_plan_20_00": {
   "LİSTE": 2,
@@ -96,14 +96,14 @@
  ],
  "media_types": {
   "CAROUSEL_ALBUM": {
-   "n": 51,
-   "median": 16,
+   "n": 52,
+   "median": 16.5,
    "mean": 50
   },
   "REELS": {
-   "n": 149,
-   "median": 86,
-   "mean": 1360
+   "n": 148,
+   "median": 86.5,
+   "mean": 1370
   }
  },
  "posts": [
@@ -114,7 +114,7 @@
    "likes": 915,
    "comments": 84,
    "score": 1167,
-   "age_h": 515,
+   "age_h": 539,
    "mature": true
   },
   {
@@ -124,7 +124,7 @@
    "likes": 21,
    "comments": 2,
    "score": 27,
-   "age_h": 491,
+   "age_h": 515,
    "mature": true
   },
   {
@@ -134,7 +134,7 @@
    "likes": 9,
    "comments": 0,
    "score": 9,
-   "age_h": 467,
+   "age_h": 491,
    "mature": true
   },
   {
@@ -144,27 +144,27 @@
    "likes": 23,
    "comments": 7,
    "score": 44,
-   "age_h": 443,
+   "age_h": 467,
    "mature": true
   },
   {
    "id": "gun5_jagten",
    "format": "FİLM",
    "slot": "20:00",
-   "likes": 48,
+   "likes": 49,
    "comments": 2,
-   "score": 54,
-   "age_h": 419,
+   "score": 55,
+   "age_h": 443,
    "mature": true
   },
   {
    "id": "2026-10-06_liste_turk-sinemasi",
    "format": "LİSTE",
    "slot": "18:40",
-   "likes": 101,
+   "likes": 102,
    "comments": 26,
-   "score": 179,
-   "age_h": 396,
+   "score": 180,
+   "age_h": 420,
    "mature": true
   },
   {
@@ -174,7 +174,7 @@
    "likes": 20,
    "comments": 0,
    "score": 20,
-   "age_h": 371,
+   "age_h": 395,
    "mature": true
   },
   {
@@ -184,7 +184,7 @@
    "likes": 11,
    "comments": 2,
    "score": 17,
-   "age_h": 353,
+   "age_h": 377,
    "mature": true
   },
   {
@@ -194,7 +194,7 @@
    "likes": 22,
    "comments": 0,
    "score": 22,
-   "age_h": 347,
+   "age_h": 371,
    "mature": true
   },
   {
@@ -204,7 +204,7 @@
    "likes": 10,
    "comments": 0,
    "score": 10,
-   "age_h": 329,
+   "age_h": 353,
    "mature": true
   },
   {
@@ -214,7 +214,7 @@
    "likes": 7,
    "comments": 0,
    "score": 7,
-   "age_h": 323,
+   "age_h": 347,
    "mature": true
   },
   {
@@ -224,7 +224,7 @@
    "likes": 8,
    "comments": 0,
    "score": 8,
-   "age_h": 305,
+   "age_h": 329,
    "mature": true
   },
   {
@@ -234,7 +234,7 @@
    "likes": 7,
    "comments": 4,
    "score": 19,
-   "age_h": 299,
+   "age_h": 323,
    "mature": true
   },
   {
@@ -244,27 +244,27 @@
    "likes": 11,
    "comments": 0,
    "score": 11,
-   "age_h": 281,
+   "age_h": 305,
    "mature": true
   },
   {
    "id": "2026-10-11_liste_kara-komedi",
    "format": "LİSTE",
    "slot": "20:00",
-   "likes": 68,
+   "likes": 73,
    "comments": 13,
-   "score": 107,
-   "age_h": 275,
+   "score": 112,
+   "age_h": 299,
    "mature": true
   },
   {
    "id": "2026-10-12_haber_fatherland",
    "format": "HABER",
    "slot": "14:00",
-   "likes": 8,
+   "likes": 9,
    "comments": 4,
-   "score": 20,
-   "age_h": 257,
+   "score": 21,
+   "age_h": 281,
    "mature": true
   },
   {
@@ -274,7 +274,7 @@
    "likes": 14,
    "comments": 0,
    "score": 14,
-   "age_h": 251,
+   "age_h": 275,
    "mature": true
   },
   {
@@ -284,7 +284,7 @@
    "likes": 10,
    "comments": 0,
    "score": 10,
-   "age_h": 233,
+   "age_h": 257,
    "mature": true
   },
   {
@@ -294,7 +294,7 @@
    "likes": 18,
    "comments": 0,
    "score": 18,
-   "age_h": 227,
+   "age_h": 251,
    "mature": true
   },
   {
@@ -304,7 +304,7 @@
    "likes": 2,
    "comments": 0,
    "score": 2,
-   "age_h": 209,
+   "age_h": 233,
    "mature": true
   },
   {
@@ -314,7 +314,7 @@
    "likes": 6,
    "comments": 0,
    "score": 6,
-   "age_h": 203,
+   "age_h": 227,
    "mature": true
   },
   {
@@ -324,7 +324,7 @@
    "likes": 3,
    "comments": 0,
    "score": 3,
-   "age_h": 184,
+   "age_h": 207,
    "mature": true
   },
   {
@@ -334,7 +334,7 @@
    "likes": 6,
    "comments": 0,
    "score": 6,
-   "age_h": 179,
+   "age_h": 203,
    "mature": true
   },
   {
@@ -344,7 +344,7 @@
    "likes": 11,
    "comments": 0,
    "score": 11,
-   "age_h": 161,
+   "age_h": 185,
    "mature": true
   },
   {
@@ -354,17 +354,17 @@
    "likes": 6,
    "comments": 0,
    "score": 6,
-   "age_h": 155,
+   "age_h": 179,
    "mature": true
   },
   {
    "id": "2026-10-17_sahne_grand-budapest-oranlar",
    "format": "SAHNE",
    "slot": "20:00",
-   "likes": 16,
+   "likes": 17,
    "comments": 0,
-   "score": 16,
-   "age_h": 131,
+   "score": 17,
+   "age_h": 155,
    "mature": true
   },
   {
@@ -374,27 +374,27 @@
    "likes": 9,
    "comments": 2,
    "score": 15,
-   "age_h": 107,
+   "age_h": 131,
    "mature": true
   },
   {
    "id": "2026-10-19_film_dogville",
    "format": "FİLM",
    "slot": "20:00",
-   "likes": 8,
+   "likes": 10,
    "comments": 0,
-   "score": 8,
-   "age_h": 83,
+   "score": 10,
+   "age_h": 107,
    "mature": true
   },
   {
    "id": "2026-10-20_film_schindler-tek-renk",
    "format": "FİLM",
    "slot": "20:00",
-   "likes": 20,
+   "likes": 21,
    "comments": 3,
-   "score": 29,
-   "age_h": 59,
+   "score": 30,
+   "age_h": 83,
    "mature": true
   },
   {
@@ -404,7 +404,17 @@
    "likes": 16,
    "comments": 0,
    "score": 16,
-   "age_h": 35,
+   "age_h": 59,
+   "mature": true
+  },
+  {
+   "id": "2026-10-23_liste_gunlerce-pesini-birakmayan",
+   "format": "LİSTE",
+   "slot": "18:00",
+   "likes": 46,
+   "comments": 3,
+   "score": 55,
+   "age_h": 13,
    "mature": false
   }
  ],
@@ -412,7 +422,7 @@
   {
    "date": "2026-04-27",
    "type": "REELS",
-   "likes": 58961,
+   "likes": 58972,
    "comments": 164,
    "caption": "Four Lions",
    "permalink": "https://www.instagram.com/reel/DXoUsCyMfXm/"
@@ -420,7 +430,7 @@
   {
    "date": "2026-04-06",
    "type": "REELS",
-   "likes": 37752,
+   "likes": 37744,
    "comments": 165,
    "caption": "Shrek the Third (2007), taht meselesi yüzünden istemediği bir sorumluluğun eşiğine gelen bir karakterin, kendi",
    "permalink": "https://www.instagram.com/reel/DWyNvIpDP-z/"
@@ -428,7 +438,7 @@
   {
    "date": "2026-04-03",
    "type": "REELS",
-   "likes": 24627,
+   "likes": 24624,
    "comments": 115,
    "caption": "Fantastic Mr. Fox (2009), sakin bir aile hayatı kurmaya çalışırken eski içgüdülerinden vazgeçemeyen bir tilkin",
    "permalink": "https://www.instagram.com/reel/DWqebDiDLC3/"
@@ -436,7 +446,7 @@
   {
    "date": "2026-06-13",
    "type": "REELS",
-   "likes": 14319,
+   "likes": 14318,
    "comments": 96,
    "caption": "964 Pinocchio (1991), hafızası silinmiş ve sokağa terk edilmiş bir sibernetik insanın, kim olduğunu anlamaya ç",
    "permalink": "https://www.instagram.com/reel/DZhX_PYs05V/"
@@ -444,7 +454,7 @@
   {
    "date": "2026-04-05",
    "type": "REELS",
-   "likes": 7488,
+   "likes": 7489,
    "comments": 185,
    "caption": "Duvara Karşı (2004), hayatla bağı zayıflamış iki insanın tesadüfi biçimde aynı noktada buluşmasını anlatırken,",
    "permalink": "https://www.instagram.com/reel/DWvqozNjO8n/"
@@ -452,7 +462,7 @@
   {
    "date": "2026-06-23",
    "type": "REELS",
-   "likes": 6923,
+   "likes": 6922,
    "comments": 203,
    "caption": "Narın Rengi (1969), ünlü bir ozanın hayatını alışılmış bir biyografi gibi anlatmak yerine, onun dünyasını şiir",
    "permalink": "https://www.instagram.com/reel/DZ7N93CsO3n/"
@@ -460,7 +470,7 @@
   {
    "date": "2026-07-16",
    "type": "REELS",
-   "likes": 4330,
+   "likes": 4329,
    "comments": 17,
    "caption": "İstanbul Hatırası: Köprüyü Geçmek (2005), İstanbul’u tarihî yapıları ya da turistik noktalarıyla değil, müziği",
    "permalink": "https://www.instagram.com/reel/Da2ctorsDpj/"
@@ -476,7 +486,7 @@
   {
    "date": "2026-03-25",
    "type": "REELS",
-   "likes": 3269,
+   "likes": 3268,
    "comments": 27,
    "caption": "Duvara Karşı (2004)",
    "permalink": "https://www.instagram.com/reel/DWTS36RDDoR/"
@@ -492,7 +502,7 @@
   {
    "date": "2026-03-25",
    "type": "REELS",
-   "likes": 2541,
+   "likes": 2539,
    "comments": 67,
    "caption": "30 Gün 30 Film — Gün 17",
    "permalink": "https://www.instagram.com/reel/DWTtjsgDAp3/"
@@ -508,8 +518,8 @@
   {
    "date": "2026-08-10",
    "type": "REELS",
-   "likes": 1922,
-   "comments": 71,
+   "likes": 1946,
+   "comments": 76,
    "caption": "The Invite (2026), evlilikleri sorunlu bir çiftin üst kattaki komşularını akşam yemeğine davet etmesiyle başlı",
    "permalink": "https://www.instagram.com/reel/Db3g4FGsHLo/"
   },
@@ -564,7 +574,7 @@
   {
    "date": "2026-03-26",
    "type": "REELS",
-   "likes": 1122,
+   "likes": 1123,
    "comments": 11,
    "caption": "30 Gün 30 Film — Gün 19",
    "permalink": "https://www.instagram.com/reel/DWWPORejDWs/"
@@ -579,7 +589,7 @@
   },
   {
    "date": "2026-10-06",
-   "likes": 101,
+   "likes": 102,
    "comments": 26,
    "caption": "Türk sinemasının sessiz başyapıtları. Gişe rekoru kırmadılar, televizyonda pek dönmediler ama festivallerde öd"
   },
@@ -591,7 +601,7 @@
   },
   {
    "date": "2026-10-11",
-   "likes": 68,
+   "likes": 73,
    "comments": 13,
    "caption": "Gülerken suçlu hissettiren 5 kara komedi. Hepsinde ciddi, hatta korkunç bir mesele var; ama film seni o mesele"
   },
@@ -614,10 +624,10 @@
    "caption": "Dogville (2003), peşindeki insanlardan kaçan genç bir kadının, dağların arasında bulunan küçük bir kasabaya sı"
   },
   {
-   "date": "2026-10-05",
-   "likes": 48,
-   "comments": 2,
-   "caption": "Jagten (2012), küçük bir Danimarka kasabasında anaokulu öğretmeni olarak çalışan Lucas'ın hikâyesini anlatıyor"
+   "date": "2026-10-23",
+   "likes": 46,
+   "comments": 3,
+   "caption": "İzledikten sonra günlerce peşini bırakmayan 5 film. Hepsinin ortak noktası: bitince ekranı kapatıyorsun ama ak"
   }
  ]
 }
