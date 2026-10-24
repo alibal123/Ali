@@ -1,0 +1,900 @@
+{
+ "id": "2026-10-25_liste_akil-sagligina-zararlidir",
+ "caption": "Akıl sağlığına zararlıdır: izlerken yanında biri olsun diye uyarıyoruz. Bitince bile bir süre kendine gelemeyeceğin 5 film.\n\nBlack Swan, mükemmel olmaya takıntılı bir balerinin kendi gölgesiyle yüzleşmesini anlatıyor. Requiem for a Dream, dört insanın hayallerine tutunurken bağımlılığın içine çekilişini. The Machinist bir yıldır uyuyamayan bir adamın çözülen hayatını, Perfect Blue gerçekle hayalin arasındaki çizgiyi kaybeden bir pop yıldızını, Enemy ise kendisinin birebir aynısını gören bir öğretmeni.\n\nHepsini kaydet, sırayla ve ışıklar açıkken izle. Sen bu listeden hangisini izledin, hangisinden sonra kendine gelemedin?\n\nYarın 18:00'de: Keanu Reeves'in son sahnede hep aynı seçimi yaptığı 4 film.",
+ "slides": [
+  {
+   "bg": "#0b0b0b",
+   "els": [
+    {
+     "type": "img",
+     "src": "/tmp/prep/n_blackswan_4_97a4162ae888.jpg",
+     "x": 0,
+     "y": 60,
+     "w": 1080,
+     "h": 560,
+     "z": 1
+    },
+    {
+     "type": "box",
+     "x": 0,
+     "y": 0,
+     "w": 1080,
+     "h": 64,
+     "z": 6,
+     "rot": 0,
+     "css": "background:repeating-linear-gradient(-45deg,#ffe500 0 30px,#111 30px 60px)"
+    },
+    {
+     "type": "box",
+     "x": -40,
+     "y": 500,
+     "w": 1160,
+     "h": 700,
+     "bg": "#ffe500",
+     "z": 3,
+     "rot": -2
+    },
+    {
+     "type": "box",
+     "x": 40,
+     "y": 470,
+     "w": 270,
+     "h": 70,
+     "bg": "#0b0b0b",
+     "z": 5,
+     "rot": -2
+    },
+    {
+     "type": "txt",
+     "html": "UYARI",
+     "x": 56,
+     "y": 478,
+     "w": 240,
+     "size": 56,
+     "font": "anton",
+     "color": "#ffe500",
+     "z": 6,
+     "ls": 6,
+     "rot": -2
+    },
+    {
+     "type": "txt",
+     "html": "AKIL<br>SAĞLIĞINA<br>ZARARLIDIR",
+     "x": 62,
+     "y": 565,
+     "w": 980,
+     "size": 190,
+     "font": "anton",
+     "color": "#0b0b0b",
+     "z": 5,
+     "lh": 1.0,
+     "rot": -2,
+     "upper": true
+    },
+    {
+     "type": "txt",
+     "html": "İzlerken yanında biri olsun.",
+     "x": 60,
+     "y": 1190,
+     "w": 800,
+     "size": 54,
+     "font": "oswald",
+     "color": "#fff",
+     "z": 5,
+     "weight": 500
+    },
+    {
+     "type": "txt",
+     "html": "5 film · Kaydet",
+     "x": 60,
+     "y": 1262,
+     "w": 600,
+     "size": 36,
+     "font": "oswald",
+     "color": "#ffe500",
+     "z": 5,
+     "weight": 500,
+     "ls": 4,
+     "upper": true
+    },
+    {
+     "type": "logo",
+     "name": "yellow",
+     "x": 900,
+     "y": 1190,
+     "w": 120,
+     "z": 8,
+     "op": 1
+    }
+   ]
+  },
+  {
+   "bg": "#ffe500",
+   "els": [
+    {
+     "type": "txt",
+     "html": "01",
+     "x": -30,
+     "y": -150,
+     "w": 900,
+     "size": 760,
+     "font": "anton",
+     "color": "#0b0b0b",
+     "z": 1,
+     "lh": 1
+    },
+    {
+     "type": "img",
+     "src": "/tmp/prep/n_blackswan_6_3f37882b7aa8.jpg",
+     "x": -140,
+     "y": 440,
+     "w": 1360,
+     "h": 580,
+     "z": 3,
+     "rot": -3,
+     "border": "10px solid #111",
+     "shadow": "0 24px 60px rgba(0,0,0,.35)"
+    },
+    {
+     "type": "box",
+     "x": 40,
+     "y": 915,
+     "w": 780,
+     "h": 150,
+     "bg": "#0b0b0b",
+     "z": 5,
+     "rot": -3
+    },
+    {
+     "type": "txt",
+     "html": "BLACK SWAN",
+     "x": 66,
+     "y": 925,
+     "w": 760,
+     "size": 126,
+     "font": "anton",
+     "color": "#ffe500",
+     "z": 6,
+     "rot": -3,
+     "lh": 1.05
+    },
+    {
+     "type": "txt",
+     "html": "2010 · Darren Aronofsky",
+     "x": 70,
+     "y": 1075,
+     "w": 900,
+     "size": 36,
+     "font": "oswald",
+     "color": "#0b0b0b",
+     "z": 5,
+     "weight": 500,
+     "ls": 3,
+     "upper": true
+    },
+    {
+     "type": "txt",
+     "html": "Mükemmel olmaya takıntılı bir balerin, Kuğu Gölü'nün başrolünü alınca kendi gölgesiyle yüzleşmeye başlar.",
+     "x": 70,
+     "y": 1128,
+     "w": 940,
+     "size": 35,
+     "font": "inter",
+     "color": "#0b0b0b",
+     "z": 5,
+     "weight": 600,
+     "lh": 1.28
+    },
+    {
+     "type": "box",
+     "x": 745,
+     "y": 70,
+     "w": 270,
+     "h": 270,
+     "bg": "#0b0b0b",
+     "z": 4,
+     "radius": 200,
+     "rot": 8
+    },
+    {
+     "type": "txt",
+     "html": "OSCAR<br><span style='font-size:24px;letter-spacing:1px'>EN İYİ KADIN<br>OYUNCU</span>",
+     "x": 755,
+     "y": 105,
+     "w": 250,
+     "size": 64,
+     "font": "anton",
+     "color": "#ffe500",
+     "z": 6,
+     "align": "center",
+     "rot": 8,
+     "lh": 1.05
+    },
+    {
+     "type": "txt",
+     "html": "ZARAR DERECESİ",
+     "x": 70,
+     "y": 1285,
+     "w": 330,
+     "size": 26,
+     "font": "oswald",
+     "color": "#0b0b0b",
+     "z": 5,
+     "weight": 500,
+     "ls": 4
+    },
+    {
+     "type": "txt",
+     "html": "●●●●○",
+     "x": 400,
+     "y": 1281,
+     "w": 300,
+     "size": 34,
+     "font": "inter",
+     "color": "#0b0b0b",
+     "z": 5,
+     "ls": 6,
+     "weight": 700
+    },
+    {
+     "type": "logo",
+     "name": "black",
+     "x": 930,
+     "y": 1262,
+     "w": 80,
+     "z": 8,
+     "op": 1
+    }
+   ]
+  },
+  {
+   "bg": "#0b0b0b",
+   "els": [
+    {
+     "type": "img",
+     "src": "/tmp/prep/n_requiem_4_1f8987dc90a7.jpg",
+     "x": 0,
+     "y": 0,
+     "w": 1080,
+     "h": 1350,
+     "z": 1
+    },
+    {
+     "type": "txt",
+     "html": "02",
+     "x": 40,
+     "y": 10,
+     "w": 500,
+     "size": 330,
+     "font": "anton",
+     "color": "transparent",
+     "z": 4,
+     "stroke": "7px #0b0b0b",
+     "lh": 1
+    },
+    {
+     "type": "box",
+     "x": 720,
+     "y": 120,
+     "w": 300,
+     "h": 130,
+     "bg": "#0b0b0b",
+     "z": 4,
+     "rot": 6
+    },
+    {
+     "type": "txt",
+     "html": "OSCAR ADAYI<br><span style='color:#fff'>ELLEN BURSTYN</span>",
+     "x": 735,
+     "y": 140,
+     "w": 275,
+     "size": 40,
+     "font": "anton",
+     "color": "#ffe500",
+     "z": 6,
+     "align": "center",
+     "rot": 6,
+     "lh": 1.15
+    },
+    {
+     "type": "box",
+     "x": 0,
+     "y": 820,
+     "w": 1080,
+     "h": 530,
+     "bg": "#0b0b0b",
+     "z": 3
+    },
+    {
+     "type": "box",
+     "x": 0,
+     "y": 806,
+     "w": 1080,
+     "h": 26,
+     "z": 4,
+     "rot": 0,
+     "css": "background:repeating-linear-gradient(-45deg,#ffe500 0 22px,#0b0b0b 22px 44px)"
+    },
+    {
+     "type": "txt",
+     "html": "REQUIEM<br>FOR A DREAM",
+     "x": 58,
+     "y": 850,
+     "w": 980,
+     "size": 118,
+     "font": "anton",
+     "color": "#ffe500",
+     "z": 5,
+     "lh": 0.98
+    },
+    {
+     "type": "txt",
+     "html": "2000 · Darren Aronofsky",
+     "x": 62,
+     "y": 1095,
+     "w": 900,
+     "size": 36,
+     "font": "oswald",
+     "color": "#fff",
+     "z": 5,
+     "weight": 500,
+     "ls": 3,
+     "upper": true
+    },
+    {
+     "type": "txt",
+     "html": "Dört insan, kendi hayallerine tutunmak için farklı bağımlılıkların içine çekilir.",
+     "x": 62,
+     "y": 1150,
+     "w": 940,
+     "size": 38,
+     "font": "inter",
+     "color": "#fff",
+     "z": 5,
+     "weight": 500,
+     "lh": 1.3
+    },
+    {
+     "type": "txt",
+     "html": "ZARAR DERECESİ",
+     "x": 62,
+     "y": 1290,
+     "w": 330,
+     "size": 26,
+     "font": "oswald",
+     "color": "#ffe500",
+     "z": 5,
+     "weight": 500,
+     "ls": 4
+    },
+    {
+     "type": "txt",
+     "html": "●●●●●",
+     "x": 392,
+     "y": 1286,
+     "w": 300,
+     "size": 34,
+     "font": "inter",
+     "color": "#ffe500",
+     "z": 5,
+     "ls": 6,
+     "weight": 700
+    },
+    {
+     "type": "logo",
+     "name": "yellow",
+     "x": 930,
+     "y": 1262,
+     "w": 80,
+     "z": 8,
+     "op": 1
+    }
+   ]
+  },
+  {
+   "bg": "#f4f1e8",
+   "els": [
+    {
+     "type": "txt",
+     "html": "THE<br>MACHINIST",
+     "x": 52,
+     "y": 30,
+     "w": 980,
+     "size": 212,
+     "font": "anton",
+     "color": "#0b0b0b",
+     "z": 2,
+     "lh": 0.88
+    },
+    {
+     "type": "txt",
+     "html": "03",
+     "x": 720,
+     "y": 300,
+     "w": 360,
+     "size": 190,
+     "font": "anton",
+     "color": "#ffe500",
+     "z": 1,
+     "stroke": "5px #0b0b0b",
+     "lh": 1,
+     "align": "right"
+    },
+    {
+     "type": "img",
+     "src": "/tmp/prep/n_machinist_1_22feaad3d150.jpg",
+     "x": 30,
+     "y": 500,
+     "w": 640,
+     "h": 340,
+     "z": 3,
+     "rot": -6,
+     "border": "12px solid #fff",
+     "shadow": "0 18px 40px rgba(0,0,0,.35)"
+    },
+    {
+     "type": "img",
+     "src": "/tmp/prep/n_machinist_6_f88b0561c084.jpg",
+     "x": 410,
+     "y": 640,
+     "w": 640,
+     "h": 340,
+     "z": 4,
+     "rot": 5,
+     "border": "12px solid #fff",
+     "shadow": "0 18px 40px rgba(0,0,0,.35)"
+    },
+    {
+     "type": "img",
+     "src": "/tmp/prep/n_machinist_2_b73b27c62f21.jpg",
+     "x": 60,
+     "y": 840,
+     "w": 560,
+     "h": 300,
+     "z": 5,
+     "rot": -2,
+     "border": "12px solid #fff",
+     "shadow": "0 18px 40px rgba(0,0,0,.35)"
+    },
+    {
+     "type": "box",
+     "x": 800,
+     "y": 420,
+     "w": 210,
+     "h": 210,
+     "bg": "#ffe500",
+     "z": 6,
+     "radius": 200,
+     "rot": 10,
+     "border": "6px solid #0b0b0b"
+    },
+    {
+     "type": "txt",
+     "html": "~28 KG<br><span style='font-size:30px'>VERDİ</span>",
+     "x": 805,
+     "y": 465,
+     "w": 200,
+     "size": 54,
+     "font": "anton",
+     "color": "#0b0b0b",
+     "z": 7,
+     "align": "center",
+     "rot": 10,
+     "lh": 1.0
+    },
+    {
+     "type": "txt",
+     "html": "2004 · Brad Anderson",
+     "x": 640,
+     "y": 1060,
+     "w": 420,
+     "size": 28,
+     "font": "oswald",
+     "color": "#0b0b0b",
+     "z": 5,
+     "weight": 500,
+     "ls": 3,
+     "upper": true
+    },
+    {
+     "type": "txt",
+     "html": "Bir yıldır uyuyamayan makinistin hayatı, işyerinde tanımadığı biri belirince çözülür.",
+     "x": 60,
+     "y": 1170,
+     "w": 960,
+     "size": 37,
+     "font": "inter",
+     "color": "#0b0b0b",
+     "z": 5,
+     "weight": 600,
+     "lh": 1.28
+    },
+    {
+     "type": "txt",
+     "html": "ZARAR DERECESİ",
+     "x": 60,
+     "y": 1297,
+     "w": 330,
+     "size": 26,
+     "font": "oswald",
+     "color": "#0b0b0b",
+     "z": 5,
+     "weight": 500,
+     "ls": 4
+    },
+    {
+     "type": "txt",
+     "html": "●●●●○",
+     "x": 390,
+     "y": 1293,
+     "w": 300,
+     "size": 34,
+     "font": "inter",
+     "color": "#0b0b0b",
+     "z": 5,
+     "ls": 6,
+     "weight": 700
+    },
+    {
+     "type": "logo",
+     "name": "black",
+     "x": 940,
+     "y": 1272,
+     "w": 74,
+     "z": 8,
+     "op": 1
+    }
+   ]
+  },
+  {
+   "bg": "#0b0b0b",
+   "els": [
+    {
+     "type": "img",
+     "src": "/tmp/prep/n_perfectblue_6_ee3a134e1160.jpg",
+     "x": 0,
+     "y": 0,
+     "w": 1080,
+     "h": 1350,
+     "z": 1
+    },
+    {
+     "type": "box",
+     "x": 0,
+     "y": 900,
+     "w": 1080,
+     "h": 450,
+     "bg": "linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.92) 45%,#000)",
+     "z": 2
+    },
+    {
+     "type": "txt",
+     "html": "04",
+     "x": 50,
+     "y": 40,
+     "w": 400,
+     "size": 300,
+     "font": "anton",
+     "color": "transparent",
+     "z": 4,
+     "stroke": "6px #fff",
+     "lh": 1
+    },
+    {
+     "type": "box",
+     "x": -60,
+     "y": 690,
+     "w": 1200,
+     "h": 170,
+     "bg": "#ffe500",
+     "z": 4,
+     "rot": -6
+    },
+    {
+     "type": "txt",
+     "html": "PERFECT BLUE",
+     "x": -20,
+     "y": 700,
+     "w": 1120,
+     "size": 152,
+     "font": "anton",
+     "color": "#0b0b0b",
+     "z": 5,
+     "align": "center",
+     "rot": -6,
+     "lh": 1
+    },
+    {
+     "type": "box",
+     "x": -60,
+     "y": 880,
+     "w": 1200,
+     "h": 66,
+     "bg": "#0b0b0b",
+     "z": 4,
+     "rot": -6
+    },
+    {
+     "type": "txt",
+     "html": "SATOSHI KON · 1997",
+     "x": -20,
+     "y": 887,
+     "w": 1120,
+     "size": 34,
+     "font": "oswald",
+     "color": "#ffe500",
+     "z": 5,
+     "weight": 500,
+     "ls": 8,
+     "align": "center",
+     "rot": -6
+    },
+    {
+     "type": "txt",
+     "html": "Pop grubunu bırakıp oyunculuğa geçen Mima'nın gerçekle hayal arasındaki çizgisi silinir.",
+     "x": 62,
+     "y": 1075,
+     "w": 940,
+     "size": 38,
+     "font": "inter",
+     "color": "#fff",
+     "z": 5,
+     "weight": 500,
+     "lh": 1.3
+    },
+    {
+     "type": "txt",
+     "html": "Satoshi Kon'un ilk uzun metrajı.",
+     "x": 62,
+     "y": 1215,
+     "w": 900,
+     "size": 30,
+     "font": "oswald",
+     "color": "#ffe500",
+     "z": 5,
+     "weight": 500,
+     "ls": 3
+    },
+    {
+     "type": "txt",
+     "html": "ZARAR DERECESİ",
+     "x": 62,
+     "y": 1290,
+     "w": 330,
+     "size": 26,
+     "font": "oswald",
+     "color": "#fff",
+     "z": 5,
+     "weight": 500,
+     "ls": 4
+    },
+    {
+     "type": "txt",
+     "html": "●●●●○",
+     "x": 392,
+     "y": 1286,
+     "w": 300,
+     "size": 34,
+     "font": "inter",
+     "color": "#fff",
+     "z": 5,
+     "ls": 6,
+     "weight": 700
+    },
+    {
+     "type": "logo",
+     "name": "white",
+     "x": 930,
+     "y": 1262,
+     "w": 80,
+     "z": 8,
+     "op": 1
+    }
+   ]
+  },
+  {
+   "bg": "#ffe500",
+   "els": [
+    {
+     "type": "img",
+     "src": "/tmp/prep/n_enemy_5_08ff8b972449.jpg",
+     "x": 0,
+     "y": 0,
+     "w": 540,
+     "h": 700,
+     "z": 1
+    },
+    {
+     "type": "img",
+     "src": "/tmp/prep/n_enemy_5_98bd19cd2e49.jpg",
+     "x": 540,
+     "y": 0,
+     "w": 540,
+     "h": 700,
+     "z": 1
+    },
+    {
+     "type": "box",
+     "x": 536,
+     "y": 0,
+     "w": 8,
+     "h": 700,
+     "bg": "#0b0b0b",
+     "z": 3
+    },
+    {
+     "type": "txt",
+     "html": "05",
+     "x": 40,
+     "y": 20,
+     "w": 300,
+     "size": 200,
+     "font": "anton",
+     "color": "transparent",
+     "z": 4,
+     "stroke": "5px #fff"
+    },
+    {
+     "type": "txt",
+     "html": "ENEMY",
+     "x": 40,
+     "y": 610,
+     "w": 1000,
+     "size": 240,
+     "font": "anton",
+     "color": "#0b0b0b",
+     "z": 5,
+     "lh": 1
+    },
+    {
+     "type": "txt",
+     "html": "2013 · Denis Villeneuve",
+     "x": 50,
+     "y": 860,
+     "w": 900,
+     "size": 36,
+     "font": "oswald",
+     "color": "#0b0b0b",
+     "z": 5,
+     "weight": 500,
+     "ls": 3,
+     "upper": true
+    },
+    {
+     "type": "txt",
+     "html": "Sıradan bir tarih öğretmeni, bir filmde kendisinin birebir aynısını görünce onun peşine düşer.",
+     "x": 50,
+     "y": 925,
+     "w": 960,
+     "size": 40,
+     "font": "inter",
+     "color": "#0b0b0b",
+     "z": 5,
+     "weight": 700,
+     "lh": 1.28
+    },
+    {
+     "type": "txt",
+     "html": "José Saramago'nun romanından uyarlandı. Jake Gyllenhaal iki rolü birden oynuyor.",
+     "x": 50,
+     "y": 1085,
+     "w": 940,
+     "size": 32,
+     "font": "inter",
+     "color": "#0b0b0b",
+     "z": 5,
+     "weight": 500,
+     "lh": 1.3,
+     "op": 0.85
+    },
+    {
+     "type": "txt",
+     "html": "ZARAR DERECESİ",
+     "x": 50,
+     "y": 1290,
+     "w": 330,
+     "size": 26,
+     "font": "oswald",
+     "color": "#0b0b0b",
+     "z": 5,
+     "weight": 500,
+     "ls": 4
+    },
+    {
+     "type": "txt",
+     "html": "●●●●○",
+     "x": 380,
+     "y": 1286,
+     "w": 300,
+     "size": 34,
+     "font": "inter",
+     "color": "#0b0b0b",
+     "z": 5,
+     "ls": 6,
+     "weight": 700
+    },
+    {
+     "type": "logo",
+     "name": "black",
+     "x": 930,
+     "y": 1262,
+     "w": 80,
+     "z": 8,
+     "op": 1
+    }
+   ]
+  },
+  {
+   "bg": "#ffe500",
+   "els": [
+    {
+     "type": "box",
+     "x": 0,
+     "y": 0,
+     "w": 1080,
+     "h": 70,
+     "z": 5,
+     "rot": 0,
+     "css": "background:repeating-linear-gradient(-45deg,#ffe500 0 30px,#0b0b0b 30px 60px)"
+    },
+    {
+     "type": "box",
+     "x": 0,
+     "y": 1280,
+     "w": 1080,
+     "h": 70,
+     "z": 5,
+     "rot": 0,
+     "css": "background:repeating-linear-gradient(-45deg,#ffe500 0 30px,#0b0b0b 30px 60px)"
+    },
+    {
+     "type": "txt",
+     "html": "ZARAR<br>RAPORUNU<br>YORUMLARA<br>YAZ",
+     "x": 60,
+     "y": 120,
+     "w": 980,
+     "size": 205,
+     "font": "anton",
+     "color": "#0b0b0b",
+     "z": 5,
+     "lh": 0.92
+    },
+    {
+     "type": "txt",
+     "html": "Hangisinden sonra bir hafta kendine gelemedin?",
+     "x": 64,
+     "y": 880,
+     "w": 900,
+     "size": 58,
+     "font": "playfair",
+     "color": "#0b0b0b",
+     "z": 5,
+     "weight": 700,
+     "lh": 1.2
+    },
+    {
+     "type": "txt",
+     "html": "KAYDET · ARKADAŞINA GÖNDER · YORUM YAP",
+     "x": 64,
+     "y": 1100,
+     "w": 960,
+     "size": 32,
+     "font": "oswald",
+     "color": "#0b0b0b",
+     "z": 5,
+     "weight": 500,
+     "ls": 4
+    },
+    {
+     "type": "logo",
+     "name": "black",
+     "x": 760,
+     "y": 1010,
+     "w": 240,
+     "z": 8,
+     "op": 1
+    }
+   ]
+  }
+ ]
+}

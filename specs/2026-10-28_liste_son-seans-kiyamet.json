@@ -1,0 +1,614 @@
+{
+ "id": "2026-10-28_liste_son-seans-kiyamet",
+ "caption": "Dışarı kıyamet koptuğunda içeride izlenecek 4 film. Dünyanın sonu bu filmlerde patlamalarla değil, insanların birbirine bakışıyla geliyor.\n\nChildren of Men insanlığın artık çocuk doğuramadığı bir dünyayı, Take Shelter bir adamın kafasındaki fırtınayı, The Road küllere dönmüş bir dünyada babayla oğulun yürüyüşünü, Melancholia ise Dünya'ya doğru yaklaşan dev bir gezegeni anlatıyor.\n\nSırayla izlersen kıyamete kendini hazırlamış olursun. Sen son film olarak hangisini seçerdin?\n\nYarın 18:00'de: Hayatı sorgulatacak 4 sakin film. Takipte kal.",
+ "slides": [
+  {
+   "bg": {
+    "css": "linear-gradient(180deg,#3ddc84 0%,#f0c030 50%,#e03a2a 100%)"
+   },
+   "els": [
+    {
+     "type": "img",
+     "src": "/tmp/prep/n_childrenofmen_3_a58174298477.jpg",
+     "x": 0,
+     "y": 760,
+     "w": 1080,
+     "h": 590,
+     "z": 1,
+     "css": "opacity:.9"
+    },
+    {
+     "type": "txt",
+     "html": "KIYAMETE<br>4 FİLM<br>KALDI",
+     "x": 50,
+     "y": 30,
+     "w": 980,
+     "size": 215,
+     "font": "anton",
+     "color": "#0a0f0a",
+     "z": 5,
+     "lh": 0.92
+    },
+    {
+     "type": "box",
+     "x": 0,
+     "y": 700,
+     "w": 1080,
+     "h": 110,
+     "bg": "#0a0f0a",
+     "z": 4,
+     "rot": -2
+    },
+    {
+     "type": "txt",
+     "html": "SON SEANS · DIŞARI KIYAMET KOPUYOR",
+     "x": 0,
+     "y": 725,
+     "w": 1080,
+     "size": 40,
+     "font": "oswald",
+     "color": "#f5f5ee",
+     "z": 5,
+     "weight": 500,
+     "ls": 6,
+     "align": "center",
+     "rot": -2
+    },
+    {
+     "type": "txt",
+     "html": "Kaydet · izle · hazırlan",
+     "x": 60,
+     "y": 1250,
+     "w": 700,
+     "size": 40,
+     "font": "oswald",
+     "color": "#0a0f0a",
+     "z": 6,
+     "weight": 500,
+     "ls": 4,
+     "upper": true,
+     "bg": "#f5f5ee",
+     "pad": "8px 16px"
+    },
+    {
+     "type": "logo",
+     "name": "black",
+     "x": 900,
+     "y": 1180,
+     "w": 140,
+     "z": 8,
+     "op": 1
+    }
+   ]
+  },
+  {
+   "bg": {
+    "css": "linear-gradient(180deg,#3ddc84,#a8d94a)"
+   },
+   "els": [
+    {
+     "type": "txt",
+     "html": "4",
+     "x": 30,
+     "y": -60,
+     "w": 800,
+     "size": 620,
+     "font": "anton",
+     "color": "transparent",
+     "z": 1,
+     "stroke": "6px #0a0f0a",
+     "lh": 1
+    },
+    {
+     "type": "img",
+     "src": "/tmp/prep/n_childrenofmen_1_dbd1f3fdd405.jpg",
+     "x": -140,
+     "y": 390,
+     "w": 1360,
+     "h": 560,
+     "z": 3,
+     "rot": 3,
+     "border": "10px solid #0a0f0a",
+     "shadow": "0 20px 50px rgba(0,0,0,.4)"
+    },
+    {
+     "type": "box",
+     "x": 30,
+     "y": 1000,
+     "w": 700,
+     "h": 140,
+     "bg": "#0a0f0a",
+     "z": 5,
+     "rot": -2
+    },
+    {
+     "type": "txt",
+     "html": "CHILDREN OF MEN",
+     "x": 50,
+     "y": 1010,
+     "w": 700,
+     "size": 100,
+     "font": "anton",
+     "color": "#3ddc84",
+     "z": 6,
+     "rot": -2,
+     "lh": 1.1,
+     "upper": true
+    },
+    {
+     "type": "txt",
+     "html": "2006 · Alfonso Cuarón",
+     "x": 40,
+     "y": 1150,
+     "w": 900,
+     "size": 30,
+     "font": "oswald",
+     "color": "#0a0f0a",
+     "z": 5,
+     "weight": 500,
+     "ls": 4,
+     "upper": true
+    },
+    {
+     "type": "txt",
+     "html": "İnsanlık çocuk doğuramaz hale gelmiştir. Bir adam, umudun tek taşıyıcısını korumaya çalışır.",
+     "x": 40,
+     "y": 1200,
+     "w": 860,
+     "size": 34,
+     "font": "inter",
+     "color": "#0a0f0a",
+     "z": 5,
+     "weight": 700,
+     "lh": 1.25
+    },
+    {
+     "type": "logo",
+     "name": "black",
+     "x": 930,
+     "y": 1262,
+     "w": 80,
+     "z": 8,
+     "op": 1
+    },
+    {
+     "type": "box",
+     "x": 730,
+     "y": 60,
+     "w": 300,
+     "h": 150,
+     "bg": "#0a0f0a",
+     "z": 5,
+     "rot": 5
+    },
+    {
+     "type": "txt",
+     "html": "DÜNYANIN SONUNA<br><span style='font-size:70px;color:#3ddc84'>4 GÜN</span>",
+     "x": 735,
+     "y": 70,
+     "w": 290,
+     "size": 28,
+     "font": "oswald",
+     "color": "#f5f5ee",
+     "z": 6,
+     "weight": 500,
+     "align": "center",
+     "ls": 3,
+     "rot": 5,
+     "lh": 1.1
+    }
+   ]
+  },
+  {
+   "bg": {
+    "css": "linear-gradient(180deg,#a8d94a,#f0c030)"
+   },
+   "els": [
+    {
+     "type": "txt",
+     "html": "3",
+     "x": 30,
+     "y": -60,
+     "w": 800,
+     "size": 620,
+     "font": "anton",
+     "color": "transparent",
+     "z": 1,
+     "stroke": "6px #0a0f0a",
+     "lh": 1
+    },
+    {
+     "type": "img",
+     "src": "/tmp/prep/n_takeshelter_2_bf44334c5645.jpg",
+     "x": -140,
+     "y": 390,
+     "w": 1360,
+     "h": 560,
+     "z": 3,
+     "rot": 3,
+     "border": "10px solid #0a0f0a",
+     "shadow": "0 20px 50px rgba(0,0,0,.4)"
+    },
+    {
+     "type": "box",
+     "x": 30,
+     "y": 1000,
+     "w": 700,
+     "h": 140,
+     "bg": "#0a0f0a",
+     "z": 5,
+     "rot": -2
+    },
+    {
+     "type": "txt",
+     "html": "TAKE SHELTER",
+     "x": 50,
+     "y": 1010,
+     "w": 700,
+     "size": 100,
+     "font": "anton",
+     "color": "#a8d94a",
+     "z": 6,
+     "rot": -2,
+     "lh": 1.1,
+     "upper": true
+    },
+    {
+     "type": "txt",
+     "html": "2011 · Jeff Nichols",
+     "x": 40,
+     "y": 1150,
+     "w": 900,
+     "size": 30,
+     "font": "oswald",
+     "color": "#0a0f0a",
+     "z": 5,
+     "weight": 500,
+     "ls": 4,
+     "upper": true
+    },
+    {
+     "type": "txt",
+     "html": "Bir inşaat işçisi, gelmekte olan bir fırtınanın kâbuslarını görür. Ailesi bunun gerçek olup olmadığını sorar.",
+     "x": 40,
+     "y": 1200,
+     "w": 860,
+     "size": 34,
+     "font": "inter",
+     "color": "#0a0f0a",
+     "z": 5,
+     "weight": 700,
+     "lh": 1.25
+    },
+    {
+     "type": "logo",
+     "name": "black",
+     "x": 930,
+     "y": 1262,
+     "w": 80,
+     "z": 8,
+     "op": 1
+    },
+    {
+     "type": "box",
+     "x": 730,
+     "y": 60,
+     "w": 300,
+     "h": 150,
+     "bg": "#0a0f0a",
+     "z": 5,
+     "rot": 5
+    },
+    {
+     "type": "txt",
+     "html": "DÜNYANIN SONUNA<br><span style='font-size:70px;color:#a8d94a'>3 GÜN</span>",
+     "x": 735,
+     "y": 70,
+     "w": 290,
+     "size": 28,
+     "font": "oswald",
+     "color": "#f5f5ee",
+     "z": 6,
+     "weight": 500,
+     "align": "center",
+     "ls": 3,
+     "rot": 5,
+     "lh": 1.1
+    }
+   ]
+  },
+  {
+   "bg": {
+    "css": "linear-gradient(180deg,#f0c030,#e8761f)"
+   },
+   "els": [
+    {
+     "type": "txt",
+     "html": "2",
+     "x": 30,
+     "y": -60,
+     "w": 800,
+     "size": 620,
+     "font": "anton",
+     "color": "transparent",
+     "z": 1,
+     "stroke": "6px #0a0f0a",
+     "lh": 1
+    },
+    {
+     "type": "img",
+     "src": "/tmp/prep/n_theroad_3_fe150e4d2b93.jpg",
+     "x": -140,
+     "y": 390,
+     "w": 1360,
+     "h": 560,
+     "z": 3,
+     "rot": 3,
+     "border": "10px solid #0a0f0a",
+     "shadow": "0 20px 50px rgba(0,0,0,.4)"
+    },
+    {
+     "type": "box",
+     "x": 30,
+     "y": 1000,
+     "w": 700,
+     "h": 140,
+     "bg": "#0a0f0a",
+     "z": 5,
+     "rot": -2
+    },
+    {
+     "type": "txt",
+     "html": "THE ROAD",
+     "x": 50,
+     "y": 1010,
+     "w": 700,
+     "size": 100,
+     "font": "anton",
+     "color": "#f0c030",
+     "z": 6,
+     "rot": -2,
+     "lh": 1.1,
+     "upper": true
+    },
+    {
+     "type": "txt",
+     "html": "2009 · John Hillcoat",
+     "x": 40,
+     "y": 1150,
+     "w": 900,
+     "size": 30,
+     "font": "oswald",
+     "color": "#0a0f0a",
+     "z": 5,
+     "weight": 500,
+     "ls": 4,
+     "upper": true
+    },
+    {
+     "type": "txt",
+     "html": "Küllere dönmüş bir dünyada bir baba ve oğul, güneye doğru yürüyor.",
+     "x": 40,
+     "y": 1200,
+     "w": 860,
+     "size": 34,
+     "font": "inter",
+     "color": "#0a0f0a",
+     "z": 5,
+     "weight": 700,
+     "lh": 1.25
+    },
+    {
+     "type": "logo",
+     "name": "black",
+     "x": 930,
+     "y": 1262,
+     "w": 80,
+     "z": 8,
+     "op": 1
+    },
+    {
+     "type": "box",
+     "x": 730,
+     "y": 60,
+     "w": 300,
+     "h": 150,
+     "bg": "#0a0f0a",
+     "z": 5,
+     "rot": 5
+    },
+    {
+     "type": "txt",
+     "html": "DÜNYANIN SONUNA<br><span style='font-size:70px;color:#f0c030'>2 GÜN</span>",
+     "x": 735,
+     "y": 70,
+     "w": 290,
+     "size": 28,
+     "font": "oswald",
+     "color": "#f5f5ee",
+     "z": 6,
+     "weight": 500,
+     "align": "center",
+     "ls": 3,
+     "rot": 5,
+     "lh": 1.1
+    }
+   ]
+  },
+  {
+   "bg": {
+    "css": "linear-gradient(180deg,#e8761f,#e03a2a)"
+   },
+   "els": [
+    {
+     "type": "txt",
+     "html": "1",
+     "x": 30,
+     "y": -60,
+     "w": 800,
+     "size": 620,
+     "font": "anton",
+     "color": "transparent",
+     "z": 1,
+     "stroke": "6px #f5f5ee",
+     "lh": 1
+    },
+    {
+     "type": "img",
+     "src": "/tmp/prep/n_melancholia_3_c2cce69de096.jpg",
+     "x": -140,
+     "y": 390,
+     "w": 1360,
+     "h": 560,
+     "z": 3,
+     "rot": 3,
+     "border": "10px solid #0a0f0a",
+     "shadow": "0 20px 50px rgba(0,0,0,.4)"
+    },
+    {
+     "type": "box",
+     "x": 30,
+     "y": 1000,
+     "w": 700,
+     "h": 140,
+     "bg": "#0a0f0a",
+     "z": 5,
+     "rot": -2
+    },
+    {
+     "type": "txt",
+     "html": "MELANCHOLIA",
+     "x": 50,
+     "y": 1010,
+     "w": 700,
+     "size": 100,
+     "font": "anton",
+     "color": "#e8761f",
+     "z": 6,
+     "rot": -2,
+     "lh": 1.1,
+     "upper": true
+    },
+    {
+     "type": "txt",
+     "html": "2011 · Lars von Trier",
+     "x": 40,
+     "y": 1150,
+     "w": 900,
+     "size": 30,
+     "font": "oswald",
+     "color": "#f5f5ee",
+     "z": 5,
+     "weight": 500,
+     "ls": 4,
+     "upper": true
+    },
+    {
+     "type": "txt",
+     "html": "Dünya'ya doğru gelen dev bir gezegen, iki kız kardeşi hazırlıksız yakalar. Kirsten Dunst Cannes'da En İyi Kadın Oyuncu seçildi.",
+     "x": 40,
+     "y": 1200,
+     "w": 860,
+     "size": 34,
+     "font": "inter",
+     "color": "#f5f5ee",
+     "z": 5,
+     "weight": 700,
+     "lh": 1.25
+    },
+    {
+     "type": "logo",
+     "name": "white",
+     "x": 930,
+     "y": 1262,
+     "w": 80,
+     "z": 8,
+     "op": 1
+    },
+    {
+     "type": "box",
+     "x": 730,
+     "y": 60,
+     "w": 300,
+     "h": 150,
+     "bg": "#0a0f0a",
+     "z": 5,
+     "rot": 5
+    },
+    {
+     "type": "txt",
+     "html": "DÜNYANIN SONUNA<br><span style='font-size:70px;color:#e8761f'>1 GÜN</span>",
+     "x": 735,
+     "y": 70,
+     "w": 290,
+     "size": 28,
+     "font": "oswald",
+     "color": "#f5f5ee",
+     "z": 6,
+     "weight": 500,
+     "align": "center",
+     "ls": 3,
+     "rot": 5,
+     "lh": 1.1
+    }
+   ]
+  },
+  {
+   "bg": {
+    "css": "linear-gradient(180deg,#e03a2a,#7a0f0a)"
+   },
+   "els": [
+    {
+     "type": "txt",
+     "html": "SON<br>FİLMİNİ<br>SEÇ",
+     "x": 60,
+     "y": 60,
+     "w": 980,
+     "size": 270,
+     "font": "anton",
+     "color": "#f5f5ee",
+     "z": 5,
+     "lh": 0.92
+    },
+    {
+     "type": "txt",
+     "html": "Dünyanın son gecesinde hangisini izlerdin?",
+     "x": 60,
+     "y": 880,
+     "w": 880,
+     "size": 60,
+     "font": "playfair",
+     "color": "#f5f5ee",
+     "z": 5,
+     "weight": 700,
+     "lh": 1.2
+    },
+    {
+     "type": "txt",
+     "html": "YORUMLARA YAZ",
+     "x": 60,
+     "y": 1120,
+     "w": 600,
+     "size": 40,
+     "font": "oswald",
+     "color": "#0a0f0a",
+     "z": 5,
+     "weight": 500,
+     "ls": 6,
+     "bg": "#f0c030",
+     "pad": "10px 20px",
+     "rot": -2
+    },
+    {
+     "type": "logo",
+     "name": "white",
+     "x": 840,
+     "y": 1100,
+     "w": 180,
+     "z": 8,
+     "op": 1
+    }
+   ]
+  }
+ ]
+}

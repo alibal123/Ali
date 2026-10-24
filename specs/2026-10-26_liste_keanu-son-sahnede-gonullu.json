@@ -1,0 +1,656 @@
+{
+ "id": "2026-10-26_liste_keanu-son-sahnede-gonullu",
+ "caption": "Keanu Reeves son sahnede hep aynı seçimi yapıyor. Kimi zaman kendini, kimi zaman dünyayı, kimi zaman bir inancı seçiyor ve her seferinde bir bedel ödüyor.\n\nConstantine'de cehennemle pazarlık eden bir şeytan kovucu, The Matrix Revolutions'ta insanlığın kaderini omuzlayan Neo, The Day the Earth Stood Still'de dünyayı kurtarmaya çalışan bir uzaylı elçisi, The Devil's Advocate'ta ise bir avukat var. Hepsinin finalinde Keanu'nun karakteri başka birinin yerine bir yük taşıyor.\n\nSonları kimseye anlatmıyoruz, sen izle ve karar ver: Keanu'nun en çok hangi filmde fedakârlık yaptığını düşünüyorsun?\n\nYarın 18:00'de: Bir balık ve bir adam aynı sorunu yaşıyor, ikisi de bir şeyleri hatırlayamıyor. Dory mi Memento mu?",
+ "slides": [
+  {
+   "bg": "#d7261e",
+   "els": [
+    {
+     "type": "img",
+     "src": "/tmp/prep/n_constantine_1_6dbe9480b176.jpg",
+     "x": 0,
+     "y": 0,
+     "w": 1080,
+     "h": 1350,
+     "z": 1
+    },
+    {
+     "type": "box",
+     "x": 0,
+     "y": 0,
+     "w": 1080,
+     "h": 1350,
+     "bg": "#d7261e",
+     "z": 2,
+     "blend": "multiply"
+    },
+    {
+     "type": "txt",
+     "html": "KEANU",
+     "x": 40,
+     "y": 40,
+     "w": 1000,
+     "size": 330,
+     "font": "anton",
+     "color": "#f3ead8",
+     "z": 4,
+     "lh": 1
+    },
+    {
+     "type": "txt",
+     "html": "SON SAHNEDE<br>HEP GÖNÜLLÜ",
+     "x": 50,
+     "y": 360,
+     "w": 900,
+     "size": 118,
+     "font": "anton",
+     "color": "#d7261e",
+     "z": 5,
+     "lh": 1,
+     "bg": "#f3ead8",
+     "pad": "10px 24px",
+     "css": "display:inline-block"
+    },
+    {
+     "type": "box",
+     "x": 0,
+     "y": 1040,
+     "w": 1080,
+     "h": 310,
+     "bg": "#140a0a",
+     "z": 3
+    },
+    {
+     "type": "txt",
+     "html": "Kendini feda ettiği 4 film",
+     "x": 60,
+     "y": 1075,
+     "w": 900,
+     "size": 62,
+     "font": "playfair",
+     "color": "#f3ead8",
+     "z": 5,
+     "weight": 700
+    },
+    {
+     "type": "txt",
+     "html": "Sonlar spoiler'sız · Kaydet",
+     "x": 60,
+     "y": 1175,
+     "w": 900,
+     "size": 34,
+     "font": "oswald",
+     "color": "#d7261e",
+     "z": 5,
+     "weight": 500,
+     "ls": 4,
+     "upper": true
+    },
+    {
+     "type": "logo",
+     "name": "red",
+     "x": 900,
+     "y": 1130,
+     "w": 130,
+     "z": 8,
+     "op": 1
+    }
+   ]
+  },
+  {
+   "bg": "#140a0a",
+   "els": [
+    {
+     "type": "img",
+     "src": "/tmp/prep/n_constantine_4_9fe4fc2138d4.jpg",
+     "x": 0,
+     "y": 0,
+     "w": 1080,
+     "h": 1350,
+     "z": 1
+    },
+    {
+     "type": "box",
+     "x": 0,
+     "y": 0,
+     "w": 1080,
+     "h": 1350,
+     "bg": "#d7261e",
+     "z": 2,
+     "blend": "multiply",
+     "op": 0.85
+    },
+    {
+     "type": "box",
+     "x": 0,
+     "y": 820,
+     "w": 1080,
+     "h": 530,
+     "bg": "linear-gradient(180deg,rgba(20,10,10,0),rgba(20,10,10,.95) 40%)",
+     "z": 3
+    },
+    {
+     "type": "txt",
+     "html": "01",
+     "x": 40,
+     "y": 10,
+     "w": 500,
+     "size": 380,
+     "font": "anton",
+     "color": "transparent",
+     "z": 4,
+     "stroke": "6px #f3ead8",
+     "lh": 1,
+     "align": "left"
+    },
+    {
+     "type": "box",
+     "x": -40,
+     "y": 560,
+     "w": 1160,
+     "h": 230,
+     "bg": "#f3ead8",
+     "z": 5,
+     "rot": -3
+    },
+    {
+     "type": "txt",
+     "html": "CONSTANTINE",
+     "x": 50,
+     "y": 585,
+     "w": 980,
+     "size": 96,
+     "font": "anton",
+     "color": "#d7261e",
+     "z": 6,
+     "lh": 1.05,
+     "upper": true,
+     "rot": -3,
+     "align": "left"
+    },
+    {
+     "type": "txt",
+     "html": "2005 · Francis Lawrence",
+     "x": 60,
+     "y": 880,
+     "w": 960,
+     "size": 32,
+     "font": "oswald",
+     "color": "#f3ead8",
+     "z": 6,
+     "weight": 500,
+     "ls": 5,
+     "upper": true
+    },
+    {
+     "type": "txt",
+     "html": "Cehennemle pazarlık eden bir şeytan kovucunun, kendi ruhunu da riske atması gerekir.",
+     "x": 60,
+     "y": 945,
+     "w": 940,
+     "size": 44,
+     "font": "inter",
+     "color": "#fff",
+     "z": 6,
+     "weight": 600,
+     "lh": 1.3
+    },
+    {
+     "type": "logo",
+     "name": "red",
+     "x": 930,
+     "y": 1262,
+     "w": 80,
+     "z": 8,
+     "op": 1
+    },
+    {
+     "type": "txt",
+     "html": "@derecefilm",
+     "font": "oswald",
+     "size": 24,
+     "weight": 500,
+     "color": "#f3ead8",
+     "x": 60,
+     "y": 1295,
+     "w": 400,
+     "align": "left",
+     "ls": 3,
+     "z": 8,
+     "op": 0.9,
+     "upper": true
+    }
+   ]
+  },
+  {
+   "bg": "#140a0a",
+   "els": [
+    {
+     "type": "img",
+     "src": "/tmp/prep/fg_matrixrev_09_082873c2661e.jpg",
+     "x": 0,
+     "y": 0,
+     "w": 1080,
+     "h": 1350,
+     "z": 1
+    },
+    {
+     "type": "box",
+     "x": 0,
+     "y": 0,
+     "w": 1080,
+     "h": 1350,
+     "bg": "#d7261e",
+     "z": 2,
+     "blend": "multiply",
+     "op": 0.85
+    },
+    {
+     "type": "box",
+     "x": 0,
+     "y": 820,
+     "w": 1080,
+     "h": 530,
+     "bg": "linear-gradient(180deg,rgba(20,10,10,0),rgba(20,10,10,.95) 40%)",
+     "z": 3
+    },
+    {
+     "type": "txt",
+     "html": "02",
+     "x": 540,
+     "y": 10,
+     "w": 500,
+     "size": 380,
+     "font": "anton",
+     "color": "transparent",
+     "z": 4,
+     "stroke": "6px #f3ead8",
+     "lh": 1,
+     "align": "right"
+    },
+    {
+     "type": "box",
+     "x": -40,
+     "y": 560,
+     "w": 1160,
+     "h": 230,
+     "bg": "#f3ead8",
+     "z": 5,
+     "rot": 3
+    },
+    {
+     "type": "txt",
+     "html": "THE MATRIX REVOLUTIONS",
+     "x": 50,
+     "y": 585,
+     "w": 980,
+     "size": 62,
+     "font": "anton",
+     "color": "#d7261e",
+     "z": 6,
+     "lh": 1.05,
+     "upper": true,
+     "rot": 3,
+     "align": "right"
+    },
+    {
+     "type": "txt",
+     "html": "2003 · Wachowski'ler",
+     "x": 60,
+     "y": 880,
+     "w": 960,
+     "size": 32,
+     "font": "oswald",
+     "color": "#f3ead8",
+     "z": 6,
+     "weight": 500,
+     "ls": 5,
+     "upper": true
+    },
+    {
+     "type": "txt",
+     "html": "Neo'nun makinelerle savaşı bu kez insanlığın son şehri Zion'un önünde sonuçlanır.",
+     "x": 60,
+     "y": 945,
+     "w": 940,
+     "size": 44,
+     "font": "inter",
+     "color": "#fff",
+     "z": 6,
+     "weight": 600,
+     "lh": 1.3
+    },
+    {
+     "type": "logo",
+     "name": "red",
+     "x": 930,
+     "y": 1262,
+     "w": 80,
+     "z": 8,
+     "op": 1
+    },
+    {
+     "type": "txt",
+     "html": "@derecefilm",
+     "font": "oswald",
+     "size": 24,
+     "weight": 500,
+     "color": "#f3ead8",
+     "x": 60,
+     "y": 1295,
+     "w": 400,
+     "align": "left",
+     "ls": 3,
+     "z": 8,
+     "op": 0.9,
+     "upper": true
+    }
+   ]
+  },
+  {
+   "bg": "#140a0a",
+   "els": [
+    {
+     "type": "img",
+     "src": "/tmp/prep/n_dayearth_1_40cf7bc183e7.jpg",
+     "x": 0,
+     "y": 0,
+     "w": 1080,
+     "h": 1350,
+     "z": 1
+    },
+    {
+     "type": "box",
+     "x": 0,
+     "y": 0,
+     "w": 1080,
+     "h": 1350,
+     "bg": "#d7261e",
+     "z": 2,
+     "blend": "multiply",
+     "op": 0.85
+    },
+    {
+     "type": "box",
+     "x": 0,
+     "y": 820,
+     "w": 1080,
+     "h": 530,
+     "bg": "linear-gradient(180deg,rgba(20,10,10,0),rgba(20,10,10,.95) 40%)",
+     "z": 3
+    },
+    {
+     "type": "txt",
+     "html": "03",
+     "x": 40,
+     "y": 10,
+     "w": 500,
+     "size": 380,
+     "font": "anton",
+     "color": "transparent",
+     "z": 4,
+     "stroke": "6px #f3ead8",
+     "lh": 1,
+     "align": "left"
+    },
+    {
+     "type": "box",
+     "x": -40,
+     "y": 560,
+     "w": 1160,
+     "h": 230,
+     "bg": "#f3ead8",
+     "z": 5,
+     "rot": -3
+    },
+    {
+     "type": "txt",
+     "html": "THE DAY THE EARTH STOOD STILL",
+     "x": 50,
+     "y": 585,
+     "w": 980,
+     "size": 62,
+     "font": "anton",
+     "color": "#d7261e",
+     "z": 6,
+     "lh": 1.05,
+     "upper": true,
+     "rot": -3,
+     "align": "left"
+    },
+    {
+     "type": "txt",
+     "html": "2008 · Scott Derrickson",
+     "x": 60,
+     "y": 880,
+     "w": 960,
+     "size": 32,
+     "font": "oswald",
+     "color": "#f3ead8",
+     "z": 6,
+     "weight": 500,
+     "ls": 5,
+     "upper": true
+    },
+    {
+     "type": "txt",
+     "html": "Dünyaya gelen bir elçi, insanlığın yaşamaya değip değmediğine karar vermek zorundadır.",
+     "x": 60,
+     "y": 945,
+     "w": 940,
+     "size": 44,
+     "font": "inter",
+     "color": "#fff",
+     "z": 6,
+     "weight": 600,
+     "lh": 1.3
+    },
+    {
+     "type": "logo",
+     "name": "red",
+     "x": 930,
+     "y": 1262,
+     "w": 80,
+     "z": 8,
+     "op": 1
+    },
+    {
+     "type": "txt",
+     "html": "@derecefilm",
+     "font": "oswald",
+     "size": 24,
+     "weight": 500,
+     "color": "#f3ead8",
+     "x": 60,
+     "y": 1295,
+     "w": 400,
+     "align": "left",
+     "ls": 3,
+     "z": 8,
+     "op": 0.9,
+     "upper": true
+    }
+   ]
+  },
+  {
+   "bg": "#140a0a",
+   "els": [
+    {
+     "type": "img",
+     "src": "/tmp/prep/n_devilsadv_4_9ee989b8df74.jpg",
+     "x": 0,
+     "y": 0,
+     "w": 1080,
+     "h": 1350,
+     "z": 1
+    },
+    {
+     "type": "box",
+     "x": 0,
+     "y": 0,
+     "w": 1080,
+     "h": 1350,
+     "bg": "#d7261e",
+     "z": 2,
+     "blend": "multiply",
+     "op": 0.85
+    },
+    {
+     "type": "box",
+     "x": 0,
+     "y": 820,
+     "w": 1080,
+     "h": 530,
+     "bg": "linear-gradient(180deg,rgba(20,10,10,0),rgba(20,10,10,.95) 40%)",
+     "z": 3
+    },
+    {
+     "type": "txt",
+     "html": "04",
+     "x": 540,
+     "y": 10,
+     "w": 500,
+     "size": 380,
+     "font": "anton",
+     "color": "transparent",
+     "z": 4,
+     "stroke": "6px #f3ead8",
+     "lh": 1,
+     "align": "right"
+    },
+    {
+     "type": "box",
+     "x": -40,
+     "y": 560,
+     "w": 1160,
+     "h": 230,
+     "bg": "#f3ead8",
+     "z": 5,
+     "rot": 3
+    },
+    {
+     "type": "txt",
+     "html": "THE DEVIL'S ADVOCATE",
+     "x": 50,
+     "y": 585,
+     "w": 980,
+     "size": 62,
+     "font": "anton",
+     "color": "#d7261e",
+     "z": 6,
+     "lh": 1.05,
+     "upper": true,
+     "rot": 3,
+     "align": "right"
+    },
+    {
+     "type": "txt",
+     "html": "1997 · Taylor Hackford",
+     "x": 60,
+     "y": 880,
+     "w": 960,
+     "size": 32,
+     "font": "oswald",
+     "color": "#f3ead8",
+     "z": 6,
+     "weight": 500,
+     "ls": 5,
+     "upper": true
+    },
+    {
+     "type": "txt",
+     "html": "Hiç dava kaybetmeyen genç bir avukat, büyük bir hukuk firmasında çok daha büyük bir bedel öder.",
+     "x": 60,
+     "y": 945,
+     "w": 940,
+     "size": 44,
+     "font": "inter",
+     "color": "#fff",
+     "z": 6,
+     "weight": 600,
+     "lh": 1.3
+    },
+    {
+     "type": "logo",
+     "name": "red",
+     "x": 930,
+     "y": 1262,
+     "w": 80,
+     "z": 8,
+     "op": 1
+    },
+    {
+     "type": "txt",
+     "html": "@derecefilm",
+     "font": "oswald",
+     "size": 24,
+     "weight": 500,
+     "color": "#f3ead8",
+     "x": 60,
+     "y": 1295,
+     "w": 400,
+     "align": "left",
+     "ls": 3,
+     "z": 8,
+     "op": 0.9,
+     "upper": true
+    }
+   ]
+  },
+  {
+   "bg": "#d7261e",
+   "els": [
+    {
+     "type": "txt",
+     "html": "SENCE<br>HANGİSİNDE<br>EN ÇOK<br>FEDAKÂRLIK<br>YAPTI?",
+     "x": 60,
+     "y": 70,
+     "w": 980,
+     "size": 180,
+     "font": "anton",
+     "color": "#f3ead8",
+     "z": 5,
+     "lh": 0.95
+    },
+    {
+     "type": "txt",
+     "html": "Yorumlara yaz. En iyi cevap bir sonraki gönderiye girer.",
+     "x": 64,
+     "y": 1010,
+     "w": 720,
+     "size": 44,
+     "font": "playfair",
+     "color": "#140a0a",
+     "z": 5,
+     "weight": 700,
+     "lh": 1.2
+    },
+    {
+     "type": "logo",
+     "name": "black",
+     "x": 780,
+     "y": 980,
+     "w": 240,
+     "z": 8,
+     "op": 1
+    },
+    {
+     "type": "txt",
+     "html": "@derecefilm",
+     "font": "oswald",
+     "size": 26,
+     "weight": 500,
+     "color": "#140a0a",
+     "x": 64,
+     "y": 1290,
+     "w": 400,
+     "align": "left",
+     "ls": 3,
+     "z": 9,
+     "op": 0.9,
+     "upper": true
+    }
+   ]
+  }
+ ]
+}

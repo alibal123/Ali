@@ -1,0 +1,520 @@
+{
+ "id": "2026-10-29_liste_hayati-sorgulatan-4-film",
+ "caption": "Hayatı bir an durup sorgulatan 4 sakin film. Patlama yok, kovalamaca yok, sadece insan ve zaman var.\n\nThe Tree of Life (2011) bir ailenin hikâyesini evrenin yaratılışıyla yan yana koyuyor ve Cannes'da Altın Palmiye aldı. Wild Strawberries (1957) yaşlı bir profesörün geçmişine yaptığı yolculuğu Bergman'ın kaleminden anlatıyor. Perfect Days (2023) Tokyo'da tuvaletleri temizleyen bir adamın sakin günlerini izliyor, Koji Yakusho bu rolle Cannes'da En İyi Erkek Oyuncu seçildi. Paterson (2016) şiir yazan bir otobüs şoförünün haftasını anlatıyor.\n\nBu hafta bir akşamını bunlardan birine ayır. Sen hangisinden sonra hayatına dair bir şeyi değiştirdin?\n\nCumhuriyet Bayramımız kutlu olsun.",
+ "slides": [
+  {
+   "bg": "#f4ecdb",
+   "els": [
+    {
+     "type": "img",
+     "src": "/tmp/prep/n_treeoflife_2_97367a92507c.jpg",
+     "x": 40,
+     "y": 60,
+     "w": 520,
+     "h": 640,
+     "z": 2,
+     "rot": -5,
+     "border": "14px solid #fff",
+     "shadow": "0 16px 34px rgba(60,40,20,.35)"
+    },
+    {
+     "type": "img",
+     "src": "/tmp/prep/n_perfectdays_2_b24bbf3ad60b.jpg",
+     "x": 560,
+     "y": 40,
+     "w": 480,
+     "h": 600,
+     "z": 2,
+     "rot": 4,
+     "border": "14px solid #fff",
+     "shadow": "0 16px 34px rgba(60,40,20,.35)"
+    },
+    {
+     "type": "img",
+     "src": "/tmp/prep/n_paterson_6_d0145cd6d197.jpg",
+     "x": 500,
+     "y": 560,
+     "w": 520,
+     "h": 390,
+     "z": 3,
+     "rot": -3,
+     "border": "14px solid #fff",
+     "shadow": "0 16px 34px rgba(60,40,20,.35)"
+    },
+    {
+     "type": "img",
+     "src": "/tmp/prep/n_wildstraw_2_91a399f8bae7.jpg",
+     "x": 30,
+     "y": 640,
+     "w": 440,
+     "h": 380,
+     "z": 3,
+     "rot": 3,
+     "border": "14px solid #fff",
+     "shadow": "0 16px 34px rgba(60,40,20,.35)"
+    },
+    {
+     "type": "txt",
+     "html": "Size hayatı<br>sorgulatacak",
+     "x": 60,
+     "y": 1030,
+     "w": 980,
+     "size": 108,
+     "font": "serif",
+     "color": "#2a2118",
+     "z": 5,
+     "lh": 1
+    },
+    {
+     "type": "txt",
+     "html": "4 sakin film",
+     "x": 60,
+     "y": 1250,
+     "w": 500,
+     "size": 76,
+     "font": "caveat",
+     "color": "#c4552d",
+     "z": 5,
+     "weight": 700,
+     "rot": -2
+    },
+    {
+     "type": "logo",
+     "name": "black",
+     "x": 920,
+     "y": 1090,
+     "w": 110,
+     "z": 8,
+     "op": 1
+    }
+   ]
+  },
+  {
+   "bg": "#f4ecdb",
+   "els": [
+    {
+     "type": "txt",
+     "html": "1",
+     "x": 640,
+     "y": -60,
+     "w": 420,
+     "size": 480,
+     "font": "serif",
+     "color": "#e6d8bd",
+     "z": 1,
+     "align": "right",
+     "lh": 1
+    },
+    {
+     "type": "img",
+     "src": "/tmp/prep/n_treeoflife_3_0c0b67c151eb.jpg",
+     "x": 90,
+     "y": 150,
+     "w": 900,
+     "h": 640,
+     "z": 3,
+     "rot": -2,
+     "border": "16px solid #fff",
+     "shadow": "0 16px 34px rgba(60,40,20,.35)"
+    },
+    {
+     "type": "txt",
+     "html": "THE TREE OF LIFE",
+     "x": 60,
+     "y": 880,
+     "w": 960,
+     "size": 96,
+     "font": "serif",
+     "color": "#2a2118",
+     "z": 5,
+     "lh": 1,
+     "upper": true
+    },
+    {
+     "type": "txt",
+     "html": "2011 · Terrence Malick",
+     "x": 64,
+     "y": 1000,
+     "w": 900,
+     "size": 30,
+     "font": "oswald",
+     "color": "#c4552d",
+     "z": 5,
+     "weight": 500,
+     "ls": 4,
+     "upper": true
+    },
+    {
+     "type": "txt",
+     "html": "Bir ailenin hikâyesi, evrenin yaratılışıyla yan yana anlatılır. Cannes'da Altın Palmiye kazandı.",
+     "x": 64,
+     "y": 1055,
+     "w": 900,
+     "size": 38,
+     "font": "playfair",
+     "color": "#2a2118",
+     "z": 5,
+     "weight": 400,
+     "lh": 1.3
+    },
+    {
+     "type": "txt",
+     "html": "yavaş ve büyük",
+     "x": 560,
+     "y": 40,
+     "w": 480,
+     "size": 58,
+     "font": "caveat",
+     "color": "#3f6b4f",
+     "z": 6,
+     "weight": 700,
+     "lh": 1,
+     "rot": 5
+    },
+    {
+     "type": "logo",
+     "name": "black",
+     "x": 930,
+     "y": 1262,
+     "w": 80,
+     "z": 8,
+     "op": 1
+    }
+   ]
+  },
+  {
+   "bg": "#f4ecdb",
+   "els": [
+    {
+     "type": "txt",
+     "html": "2",
+     "x": 640,
+     "y": -60,
+     "w": 420,
+     "size": 480,
+     "font": "serif",
+     "color": "#e6d8bd",
+     "z": 1,
+     "align": "right",
+     "lh": 1
+    },
+    {
+     "type": "img",
+     "src": "/tmp/prep/n_wildstraw_3_79164e6240f4.jpg",
+     "x": 90,
+     "y": 150,
+     "w": 900,
+     "h": 640,
+     "z": 3,
+     "rot": 2,
+     "border": "16px solid #fff",
+     "shadow": "0 16px 34px rgba(60,40,20,.35)"
+    },
+    {
+     "type": "txt",
+     "html": "WILD STRAWBERRIES",
+     "x": 60,
+     "y": 880,
+     "w": 960,
+     "size": 96,
+     "font": "serif",
+     "color": "#2a2118",
+     "z": 5,
+     "lh": 1,
+     "upper": true
+    },
+    {
+     "type": "txt",
+     "html": "1957 · Ingmar Bergman",
+     "x": 64,
+     "y": 1000,
+     "w": 900,
+     "size": 30,
+     "font": "oswald",
+     "color": "#c4552d",
+     "z": 5,
+     "weight": 500,
+     "ls": 4,
+     "upper": true
+    },
+    {
+     "type": "txt",
+     "html": "Yaşlı bir profesör, onur ödülüne giderken geçmişinin içinden de geçer.",
+     "x": 64,
+     "y": 1055,
+     "w": 900,
+     "size": 38,
+     "font": "playfair",
+     "color": "#2a2118",
+     "z": 5,
+     "weight": 400,
+     "lh": 1.3
+    },
+    {
+     "type": "txt",
+     "html": "geçmişe yolculuk",
+     "x": 560,
+     "y": 40,
+     "w": 480,
+     "size": 58,
+     "font": "caveat",
+     "color": "#3f6b4f",
+     "z": 6,
+     "weight": 700,
+     "lh": 1,
+     "rot": 5
+    },
+    {
+     "type": "logo",
+     "name": "black",
+     "x": 930,
+     "y": 1262,
+     "w": 80,
+     "z": 8,
+     "op": 1
+    }
+   ]
+  },
+  {
+   "bg": "#f4ecdb",
+   "els": [
+    {
+     "type": "txt",
+     "html": "3",
+     "x": 640,
+     "y": -60,
+     "w": 420,
+     "size": 480,
+     "font": "serif",
+     "color": "#e6d8bd",
+     "z": 1,
+     "align": "right",
+     "lh": 1
+    },
+    {
+     "type": "img",
+     "src": "/tmp/prep/n_perfectdays_4_84e9d554d2f2.jpg",
+     "x": 90,
+     "y": 150,
+     "w": 900,
+     "h": 640,
+     "z": 3,
+     "rot": -2,
+     "border": "16px solid #fff",
+     "shadow": "0 16px 34px rgba(60,40,20,.35)"
+    },
+    {
+     "type": "txt",
+     "html": "PERFECT DAYS",
+     "x": 60,
+     "y": 880,
+     "w": 960,
+     "size": 96,
+     "font": "serif",
+     "color": "#2a2118",
+     "z": 5,
+     "lh": 1,
+     "upper": true
+    },
+    {
+     "type": "txt",
+     "html": "2023 · Wim Wenders",
+     "x": 64,
+     "y": 1000,
+     "w": 900,
+     "size": 30,
+     "font": "oswald",
+     "color": "#c4552d",
+     "z": 5,
+     "weight": 500,
+     "ls": 4,
+     "upper": true
+    },
+    {
+     "type": "txt",
+     "html": "Tokyo'da tuvalet temizleyen bir adamın sakin günleri. Koji Yakusho, Cannes'da En İyi Erkek Oyuncu seçildi.",
+     "x": 64,
+     "y": 1055,
+     "w": 900,
+     "size": 38,
+     "font": "playfair",
+     "color": "#2a2118",
+     "z": 5,
+     "weight": 400,
+     "lh": 1.3
+    },
+    {
+     "type": "txt",
+     "html": "küçük ritüeller",
+     "x": 560,
+     "y": 40,
+     "w": 480,
+     "size": 58,
+     "font": "caveat",
+     "color": "#3f6b4f",
+     "z": 6,
+     "weight": 700,
+     "lh": 1,
+     "rot": 5
+    },
+    {
+     "type": "logo",
+     "name": "black",
+     "x": 930,
+     "y": 1262,
+     "w": 80,
+     "z": 8,
+     "op": 1
+    }
+   ]
+  },
+  {
+   "bg": "#f4ecdb",
+   "els": [
+    {
+     "type": "txt",
+     "html": "4",
+     "x": 640,
+     "y": -60,
+     "w": 420,
+     "size": 480,
+     "font": "serif",
+     "color": "#e6d8bd",
+     "z": 1,
+     "align": "right",
+     "lh": 1
+    },
+    {
+     "type": "img",
+     "src": "/tmp/prep/n_paterson_1_50af987fd28e.jpg",
+     "x": 90,
+     "y": 150,
+     "w": 900,
+     "h": 640,
+     "z": 3,
+     "rot": 2,
+     "border": "16px solid #fff",
+     "shadow": "0 16px 34px rgba(60,40,20,.35)"
+    },
+    {
+     "type": "txt",
+     "html": "PATERSON",
+     "x": 60,
+     "y": 880,
+     "w": 960,
+     "size": 96,
+     "font": "serif",
+     "color": "#2a2118",
+     "z": 5,
+     "lh": 1,
+     "upper": true
+    },
+    {
+     "type": "txt",
+     "html": "2016 · Jim Jarmusch",
+     "x": 64,
+     "y": 1000,
+     "w": 900,
+     "size": 30,
+     "font": "oswald",
+     "color": "#c4552d",
+     "z": 5,
+     "weight": 500,
+     "ls": 4,
+     "upper": true
+    },
+    {
+     "type": "txt",
+     "html": "Şiir yazan bir otobüs şoförünün sıradan bir haftası.",
+     "x": 64,
+     "y": 1055,
+     "w": 900,
+     "size": 38,
+     "font": "playfair",
+     "color": "#2a2118",
+     "z": 5,
+     "weight": 400,
+     "lh": 1.3
+    },
+    {
+     "type": "txt",
+     "html": "her gün bir şiir",
+     "x": 560,
+     "y": 40,
+     "w": 480,
+     "size": 58,
+     "font": "caveat",
+     "color": "#3f6b4f",
+     "z": 6,
+     "weight": 700,
+     "lh": 1,
+     "rot": 5
+    },
+    {
+     "type": "logo",
+     "name": "black",
+     "x": 930,
+     "y": 1262,
+     "w": 80,
+     "z": 8,
+     "op": 1
+    }
+   ]
+  },
+  {
+   "bg": "#3f6b4f",
+   "els": [
+    {
+     "type": "txt",
+     "html": "hangisinden sonra<br>hayatında bir şey<br>değişti?",
+     "x": 60,
+     "y": 100,
+     "w": 980,
+     "size": 130,
+     "font": "caveat",
+     "color": "#f4ecdb",
+     "z": 5,
+     "weight": 700,
+     "lh": 1,
+     "rot": -2
+    },
+    {
+     "type": "txt",
+     "html": "Yorumlara yaz",
+     "x": 60,
+     "y": 760,
+     "w": 700,
+     "size": 70,
+     "font": "serif",
+     "color": "#f4ecdb",
+     "z": 5
+    },
+    {
+     "type": "txt",
+     "html": "29 EKİM · CUMHURİYET BAYRAMIMIZ KUTLU OLSUN",
+     "x": 60,
+     "y": 980,
+     "w": 800,
+     "size": 36,
+     "font": "oswald",
+     "color": "#f4ecdb",
+     "z": 5,
+     "weight": 500,
+     "ls": 4,
+     "bg": "#c4552d",
+     "pad": "10px 18px",
+     "rot": -1
+    },
+    {
+     "type": "logo",
+     "name": "white",
+     "x": 800,
+     "y": 1020,
+     "w": 200,
+     "z": 8,
+     "op": 1
+    }
+   ]
+  }
+ ]
+}

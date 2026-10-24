@@ -1,0 +1,439 @@
+{
+ "id": "2026-10-27_liste_unutanlar-kulubu",
+ "caption": "Unutanlar Kulübü'ne hoş geldin. Bir tarafta mavi bir balık, diğer tarafta vücudunu notlarla dolduran bir adam. İkisi de kısa süreli hafıza kaybıyla yaşıyor.\n\nFinding Nemo'da (2003) Dory her şeyi birkaç dakikada unutuyor ama hiç pes etmiyor. Memento'da (2000) Leonard yeni bir anı biriktiremiyor, bu yüzden Polaroid'lere, notlara ve dövmelere güveniyor. İkisi de aynı eksikliği çok farklı anlatıyor: biri umutla, biri paranoyayla.\n\nKim daha iyi yönetiyor bu hafızasızlığı? Dory mi, Leonard mı? Yorumlara yaz.\n\nYarın 18:00'de: Dışarı kıyamet koptuğunda izlenecek 4 film.",
+ "slides": [
+  {
+   "bg": "#fffaf0",
+   "els": [
+    {
+     "type": "img",
+     "src": "/tmp/prep/fg_nemo_05_4483316c2bb0.jpg",
+     "x": 0,
+     "y": 0,
+     "w": 540,
+     "h": 1350,
+     "z": 1
+    },
+    {
+     "type": "img",
+     "src": "/tmp/prep/fg_memento_04_0a441338d739.jpg",
+     "x": 540,
+     "y": 0,
+     "w": 540,
+     "h": 1350,
+     "z": 1
+    },
+    {
+     "type": "box",
+     "x": 0,
+     "y": 0,
+     "w": 540,
+     "h": 1350,
+     "bg": "#1d7bff",
+     "z": 2,
+     "blend": "soft-light",
+     "op": 0.6
+    },
+    {
+     "type": "box",
+     "x": 536,
+     "y": 0,
+     "w": 8,
+     "h": 1350,
+     "bg": "#ffd23f",
+     "z": 3
+    },
+    {
+     "type": "txt",
+     "html": "DORY",
+     "x": 24,
+     "y": 40,
+     "w": 500,
+     "size": 190,
+     "font": "anton",
+     "color": "#ffd23f",
+     "z": 5,
+     "lh": 1,
+     "stroke": "4px #1d7bff"
+    },
+    {
+     "type": "txt",
+     "html": "MEMENTO",
+     "x": 540,
+     "y": 50,
+     "w": 500,
+     "size": 118,
+     "font": "anton",
+     "color": "#fffaf0",
+     "z": 5,
+     "lh": 1,
+     "align": "right"
+    },
+    {
+     "type": "box",
+     "x": 190,
+     "y": 560,
+     "w": 700,
+     "h": 250,
+     "bg": "#ffd23f",
+     "z": 6,
+     "rot": -4,
+     "border": "8px solid #10162f"
+    },
+    {
+     "type": "txt",
+     "html": "UNUTANLAR<br>KULÜBÜ",
+     "x": 200,
+     "y": 575,
+     "w": 680,
+     "size": 118,
+     "font": "anton",
+     "color": "#10162f",
+     "z": 7,
+     "align": "center",
+     "rot": -4,
+     "lh": 1
+    },
+    {
+     "type": "txt",
+     "html": "Kim hafızasızlığı daha iyi yönetiyor?",
+     "x": 50,
+     "y": 1120,
+     "w": 980,
+     "size": 62,
+     "font": "playfair",
+     "color": "#fffaf0",
+     "z": 6,
+     "weight": 700,
+     "bg": "rgba(16,22,47,.85)",
+     "pad": "14px 22px",
+     "lh": 1.2
+    },
+    {
+     "type": "logo",
+     "name": "white",
+     "x": 900,
+     "y": 1210,
+     "w": 130,
+     "z": 8,
+     "op": 1
+    }
+   ]
+  },
+  {
+   "bg": "#1d7bff",
+   "els": [
+    {
+     "type": "img",
+     "src": "/tmp/prep/fg_nemo_03_6a1e46c4a370.jpg",
+     "x": 0,
+     "y": 0,
+     "w": 1080,
+     "h": 700,
+     "z": 1
+    },
+    {
+     "type": "box",
+     "x": 0,
+     "y": 640,
+     "w": 1080,
+     "h": 710,
+     "bg": "#1d7bff",
+     "z": 2,
+     "rot": -3,
+     "css": "transform-origin:0 0"
+    },
+    {
+     "type": "txt",
+     "html": "FINDING NEMO",
+     "x": 60,
+     "y": 640,
+     "w": 960,
+     "size": 130,
+     "font": "anton",
+     "color": "#fffaf0",
+     "z": 5,
+     "lh": 1,
+     "rot": -3
+    },
+    {
+     "type": "txt",
+     "html": "2003 · Andrew Stanton",
+     "x": 60,
+     "y": 800,
+     "w": 900,
+     "size": 32,
+     "font": "oswald",
+     "color": "#fffaf0",
+     "z": 5,
+     "weight": 500,
+     "ls": 4,
+     "upper": true,
+     "rot": -3
+    },
+    {
+     "type": "txt",
+     "html": "Dory her şeyi dakikalar içinde unutuyor. Ama Marlin'e bir okyanus boyunca eşlik etmekten vazgeçmiyor. Film, En İyi Animasyon Oscar'ını kazandı.",
+     "x": 60,
+     "y": 880,
+     "w": 940,
+     "size": 40,
+     "font": "inter",
+     "color": "#fffaf0",
+     "z": 5,
+     "weight": 600,
+     "lh": 1.3,
+     "rot": -3
+    },
+    {
+     "type": "logo",
+     "name": "white",
+     "x": 930,
+     "y": 1262,
+     "w": 80,
+     "z": 8,
+     "op": 1
+    }
+   ]
+  },
+  {
+   "bg": "#ff6b35",
+   "els": [
+    {
+     "type": "img",
+     "src": "/tmp/prep/fg_memento_01_d0a0f2f112f2.jpg",
+     "x": 0,
+     "y": 0,
+     "w": 1080,
+     "h": 700,
+     "z": 1
+    },
+    {
+     "type": "box",
+     "x": 0,
+     "y": 640,
+     "w": 1080,
+     "h": 710,
+     "bg": "#ff6b35",
+     "z": 2,
+     "rot": -3,
+     "css": "transform-origin:0 0"
+    },
+    {
+     "type": "txt",
+     "html": "MEMENTO",
+     "x": 60,
+     "y": 640,
+     "w": 960,
+     "size": 130,
+     "font": "anton",
+     "color": "#fffaf0",
+     "z": 5,
+     "lh": 1,
+     "rot": -3
+    },
+    {
+     "type": "txt",
+     "html": "2000 · Christopher Nolan",
+     "x": 60,
+     "y": 800,
+     "w": 900,
+     "size": 32,
+     "font": "oswald",
+     "color": "#fffaf0",
+     "z": 5,
+     "weight": 500,
+     "ls": 4,
+     "upper": true,
+     "rot": -3
+    },
+    {
+     "type": "txt",
+     "html": "Leonard yeni anı oluşturamıyor. Karısının katilini bulmak için Polaroid'lere, notlara ve dövmelere güveniyor. Film, kurgu ve senaryo dallarında Oscar'a aday gösterildi.",
+     "x": 60,
+     "y": 880,
+     "w": 940,
+     "size": 40,
+     "font": "inter",
+     "color": "#fffaf0",
+     "z": 5,
+     "weight": 600,
+     "lh": 1.3,
+     "rot": -3
+    },
+    {
+     "type": "logo",
+     "name": "white",
+     "x": 930,
+     "y": 1262,
+     "w": 80,
+     "z": 8,
+     "op": 1
+    }
+   ]
+  },
+  {
+   "bg": "#ffd23f",
+   "els": [
+    {
+     "type": "txt",
+     "html": "İKİSİNİN<br>ORTAK<br>NOKTASI",
+     "x": 40,
+     "y": 50,
+     "w": 1000,
+     "size": 170,
+     "font": "anton",
+     "color": "#10162f",
+     "z": 5,
+     "lh": 0.95
+    },
+    {
+     "type": "img",
+     "src": "/tmp/prep/fg_nemo_01_f7ae016458b5.jpg",
+     "x": 40,
+     "y": 580,
+     "w": 480,
+     "h": 560,
+     "z": 2,
+     "rot": -4,
+     "border": "12px solid #fff",
+     "shadow": "0 14px 30px rgba(0,0,0,.3)"
+    },
+    {
+     "type": "img",
+     "src": "/tmp/prep/fg_memento_12_bd7e18f18b09.jpg",
+     "x": 560,
+     "y": 620,
+     "w": 480,
+     "h": 560,
+     "z": 2,
+     "rot": 4,
+     "border": "12px solid #fff",
+     "shadow": "0 14px 30px rgba(0,0,0,.3)"
+    },
+    {
+     "type": "txt",
+     "html": "kısa süreli<br>hafıza",
+     "x": 70,
+     "y": 1150,
+     "w": 430,
+     "size": 70,
+     "font": "caveat",
+     "color": "#1d7bff",
+     "z": 6,
+     "weight": 700,
+     "lh": 1,
+     "rot": -4
+    },
+    {
+     "type": "txt",
+     "html": "hayatta kalma<br>planı",
+     "x": 600,
+     "y": 1190,
+     "w": 430,
+     "size": 70,
+     "font": "caveat",
+     "color": "#ff6b35",
+     "z": 6,
+     "weight": 700,
+     "lh": 1,
+     "rot": 3
+    },
+    {
+     "type": "logo",
+     "name": "black",
+     "x": 920,
+     "y": 1262,
+     "w": 90,
+     "z": 8,
+     "op": 1
+    }
+   ]
+  },
+  {
+   "bg": "#1d7bff",
+   "els": [
+    {
+     "type": "txt",
+     "html": "SEN<br>HANGİ<br>TARAFTASIN?",
+     "x": 60,
+     "y": 60,
+     "w": 980,
+     "size": 200,
+     "font": "anton",
+     "color": "#fffaf0",
+     "z": 5,
+     "lh": 0.95
+    },
+    {
+     "type": "box",
+     "x": 60,
+     "y": 780,
+     "w": 450,
+     "h": 190,
+     "bg": "#ffd23f",
+     "z": 3,
+     "rot": -3
+    },
+    {
+     "type": "txt",
+     "html": "DORY",
+     "x": 60,
+     "y": 805,
+     "w": 450,
+     "size": 120,
+     "font": "anton",
+     "color": "#10162f",
+     "z": 4,
+     "align": "center",
+     "rot": -3
+    },
+    {
+     "type": "box",
+     "x": 560,
+     "y": 820,
+     "w": 450,
+     "h": 190,
+     "bg": "#10162f",
+     "z": 3,
+     "rot": 3
+    },
+    {
+     "type": "txt",
+     "html": "MEMENTO",
+     "x": 560,
+     "y": 845,
+     "w": 450,
+     "size": 100,
+     "font": "anton",
+     "color": "#fffaf0",
+     "z": 4,
+     "align": "center",
+     "rot": 3
+    },
+    {
+     "type": "txt",
+     "html": "Yorumlara yaz ve filmi hiç izlemeyen bir arkadaşına gönder.",
+     "x": 60,
+     "y": 1080,
+     "w": 760,
+     "size": 42,
+     "font": "playfair",
+     "color": "#fffaf0",
+     "z": 5,
+     "weight": 700,
+     "lh": 1.25
+    },
+    {
+     "type": "logo",
+     "name": "white",
+     "x": 860,
+     "y": 1050,
+     "w": 170,
+     "z": 8,
+     "op": 1
+    }
+   ]
+  }
+ ]
+}
