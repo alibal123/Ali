@@ -422,7 +422,11 @@
       "platforms": [
         "instagram"
       ],
-      "status": "planned"
+      "status": "published",
+      "results": {
+        "instagram": "18471689725141658"
+      },
+      "published_at": "2026-10-25T18:00+03:00"
     },
     {
       "id": "2026-10-26_liste_keanu-son-sahnede-gonullu",
