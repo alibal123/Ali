@@ -1,69 +1,74 @@
 from pro import *
 
-ID = "2026-11-02_liste_turk-komedileri"
-RED, TEL, GLD = "#a8321f", "#1f5c57", "#e0a526"
-TH = theme("#f1e3c4", "#2a1a10", "#a8321f", on_acc="#f1e3c4", head="abril", upper=False, acc_logo="white")
+ID = "2026-11-02_liste_2026-en-yuksek-puanli-5-film"
+TEAL, CRM, INK = "#0e7c7b", "#f2efe6", "#141a1a"
+TH = theme(CRM, INK, TEAL, on_acc="#fff", head="anton")
 
-CAPTION = """Yıllar geçse de her izlendiğinde yeniden güldüren 5 Türk komedisi. Kimi okul sıralarında, kimi köy meydanında, kimi bir turşu dükkânında geçiyor ama hepsinin repliği hâlâ dilimizde.
+CAPTION = """2026'nın şimdiye kadar en yüksek puan alan 5 filmi. Eylül 2025'ten bu yana vizyona giren ve en az 1.500 oy almış filmler arasında TMDB izleyici puanına göre en tepedekiler hepsi bu yılın yapımı çıktı.
 
-Hababam Sınıfı (1975) Özel Çamlıca Lisesi'nin haylaz sınıfını, Tosun Paşa (1976) iki aile arasında Tosun Paşa kılığına sokulan uşak Şaban'ı, Zübük (1980) Aziz Nesin'in fırsatçı karakterini, Çöpçüler Kralı (1977) mahallenin çöpçüsü Apti'yi, Neşeli Günler (1978) ise turşu yüzünden ayrılan bir aileyi anlatıyor.
+Yerime Geç 8,8 ile zirvede. Onu 8,6 ile Kurtuluş Projesi ve Michael, 8,5 ile Örümcek-Adam: Yepyeni Bir Gün, 8,3 ile Oyuncak Hikayesi 5 izliyor. Puanlar zamanla değişebilir.
 
-Sen hangisinin repliklerini ezbere biliyorsun?
+Sen hangisini izledin, puanı hak ediyor mu?
 
 Yarın 18:00'de: Çocukken izlediğin, büyüyünce başka vuran 5 animasyon."""
 
-
 FILMS = [
-    ("Hababam Sınıfı", "1975 · Ertem Eğilmez", "Münir Özkul, Tarık Akan, Kemal Sunal, Halit Akçatepe, Adile Naşit",
-     "Özel Çamlıca Lisesi'nin haylaz öğrencilerle dolu ünlü sınıfı. Kopya, kaçamak ve unutulmaz karakterler.", S("hababam", 1), None, "okul sıraları", RED),
-    ("Tosun Paşa", "1976 · Kartal Tibet", "Kemal Sunal, Şener Şen, Müjde Ar, Adile Naşit",
-     "İki aile arasındaki Yeşil Vadi kavgasında uşak Şaban, Tosun Paşa kılığına sokulur. İşler karışır.", S("tosunpasa", 3), S("tosunpasa", 2), "fesli kahraman", TEL),
-    ("Zübük", "1980 · Kartal Tibet", "Kemal Sunal, Nevra Serezli, Metin Serezli",
-     "Aziz Nesin'in aynı adlı kitabından uyarlandı: her ortamda yolunu bulan fırsatçı Zübük'ün hikâyesi.", S("zubuk", 1), S("zubuk", 2), "fırsatçı", GLD),
-    ("Çöpçüler Kralı", "1977 · Zeki Ökten", "Kemal Sunal, Şener Şen, Ayşen Gruda",
-     "Mahallenin çöpçüsü Apti ile esnafa baskı yapan zabıta memurunun hikâyesi.", S("copculer", 3), S("copculer", 1), "mahalle", RED),
-    ("Neşeli Günler", "1978 · Orhan Aksoy", "Münir Özkul, Adile Naşit, Şener Şen",
-     "Turşu yüzünden ayrılan anne babanın çocukları üçer üçer paylaşılır; yıllar sonra tesadüfen karşılaşırlar.", S("neseligunler", 2), S("neseligunler", 1), "turşu kavgası", TEL),
+    ("YERİME GEÇ", "8.8", "1 Mayıs 2026 · Nathan Greno", "Michael B. Jordan, Juno Temple, Tracy Morgan",
+     "Ormanda yaşayan küçük bir canlıyla görkemli bir kuşun bedenleri aniden yer değiştirir; hayatta kalmak için birlik olmaları gerekir.", S("swapped", 3), S("swapped", 1), "Swapped"),
+    ("KURTULUŞ PROJESİ", "8.6", "20 Mart 2026 · Phil Lord, Christopher Miller", "Ryan Gosling, Sandra Hüller, James Ortiz",
+     "Fen bilgisi öğretmeni Ryland Grace, ışık yılları uzakta bir uzay gemisinde hafızasını kaybetmiş halde uyanır ve Güneş'in sönmesinin sırrını çözmeye çalışır.", S("hailmary", 4), S("hailmary", 3), "Project Hail Mary"),
+    ("MICHAEL", "8.6", "24 Nisan 2026 · Antoine Fuqua", "Jaafar Jackson, Colman Domingo, Nia Long",
+     "Michael Jackson'ı gerçek hayattaki yeğeni Jaafar Jackson canlandırıyor; film en ikonik performansları da içeriyor.", S("michael", 4), S("michael", 1), "Biyografi"),
+    ("ÖRÜMCEK-ADAM: YEPYENİ BİR GÜN", "8.5", "31 Temmuz 2026 · Destin Daniel Cretton", "Tom Holland, Sadie Sink, Zendaya",
+     "Artık kimsenin hatırlamadığı Peter Parker, şehre yönelen yeni bir tehdidi durdurmaya çalışır.", S("spiderman", 2), S("spiderman", 1), "Spider-Man: Brand New Day"),
+    ("OYUNCAK HİKAYESİ 5", "8.3", "19 Haziran 2026 · Andrew Stanton", "Tom Hanks, Tim Allen, Joan Cusack",
+     "Bonnie'nin bir tablete takıntılı hale gelmesiyle Buzz, Woody ve Jessie için işler iyice karışır.", S("toystory5", 3), S("toystory5", 1), "Toy Story 5"),
 ]
 
 
+def cover():
+    els = [
+        *kicker(TH, "TMDB izleyici puanı", M, 70),
+        T("2026'NIN EN<br>YÜKSEK PUANLI<br>5 FİLMİ", M, 130, W - 2 * M, 400, 130, "anton", INK, nowrap=True, mn=64, lh=1.07),
+    ]
+    y = 590
+    track_x, track_w = M + 120, 560
+    for k, f in enumerate(FILMS):
+        sc = float(f[1])
+        els += [
+            img(grade(f[6], (96, 96)), M, y, 96, 96, z=2),
+            T(f[0], track_x, y - 4, W - track_x - M - 150, 44, 30, "oswald", INK, weight=500, ls=2, nowrap=True, mn=16, upper=True),
+            box(track_x, y + 60, track_w, 14, "rgba(20,26,26,.10)", z=2),
+            box(track_x, y + 60, int(track_w * sc / 10), 14, TEAL, z=3),
+            T(f[1].replace(".", ","), W - M - 150, y + 6, 150, 70, 64, "anton", TEAL, fit=False, align="right", lh=1.0, nowrap=True, bleed=True),
+        ]
+        y += 116
+    els += [T("Eylül 2025'ten bu yana vizyona girenler arasında, en az 1.500 oy.", M, 1224, W - 2 * M - 70, 30, 22, "inter", INK, weight=500, nowrap=True, mn=14, op=0.6),
+            logo("black", W - M - 58, 1252, 58, z=9)]
+    return {"bg": CRM, "els": els}
 
 
-
-HOLE = "repeating-linear-gradient(90deg,#f1e3c4 0 22px,transparent 22px 50px)"
-
-
-def strip(x, y, w, h):
-    return [box(x, y, w, h, "#1c1713", z=2),
-            box(x + 18, y + 12, w - 36, 22, "transparent", z=3, css=f"background:{HOLE}"),
-            box(x + 18, y + h - 34, w - 36, 22, "transparent", z=3, css=f"background:{HOLE}")]
-
-
-def strip_film(i, n):
-    title, meta, cast, body, src, _, tag, _c = FILMS[i]
-    return {"bg": TH["bg"], "els": [
-        *strip(40, 48, 1000, 700),
-        img(grade(src, (924, 600), contrast=1.05, sat=0.95), 78, 98, 924, 600, z=4),
-        T(f"{i+1}", 78, 98, 90, 90, 56, "abril", "#f1e3c4", fit=False, align="center", flex="center", bleed=True, z=7, bg="#a8321f"),
-        T(title, M, 790, W - 2 * M, 100, 88, "abril", TH["ink"], nowrap=True, mn=44, lh=1.05),
-        T(meta, M, 905, W - 2 * M, 36, 26, "typewriter", TH["accent"], nowrap=True, mn=16, upper=True, ls=2),
-        T(body, M, 960, W - 2 * M, 190, 38, "inter", TH["ink"], weight=500, lh=1.38, mn=26),
-        T("Başrolde: " + cast, M, 1196, W - 2 * M, 30, 22, "oswald", TH["ink"], weight=500, ls=2, upper=True, nowrap=True, mn=14, op=0.6),
-        *footer(TH, i + 1, n),
+def score_film(i, n):
+    title, sc, meta, kadro, konu, src, _c, tag = FILMS[i]
+    ph = 700
+    ts = fit(title, 620, 92, 0.5, 40)
+    return {"bg": CRM, "els": [
+        img(grade(src, (1080, ph)), 0, 0, W, ph, z=1),
+        label(tag, M, 56),
+        box(W - M - 236, ph - 118, 236, 236, "#fff", z=4, radius=400, border=f"12px solid {TEAL}"),
+        T(sc.replace(".", ","), W - M - 236, ph - 118, 236, 236, 92, "anton", TEAL, fit=False, align="center", flex="center", lh=1.0, bleed=True, z=5),
+        T("#" + str(i + 1), M, ph + 30, 300, 40, 28, "oswald", TEAL, fit=False, weight=500, ls=6, nowrap=True),
+        T(title, M, ph + 96, 640, 110, 90, "anton", INK, nowrap=True, mn=38, lh=1.05),
+        T(meta, M, ph + 214, 700, 34, 24, "oswald", INK, weight=500, ls=3, upper=True, nowrap=True, mn=15, op=0.6),
+        rule(M, ph + 262, W - 2 * M, INK),
+        T("Oyuncular: " + kadro, M, ph + 282, W - 2 * M, 40, 28, "inter", INK, weight=500, nowrap=True, mn=18, op=0.85),
+        T(konu, M, ph + 336, W - 2 * M, 150, 34, "inter", INK, weight=500, lh=1.4, mn=24),
+        *footer(TH, i + 2, n),
     ]}
 
 
 def build():
     n = 7
-    fr = [S("tosunpasa", 2), S("copculer", 1), S("neseligunler", 1), S("zubuk", 2)]
-    els = [
-        T("Yıllar geçse de", M, 80, 800, 50, 36, "typewriter", TH["ink"], nowrap=True, ls=2),
-        T("güldüren 5<br>Türk komedisi", M, 150, W - 2 * M, 400, 150, "abril", TH["accent"], nowrap=True, mn=70, lh=1.1),
-        *strip(40, 640, 1000, 520),
-    ]
-    for k, nm in enumerate(fr):
-        els.append(img(grade(nm, (218, 420), (0.2, 0, 0.8, 1), contrast=1.05, sat=0.95), 76 + k * 232, 700, 218, 420, z=4))
-    els += [T("Kaydet, birlikte gül.", M, 1214, 600, 40, 28, "inter", TH["ink"], weight=500, nowrap=True, op=0.8), logo("black", W - M - 58, 1252, 58, z=9)]
-    slides = [{"bg": TH["bg"], "els": els}] + [strip_film(i, n) for i in range(5)]
-    slides.append(cta_slide(TH, "Hangisinin<br>repliklerini ezbere<br>biliyorsun?", "Aklında kalan repliği yorumlara yaz.", "Kaydet · Ailenle izle"))
+    slides = [cover()] + [score_film(i, n) for i in range(5)]
+    slides.append(cta_slide(TH, "SENCE PUANI<br>HAK EDİYOR MU?", "Hangisini izledin? Yorumlara kendi puanını yaz.", "Kaydet · İzleme listene ekle"))
     return {"id": ID, "caption": CAPTION, "slides": slides}

@@ -10,7 +10,7 @@ CAPTION = """Kasım'da sinemada ne var? Takvimi tek gönderide topladık.
 
 Sen ilk hangisine gideceksin?
 
-Bugün 18:00'de: Yıllar geçse de güldüren 5 Türk komedisi."""
+Bugün 18:00'de: 2026'nın en yüksek puanlı 5 filmi."""
 
 
 FILMS = [
