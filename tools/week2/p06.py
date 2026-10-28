@@ -29,9 +29,41 @@ FILMS = [
 
 
 
+
+HOLE = "repeating-linear-gradient(90deg,#f1e3c4 0 22px,transparent 22px 50px)"
+
+
+def strip(x, y, w, h):
+    return [box(x, y, w, h, "#1c1713", z=2),
+            box(x + 18, y + 12, w - 36, 22, "transparent", z=3, css=f"background:{HOLE}"),
+            box(x + 18, y + h - 34, w - 36, 22, "transparent", z=3, css=f"background:{HOLE}")]
+
+
+def strip_film(i, n):
+    title, meta, cast, body, src, _, tag, _c = FILMS[i]
+    return {"bg": TH["bg"], "els": [
+        *strip(40, 48, 1000, 700),
+        img(grade(src, (924, 600), contrast=1.05, sat=0.95), 78, 98, 924, 600, z=4),
+        T(f"{i+1}", 78, 98, 90, 90, 56, "abril", "#f1e3c4", fit=False, align="center", flex="center", bleed=True, z=7, bg="#a8321f"),
+        T(title, M, 790, W - 2 * M, 100, 88, "abril", TH["ink"], nowrap=True, mn=44, lh=1.05),
+        T(meta, M, 905, W - 2 * M, 36, 26, "typewriter", TH["accent"], nowrap=True, mn=16, upper=True, ls=2),
+        T(body, M, 960, W - 2 * M, 190, 38, "inter", TH["ink"], weight=500, lh=1.38, mn=26),
+        T("Başrolde: " + cast, M, 1196, W - 2 * M, 30, 22, "oswald", TH["ink"], weight=500, ls=2, upper=True, nowrap=True, mn=14, op=0.6),
+        *footer(TH, i + 1, n),
+    ]}
+
+
 def build():
     n = 7
-    cover = cover_mosaic(TH, [S("tosunpasa", 2), S("copculer", 1), S("neseligunler", 1), S("zubuk", 2)], "Liste · 5 film", "Yıllar geçse de<br>güldüren 5<br>Türk komedisi", "Kaydet, birlikte gül.")
-    slides = [cover] + [film_slide(TH, i + 1, n, f[4], f[0], f[1], f[3], tag=f[6].capitalize(), extra="Başrolde: " + f[2]) for i, f in enumerate(FILMS)]
+    fr = [S("tosunpasa", 2), S("copculer", 1), S("neseligunler", 1), S("zubuk", 2)]
+    els = [
+        T("Yıllar geçse de", M, 80, 800, 50, 36, "typewriter", TH["ink"], nowrap=True, ls=2),
+        T("güldüren 5<br>Türk komedisi", M, 150, W - 2 * M, 400, 150, "abril", TH["accent"], nowrap=True, mn=70, lh=1.1),
+        *strip(40, 640, 1000, 520),
+    ]
+    for k, nm in enumerate(fr):
+        els.append(img(grade(nm, (218, 420), (0.2, 0, 0.8, 1), contrast=1.05, sat=0.95), 76 + k * 232, 700, 218, 420, z=4))
+    els += [T("Kaydet, birlikte gül.", M, 1214, 600, 40, 28, "inter", TH["ink"], weight=500, nowrap=True, op=0.8), logo("black", W - M - 58, 1252, 58, z=9)]
+    slides = [{"bg": TH["bg"], "els": els}] + [strip_film(i, n) for i in range(5)]
     slides.append(cta_slide(TH, "Hangisinin<br>repliklerini ezbere<br>biliyorsun?", "Aklında kalan repliği yorumlara yaz.", "Kaydet · Ailenle izle"))
     return {"id": ID, "caption": CAPTION, "slides": slides}

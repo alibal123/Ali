@@ -1,4 +1,5 @@
 from pro import *
+ORG, CRM, BLU, INK, YEL = "#ff5a1f", "#f4efe6", "#2447ff", "#14110f", "#ffd23f"
 
 ID = "2026-10-30_liste_basa-sardiran-5-film"
 TH = theme("#f4efe6", "#14110f", "#ff5a1f", on_acc="#fff", head="anton")
@@ -20,9 +21,37 @@ FILMS = [
 ]
 
 
+
+SLIDE_TH = [  # bg, ink, mute-accent
+    (CRM, INK, ORG), (BLU, "#fff", YEL), (ORG, INK, CRM), (YEL, INK, BLU), (CRM, INK, BLU),
+]
+
+
+def poster_film(i, n):
+    title, meta, body, src, _, _, tag, _ = FILMS[i]
+    bg, ink, acc = SLIDE_TH[i]
+    return {"bg": bg, "els": [
+        T(f"{i+1:02d}", M, 40, 420, 300, 280, "anton", ink, fit=False, lh=1.0, bleed=True, stroke=f"3px {ink}", fill_none=True, op=0.9),
+        T(tag, W - M - 440, 72, 440, 40, 24, "oswald", ink, fit=False, weight=500, ls=5, upper=True, align="right", nowrap=True, op=0.75),
+        T(title, M, 330, W - 2 * M, 110, 104, "anton", ink, nowrap=True, mn=48, lh=1.05),
+        T(meta, M, 448, W - 2 * M, 36, 26, "oswald", ink, weight=500, ls=4, upper=True, nowrap=True, mn=18, op=0.75),
+        img(grade(src, (1080, 470), contrast=1.08, sat=1.12), 0, 510, W, 470, z=2),
+        T(body, M, 1010, W - 2 * M, 200, 42, "inter", ink, weight=500, lh=1.38, mn=28),
+        T(f"{i+1:02d} / {n:02d}", M, 1268, 260, 34, 24, "oswald", ink, fit=False, weight=500, ls=4, op=0.6),
+        logo("white" if bg in (BLU,) else "black", W - M - 58, 1252, 58, z=9),
+    ]}
+
+
 def build():
     n = 7
-    cover = cover_mosaic(TH, [(f[4], f[5]) for f in FILMS], "Liste · 5 film", "BİTİNCE<br>BAŞA SARDIRAN", "Spoiler yok. Kaydet, sırayla izle.")
-    slides = [cover] + [film_slide(TH, i + 1, n, f[3], f[0], f[1], f[2], crop=f[7], tag=f[6]) for i, f in enumerate(FILMS)]
+    cover = {"bg": ORG, "els": [
+        T("BİTİNCE<br>BAŞA<br>SARDIRAN", M, 96, W - 2 * M, 610, 240, "anton", CRM, nowrap=True, mn=80, lh=1.03),
+        img(grade(S("sixthsense", 2), (1080, 420), contrast=1.08), 0, 740, W, 420, z=2),
+        box(M, 1090, 360, 80, INK, z=4),
+        T("5 FİLM · SPOİLER YOK", M, 1090, 360, 80, 26, "oswald", CRM, fit=False, weight=500, ls=4, align="center", flex="center", nowrap=True, bleed=True, z=5),
+        T("Kaydet, sırayla izle.", M, 1214, 600, 40, 28, "inter", INK, weight=500, nowrap=True, op=0.8),
+        logo("black", W - M - 58, 1252, 58, z=9),
+    ]}
+    slides = [cover] + [poster_film(i, n) for i in range(5)]
     slides.append(cta_slide(TH, "SONU SENİ<br>ŞAŞIRTAN FİLM<br>HANGİSİ?", "Yorumlara yaz, ama sonunu anlatma.", "Kaydet · Sırayla izle"))
     return {"id": ID, "caption": CAPTION, "slides": slides}

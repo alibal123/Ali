@@ -31,10 +31,21 @@ PAIRS = [
 
 
 
+
 def build():
     n = 6
-    photos = [p[0][3] for p in PAIRS] + [p[1][3] for p in PAIRS]
-    cover = cover_mosaic(TH, photos, "Dört eşleşme", "BUNU SEVDİYSEN,<br>BUNU İZLE", "Üstteki sevdiğin, alttaki izleyeceğin film.")
+    els = []
+    for k, p in enumerate(PAIRS):
+        x = k * 270
+        els.append(img(grade(p[0][3], (270, 520), (0.25, 0, 0.75, 1)), x, 0, 270, 520, z=1))
+        els.append(img(grade(p[1][3], (270, 520), (0.25, 0, 0.75, 1)), x, 830, 270, 520, z=1))
+    els += [
+        box(0, 520, W, 310, TH["accent"], z=3),
+        T("BUNU SEVDİYSEN,<br>BUNU İZLE", M, 560, W - 2 * M, 240, 130, "anton", "#fff", nowrap=True, mn=60, lh=1.08),
+        T("Üstte sevdiğin, altta izleyeceğin film", M, 860, 800, 34, 22, "oswald", "#fff", fit=False, weight=500, ls=3, upper=True, op=0.0),
+        logo("white", W - M - 58, 1252, 58, z=9),
+    ]
+    cover = {"bg": TH["bg"], "els": els}
     slides = [cover]
     for i, (a, b, why, _) in enumerate(PAIRS):
         slides.append(pair_slide(TH, i + 2, n, (a[0], a[1], a[2]), (b[0], b[1], b[2]), why))
