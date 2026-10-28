@@ -475,6 +475,106 @@
         "instagram"
       ],
       "status": "planned"
+    },
+    {
+      "id": "2026-10-30_liste_basa-sardiran-5-film",
+      "folder": "posts/2026-10-30_liste_basa-sardiran-5-film",
+      "publish_at": "2026-10-30T18:00",
+      "platforms": [
+        "instagram"
+      ],
+      "status": "planned",
+      "kind": "liste"
+    },
+    {
+      "id": "2026-10-31_vizyon_dunesday",
+      "folder": "posts/2026-10-31_vizyon_dunesday",
+      "publish_at": "2026-10-31T13:00",
+      "platforms": [
+        "instagram"
+      ],
+      "status": "planned",
+      "kind": "vizyon"
+    },
+    {
+      "id": "2026-10-31_liste_cadilar-bayrami-5-film",
+      "folder": "posts/2026-10-31_liste_cadilar-bayrami-5-film",
+      "publish_at": "2026-10-31T18:00",
+      "platforms": [
+        "instagram"
+      ],
+      "status": "planned",
+      "kind": "liste"
+    },
+    {
+      "id": "2026-11-01_eslestirme_bunu-sevdiysen",
+      "folder": "posts/2026-11-01_eslestirme_bunu-sevdiysen",
+      "publish_at": "2026-11-01T18:00",
+      "platforms": [
+        "instagram"
+      ],
+      "status": "planned",
+      "kind": "eslestirme"
+    },
+    {
+      "id": "2026-11-02_vizyon_kasim-takvimi",
+      "folder": "posts/2026-11-02_vizyon_kasim-takvimi",
+      "publish_at": "2026-11-02T13:00",
+      "platforms": [
+        "instagram"
+      ],
+      "status": "planned",
+      "kind": "vizyon"
+    },
+    {
+      "id": "2026-11-02_liste_turk-komedileri",
+      "folder": "posts/2026-11-02_liste_turk-komedileri",
+      "publish_at": "2026-11-02T18:00",
+      "platforms": [
+        "instagram"
+      ],
+      "status": "planned",
+      "kind": "liste"
+    },
+    {
+      "id": "2026-11-03_liste_buyuyunce-vuran-animasyon",
+      "folder": "posts/2026-11-03_liste_buyuyunce-vuran-animasyon",
+      "publish_at": "2026-11-03T18:00",
+      "platforms": [
+        "instagram"
+      ],
+      "status": "planned",
+      "kind": "liste"
+    },
+    {
+      "id": "2026-11-04_vizyon_kadrosuyla-gundem",
+      "folder": "posts/2026-11-04_vizyon_kadrosuyla-gundem",
+      "publish_at": "2026-11-04T13:00",
+      "platforms": [
+        "instagram"
+      ],
+      "status": "planned",
+      "kind": "vizyon"
+    },
+    {
+      "id": "2026-11-04_liste_battaniye-filmleri",
+      "folder": "posts/2026-11-04_liste_battaniye-filmleri",
+      "publish_at": "2026-11-04T18:00",
+      "platforms": [
+        "instagram"
+      ],
+      "status": "planned",
+      "kind": "liste"
+    },
+    {
+      "id": "2026-11-05_liste_tek-mekanda-gecen-5-film",
+      "folder": "posts/2026-11-05_liste_tek-mekanda-gecen-5-film",
+      "publish_at": "2026-11-05T18:00",
+      "platforms": [
+        "instagram"
+      ],
+      "status": "planned",
+      "kind": "liste"
     }
   ]
 }

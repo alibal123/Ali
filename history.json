@@ -1,475 +1,746 @@
 {
-  "note": "Paylaşılan ya da zamanlanan filmler. Haftalık görev bunları TEKRAR seçmez (oyun cevapları hariç). Her yeni gönderiden sonra eklenir.",
-  "films": [
-    {
-      "title": "Coherence",
-      "year": 2013,
-      "tmdb": "220289",
-      "post": "gun1_liste"
-    },
-    {
-      "title": "Primer",
-      "year": 2004,
-      "tmdb": "14337",
-      "post": "gun1_liste"
-    },
-    {
-      "title": "The Man from Earth",
-      "year": 2007,
-      "tmdb": "13363",
-      "post": "gun1_liste"
-    },
-    {
-      "title": "Predestination",
-      "year": 2014,
-      "tmdb": "206487",
-      "post": "gun1_liste"
-    },
-    {
-      "title": "Triangle",
-      "year": 2009,
-      "tmdb": "26466",
-      "post": "gun1_liste"
-    },
-    {
-      "title": "Incendies",
-      "year": 2010,
-      "tmdb": "46738",
-      "post": "gun2_incendies"
-    },
-    {
-      "title": "Three Identical Strangers",
-      "year": 2018,
-      "tmdb": "489988",
-      "post": "gun3_belgesel"
-    },
-    {
-      "title": "Jagten",
-      "year": 2012,
-      "tmdb": "103663",
-      "post": "gun5_jagten"
-    },
-    {
-      "title": "Sicario",
-      "year": 2015,
-      "tmdb": "273481",
-      "post": "hesapta daha önce paylaşıldı"
-    },
-    {
-      "title": "Everyone Is Lying to You for Money",
-      "year": 2025,
-      "tmdb": "",
-      "post": "hesapta daha önce paylaşıldı"
-    },
-    {
-      "title": "Uzak",
-      "year": 2002,
-      "tmdb": "",
-      "post": "2026-10-06..10"
-    },
-    {
-      "title": "Kaç Para Kaç",
-      "year": 1999,
-      "tmdb": "",
-      "post": "2026-10-06..10"
-    },
-    {
-      "title": "Yazgı",
-      "year": 2001,
-      "tmdb": "",
-      "post": "2026-10-06..10"
-    },
-    {
-      "title": "Anayurt Oteli",
-      "year": 1987,
-      "tmdb": "",
-      "post": "2026-10-06..10"
-    },
-    {
-      "title": "Güneşe Yolculuk",
-      "year": 1999,
-      "tmdb": "",
-      "post": "2026-10-06..10"
-    },
-    {
-      "title": "Fantastic Mr. Fox",
-      "year": 2009,
-      "tmdb": "",
-      "post": "2026-10-06..10"
-    },
-    {
-      "title": "Mary and Max",
-      "year": 2009,
-      "tmdb": "",
-      "post": "2026-10-06..10"
-    },
-    {
-      "title": "Shrek the Third",
-      "year": 2007,
-      "tmdb": "",
-      "post": "2026-10-06..10"
-    },
-    {
-      "title": "Ernest & Celestine",
-      "year": 2012,
-      "tmdb": "",
-      "post": "2026-10-06..10"
-    },
-    {
-      "title": "964 Pinocchio",
-      "year": 1991,
-      "tmdb": "",
-      "post": "2026-10-06..10"
-    },
-    {
-      "title": "Akira",
-      "year": 1988,
-      "tmdb": "",
-      "post": "2026-10-06..10"
-    },
-    {
-      "title": "Duvara Karşı",
-      "year": 2004,
-      "tmdb": "",
-      "post": "2026-10-06..10"
-    },
-    {
-      "title": "Amores Perros",
-      "year": 2000,
-      "tmdb": "",
-      "post": "2026-10-06..10"
-    },
-    {
-      "title": "Memories of Murder",
-      "year": 2003,
-      "tmdb": "",
-      "post": "2026-10-06..10"
-    },
-    {
-      "title": "Run Lola Run",
-      "year": 1998,
-      "tmdb": "",
-      "post": "2026-10-06..10"
-    },
-    {
-      "title": "Gone with the Wind",
-      "year": 1939,
-      "tmdb": "",
-      "post": "2026-10-06..10"
-    },
-    {
-      "title": "4 Months, 3 Weeks and 2 Days",
-      "year": 2007,
-      "tmdb": "",
-      "post": "2026-10-06..10"
-    },
-    {
-      "title": "Y Tu Mamá También",
-      "year": 2001,
-      "tmdb": "",
-      "post": "2026-10-06..10"
-    },
-    {
-      "title": "Mondays in the Sun",
-      "year": 2002,
-      "tmdb": "",
-      "post": "2026-10-06..10"
-    },
-    {
-      "title": "Pay It Forward",
-      "year": 2000,
-      "tmdb": "",
-      "post": "2026-10-06..10"
-    },
-    {
-      "title": "Five Feet Apart",
-      "year": 2019,
-      "tmdb": "",
-      "post": "2026-10-06..10"
-    },
-    {
-      "title": "The Ultimate Gift",
-      "year": 2006,
-      "tmdb": "",
-      "post": "2026-10-06..10"
-    },
-    {
-      "title": "Infinity Pool",
-      "year": 2023,
-      "tmdb": "",
-      "post": "2026-10-06..10"
-    },
-    {
-      "title": "Nope",
-      "year": 2022,
-      "tmdb": "",
-      "post": "2026-10-06..10"
-    },
-    {
-      "title": "Longlegs",
-      "year": 2024,
-      "tmdb": "",
-      "post": "2026-10-06..10"
-    },
-    {
-      "title": "In Bruges",
-      "year": 2008,
-      "tmdb": "8321",
-      "post": "2026-10-11_liste_kara-komedi"
-    },
-    {
-      "title": "Wild Tales",
-      "year": 2014,
-      "tmdb": "265195",
-      "post": "2026-10-11_liste_kara-komedi"
-    },
-    {
-      "title": "The Death of Stalin",
-      "year": 2017,
-      "tmdb": "402897",
-      "post": "2026-10-11_liste_kara-komedi"
-    },
-    {
-      "title": "Delicatessen",
-      "year": 1991,
-      "tmdb": "892",
-      "post": "2026-10-11_liste_kara-komedi"
-    },
-    {
-      "title": "The Lobster",
-      "year": 2015,
-      "tmdb": "254320",
-      "post": "2026-10-11_liste_kara-komedi"
-    },
-    {
-      "title": "Three Colors: Red",
-      "post": "2026-10-12_film_kirmizi"
-    },
-    {
-      "title": "Memento",
-      "post": "2026-10-13_liste_kafanin-icinde"
-    },
-    {
-      "title": "Being John Malkovich",
-      "post": "2026-10-13_liste_kafanin-icinde"
-    },
-    {
-      "title": "The Truman Show",
-      "post": "2026-10-13_liste_kafanin-icinde"
-    },
-    {
-      "title": "Close Encounters of the Third Kind",
-      "post": "2026-10-14_karsilastirma_uzaylilarla-konusmak"
-    },
-    {
-      "title": "Contact",
-      "post": "2026-10-14_karsilastirma_uzaylilarla-konusmak"
-    },
-    {
-      "title": "Arrival",
-      "post": "2026-10-14_karsilastirma_uzaylilarla-konusmak"
-    },
-    {
-      "title": "The Menu",
-      "post": "2026-10-15_film_the-menu"
-    },
-    {
-      "title": "The Grand Budapest Hotel",
-      "post": "2026-10-17_sahne_grand-budapest-oranlar"
-    },
-    {
-      "title": "Finding Nemo",
-      "post": "2026-10-18_film_kayip-balik-nemo"
-    },
-    {
-      "title": "Dogville",
-      "post": "2026-10-19_film_dogville"
-    },
-    {
-      "title": "Schindler's List",
-      "post": "2026-10-20_film_schindler-tek-renk"
-    },
-    {
-      "title": "Stalker",
-      "post": "2026-10-21_liste-7-oneri"
-    },
-    {
-      "title": "Dark City",
-      "post": "2026-10-21_liste-7-oneri"
-    },
-    {
-      "title": "The Fall",
-      "post": "2026-10-21_liste-7-oneri"
-    },
-    {
-      "title": "Paprika",
-      "post": "2026-10-21_liste-7-oneri"
-    },
-    {
-      "title": "Timecrimes",
-      "post": "2026-10-21_liste-7-oneri"
-    },
-    {
-      "title": "Synecdoche, New York",
-      "post": "2026-10-21_liste-7-oneri"
-    },
-    {
-      "title": "Moon",
-      "post": "2026-10-21_liste-7-oneri"
-    },
-    {
-      "title": "Oldboy",
-      "post": "2026-10-23_liste_gunlerce-pesini-birakmayan"
-    },
-    {
-      "title": "Prisoners",
-      "post": "2026-10-23_liste_gunlerce-pesini-birakmayan"
-    },
-    {
-      "title": "Burning",
-      "post": "2026-10-23_liste_gunlerce-pesini-birakmayan"
-    },
-    {
-      "title": "Zodiac",
-      "post": "2026-10-23_liste_gunlerce-pesini-birakmayan"
-    },
-    {
-      "title": "Mulholland Drive",
-      "post": "2026-10-23_liste_gunlerce-pesini-birakmayan"
-    },
-    {
-      "title": "Black Swan",
-      "post": "2026-10-25_liste_akil-sagligina-zararlidir"
-    },
-    {
-      "title": "Requiem for a Dream",
-      "post": "2026-10-25_liste_akil-sagligina-zararlidir"
-    },
-    {
-      "title": "The Machinist",
-      "post": "2026-10-25_liste_akil-sagligina-zararlidir"
-    },
-    {
-      "title": "Perfect Blue",
-      "post": "2026-10-25_liste_akil-sagligina-zararlidir"
-    },
-    {
-      "title": "Enemy",
-      "post": "2026-10-25_liste_akil-sagligina-zararlidir"
-    },
-    {
-      "title": "Constantine",
-      "post": "2026-10-26_liste_keanu-son-sahnede-gonullu"
-    },
-    {
-      "title": "The Matrix Revolutions",
-      "post": "2026-10-26_liste_keanu-son-sahnede-gonullu"
-    },
-    {
-      "title": "The Day the Earth Stood Still",
-      "post": "2026-10-26_liste_keanu-son-sahnede-gonullu"
-    },
-    {
-      "title": "The Devil's Advocate",
-      "post": "2026-10-26_liste_keanu-son-sahnede-gonullu"
-    },
-    {
-      "title": "Finding Nemo",
-      "post": "2026-10-27_liste_unutanlar-kulubu"
-    },
-    {
-      "title": "Memento",
-      "post": "2026-10-27_liste_unutanlar-kulubu"
-    },
-    {
-      "title": "Children of Men",
-      "post": "2026-10-28_liste_son-seans-kiyamet"
-    },
-    {
-      "title": "Take Shelter",
-      "post": "2026-10-28_liste_son-seans-kiyamet"
-    },
-    {
-      "title": "The Road",
-      "post": "2026-10-28_liste_son-seans-kiyamet"
-    },
-    {
-      "title": "Melancholia",
-      "post": "2026-10-28_liste_son-seans-kiyamet"
-    },
-    {
-      "title": "The Tree of Life",
-      "post": "2026-10-29_liste_hayati-sorgulatan-4-film"
-    },
-    {
-      "title": "Wild Strawberries",
-      "post": "2026-10-29_liste_hayati-sorgulatan-4-film"
-    },
-    {
-      "title": "Perfect Days",
-      "post": "2026-10-29_liste_hayati-sorgulatan-4-film"
-    },
-    {
-      "title": "Paterson",
-      "post": "2026-10-29_liste_hayati-sorgulatan-4-film"
-    }
-  ],
-  "quiz_answers_used": [
-    "Shutter Island",
-    "Up",
-    "Inception",
-    "Interstellar",
-    "Fight Club",
-    "The Matrix Revolutions"
-  ],
-  "news": [
-    {
-      "date": "2026-10-08",
-      "title": "Lee Chang-dong'un Possible Love'ı 6 Kasım'da Netflix'te",
-      "film": "Possible Love",
-      "post": "2026-10-08_haber_possible-love"
-    },
-    {
-      "date": "2026-10-09",
-      "film": "Primetime",
-      "post": "2026-10-09_haber_primetime"
-    },
-    {
-      "date": "2026-10-10",
-      "film": "Sense and Sensibility (2026)",
-      "post": "2026-10-10_haber_ask-ve-yasam"
-    },
-    {
-      "date": "2026-10-11",
-      "film": "Digger",
-      "post": "2026-10-11_haber_digger"
-    },
-    {
-      "date": "2026-10-12",
-      "film": "Fatherland",
-      "post": "2026-10-12_haber_fatherland"
-    },
-    {
-      "date": "2026-10-13",
-      "film": "Clayface",
-      "post": "2026-10-13_haber_clayface"
-    },
-    {
-      "date": "2026-10-14",
-      "film": "Wildwood",
-      "post": "2026-10-14_haber_wildwood"
-    },
-    {
-      "date": "2026-10-15",
-      "film": "You Can See Everything",
-      "post": "2026-10-15_haber_you-can-see-everything"
-    }
-  ],
-  "vizyon": [
-    {
-      "date": "2026-10-16",
-      "film": "Whalefall, Sense and Sensibility, Street Fighter, Atonement, Goody Goody",
-      "post": "2026-10-16_vizyon_bu-hafta"
-    }
-  ]
+ "note": "Paylaşılan ya da zamanlanan filmler. Haftalık görev bunları TEKRAR seçmez (oyun cevapları hariç). Her yeni gönderiden sonra eklenir.",
+ "films": [
+  {
+   "title": "Coherence",
+   "year": 2013,
+   "tmdb": "220289",
+   "post": "gun1_liste"
+  },
+  {
+   "title": "Primer",
+   "year": 2004,
+   "tmdb": "14337",
+   "post": "gun1_liste"
+  },
+  {
+   "title": "The Man from Earth",
+   "year": 2007,
+   "tmdb": "13363",
+   "post": "gun1_liste"
+  },
+  {
+   "title": "Predestination",
+   "year": 2014,
+   "tmdb": "206487",
+   "post": "gun1_liste"
+  },
+  {
+   "title": "Triangle",
+   "year": 2009,
+   "tmdb": "26466",
+   "post": "gun1_liste"
+  },
+  {
+   "title": "Incendies",
+   "year": 2010,
+   "tmdb": "46738",
+   "post": "gun2_incendies"
+  },
+  {
+   "title": "Three Identical Strangers",
+   "year": 2018,
+   "tmdb": "489988",
+   "post": "gun3_belgesel"
+  },
+  {
+   "title": "Jagten",
+   "year": 2012,
+   "tmdb": "103663",
+   "post": "gun5_jagten"
+  },
+  {
+   "title": "Sicario",
+   "year": 2015,
+   "tmdb": "273481",
+   "post": "hesapta daha önce paylaşıldı"
+  },
+  {
+   "title": "Everyone Is Lying to You for Money",
+   "year": 2025,
+   "tmdb": "",
+   "post": "hesapta daha önce paylaşıldı"
+  },
+  {
+   "title": "Uzak",
+   "year": 2002,
+   "tmdb": "",
+   "post": "2026-10-06..10"
+  },
+  {
+   "title": "Kaç Para Kaç",
+   "year": 1999,
+   "tmdb": "",
+   "post": "2026-10-06..10"
+  },
+  {
+   "title": "Yazgı",
+   "year": 2001,
+   "tmdb": "",
+   "post": "2026-10-06..10"
+  },
+  {
+   "title": "Anayurt Oteli",
+   "year": 1987,
+   "tmdb": "",
+   "post": "2026-10-06..10"
+  },
+  {
+   "title": "Güneşe Yolculuk",
+   "year": 1999,
+   "tmdb": "",
+   "post": "2026-10-06..10"
+  },
+  {
+   "title": "Fantastic Mr. Fox",
+   "year": 2009,
+   "tmdb": "",
+   "post": "2026-10-06..10"
+  },
+  {
+   "title": "Mary and Max",
+   "year": 2009,
+   "tmdb": "",
+   "post": "2026-10-06..10"
+  },
+  {
+   "title": "Shrek the Third",
+   "year": 2007,
+   "tmdb": "",
+   "post": "2026-10-06..10"
+  },
+  {
+   "title": "Ernest & Celestine",
+   "year": 2012,
+   "tmdb": "",
+   "post": "2026-10-06..10"
+  },
+  {
+   "title": "964 Pinocchio",
+   "year": 1991,
+   "tmdb": "",
+   "post": "2026-10-06..10"
+  },
+  {
+   "title": "Akira",
+   "year": 1988,
+   "tmdb": "",
+   "post": "2026-10-06..10"
+  },
+  {
+   "title": "Duvara Karşı",
+   "year": 2004,
+   "tmdb": "",
+   "post": "2026-10-06..10"
+  },
+  {
+   "title": "Amores Perros",
+   "year": 2000,
+   "tmdb": "",
+   "post": "2026-10-06..10"
+  },
+  {
+   "title": "Memories of Murder",
+   "year": 2003,
+   "tmdb": "",
+   "post": "2026-10-06..10"
+  },
+  {
+   "title": "Run Lola Run",
+   "year": 1998,
+   "tmdb": "",
+   "post": "2026-10-06..10"
+  },
+  {
+   "title": "Gone with the Wind",
+   "year": 1939,
+   "tmdb": "",
+   "post": "2026-10-06..10"
+  },
+  {
+   "title": "4 Months, 3 Weeks and 2 Days",
+   "year": 2007,
+   "tmdb": "",
+   "post": "2026-10-06..10"
+  },
+  {
+   "title": "Y Tu Mamá También",
+   "year": 2001,
+   "tmdb": "",
+   "post": "2026-10-06..10"
+  },
+  {
+   "title": "Mondays in the Sun",
+   "year": 2002,
+   "tmdb": "",
+   "post": "2026-10-06..10"
+  },
+  {
+   "title": "Pay It Forward",
+   "year": 2000,
+   "tmdb": "",
+   "post": "2026-10-06..10"
+  },
+  {
+   "title": "Five Feet Apart",
+   "year": 2019,
+   "tmdb": "",
+   "post": "2026-10-06..10"
+  },
+  {
+   "title": "The Ultimate Gift",
+   "year": 2006,
+   "tmdb": "",
+   "post": "2026-10-06..10"
+  },
+  {
+   "title": "Infinity Pool",
+   "year": 2023,
+   "tmdb": "",
+   "post": "2026-10-06..10"
+  },
+  {
+   "title": "Nope",
+   "year": 2022,
+   "tmdb": "",
+   "post": "2026-10-06..10"
+  },
+  {
+   "title": "Longlegs",
+   "year": 2024,
+   "tmdb": "",
+   "post": "2026-10-06..10"
+  },
+  {
+   "title": "In Bruges",
+   "year": 2008,
+   "tmdb": "8321",
+   "post": "2026-10-11_liste_kara-komedi"
+  },
+  {
+   "title": "Wild Tales",
+   "year": 2014,
+   "tmdb": "265195",
+   "post": "2026-10-11_liste_kara-komedi"
+  },
+  {
+   "title": "The Death of Stalin",
+   "year": 2017,
+   "tmdb": "402897",
+   "post": "2026-10-11_liste_kara-komedi"
+  },
+  {
+   "title": "Delicatessen",
+   "year": 1991,
+   "tmdb": "892",
+   "post": "2026-10-11_liste_kara-komedi"
+  },
+  {
+   "title": "The Lobster",
+   "year": 2015,
+   "tmdb": "254320",
+   "post": "2026-10-11_liste_kara-komedi"
+  },
+  {
+   "title": "Three Colors: Red",
+   "post": "2026-10-12_film_kirmizi"
+  },
+  {
+   "title": "Memento",
+   "post": "2026-10-13_liste_kafanin-icinde"
+  },
+  {
+   "title": "Being John Malkovich",
+   "post": "2026-10-13_liste_kafanin-icinde"
+  },
+  {
+   "title": "The Truman Show",
+   "post": "2026-10-13_liste_kafanin-icinde"
+  },
+  {
+   "title": "Close Encounters of the Third Kind",
+   "post": "2026-10-14_karsilastirma_uzaylilarla-konusmak"
+  },
+  {
+   "title": "Contact",
+   "post": "2026-10-14_karsilastirma_uzaylilarla-konusmak"
+  },
+  {
+   "title": "Arrival",
+   "post": "2026-10-14_karsilastirma_uzaylilarla-konusmak"
+  },
+  {
+   "title": "The Menu",
+   "post": "2026-10-15_film_the-menu"
+  },
+  {
+   "title": "The Grand Budapest Hotel",
+   "post": "2026-10-17_sahne_grand-budapest-oranlar"
+  },
+  {
+   "title": "Finding Nemo",
+   "post": "2026-10-18_film_kayip-balik-nemo"
+  },
+  {
+   "title": "Dogville",
+   "post": "2026-10-19_film_dogville"
+  },
+  {
+   "title": "Schindler's List",
+   "post": "2026-10-20_film_schindler-tek-renk"
+  },
+  {
+   "title": "Stalker",
+   "post": "2026-10-21_liste-7-oneri"
+  },
+  {
+   "title": "Dark City",
+   "post": "2026-10-21_liste-7-oneri"
+  },
+  {
+   "title": "The Fall",
+   "post": "2026-10-21_liste-7-oneri"
+  },
+  {
+   "title": "Paprika",
+   "post": "2026-10-21_liste-7-oneri"
+  },
+  {
+   "title": "Timecrimes",
+   "post": "2026-10-21_liste-7-oneri"
+  },
+  {
+   "title": "Synecdoche, New York",
+   "post": "2026-10-21_liste-7-oneri"
+  },
+  {
+   "title": "Moon",
+   "post": "2026-10-21_liste-7-oneri"
+  },
+  {
+   "title": "Oldboy",
+   "post": "2026-10-23_liste_gunlerce-pesini-birakmayan"
+  },
+  {
+   "title": "Prisoners",
+   "post": "2026-10-23_liste_gunlerce-pesini-birakmayan"
+  },
+  {
+   "title": "Burning",
+   "post": "2026-10-23_liste_gunlerce-pesini-birakmayan"
+  },
+  {
+   "title": "Zodiac",
+   "post": "2026-10-23_liste_gunlerce-pesini-birakmayan"
+  },
+  {
+   "title": "Mulholland Drive",
+   "post": "2026-10-23_liste_gunlerce-pesini-birakmayan"
+  },
+  {
+   "title": "Black Swan",
+   "post": "2026-10-25_liste_akil-sagligina-zararlidir"
+  },
+  {
+   "title": "Requiem for a Dream",
+   "post": "2026-10-25_liste_akil-sagligina-zararlidir"
+  },
+  {
+   "title": "The Machinist",
+   "post": "2026-10-25_liste_akil-sagligina-zararlidir"
+  },
+  {
+   "title": "Perfect Blue",
+   "post": "2026-10-25_liste_akil-sagligina-zararlidir"
+  },
+  {
+   "title": "Enemy",
+   "post": "2026-10-25_liste_akil-sagligina-zararlidir"
+  },
+  {
+   "title": "Constantine",
+   "post": "2026-10-26_liste_keanu-son-sahnede-gonullu"
+  },
+  {
+   "title": "The Matrix Revolutions",
+   "post": "2026-10-26_liste_keanu-son-sahnede-gonullu"
+  },
+  {
+   "title": "The Day the Earth Stood Still",
+   "post": "2026-10-26_liste_keanu-son-sahnede-gonullu"
+  },
+  {
+   "title": "The Devil's Advocate",
+   "post": "2026-10-26_liste_keanu-son-sahnede-gonullu"
+  },
+  {
+   "title": "Finding Nemo",
+   "post": "2026-10-27_liste_unutanlar-kulubu"
+  },
+  {
+   "title": "Memento",
+   "post": "2026-10-27_liste_unutanlar-kulubu"
+  },
+  {
+   "title": "Children of Men",
+   "post": "2026-10-28_liste_son-seans-kiyamet"
+  },
+  {
+   "title": "Take Shelter",
+   "post": "2026-10-28_liste_son-seans-kiyamet"
+  },
+  {
+   "title": "The Road",
+   "post": "2026-10-28_liste_son-seans-kiyamet"
+  },
+  {
+   "title": "Melancholia",
+   "post": "2026-10-28_liste_son-seans-kiyamet"
+  },
+  {
+   "title": "The Tree of Life",
+   "post": "2026-10-29_liste_hayati-sorgulatan-4-film"
+  },
+  {
+   "title": "Wild Strawberries",
+   "post": "2026-10-29_liste_hayati-sorgulatan-4-film"
+  },
+  {
+   "title": "Perfect Days",
+   "post": "2026-10-29_liste_hayati-sorgulatan-4-film"
+  },
+  {
+   "title": "Paterson",
+   "post": "2026-10-29_liste_hayati-sorgulatan-4-film"
+  },
+  {
+   "title": "The Prestige",
+   "year": 2006,
+   "tmdb": "",
+   "post": "2026-10-30..11-05 haftası"
+  },
+  {
+   "title": "Shutter Island",
+   "year": 2010,
+   "tmdb": "",
+   "post": "2026-10-30..11-05 haftası"
+  },
+  {
+   "title": "The Usual Suspects",
+   "year": 1995,
+   "tmdb": "",
+   "post": "2026-10-30..11-05 haftası"
+  },
+  {
+   "title": "Gone Girl",
+   "year": 2014,
+   "tmdb": "",
+   "post": "2026-10-30..11-05 haftası"
+  },
+  {
+   "title": "The Sixth Sense",
+   "year": 1999,
+   "tmdb": "",
+   "post": "2026-10-30..11-05 haftası"
+  },
+  {
+   "title": "Beetlejuice",
+   "year": 1988,
+   "tmdb": "",
+   "post": "2026-10-30..11-05 haftası"
+  },
+  {
+   "title": "Hocus Pocus",
+   "year": 1993,
+   "tmdb": "",
+   "post": "2026-10-30..11-05 haftası"
+  },
+  {
+   "title": "Coraline",
+   "year": 2009,
+   "tmdb": "",
+   "post": "2026-10-30..11-05 haftası"
+  },
+  {
+   "title": "The Nightmare Before Christmas",
+   "year": 1993,
+   "tmdb": "",
+   "post": "2026-10-30..11-05 haftası"
+  },
+  {
+   "title": "Casper",
+   "year": 1995,
+   "tmdb": "",
+   "post": "2026-10-30..11-05 haftası"
+  },
+  {
+   "title": "Inception",
+   "year": 2010,
+   "tmdb": "",
+   "post": "2026-10-30..11-05 haftası"
+  },
+  {
+   "title": "Forrest Gump",
+   "year": 1994,
+   "tmdb": "",
+   "post": "2026-10-30..11-05 haftası"
+  },
+  {
+   "title": "Big Fish",
+   "year": 2003,
+   "tmdb": "",
+   "post": "2026-10-30..11-05 haftası"
+  },
+  {
+   "title": "Knives Out",
+   "year": 2019,
+   "tmdb": "",
+   "post": "2026-10-30..11-05 haftası"
+  },
+  {
+   "title": "Gosford Park",
+   "year": 2001,
+   "tmdb": "",
+   "post": "2026-10-30..11-05 haftası"
+  },
+  {
+   "title": "Parasite",
+   "year": 2019,
+   "tmdb": "",
+   "post": "2026-10-30..11-05 haftası"
+  },
+  {
+   "title": "Shoplifters",
+   "year": 2018,
+   "tmdb": "",
+   "post": "2026-10-30..11-05 haftası"
+  },
+  {
+   "title": "Hababam Sınıfı",
+   "year": 1975,
+   "tmdb": "",
+   "post": "2026-10-30..11-05 haftası"
+  },
+  {
+   "title": "Tosun Paşa",
+   "year": 1976,
+   "tmdb": "",
+   "post": "2026-10-30..11-05 haftası"
+  },
+  {
+   "title": "Zübük",
+   "year": 1980,
+   "tmdb": "",
+   "post": "2026-10-30..11-05 haftası"
+  },
+  {
+   "title": "Çöpçüler Kralı",
+   "year": 1977,
+   "tmdb": "",
+   "post": "2026-10-30..11-05 haftası"
+  },
+  {
+   "title": "Neşeli Günler",
+   "year": 1978,
+   "tmdb": "",
+   "post": "2026-10-30..11-05 haftası"
+  },
+  {
+   "title": "Up",
+   "year": 2009,
+   "tmdb": "",
+   "post": "2026-10-30..11-05 haftası"
+  },
+  {
+   "title": "Coco",
+   "year": 2017,
+   "tmdb": "",
+   "post": "2026-10-30..11-05 haftası"
+  },
+  {
+   "title": "Inside Out",
+   "year": 2015,
+   "tmdb": "",
+   "post": "2026-10-30..11-05 haftası"
+  },
+  {
+   "title": "WALL·E",
+   "year": 2008,
+   "tmdb": "",
+   "post": "2026-10-30..11-05 haftası"
+  },
+  {
+   "title": "Your Name",
+   "year": 2016,
+   "tmdb": "",
+   "post": "2026-10-30..11-05 haftası"
+  },
+  {
+   "title": "About Time",
+   "year": 2013,
+   "tmdb": "",
+   "post": "2026-10-30..11-05 haftası"
+  },
+  {
+   "title": "Paddington 2",
+   "year": 2017,
+   "tmdb": "",
+   "post": "2026-10-30..11-05 haftası"
+  },
+  {
+   "title": "Chef",
+   "year": 2014,
+   "tmdb": "",
+   "post": "2026-10-30..11-05 haftası"
+  },
+  {
+   "title": "Little Women",
+   "year": 2019,
+   "tmdb": "",
+   "post": "2026-10-30..11-05 haftası"
+  },
+  {
+   "title": "12 Angry Men",
+   "year": 1957,
+   "tmdb": "",
+   "post": "2026-10-30..11-05 haftası"
+  },
+  {
+   "title": "Rope",
+   "year": 1948,
+   "tmdb": "",
+   "post": "2026-10-30..11-05 haftası"
+  },
+  {
+   "title": "Locke",
+   "year": 2013,
+   "tmdb": "",
+   "post": "2026-10-30..11-05 haftası"
+  },
+  {
+   "title": "Buried",
+   "year": 2010,
+   "tmdb": "",
+   "post": "2026-10-30..11-05 haftası"
+  },
+  {
+   "title": "Cube",
+   "year": 1997,
+   "tmdb": "",
+   "post": "2026-10-30..11-05 haftası"
+  }
+ ],
+ "quiz_answers_used": [
+  "Shutter Island",
+  "Up",
+  "Inception",
+  "Interstellar",
+  "Fight Club",
+  "The Matrix Revolutions"
+ ],
+ "news": [
+  {
+   "date": "2026-10-08",
+   "title": "Lee Chang-dong'un Possible Love'ı 6 Kasım'da Netflix'te",
+   "film": "Possible Love",
+   "post": "2026-10-08_haber_possible-love"
+  },
+  {
+   "date": "2026-10-09",
+   "film": "Primetime",
+   "post": "2026-10-09_haber_primetime"
+  },
+  {
+   "date": "2026-10-10",
+   "film": "Sense and Sensibility (2026)",
+   "post": "2026-10-10_haber_ask-ve-yasam"
+  },
+  {
+   "date": "2026-10-11",
+   "film": "Digger",
+   "post": "2026-10-11_haber_digger"
+  },
+  {
+   "date": "2026-10-12",
+   "film": "Fatherland",
+   "post": "2026-10-12_haber_fatherland"
+  },
+  {
+   "date": "2026-10-13",
+   "film": "Clayface",
+   "post": "2026-10-13_haber_clayface"
+  },
+  {
+   "date": "2026-10-14",
+   "film": "Wildwood",
+   "post": "2026-10-14_haber_wildwood"
+  },
+  {
+   "date": "2026-10-15",
+   "film": "You Can See Everything",
+   "post": "2026-10-15_haber_you-can-see-everything"
+  }
+ ],
+ "vizyon": [
+  {
+   "date": "2026-10-16",
+   "film": "Whalefall, Sense and Sensibility, Street Fighter, Atonement, Goody Goody",
+   "post": "2026-10-16_vizyon_bu-hafta"
+  },
+  {
+   "date": "2026-10-31",
+   "film": "Avengers: Doomsday",
+   "post": "13:00 vizyon gönderisi"
+  },
+  {
+   "date": "2026-10-31",
+   "film": "Dune: Part Three",
+   "post": "13:00 vizyon gönderisi"
+  },
+  {
+   "date": "2026-11-02",
+   "film": "Şapkalı Kedi",
+   "post": "13:00 vizyon gönderisi"
+  },
+  {
+   "date": "2026-11-02",
+   "film": "Godzilla Minus Zero",
+   "post": "13:00 vizyon gönderisi"
+  },
+  {
+   "date": "2026-11-02",
+   "film": "Ebenezer: Bir Noel Şarkısı",
+   "post": "13:00 vizyon gönderisi"
+  },
+  {
+   "date": "2026-11-02",
+   "film": "Açlık Oyunları: Hasatta Gündoğumu",
+   "post": "13:00 vizyon gönderisi"
+  },
+  {
+   "date": "2026-11-02",
+   "film": "Zor Baba 4",
+   "post": "13:00 vizyon gönderisi"
+  },
+  {
+   "date": "2026-11-04",
+   "film": "Vahşi At Dokuz",
+   "post": "13:00 vizyon gönderisi"
+  },
+  {
+   "date": "2026-11-04",
+   "film": "Kağıttan Kaplan",
+   "post": "13:00 vizyon gönderisi"
+  },
+  {
+   "date": "2026-11-04",
+   "film": "Hexe: Sihir Krallığı",
+   "post": "13:00 vizyon gönderisi"
+  },
+  {
+   "date": "2026-11-04",
+   "film": "Vahşi Gece 2",
+   "post": "13:00 vizyon gönderisi"
+  }
+ ]
 }

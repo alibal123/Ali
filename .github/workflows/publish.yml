@@ -6,6 +6,11 @@ on:
     - cron: "7 12 * * *"     # 15:07 İstanbul: erken uyan, 20:00'ye kadar bekle (GitHub zamanlayıcısı akşamları atlayabiliyor)
     - cron: "37 14 * * *"    # 17:37 İstanbul: yedek
     - cron: "33 16 * * *"    # 19:33 İstanbul: yedek
+    - cron: "7 6 * * *"      # 09:07 İstanbul: 13:00 gönderisi için erken uyan
+    - cron: "37 8 * * *"     # 11:37 İstanbul: 13:00 yedek
+    - cron: "33 9 * * *"     # 12:33 İstanbul: 13:00 yedek
+  push:
+    paths: ["tetik/ping.txt"]   # bulut görevi (Claude) saatinden önce bu dosyayı güncelleyerek akışı kesin başlatır
   workflow_dispatch:
     inputs:
       dry_run:

@@ -1,3 +1,17 @@
+# GÜNCEL PLAN (28 Ekim 2026, Ali) — bu bölüm aşağıdaki tüm eski kuralların ÜSTÜNDEDİR
+
+- **Gün numarası:** 30 Ekim 2026 = 1. gün. **Tek sayılı günlerde 1, çift sayılı günlerde 2 gönderi.** Her gün 18:00 gönderisi var; çift günlerde ayrıca **13:00** gönderisi var.
+  (31 Ekim, 2 Kasım, 4 Kasım çift gün; 8. gün 6 Kasım çift gün olduğu için 13:00 + 18:00 olur. Ali'nin ilk mesajındaki "tek günlerde 13:00" ifadesi yazım hatası sayıldı; yanlışsa Ali düzeltir.)
+- **13:00 gönderisi:** yaklaşan/güncel vizyon filmleri (TMDB Türkiye vizyon tarihleri; olgular TMDB künyesinden). Avengers: Doomsday ve Dune: Part Three bir kez işlendi; sürekli aynı filmleri yapma, farklı yaklaşan filmlere dön. `derecefilm` yazısı yok.
+- **18:00 gönderisi:** hesabın en çok tutan tarzı (film listeleri, "bunu sevdiysen şunu izle", animasyon, Türk sineması, ruh hali listeleri). Çok karanlık yapma. Her gönderi farklı konu/tür.
+- **Logo:** her slaytta sabit konumda `assets/logo/` logosu (`logo()`); gönderide ve açıklamada "derecefilm" yazısı kullanma.
+- **Tasarım sistemi (zorunlu):** `tools/week2/pro.py` (kapak mozaik/hero, film/bilgi/eşleştirme slaytları, CTA). Eğik kart, bant, çıkartma, rastgele daire KULLANMA. `tools/week2/engine.py` yazıyı otomatik sığdırır; render çıktısında `UYARI` kalmayana kadar düzelt. Örnek: `tools/week2/p01.py … p10.py`. Çalıştırma: `python3 tools/week2/run.py p01`.
+- **Sahne kareleri:** TMDB yazısız kareler `otomasyon` deposundaki `derecefilm-stills` iş akışıyla indirilir (`derecefilm/stills/request.json` → künye `resolved.json`); `assets/stills/w_<ad>_<n>.jpg` olarak kopyalanır.
+- **Yayın:** `schedule.json` kaydı (`T13:00` / `T18:00`) + `publish.yml`. Bilgisayar gerekmez. Bulut görevleri saatten önce `tetik/ping.txt` günceller (push → yayın akışı başlar), yayını doğrular.
+- Açıklamanın son satırı bir sonraki gönderiyi duyurur ("Bugün 18:00'de: …" / "Yarın 13:00'te: …").
+
+---
+
 # Haftalık içerik görevi — derecefilm
 
 Bu dosya, her **pazar 11:00 (İstanbul)** çalışan zamanlanmış Claude görevinin talimatıdır.
