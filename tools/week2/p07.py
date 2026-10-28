@@ -4,7 +4,7 @@ ID = "2026-11-03_liste_buyuyunce-vuran-animasyon"
 PEACH = MINT = LILAC = BUT = SKY = "#fff"
 TH = theme("#eaf4ff", "#16213e", "#ffb703", on_acc="#16213e", head="serif", accent_txt="#a86a00")
 
-CAPTION = """Çocukken renkleri için izlemiştin. Büyüyünce konuşmadıkları şeyin ne kadar ağır olduğunu fark ediyorsun. Çocukken izlediğin, büyüyünce başka vuran 5 animasyon.
+CAPTION = """Çizgi film diye girdim, ağlayarak çıktım. Çocukken renkleri için izlemiştin. Büyüyünce konuşmadıkları şeyin ne kadar ağır olduğunu fark ediyorsun. Çocukken izlediğin, büyüyünce başka vuran 5 animasyon.
 
 Up (2009) yaşlı Carl'ın evini balonlarla uçurmasını, Coco (2017) müziği yasak bir ailenin çocuğu Miguel'in Ölüler Günü yolculuğunu, Inside Out (2015) 11 yaşındaki Riley'nin kafasındaki duyguların taşınma telaşını, WALL·E (2008) terk edilmiş Dünya'da çöp toplayan küçük bir robotun aşkını, Your Name (2016) ise birbirinin bedeninde uyanan iki gencin hikâyesini anlatıyor. İlk dördü En İyi Animasyon Oscar'ını aldı.
 
@@ -45,7 +45,7 @@ def round_film(i, n):
 def build():
     n = 7
     els = [
-        T("Çocukken izledin,<br>büyüyünce başka vurdu", M, 70, W - 2 * M, 250, 96, "serif", TH["ink"], nowrap=True, mn=50, lh=1.12, align="center"),
+        T("Çizgi film diye girdim,<br>ağlayarak çıktım", M, 70, W - 2 * M, 250, 96, "serif", TH["ink"], nowrap=True, mn=50, lh=1.12, align="center"),
         card(FILMS[0][4], 56, 360, 968, 560, 48),
     ]
     for k in range(1, 5):

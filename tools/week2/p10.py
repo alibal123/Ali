@@ -3,7 +3,7 @@ from pro import *
 ID = "2026-11-05_liste_tek-mekanda-gecen-5-film"
 TH = theme("#f1ece3", "#161412", "#0f2a4a", on_acc="#fff", head="anton")
 
-CAPTION = """Büyük bütçe yok, devasa dekor yok. Tek bir oda, tek bir araç, tek bir mekân var; ama sonuna kadar nefes alamıyorsun. Tek mekânda geçen 5 film.
+CAPTION = """Kapı kilitli, nefes askıda. Büyük bütçe yok, devasa dekor yok. Tek bir oda, tek bir araç, tek bir mekân var; ama sonuna kadar nefes alamıyorsun. Tek mekânda geçen 5 film.
 
 12 Angry Men (1957) bir jüri odasındaki on iki kişiyi, Rope (1948) bir dairede işlenen "kusursuz cinayet"i, Locke (2013) bir arabada geçen bir geceyi, Buried (2010) bir tabutun içinde uyanan adamı, Cube (1997) birbirine geçen küp odalardan oluşan bir yapıda uyanan altı yabancıyı anlatıyor.
 
@@ -63,7 +63,7 @@ def build():
         duo(S("cube", 3)),
         box(0, 380, W, 970, "linear-gradient(180deg,rgba(4,10,20,0),rgba(8,22,44,.82) 58%)", z=2),
         *brackets(), *rec_bar("5 FİLM · TEK ODA"),
-        T("TEK ODADA<br>GEÇEN<br>5 FİLM", 88, 620, W - 176, 520, 190, "anton", "#fff", nowrap=True, mn=70, lh=1.06),
+        T("KAPI KİLİTLİ,<br>NEFES<br>ASKIDA", 88, 620, W - 176, 520, 190, "anton", "#fff", nowrap=True, mn=70, lh=1.06),
         T("Büyük bütçe yok, nefes almak da yok.", 88, 1180, 800, 36, 26, "inter", "#fff", weight=500, nowrap=True, op=0.85),
         logo("white", W - 88 - 52, 1186, 52, z=9),
     ]}

@@ -1,10 +1,11 @@
 from pro import *
 
 ID = "2026-10-31_liste_cadilar-bayrami-5-film"
-TH = theme("#fdf1e3", "#2b2118", "#e8761b", on_acc="#2b2118", head="anton", accent_txt="#b4540a")
-BGS = ["#fdf1e3", "#e3eddc", "#fbe6b4", "#fde0d0", "#e3eddc"]
+INK = "#24163a"
+TH = theme("#ff7a1a", INK, "#ffd23f", on_acc=INK, head="anton", accent_txt=INK, logo_light="black")
+BGS = ["#ffd23f", "#c3a0f5", "#86dcb8", "#ff9fba", "#92cbff"]
 
-CAPTION = """Cadılar Bayramı gecesi için korkutmadan eğlendiren 5 film. Kan yok, gerilim yok; sadece sevimli hayaletler, komik cadılar ve tuhaf dünyalar var.
+CAPTION = """Şeker verirsen korkutmayız. Cadılar Bayramı gecesi için çocukluğumuzun cadıları, hayaletleri ve tuhaf dünyaları: kan yok, gerilim yok, sıfır kâbus. 5 film.
 
 Beetlejuice (1988) hayaletlere yardım eden çılgın bir "biyo-egzorsist"i, Hocus Pocus (1993) yüzyıllar sonra dirilen üç cadı kardeşi, Coraline (2009) gizli bir kapının ardındaki "öteki" dünyayı, The Nightmare Before Christmas (1993) Cadılar Bayramı Şehri'nin kralı Jack'in Noel merakını, Casper (1995) ise dost canlısı bir hayaletin hikâyesini anlatıyor.
 
@@ -22,36 +23,77 @@ FILMS = [
 
 
 
-ARC = lambda w: f"{w // 2}px {w // 2}px 0 0"
+
+import cut
+from PIL import Image, ImageFilter, ImageChops
+import os
+
+CUTS = ["beetlejuice_2", "hocuspocus_1", "coraline_3", "nightmare_3", "casper_1"]
+OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "assets", "cutouts")
 
 
-def arch_film(i, n):
-    title, meta, body, src, _, tag = FILMS[i]
+def sticker(name, maxw, maxh, pad=26):
+    path = os.path.join(OUT, f"st_{name}_{maxw}x{maxh}.png")
+    im = cut.cutout(name).convert("RGBA")
+    im = im.crop(im.getchannel("A").point(lambda v: 255 if v > 20 else 0).getbbox())
+    r = min(maxw / im.width, maxh / im.height)
+    im = im.resize((max(1, int(im.width * r)), max(1, int(im.height * r))), Image.LANCZOS)
+    cw, ch = im.width + pad * 4, im.height + pad * 4
+    a = Image.new("L", (cw, ch), 0)
+    a.paste(im.getchannel("A"), (pad * 2, pad * 2))
+    d = a
+    for _ in range(pad // 4 + 1):
+        d = d.filter(ImageFilter.MaxFilter(9))
+    d = d.point(lambda v: 255 if v > 100 else 0).filter(ImageFilter.GaussianBlur(1.2))
+    sh = d.filter(ImageFilter.GaussianBlur(14))
+    out = Image.new("RGBA", (cw, ch), (0, 0, 0, 0))
+    shadow = Image.new("RGBA", (cw, ch), (36, 22, 58, 0))
+    shadow.putalpha(sh.point(lambda v: int(v * 0.35)))
+    out.alpha_composite(shadow, (0, 12))
+    white = Image.new("RGBA", (cw, ch), (255, 255, 255, 255)); white.putalpha(d)
+    out.alpha_composite(white)
+    layer = Image.new("RGBA", (cw, ch), (0, 0, 0, 0)); layer.paste(im, (pad * 2, pad * 2))
+    out.alpha_composite(layer)
+    out.save(path)
+    return path, cw, ch
+
+
+def stk(name, cx, cy, maxw, maxh, rot=0, z=5):
+    p, w, h = sticker(name, maxw, maxh)
+    return img(p, cx - w // 2, cy - h // 2, w, h, z=z, fit="contain", rot=rot)
+
+
+def film(i, n):
+    title, meta, body, _s, _s2, tag = FILMS[i]
+    rots = [-4, 3, -3, 4, -3]
+    sizes = [(700, 620), (880, 560), (420, 640), (760, 600), (820, 560)]
+    sw, sh = sizes[i]
     return {"bg": BGS[i], "els": [
-        img(grade(src, (680, 780), (0.15, 0, 0.85, 1)), 200, 72, 680, 780, z=2, radius=ARC(680)),
-        label(tag, 200 + 340 - 70, 60, bg=TH["accent"], color="#2b2118", size=22, z=6),
-        T(title, M, 890, W - 2 * M, 100, 92, "anton", TH["ink"], nowrap=True, mn=44, lh=1.05, align="center"),
-        T(meta, M, 1000, W - 2 * M, 36, 26, "oswald", TH["accent_txt"], weight=500, ls=4, upper=True, nowrap=True, mn=18, align="center"),
-        T(body, 150, 1054, W - 300, 170, 36, "inter", TH["ink"], weight=500, lh=1.38, mn=26, align="center"),
-        *footer(TH, i + 1, n),
+        T(f"{i+1:02d}", M, 56, 200, 90, 80, "anton", INK, fit=False, lh=1.0, nowrap=True),
+        label(tag.upper(), W - M - 340, 70, bg=INK, color="#fff", size=22, z=8),
+        stk(CUTS[i], 540, 410, sw, sh, rot=rots[i]),
+        T(title, M, 800, W - 2 * M, 130, 104, "anton", INK, nowrap=True, mn=44, lh=1.05, align="center", z=6),
+        T(meta, M, 936, W - 2 * M, 34, 26, "oswald", INK, weight=500, ls=5, upper=True, nowrap=True, mn=16, align="center", op=0.75),
+        T(body, 110, 992, W - 220, 190, 36, "inter", INK, weight=500, lh=1.38, mn=26, align="center"),
+        T(f"{i+1} / 6", M, 1268, 200, 34, 22, "oswald", INK, fit=False, weight=500, ls=4, op=0.6),
+        logo("black", W - M - 58, 1252, 58, z=9),
     ]}
 
 
 def build():
     n = 7
     els = [
-        T("KORKUTMADAN<br>EĞLENDİREN<br>5 FİLM", M, 70, W - 2 * M, 470, 190, "anton", TH["ink"], nowrap=True, mn=70, lh=1.07),
-        T("CADILAR BAYRAMI GECESİ", M, 580, 700, 34, 26, "oswald", TH["accent_txt"], fit=False, weight=500, ls=6, upper=True, nowrap=True),
+        T("ŞEKER<br>VERİRSEN<br>KORKUTMAYIZ", M, 70, W - 2 * M, 560, 165, "anton", INK, nowrap=True, mn=70, lh=1.24, z=3),
+        T("CADILAR BAYRAMI İÇİN 5 FİLM", M, 630, 800, 34, 26, "oswald", INK, fit=False, weight=500, ls=6, upper=True, nowrap=True, z=3),
+        stk("casper_1", 830, 840, 440, 360, rot=5, z=4),
+        stk("hocuspocus_1", 440, 950, 620, 450, rot=-4, z=6),
+        stk("coraline_3", 170, 880, 190, 380, rot=-6, z=5),
+        stk("beetlejuice_2", 830, 1090, 380, 440, rot=6, z=7),
+        stk("nightmare_3", 190, 1130, 230, 230, rot=-4, z=8),
+        T("Sıfır kâbus. Kaydet, bu gece aç.", 360, 1290, 600, 36, 24, "inter", INK, weight=600, nowrap=True, z=9),
+        logo("black", W - M - 58, 1262, 58, z=9),
     ]
-    heights = [520, 440, 520, 440, 520]
-    for k, f in enumerate(FILMS):
-        w = 176
-        x = M + k * (w + 15)
-        h = heights[k]
-        els.append(img(grade(f[4], (w, h), (0.25, 0, 0.75, 1)), x, 1180 - h, w, h, z=2, radius=ARC(w)))
-    els.append(T("Kan yok, gerilim yok. Kaydet, bu gece aç.", M, 1214, 800, 40, 26, "inter", TH["ink"], weight=500, nowrap=True, op=0.8))
-    els.append(logo("black", W - M - 58, 1252, 58, z=9))
-    cover = {"bg": "#fbe6b4", "els": els}
-    slides = [cover] + [arch_film(i, n) for i in range(5)]
-    slides.append(cta_slide(TH, "BU GECE<br>HANGİSİNİ<br>AÇIYORSUN?", "Yorumlara yaz, ışıkları kıs.", "Kaydet · Aileyle izle"))
+    cover = {"bg": "#ff7a1a", "els": els}
+    slides = [cover] + [film(i, n) for i in range(5)]
+    slides.append(cta_slide(TH, "BU GECE<br>HANGİSİNİ<br>AÇIYORSUN?", "Yorumlara yaz, şekerleri ayır.", "Kaydet · Aileyle izle"))
     return {"id": ID, "caption": CAPTION, "slides": slides}

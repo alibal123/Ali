@@ -3,7 +3,7 @@ ORG, CRM, BLU, INK, YEL = "#ff5a1f", "#f4efe6", "#2447ff", "#14110f", "#ffd23f"
 
 ID = "2026-10-30_liste_basa-sardiran-5-film"
 TH = theme("#f1ece3", "#161412", "#c8321f", on_acc="#fff", head="anton")
-CAPTION = """Bitince "dur, şimdi başa saralım" dedirten 5 film. Hepsinin ortak noktası şu: ilk izlemede hikâyeyi anladığını sanıyorsun, ikinci izlemede her sahnede bir ipucu görüp "bunu nasıl kaçırdım" diyorsun.
+CAPTION = """İzledim, şimdi başa sarıyorum. Bitince "dur, bir daha bakayım" dedirten 5 film. Hepsinin ortak noktası şu: ilk izlemede hikâyeyi anladığını sanıyorsun, ikinci izlemede her sahnede bir ipucu görüp "bunu nasıl kaçırdım" diyorsun.
 
 The Prestige (2006) birbirini alt etmeye çalışan iki sihirbazın takıntısını, Shutter Island (2010) bir adadaki akıl hastanesinden kaybolan hastanın izini, The Usual Suspects (1995) bir sorgu odasında anlatılan hikâyenin ne kadarının doğru olduğunu, Gone Girl (2014) evlilik yıldönümünde kaybolan bir kadının ardından başlayan şüpheyi, The Sixth Sense (1999) ise ölüleri gördüğünü söyleyen bir çocuğun hikâyesini anlatıyor.
 
@@ -64,7 +64,7 @@ def build():
         box(0, 300, W, 1050, "linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.9) 58%)", z=2),
         logo("white", W - M - 58, 64, 58, z=9),
         *rewind_icon(M, 560, 2.4),
-        T("BİTİNCE<br>BAŞA<br>SARDIRAN", M, 700, W - 2 * M, 480, 175, "anton", "#fff", nowrap=True, mn=70, lh=1.06),
+        T("İZLEDİM,<br>ŞİMDİ BAŞA<br>SARIYORUM", M, 700, W - 2 * M, 480, 175, "anton", "#fff", nowrap=True, mn=70, lh=1.16),
         T("5 film · Spoiler yok · Kaydet", M, 1200, 800, 30, 24, "oswald", "#fff", fit=False, weight=500, ls=4, upper=True, nowrap=True, op=0.85),
         *player_bar(0, 5),
     ]}

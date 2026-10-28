@@ -4,7 +4,7 @@ ID = "2026-11-02_liste_2026-en-yuksek-puanli-5-film"
 TEAL, CRM, INK = "#0e7c7b", "#f2efe6", "#141a1a"
 TH = theme(CRM, INK, TEAL, on_acc="#fff", head="anton")
 
-CAPTION = """2026'nın şimdiye kadar en yüksek puan alan 5 filmi. Eylül 2025'ten bu yana vizyona giren ve en az 1.500 oy almış filmler arasında TMDB izleyici puanına göre en tepedekiler hepsi bu yılın yapımı çıktı.
+CAPTION = """2026'nın takdir alanları. Yılın en yüksek puanlı 5 filmi. Eylül 2025'ten bu yana vizyona giren ve en az 1.500 oy almış filmler arasında TMDB izleyici puanına göre en tepedekiler hepsi bu yılın yapımı çıktı.
 
 Yerime Geç 8,8 ile zirvede. Onu 8,6 ile Kurtuluş Projesi ve Michael, 8,5 ile Örümcek-Adam: Yepyeni Bir Gün, 8,3 ile Oyuncak Hikayesi 5 izliyor. Puanlar zamanla değişebilir.
 
@@ -29,7 +29,7 @@ FILMS = [
 def cover():
     els = [
         *kicker(TH, "TMDB izleyici puanı", M, 70),
-        T("2026'NIN EN<br>YÜKSEK PUANLI<br>5 FİLMİ", M, 130, W - 2 * M, 400, 130, "anton", INK, nowrap=True, mn=64, lh=1.07),
+        T("2026'NIN<br>TAKDİR<br>ALANLARI", M, 130, W - 2 * M, 400, 130, "anton", INK, nowrap=True, mn=64, lh=1.07),
     ]
     y = 590
     track_x, track_w = M + 120, 560

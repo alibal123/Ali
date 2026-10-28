@@ -6,7 +6,7 @@ CRM, INK = "#f4ede2", "#2a2420"
 MUS, SAGE, ROSE, SKY = "#f2c24f", "#a8c4ab", "#f0a9a0", "#a9c8e8"
 TH = theme(CRM, INK, MUS, on_acc=INK, head="anton", acc_logo="black")
 
-CAPTION = """Dışarısı Kasım, içerisi sinema. Battaniyeye sarılıp çayı demleyince açılacak 4 film: gürültü yok, yıkım yok, sadece sıcacık hikâyeler.
+CAPTION = """Çayı demle, filmi biz seçtik. Battaniyeye sarılıp çayı demleyince açılacak 4 film: gürültü yok, yıkım yok, sadece sıcacık hikâyeler.
 
 About Time (2013) ailesindeki erkeklerin zamanda geriye gidebildiğini öğrenen bir gencin aşk ve aile hikâyesini, Paddington 2 (2017) hapse düşen sevimli ayının macerasını, Chef (2014) işinden ayrılıp yemek kamyonuyla yola çıkan bir şefi, Little Women (2019) March kardeşlerin büyüme hikâyesini anlatıyor. Little Women, En İyi Kostüm Tasarımı dalında Oscar aldı.
 
@@ -52,7 +52,7 @@ def build():
     n = 6
     els = [
         *kicker(TH, "4 film · battaniye · çay", M, 66, color=INK, w=900),
-        T("DIŞARISI KASIM,<br>İÇERİSİ SİNEMA", M, 130, W - 2 * M, 330, 140, "anton", INK, nowrap=True, mn=60, lh=1.1),
+        T("ÇAYI DEMLE,<br>FİLMİ BİZ<br>SEÇTİK", M, 130, W - 2 * M, 330, 140, "anton", INK, nowrap=True, mn=60, lh=1.2),
     ]
     cover_names = ["abouttime_3", "paddington2_2", "chef_3", "littlewomen_1"]
     D = 320
