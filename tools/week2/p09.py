@@ -20,29 +20,49 @@ FILMS = [
 
 
 
-def mag_film(i, n):
+
+TIMES = [("18:30", "Çay vakti"), ("20:00", "Aile saati"), ("21:30", "Akşam yemeği"), ("23:00", "Battaniye saati")]
+
+
+def warm(src, crop=(0, 0, 1, 1)):
+    return [img(grade(src, (1080, 1350), crop, grain=8), 0, 0, W, H, z=1),
+            box(0, 0, W, H, "rgba(255,150,60,.20)", z=2, blend="multiply"),
+            box(0, 0, W, H, "linear-gradient(180deg,rgba(40,16,4,.35),rgba(40,16,4,0) 35%)", z=2)]
+
+
+def eve_film(i, n):
     title, meta, body, src, _, tag = FILMS[i]
-    return {"bg": TH["bg"], "els": [
-        T(f"{i+1:02d}", M, 72, 300, 130, 120, "serif", TH["accent"], fit=False, lh=1.0, bleed=True),
-        T(title, M, 230, 420, 330, 74, "serif", TH["ink"], mn=36, lh=1.08),
-        rule(M, 590, 80, TH["accent"], op=1, h=4),
-        T(meta, M, 620, 400, 60, 22, "oswald", TH["accent"], weight=500, ls=3, upper=True, lh=1.4, mn=16),
-        T(body, M, 700, 400, 460, 32, "inter", TH["ink"], weight=500, lh=1.45, mn=22),
-        img(grade(src, (500, 1000), (0.28, 0, 0.72, 1)), 508, 72, 500, 1000, z=2),
-        T(tag, 508, 1100, 500, 40, 24, "oswald", TH["ink"], fit=False, weight=500, ls=5, upper=True, op=0.6, align="right", nowrap=True),
-        *footer(TH, i + 1, n),
+    t, lab = TIMES[i]
+    return {"bg": "#2a1208", "els": [
+        *warm(src),
+        T(t, M, 70, 600, 240, 210, "serif", "#fff", fit=False, lh=1.0, bleed=True, nowrap=True),
+        T(lab.upper(), M + 6, 318, 600, 34, 26, "oswald", "#fff", fit=False, weight=500, ls=8, nowrap=True),
+        logo("white", W - M - 58, 64, 58, z=9),
+        box(56, 810, 968, 430, "#fbeee0", z=4, radius=26),
+        T(title, 96, 846, 888, 100, 80, "serif", TH["ink"], nowrap=True, mn=40, lh=1.05),
+        T(meta, 96, 958, 888, 32, 24, "oswald", TH["accent"], weight=500, ls=4, upper=True, nowrap=True, mn=16),
+        T(body, 96, 1010, 888, 190, 34, "inter", TH["ink"], weight=500, lh=1.4, mn=24),
+        T(f"{i+1:02d} / 04", 96, 1272, 200, 30, 22, "oswald", "#fff", fit=False, weight=500, ls=4, op=0.8),
     ]}
 
 
 def build():
     n = 6
-    cover = {"bg": TH["bg"], "els": [
-        box(40, 40, 1000, 1270, "transparent", z=1, border=f"2px solid {TH['ink']}", css="opacity:.35"),
-        img(grade(FILMS[3][4], (904, 700), (0, 0, 1, 1)), 88, 88, 904, 700, z=2),
-        T("Kasım akşamlarına<br>battaniye gibi<br>gelen 4 film", M + 16, 830, W - 2 * M - 32, 330, 86, "serif", TH["ink"], nowrap=True, mn=44, lh=1.1, align="center"),
-        T("LİSTE · 4 FİLM · KAYDET", M, 1180, W - 2 * M, 34, 24, "oswald", TH["accent"], fit=False, weight=500, ls=6, align="center", nowrap=True),
-        logo("black", W // 2 - 29, 1240, 58, z=9),
+    cover = {"bg": "#2a1208", "els": [
+        *warm(FILMS[3][4]),
+        T("KASIM AKŞAMI PROGRAMI", M, 76, 800, 36, 26, "oswald", "#fff", fit=False, weight=500, ls=8, nowrap=True),
+        logo("white", W - M - 58, 64, 58, z=9),
+        box(56, 560, 968, 690, "#fbeee0", z=4, radius=26),
+        T("Kasım akşamlarına<br>battaniye gibi<br>gelen 4 film", 96, 596, 888, 280, 84, "serif", TH["ink"], nowrap=True, mn=44, lh=1.1),
     ]}
-    slides = [cover] + [mag_film(i, n) for i in range(4)]
+    rows = []
+    y = 930
+    for (t, lab), f in zip(TIMES, FILMS):
+        rows += [rule(96, y, 888, TH["ink"], op=0.15), T(t, 96, y + 12, 120, 40, 30, "oswald", TH["accent_txt"], fit=False, weight=500, ls=2, nowrap=True),
+                 T(f[0], 230, y + 8, 520, 44, 32, "inter", TH["ink"], weight=600, nowrap=True, mn=18),
+                 T(lab.upper(), 700, y + 16, 284, 30, 20, "oswald", TH["ink"], weight=500, ls=3, nowrap=True, align="right", mn=12, op=0.55)]
+        y += 70
+    cover["els"] += rows
+    slides = [cover] + [eve_film(i, n) for i in range(4)]
     slides.append(cta_slide(TH, "Bu akşam<br>hangisini<br>açıyorsun?", "Yorumlara yaz, çayını da söyle.", "Kaydet · Sıcak tut"))
     return {"id": ID, "caption": CAPTION, "slides": slides}

@@ -1,7 +1,7 @@
 from pro import *
 
 ID = "2026-11-01_eslestirme_bunu-sevdiysen"
-TH = theme("#f4efe6", "#14110f", "#ff4f7b", on_acc="#fff", head="anton")
+TH = theme("#f4efe6", "#14110f", "#ff4f5e", on_acc="#fff", head="anton")
 
 CAPTION = """Bunu sevdiysen şunu izle: aynı tadı veren 4 film çifti.
 
@@ -32,22 +32,44 @@ PAIRS = [
 
 
 
+
+def half(src, x, w, h, gray):
+    return img(prep(src, size=(w, h), gray=gray, contrast=1.1, sat=(1.0 if gray else 1.12), grain=8), x, 0, w, h, z=1)
+
+
+def split_pair(i, n):
+    a, b, why, _ = PAIRS[i]
+    ph = 980
+    return {"bg": TH["bg"], "els": [
+        half(a[2], 0, 540, ph, True), half(b[2], 540, 540, ph, False),
+        box(0, ph - 360, W, 360, "linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.82))", z=2),
+        T("SEVDİN", M, ph - 190, 300, 28, 20, "oswald", "#fff", fit=False, weight=500, ls=6, op=0.75),
+        T(a[0], M, ph - 150, 440, 80, 60, "anton", "#fff", nowrap=True, mn=28, lh=1.05),
+        T(a[1], M, ph - 62, 440, 30, 18, "oswald", "#fff", weight=500, ls=3, upper=True, nowrap=True, mn=12, op=0.75),
+        T("İZLE", 570, ph - 190, 300, 28, 20, "oswald", TH["accent"], fit=False, weight=500, ls=6),
+        T(b[0], 570, ph - 150, 440, 80, 60, "anton", "#fff", nowrap=True, mn=28, lh=1.05),
+        T(b[1], 570, ph - 62, 440, 30, 18, "oswald", "#fff", weight=500, ls=3, upper=True, nowrap=True, mn=12, op=0.75),
+        box(W // 2 - 70, 400, 140, 140, TH["accent"], z=5, radius=300),
+        T("→", W // 2 - 70, 400, 140, 140, 84, "inter", "#fff", fit=False, weight=700, align="center", flex="center", lh=1.0, bleed=True, z=6),
+        T(why, M, ph + 44, W - 2 * M, 230, 36, "inter", TH["ink"], weight=500, lh=1.4, mn=26),
+        *footer(TH, i + 2, n),
+    ]}
+
+
 def build():
     n = 6
     els = []
     for k, p in enumerate(PAIRS):
-        x = k * 270
-        els.append(img(grade(p[0][3], (270, 520), (0.25, 0, 0.75, 1)), x, 0, 270, 520, z=1))
-        els.append(img(grade(p[1][3], (270, 520), (0.25, 0, 0.75, 1)), x, 830, 270, 520, z=1))
+        y = k * 337
+        els.append(img(prep(p[0][3], size=(540, 337), gray=True, contrast=1.1, grain=8), 0, y, 540, 338, z=1))
+        els.append(img(prep(p[1][3], size=(540, 337), contrast=1.05, sat=1.12, grain=8), 540, y, 540, 338, z=1))
     els += [
-        box(0, 520, W, 310, TH["accent"], z=3),
-        T("BUNU SEVDİYSEN,<br>BUNU İZLE", M, 560, W - 2 * M, 240, 130, "anton", "#fff", nowrap=True, mn=60, lh=1.08),
-        T("Üstte sevdiğin, altta izleyeceğin film", M, 860, 800, 34, 22, "oswald", "#fff", fit=False, weight=500, ls=3, upper=True, op=0.0),
-        logo("white", W - M - 58, 1252, 58, z=9),
+        box(60, 470, 960, 410, TH["accent"], z=4),
+        T("BUNU SEVDİYSEN,<br>BUNU İZLE", 100, 500, 880, 250, 130, "anton", "#fff", nowrap=True, mn=60, lh=1.08, align="center", z=5),
+        T("SOLDAKİ SEVDİĞİN, SAĞDAKİ İZLEYECEĞİN FİLM", 100, 790, 880, 36, 22, "oswald", "#fff", weight=500, ls=4, align="center", nowrap=True, mn=14, z=5, op=0.9),
+        logo("white", W - M - 58, 64, 58, z=9),
     ]
     cover = {"bg": TH["bg"], "els": els}
-    slides = [cover]
-    for i, (a, b, why, _) in enumerate(PAIRS):
-        slides.append(pair_slide(TH, i + 2, n, (a[0], a[1], a[2]), (b[0], b[1], b[2]), why))
+    slides = [cover] + [split_pair(i, n) for i in range(4)]
     slides.append(cta_slide(TH, "SEN HANGİ<br>EŞLEŞMEYİ<br>EKLERDİN?", "\"X sevdiysen Y izle\" diye yorumlara yaz.", "Kaydet · Arkadaşına gönder"))
     return {"id": ID, "caption": CAPTION, "slides": slides}

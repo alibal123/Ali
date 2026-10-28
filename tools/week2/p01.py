@@ -23,37 +23,51 @@ FILMS = [
 
 
 
-def sub_label(text, y):
-    size = 28
-    w = int(len(text) * size * 0.62 + 56)
-    x = (W - w) // 2
-    return [box(x, y, w, 56, "rgba(0,0,0,.68)", z=6),
-            T(text, x, y, w, 56, size, "inter", "#fff", fit=False, weight=500, align="center", flex="center", nowrap=True, bleed=True, z=7)]
+
+def tri_left(x, y, w, h, color="#fff", z=8):
+    return box(x, y, w, h, color, z=z, clip="polygon(100% 0,0 50%,100% 100%)")
 
 
-def lb_film(i, n):
+def rewind_icon(x, y, k=1.0, color="#fff"):
+    w, h = int(34 * k), int(40 * k)
+    return [tri_left(x, y, w, h, color), tri_left(x + w - 2, y, w, h, color)]
+
+
+def player_bar(i, n, y=1250):
+    tw = W - 2 * M
+    fill = int(tw * i / n)
+    return [box(M, y, tw, 6, "rgba(255,255,255,.35)", z=8), box(M, y, fill, 6, "#fff", z=9),
+            box(M + fill - 11, y - 8, 22, 22, "#fff", z=10, radius=40)]
+
+
+def pl_film(i, n):
     title, meta, body, src, _, _, tag, _x = FILMS[i]
-    return {"bg": TH["bg"], "els": [
-        T(f"{i+1:02d}", M, 84, 200, 36, 28, "oswald", TH["accent"], fit=False, weight=500, ls=6, bleed=False),
-        T(title, M, 140, W - 2 * M, 110, 100, "anton", TH["ink"], nowrap=True, mn=48, lh=1.05),
-        T(meta, M, 268, W - 2 * M, 36, 26, "oswald", TH["ink"], weight=500, ls=4, upper=True, nowrap=True, mn=18, op=0.6),
-        img(grade(src, (1080, 608), contrast=1.05, sat=1.05), 0, 350, W, 608, z=2),
-        *sub_label("— " + tag + ("" if tag[-1] in "?!." else "."), 958 - 100),
-        T(body, M, 1010, W - 2 * M, 210, 40, "inter", TH["ink"], weight=500, lh=1.4, mn=28),
-        *footer(TH, i + 1, n),
+    return {"bg": "#000", "els": [
+        img(grade(src, (1080, 1350), grain=8), 0, 0, W, H, z=1),
+        box(0, 480, W, 870, "linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.8) 62%)", z=2),
+        *rewind_icon(M, 78, 0.8),
+        T("BAŞA SAR", M + 80, 76, 400, 40, 26, "oswald", "#fff", fit=False, weight=500, ls=6, nowrap=True),
+        logo("white", W - M - 58, 64, 58, z=9),
+        label(tag, M, 700, bg=TH["accent"], color="#fff", size=22, z=6),
+        T(title, M, 790, W - 2 * M, 130, 118, "anton", "#fff", nowrap=True, mn=48, lh=1.05),
+        T(meta, M, 940, W - 2 * M, 34, 26, "oswald", "#fff", weight=500, ls=4, upper=True, nowrap=True, mn=18, op=0.8),
+        T(body, M, 996, W - 2 * M, 190, 38, "inter", "#fff", weight=500, lh=1.4, mn=26),
+        T(f"{i+1:02d} / {n:02d}", M, 1198, 200, 30, 22, "oswald", "#fff", fit=False, weight=500, ls=4, op=0.8),
+        *player_bar(i + 1, 5),
     ]}
 
 
 def build():
-    n = 7
-    cover = {"bg": TH["bg"], "els": [
-        *kicker(TH, "Liste · 5 film", M, 80),
-        T("BİTİNCE<br>BAŞA SARDIRAN", M, 150, W - 2 * M, 330, 170, "anton", TH["ink"], nowrap=True, mn=70, lh=1.08),
-        img(grade(S("prestige", 3), (1080, 608), contrast=1.05), 0, 520, W, 608, z=2),
-        *sub_label("— Spoiler yok.", 1028 - 100),
-        T("Kaydet, sırayla izle.", M, 1170, 700, 40, 28, "inter", TH["ink"], weight=500, nowrap=True, op=0.75),
-        logo(TH["logo"], W - M - 58, 1252, 58, z=9),
+    n = 5
+    cover = {"bg": "#000", "els": [
+        img(grade(S("sixthsense", 2), (1080, 1350), (0.05, 0, 0.95, 1), grain=8), 0, 0, W, H, z=1),
+        box(0, 300, W, 1050, "linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.9) 58%)", z=2),
+        logo("white", W - M - 58, 64, 58, z=9),
+        *rewind_icon(M, 560, 2.4),
+        T("BİTİNCE<br>BAŞA<br>SARDIRAN", M, 700, W - 2 * M, 480, 175, "anton", "#fff", nowrap=True, mn=70, lh=1.06),
+        T("5 film · Spoiler yok · Kaydet", M, 1200, 800, 30, 24, "oswald", "#fff", fit=False, weight=500, ls=4, upper=True, nowrap=True, op=0.85),
+        *player_bar(0, 5),
     ]}
-    slides = [cover] + [lb_film(i, n) for i in range(5)]
+    slides = [cover] + [pl_film(i, n) for i in range(5)]
     slides.append(cta_slide(TH, "SONU SENİ<br>ŞAŞIRTAN FİLM<br>HANGİSİ?", "Yorumlara yaz, ama sonunu anlatma.", "Kaydet · Sırayla izle"))
     return {"id": ID, "caption": CAPTION, "slides": slides}
