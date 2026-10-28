@@ -1,91 +1,92 @@
 {
- "generated_at": "2026-10-27T09:53+00:00",
- "followers": 27387,
+ "generated_at": "2026-10-28T10:40+00:00",
+ "followers": 27397,
  "scoring": "beğeni + 3×yorum; 48 saatten genç gönderiler hariç",
  "formats": {
   "BELGESEL": {
    "n": 1,
    "median": 9,
    "best": 9,
-   "adjusted": 13.7
+   "adjusted": 14.3
   },
   "DİĞER": {
    "n": 1,
    "median": 12,
    "best": 12,
-   "adjusted": 14.7
+   "adjusted": 15.3
   },
   "EŞLEŞTİRME": {
    "n": 1,
    "median": 20,
    "best": 20,
-   "adjusted": 17.3
+   "adjusted": 18.0
   },
   "FİLM": {
    "n": 8,
    "median": 18.5,
    "best": 55,
-   "adjusted": 18.0
+   "adjusted": 18.2
   },
   "HABER": {
    "n": 8,
    "median": 11.0,
    "best": 21,
-   "adjusted": 12.0
+   "adjusted": 12.2
   },
   "KARŞILAŞTIRMA": {
    "n": 1,
    "median": 7,
    "best": 7,
-   "adjusted": 13.0
+   "adjusted": 13.7
   },
   "LİSTE": {
-   "n": 6,
-   "median": 159.0,
-   "best": 1170,
-   "adjusted": 123.2
+   "n": 7,
+   "median": 123,
+   "best": 1171,
+   "adjusted": 99.4
   },
   "OYUN": {
    "n": 3,
    "median": 7,
    "best": 44,
-   "adjusted": 10.6
+   "adjusted": 11.0
   },
   "SAHNE": {
    "n": 1,
    "median": 17,
    "best": 17,
-   "adjusted": 16.3
+   "adjusted": 17.0
   },
   "VERİ": {
    "n": 1,
    "median": 19,
    "best": 19,
-   "adjusted": 17.0
+   "adjusted": 17.7
   }
  },
  "evening_weights": {
-  "BELGESEL": 0.073,
-  "DİĞER": 0.077,
-  "EŞLEŞTİRME": 0.087,
-  "FİLM": 0.089,
-  "KARŞILAŞTIRMA": 0.07,
-  "LİSTE": 0.377,
-  "OYUN": 0.06,
-  "SAHNE": 0.083,
-  "VERİ": 0.085
+  "BELGESEL": 0.078,
+  "DİĞER": 0.082,
+  "EŞLEŞTİRME": 0.093,
+  "FİLM": 0.093,
+  "KARŞILAŞTIRMA": 0.076,
+  "LİSTE": 0.334,
+  "OYUN": 0.064,
+  "SAHNE": 0.089,
+  "VERİ": 0.092
  },
  "weekly_plan_20_00": {
-  "LİSTE": 3,
-  "FİLM": 1,
+  "LİSTE": 2,
   "EŞLEŞTİRME": 1,
+  "FİLM": 1,
   "VERİ": 1,
-  "SAHNE": 1
+  "SAHNE": 1,
+  "DİĞER": 1
  },
  "ranking": [
   "LİSTE",
-  "FİLM",
   "EŞLEŞTİRME",
+  "FİLM",
   "VERİ",
   "SAHNE",
   "DİĞER",
@@ -95,14 +96,14 @@
  ],
  "media_types": {
   "CAROUSEL_ALBUM": {
-   "n": 53,
-   "median": 16,
+   "n": 54,
+   "median": 16.0,
    "mean": 52
   },
   "REELS": {
-   "n": 147,
-   "median": 86,
-   "mean": 1378
+   "n": 146,
+   "median": 83.5,
+   "mean": 1385
   }
  },
  "posts": [
@@ -110,10 +111,10 @@
    "id": "gun1_liste",
    "format": "LİSTE",
    "slot": "20:00",
-   "likes": 918,
+   "likes": 919,
    "comments": 84,
-   "score": 1170,
-   "age_h": 616,
+   "score": 1171,
+   "age_h": 641,
    "mature": true
   },
   {
@@ -123,7 +124,7 @@
    "likes": 21,
    "comments": 2,
    "score": 27,
-   "age_h": 592,
+   "age_h": 617,
    "mature": true
   },
   {
@@ -133,7 +134,7 @@
    "likes": 9,
    "comments": 0,
    "score": 9,
-   "age_h": 568,
+   "age_h": 593,
    "mature": true
   },
   {
@@ -143,7 +144,7 @@
    "likes": 23,
    "comments": 7,
    "score": 44,
-   "age_h": 544,
+   "age_h": 569,
    "mature": true
   },
   {
@@ -153,7 +154,7 @@
    "likes": 49,
    "comments": 2,
    "score": 55,
-   "age_h": 520,
+   "age_h": 545,
    "mature": true
   },
   {
@@ -163,7 +164,7 @@
    "likes": 108,
    "comments": 29,
    "score": 195,
-   "age_h": 497,
+   "age_h": 522,
    "mature": true
   },
   {
@@ -173,7 +174,7 @@
    "likes": 20,
    "comments": 0,
    "score": 20,
-   "age_h": 472,
+   "age_h": 497,
    "mature": true
   },
   {
@@ -183,7 +184,7 @@
    "likes": 11,
    "comments": 2,
    "score": 17,
-   "age_h": 454,
+   "age_h": 479,
    "mature": true
   },
   {
@@ -193,7 +194,7 @@
    "likes": 22,
    "comments": 0,
    "score": 22,
-   "age_h": 448,
+   "age_h": 473,
    "mature": true
   },
   {
@@ -203,7 +204,7 @@
    "likes": 10,
    "comments": 1,
    "score": 13,
-   "age_h": 430,
+   "age_h": 455,
    "mature": true
   },
   {
@@ -213,7 +214,7 @@
    "likes": 7,
    "comments": 0,
    "score": 7,
-   "age_h": 424,
+   "age_h": 449,
    "mature": true
   },
   {
@@ -223,7 +224,7 @@
    "likes": 8,
    "comments": 0,
    "score": 8,
-   "age_h": 406,
+   "age_h": 431,
    "mature": true
   },
   {
@@ -233,7 +234,7 @@
    "likes": 7,
    "comments": 4,
    "score": 19,
-   "age_h": 400,
+   "age_h": 425,
    "mature": true
   },
   {
@@ -243,7 +244,7 @@
    "likes": 12,
    "comments": 0,
    "score": 12,
-   "age_h": 382,
+   "age_h": 407,
    "mature": true
   },
   {
@@ -253,7 +254,7 @@
    "likes": 84,
    "comments": 13,
    "score": 123,
-   "age_h": 376,
+   "age_h": 401,
    "mature": true
   },
   {
@@ -263,7 +264,7 @@
    "likes": 9,
    "comments": 4,
    "score": 21,
-   "age_h": 358,
+   "age_h": 383,
    "mature": true
   },
   {
@@ -273,7 +274,7 @@
    "likes": 14,
    "comments": 0,
    "score": 14,
-   "age_h": 352,
+   "age_h": 377,
    "mature": true
   },
   {
@@ -283,7 +284,7 @@
    "likes": 10,
    "comments": 0,
    "score": 10,
-   "age_h": 334,
+   "age_h": 359,
    "mature": true
   },
   {
@@ -293,7 +294,7 @@
    "likes": 18,
    "comments": 0,
    "score": 18,
-   "age_h": 328,
+   "age_h": 353,
    "mature": true
   },
   {
@@ -303,7 +304,7 @@
    "likes": 2,
    "comments": 0,
    "score": 2,
-   "age_h": 310,
+   "age_h": 335,
    "mature": true
   },
   {
@@ -313,7 +314,7 @@
    "likes": 7,
    "comments": 0,
    "score": 7,
-   "age_h": 304,
+   "age_h": 329,
    "mature": true
   },
   {
@@ -323,7 +324,7 @@
    "likes": 3,
    "comments": 0,
    "score": 3,
-   "age_h": 285,
+   "age_h": 309,
    "mature": true
   },
   {
@@ -333,7 +334,7 @@
    "likes": 6,
    "comments": 0,
    "score": 6,
-   "age_h": 280,
+   "age_h": 305,
    "mature": true
   },
   {
@@ -343,7 +344,7 @@
    "likes": 12,
    "comments": 0,
    "score": 12,
-   "age_h": 262,
+   "age_h": 287,
    "mature": true
   },
   {
@@ -353,7 +354,7 @@
    "likes": 6,
    "comments": 0,
    "score": 6,
-   "age_h": 256,
+   "age_h": 281,
    "mature": true
   },
   {
@@ -363,7 +364,7 @@
    "likes": 17,
    "comments": 0,
    "score": 17,
-   "age_h": 232,
+   "age_h": 257,
    "mature": true
   },
   {
@@ -373,7 +374,7 @@
    "likes": 9,
    "comments": 2,
    "score": 15,
-   "age_h": 208,
+   "age_h": 233,
    "mature": true
   },
   {
@@ -383,57 +384,67 @@
    "likes": 10,
    "comments": 0,
    "score": 10,
-   "age_h": 184,
+   "age_h": 209,
    "mature": true
   },
   {
    "id": "2026-10-20_film_schindler-tek-renk",
    "format": "FİLM",
    "slot": "20:00",
-   "likes": 22,
+   "likes": 23,
    "comments": 6,
-   "score": 40,
-   "age_h": 160,
+   "score": 41,
+   "age_h": 185,
    "mature": true
   },
   {
    "id": "2026-10-21_liste-7-oneri",
    "format": "LİSTE",
    "slot": "20:00",
-   "likes": 16,
+   "likes": 18,
    "comments": 0,
-   "score": 16,
-   "age_h": 136,
+   "score": 18,
+   "age_h": 161,
    "mature": true
   },
   {
    "id": "2026-10-23_liste_gunlerce-pesini-birakmayan",
    "format": "LİSTE",
    "slot": "18:00",
-   "likes": 147,
-   "comments": 17,
-   "score": 198,
-   "age_h": 90,
+   "likes": 162,
+   "comments": 19,
+   "score": 219,
+   "age_h": 115,
    "mature": true
   },
   {
    "id": "2026-10-25_liste_akil-sagligina-zararlidir",
    "format": "LİSTE",
    "slot": "18:00",
-   "likes": 15,
+   "likes": 16,
    "comments": 1,
-   "score": 18,
-   "age_h": 42,
-   "mature": false
+   "score": 19,
+   "age_h": 67,
+   "mature": true
   },
   {
    "id": "2026-10-26_liste_keanu-son-sahnede-gonullu",
    "format": "LİSTE",
    "slot": "18:00",
-   "likes": 9,
+   "likes": 14,
    "comments": 0,
-   "score": 9,
-   "age_h": 18,
+   "score": 14,
+   "age_h": 43,
+   "mature": false
+  },
+  {
+   "id": "2026-10-27_liste_unutanlar-kulubu",
+   "format": "LİSTE",
+   "slot": "18:00",
+   "likes": 3,
+   "comments": 0,
+   "score": 3,
+   "age_h": 19,
    "mature": false
   }
  ],
@@ -441,7 +452,7 @@
   {
    "date": "2026-04-27",
    "type": "REELS",
-   "likes": 58939,
+   "likes": 58928,
    "comments": 164,
    "caption": "Four Lions",
    "permalink": "https://www.instagram.com/reel/DXoUsCyMfXm/"
@@ -449,7 +460,7 @@
   {
    "date": "2026-04-06",
    "type": "REELS",
-   "likes": 37726,
+   "likes": 37720,
    "comments": 165,
    "caption": "Shrek the Third (2007), taht meselesi yüzünden istemediği bir sorumluluğun eşiğine gelen bir karakterin, kendi",
    "permalink": "https://www.instagram.com/reel/DWyNvIpDP-z/"
@@ -465,7 +476,7 @@
   {
    "date": "2026-06-13",
    "type": "REELS",
-   "likes": 14310,
+   "likes": 14308,
    "comments": 96,
    "caption": "964 Pinocchio (1991), hafızası silinmiş ve sokağa terk edilmiş bir sibernetik insanın, kim olduğunu anlamaya ç",
    "permalink": "https://www.instagram.com/reel/DZhX_PYs05V/"
@@ -473,7 +484,7 @@
   {
    "date": "2026-04-05",
    "type": "REELS",
-   "likes": 7494,
+   "likes": 7493,
    "comments": 186,
    "caption": "Duvara Karşı (2004), hayatla bağı zayıflamış iki insanın tesadüfi biçimde aynı noktada buluşmasını anlatırken,",
    "permalink": "https://www.instagram.com/reel/DWvqozNjO8n/"
@@ -497,7 +508,7 @@
   {
    "date": "2026-06-29",
    "type": "REELS",
-   "likes": 3813,
+   "likes": 3812,
    "comments": 26,
    "caption": "Bir Koyun Polisiyesi (2026), sessiz ve huzurlu bir köyde yaşayan koyunların, çobanlarının esrarengiz şekilde o",
    "permalink": "https://www.instagram.com/reel/DaKhUprM6Rw/"
@@ -505,7 +516,7 @@
   {
    "date": "2026-03-25",
    "type": "REELS",
-   "likes": 3268,
+   "likes": 3267,
    "comments": 27,
    "caption": "Duvara Karşı (2004)",
    "permalink": "https://www.instagram.com/reel/DWTS36RDDoR/"
@@ -529,7 +540,7 @@
   {
    "date": "2026-06-02",
    "type": "REELS",
-   "likes": 2537,
+   "likes": 2536,
    "comments": 38,
    "caption": "They Will Kill You (2026)",
    "permalink": "https://www.instagram.com/reel/DZFA-9IswUS/"
@@ -537,7 +548,7 @@
   {
    "date": "2026-08-10",
    "type": "REELS",
-   "likes": 1999,
+   "likes": 2005,
    "comments": 83,
    "caption": "The Invite (2026), evlilikleri sorunlu bir çiftin üst kattaki komşularını akşam yemeğine davet etmesiyle başlı",
    "permalink": "https://www.instagram.com/reel/Db3g4FGsHLo/"
@@ -545,7 +556,7 @@
   {
    "date": "2026-05-06",
    "type": "REELS",
-   "likes": 1974,
+   "likes": 1973,
    "comments": 12,
    "caption": "9 (2009), insanlığın yok olduğu bir dünyada, küçük bez kuklaların hayatta kalma mücadelesini anlatır. Film, gö",
    "permalink": "https://www.instagram.com/reel/DX_bwb-shst/"
@@ -585,7 +596,7 @@
   {
    "date": "2026-10-01",
    "type": "FEED",
-   "likes": 918,
+   "likes": 919,
    "comments": 84,
    "caption": "Sonunu kimseye anlatamayacağın 5 film. Hepsinin ortak noktası şu: izlerken her şeyi anladığını düşünüyorsun, b",
    "permalink": "https://www.instagram.com/p/Dd9boxgnPJs/"
@@ -602,14 +613,14 @@
  "top_carousels": [
   {
    "date": "2026-10-01",
-   "likes": 918,
+   "likes": 919,
    "comments": 84,
    "caption": "Sonunu kimseye anlatamayacağın 5 film. Hepsinin ortak noktası şu: izlerken her şeyi anladığını düşünüyorsun, b"
   },
   {
    "date": "2026-10-23",
-   "likes": 147,
-   "comments": 17,
+   "likes": 162,
+   "comments": 19,
    "caption": "İzledikten sonra günlerce peşini bırakmayan 5 film. Hepsinin ortak noktası: bitince ekranı kapatıyorsun ama ak"
   },
   {
