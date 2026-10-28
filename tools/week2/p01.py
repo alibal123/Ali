@@ -3,6 +3,7 @@ ORG, CRM, BLU, INK, YEL = "#ff5a1f", "#f4efe6", "#2447ff", "#14110f", "#ffd23f"
 
 ID = "2026-10-30_liste_basa-sardiran-5-film"
 TH = theme("#f1ece3", "#161412", "#c8321f", on_acc="#fff", head="anton")
+LOGO = dict(pos="tr", w=72, on_light="red", on_dark="white")
 CAPTION = """İzledim, şimdi başa sarıyorum. Bitince "dur, bir daha bakayım" dedirten 5 film. Hepsinin ortak noktası şu: ilk izlemede hikâyeyi anladığını sanıyorsun, ikinci izlemede her sahnede bir ipucu görüp "bunu nasıl kaçırdım" diyorsun.
 
 The Prestige (2006) birbirini alt etmeye çalışan iki sihirbazın takıntısını, Shutter Island (2010) bir adadaki akıl hastanesinden kaybolan hastanın izini, The Usual Suspects (1995) bir sorgu odasında anlatılan hikâyenin ne kadarının doğru olduğunu, Gone Girl (2014) evlilik yıldönümünde kaybolan bir kadının ardından başlayan şüpheyi, The Sixth Sense (1999) ise ölüleri gördüğünü söyleyen bir çocuğun hikâyesini anlatıyor.

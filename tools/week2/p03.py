@@ -1,17 +1,17 @@
 from pro import *
 
 ID = "2026-10-31_liste_cadilar-bayrami-5-film"
-INK = "#24163a"
-TH = theme("#ff7a1a", INK, "#ffd23f", on_acc=INK, head="anton", accent_txt=INK, logo_light="black")
-BGS = ["#ffd23f", "#c3a0f5", "#86dcb8", "#ff9fba", "#92cbff"]
+INK, TEAL, CRM, ORG = "#24163a", "#0f3b3a", "#f6ecd6", "#ff8a2a"
+TH = theme(TEAL, CRM, ORG, on_acc=TEAL, head="anton", accent_txt=ORG, logo_light="white")
+LOGO = dict(pos="bc", w=84, on_light="black", on_dark="yellow")
 
-CAPTION = """Şeker verirsen korkutmayız. Cadılar Bayramı gecesi için çocukluğumuzun cadıları, hayaletleri ve tuhaf dünyaları: kan yok, gerilim yok, sıfır kâbus. 5 film.
+CAPTION = """Cumartesi gecesi evde kalanlar kulübü: Cadılar Bayramı'nı kutlamıyorsun ama bir film açmak istiyorsun. Kan yok, gerilim yok; sevimli hayaletler, komik cadılar ve tuhaf dünyalar. Ürkütmeyen 5 film.
 
 Beetlejuice (1988) hayaletlere yardım eden çılgın bir "biyo-egzorsist"i, Hocus Pocus (1993) yüzyıllar sonra dirilen üç cadı kardeşi, Coraline (2009) gizli bir kapının ardındaki "öteki" dünyayı, The Nightmare Before Christmas (1993) Cadılar Bayramı Şehri'nin kralı Jack'in Noel merakını, Casper (1995) ise dost canlısı bir hayaletin hikâyesini anlatıyor.
 
-Bu akşam bunlardan hangisini açıyorsun?
+Bu akşam hangisini açıyorsun?
 
-Yarın 18:00'de: "Bunu sevdiysen şunu izle", birbirine benzeyen 4 film çifti."""
+Yarın 13:00'te: Dunesday, yani 18 Aralık'ta aynı gün vizyona girecek iki dev film."""
 
 FILMS = [
     ("BEETLEJUICE", "1988 · Tim Burton", "Hayalet olan çift evlerini yeni sahiplerinden kurtarmak için çılgın bir biyo-egzorsistten medet umar. Oscar'ı En İyi Makyaj dalında aldı.", S("beetlejuice", 1), S("beetlejuice", 2), "Çılgın"),
@@ -68,32 +68,35 @@ def film(i, n):
     rots = [-4, 3, -3, 4, -3]
     sizes = [(700, 620), (880, 560), (420, 640), (760, 600), (820, 560)]
     sw, sh = sizes[i]
-    return {"bg": BGS[i], "els": [
-        T(f"{i+1:02d}", M, 56, 200, 90, 80, "anton", INK, fit=False, lh=1.0, nowrap=True),
-        label(tag.upper(), W - M - 340, 70, bg=INK, color="#fff", size=22, z=8),
-        stk(CUTS[i], 540, 410, sw, sh, rot=rots[i]),
-        T(title, M, 800, W - 2 * M, 130, 104, "anton", INK, nowrap=True, mn=44, lh=1.05, align="center", z=6),
-        T(meta, M, 936, W - 2 * M, 34, 26, "oswald", INK, weight=500, ls=5, upper=True, nowrap=True, mn=16, align="center", op=0.75),
-        T(body, 110, 992, W - 220, 190, 36, "inter", INK, weight=500, lh=1.38, mn=26, align="center"),
-        T(f"{i+1} / 6", M, 1268, 200, 34, 22, "oswald", INK, fit=False, weight=500, ls=4, op=0.6),
-        logo("black", W - M - 58, 1252, 58, z=9),
+    return {"bg": TEAL, "els": [
+        box(540 - 330, 90, 660, 660, ORG, z=2, radius=700),
+        T(f"{i+1:02d}", M, 56, 200, 90, 80, "anton", CRM, fit=False, lh=1.0, nowrap=True, z=8),
+        label(tag.upper(), W - M - 340, 70, bg=CRM, color=TEAL, size=22, z=8),
+        stk(CUTS[i], 540, 430, sw, sh, rot=rots[i]),
+        T(title, M, 800, W - 2 * M, 130, 104, "anton", CRM, nowrap=True, mn=44, lh=1.12, align="center", z=6),
+        T(meta, M, 940, W - 2 * M, 34, 26, "oswald", ORG, weight=500, ls=5, upper=True, nowrap=True, mn=16, align="center"),
+        T(body, 110, 996, W - 220, 190, 36, "inter", CRM, weight=500, lh=1.38, mn=26, align="center"),
+        T(f"{i+2} / {n}", M, 1284, 200, 34, 22, "oswald", CRM, fit=False, weight=500, ls=4, op=0.6),
     ]}
 
 
 def build():
     n = 7
     els = [
-        T("ŞEKER<br>VERİRSEN<br>KORKUTMAYIZ", M, 70, W - 2 * M, 560, 165, "anton", INK, nowrap=True, mn=70, lh=1.24, z=3),
-        T("CADILAR BAYRAMI İÇİN 5 FİLM", M, 630, 800, 34, 26, "oswald", INK, fit=False, weight=500, ls=6, upper=True, nowrap=True, z=3),
-        stk("casper_1", 830, 840, 440, 360, rot=5, z=4),
-        stk("hocuspocus_1", 440, 950, 620, 450, rot=-4, z=6),
-        stk("coraline_3", 170, 880, 190, 380, rot=-6, z=5),
-        stk("beetlejuice_2", 830, 1090, 380, 440, rot=6, z=7),
-        stk("nightmare_3", 190, 1130, 230, 230, rot=-4, z=8),
-        T("Sıfır kâbus. Kaydet, bu gece aç.", 360, 1290, 600, 36, 24, "inter", INK, weight=600, nowrap=True, z=9),
-        logo("black", W - M - 58, 1262, 58, z=9),
+        box(220, 640, 860, 860, ORG, z=1, radius=1000),
+        T("CUMARTESİ GECESİ<br>EVDE KALANLAR<br>KULÜBÜ", M, 80, W - 2 * M, 470, 140, "anton", CRM, nowrap=True, mn=70, lh=1.14, z=3),
+        T("CADILAR BAYRAMI İÇİN ÜRKÜTMEYEN 5 FİLM", M, 600, 900, 34, 24, "oswald", ORG, fit=False, weight=500, ls=5, upper=True, nowrap=True, z=3),
+        stk("casper_1", 830, 900, 440, 340, rot=5, z=4),
+        stk("hocuspocus_1", 440, 1000, 620, 430, rot=-4, z=6),
+        stk("coraline_3", 150, 920, 190, 360, rot=-6, z=5),
+        stk("beetlejuice_2", 840, 1090, 360, 400, rot=6, z=7),
+        stk("nightmare_3", 170, 1170, 220, 200, rot=-4, z=8),
     ]
-    cover = {"bg": "#ff7a1a", "els": els}
+    cover = {"bg": TEAL, "els": els}
     slides = [cover] + [film(i, n) for i in range(5)]
-    slides.append(cta_slide(TH, "BU GECE<br>HANGİSİNİ<br>AÇIYORSUN?", "Yorumlara yaz, şekerleri ayır.", "Kaydet · Aileyle izle"))
+    slides.append({"bg": ORG, "els": [
+        T("BU CUMARTESİ<br>HANGİSİNİ<br>AÇIYORSUN?", M, 110, W - 2 * M, 520, 130, "anton", TEAL, nowrap=True, mn=60, lh=1.14),
+        T("Yorumlara yaz, battaniyeyi çek.", M, 700, W - 2 * M, 50, 36, "inter", TEAL, weight=600, nowrap=True),
+        label("Kaydet · Cumartesiye sakla", M, 790, bg=TEAL, color=CRM, size=24),
+    ]})
     return {"id": ID, "caption": CAPTION, "slides": slides}

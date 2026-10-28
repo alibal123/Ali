@@ -3,6 +3,7 @@ from pro import *
 ID = "2026-11-03_liste_buyuyunce-vuran-animasyon"
 PEACH = MINT = LILAC = BUT = SKY = "#fff"
 TH = theme("#eaf4ff", "#16213e", "#ffb703", on_acc="#16213e", head="serif", accent_txt="#a86a00")
+LOGO = dict(pos="br", w=92, on_light="bluepurple", on_dark="white")
 
 CAPTION = """Çizgi film diye girdim, ağlayarak çıktım. Çocukken renkleri için izlemiştin. Büyüyünce konuşmadıkları şeyin ne kadar ağır olduğunu fark ediyorsun. Çocukken izlediğin, büyüyünce başka vuran 5 animasyon.
 

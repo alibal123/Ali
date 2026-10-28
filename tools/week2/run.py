@@ -8,7 +8,11 @@ import engine
 allbad = 0
 for name in sys.argv[1:]:
     mod = importlib.import_module(name)
-    out, bad = engine.render(mod.build())
+    spec = mod.build()
+    if hasattr(mod, 'LOGO'):
+        import pro
+        spec['slides'] = pro.relogo(spec['slides'], **mod.LOGO)
+    out, bad = engine.render(spec)
     allbad += len(bad)
     fs = sorted(glob.glob(os.path.join(out, "*.jpg")))
     cols = 4 if len(fs) > 6 else 3

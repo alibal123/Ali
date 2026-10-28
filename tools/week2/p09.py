@@ -5,6 +5,7 @@ ID = "2026-11-04_liste_battaniye-filmleri"
 CRM, INK = "#f4ede2", "#2a2420"
 MUS, SAGE, ROSE, SKY = "#f2c24f", "#a8c4ab", "#f0a9a0", "#a9c8e8"
 TH = theme(CRM, INK, MUS, on_acc=INK, head="anton", acc_logo="black")
+LOGO = dict(pos="br", w=96, on_light="red", on_dark="white")
 
 CAPTION = """Çayı demle, filmi biz seçtik. Battaniyeye sarılıp çayı demleyince açılacak 4 film: gürültü yok, yıkım yok, sadece sıcacık hikâyeler.
 

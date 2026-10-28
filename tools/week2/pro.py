@@ -174,3 +174,22 @@ def pair_slide(th, i, n, a, b, why):
             T(why, M, ph + 64 + ph + 34, W - 2 * M, 176, 38, "inter", th["ink"], weight=500, lh=1.38, mn=26),
             *footer(th, i, n)]
     return {"bg": th["bg"], "els": els}
+
+
+def relogo(slides, pos="br", w=96, on_light="black", on_dark="white", over=None, mx=56, my=50):
+    """Her slayttaki logoyu yeniden konumlandırır/renklendirir. over: {slayt_no(0'dan): logo_adı}."""
+    over = over or {}
+    def lum(c):
+        try:
+            c = c.lstrip("#"); r, g, b = (int(c[i:i + 2], 16) for i in (0, 2, 4))
+            return (0.299 * r + 0.587 * g + 0.114 * b) / 255
+        except Exception:
+            return 0.0
+    X = {"l": mx, "r": 1080 - mx - w, "c": (1080 - w) // 2}
+    Y = {"t": my, "b": 1350 - my - w}
+    x, y = X[pos[1]], Y[pos[0]]
+    for i, s in enumerate(slides):
+        s["els"] = [e for e in s["els"] if e.get("type") != "logo"]
+        name = over.get(i) or (on_light if lum(s.get("bg", "#000")) > 0.55 else on_dark)
+        s["els"].append(logo(name, x, y, w, z=30))
+    return slides

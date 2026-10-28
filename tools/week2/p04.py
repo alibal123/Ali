@@ -1,5 +1,4 @@
 from pro import *
-import cut
 
 ID = "2026-11-01_eslestirme_bunu-sevdiysen"
 CRM, INK = "#f3f1ec", "#14110f"
@@ -14,69 +13,60 @@ Sen hangi eşleşmeyi eklerdin? "X sevdiysen Y" diye yorumlara yaz.
 Yarın 13:00'te: Kasım ayında sinemaya gelecek 5 film."""
 
 PAIRS = [
-    # A: (ad, başlık, meta, kesit)  B: ...   renk1, renk2, sebep
-    (("KNIVES OUT", "2019 · Rian Johnson", "knivesout_2"), ("GOSFORD PARK", "2001 · Robert Altman", "gosford_2"), "#e8412e", "#2447d9",
-     "Bir malikane, bir cinayet, herkes şüpheli: Gosford Park 1932'de geçen, kalabalık kadrolu bir polisiye."),
-    (("PARASITE", "2019 · Bong Joon-ho", "parasite_2"), ("SHOPLIFTERS", "2018 · Hirokazu Kore-eda", "shoplifters_3"), "#ffc933", "#0f8f6a",
+    (("KNIVES OUT", "2019 · Rian Johnson", S("knivesout", 1), (0, 0.12, 1, 0.82)), ("GOSFORD PARK", "2001 · Robert Altman", S("gosford", 3), (0, 0.05, 1, 0.78)), "#e8412e", "#2447d9",
+     "Bir malikane, bir cinayet, herkes şüpheli. Gosford Park, 1932'de geçen kalabalık kadrolu bir polisiye; Knives Out'un ilham aldığı türün ustası."),
+    (("PARASITE", "2019 · Bong Joon-ho", S("parasite", 1), (0, 0.1, 1, 0.85)), ("SHOPLIFTERS", "2018 · Hirokazu Kore-eda", S("shoplifters", 1), (0, 0.1, 1, 0.85)), "#e9a800", "#0f8f6a",
      "Sınıf farkını incelikle anlatan iki film: ikisi de Cannes'da Altın Palmiye aldı. Shoplifters, geçimini hırsızlıkla sağlayan bir ailenin hikâyesi."),
-    (("LA LA LAND", "2016 · Damien Chazelle", "lalaland_2"), ("WHIPLASH", "2014 · Damien Chazelle", "whiplash_3"), "#7a4dff", "#ff7aa8",
-     "İkisi de Damien Chazelle filmi: La La Land'in büyülü müziğinin ardından Whiplash, tutkunun bedelini bir davulcu üzerinden anlatıyor."),
+    (("LA LA LAND", "2016 · Damien Chazelle", S("lalaland", 2), (0, 0.08, 1, 0.9)), ("WHIPLASH", "2014 · Damien Chazelle", S("whiplash", 5), (0, 0.1, 1, 0.8)), "#7a4dff", "#d6336c",
+     "İkisi de Damien Chazelle filmi. La La Land'in büyülü müziğinden sonra Whiplash, tutkunun bedelini bir davulcu üzerinden anlatıyor."),
 ]
+LOGO = dict(pos="tr", w=78, on_light="red", on_dark="white")
 
 
-def dark(c, f=0.8):
-    c = c.lstrip("#")
-    return "#" + "".join(f"{int(int(c[k:k + 2], 16) * f):02x}" for k in (0, 2, 4))
-
-
-def wall(x, y, w, h, c):
-    return box(x, y, w, h, dark(c), z=6)
-
-
-PART = {"gosford_2": (0.46, 1.0), "whiplash_3": (0.24, 0.80)}
-
-
-def fig(name, bx, bw, bottom, max_h, gray, z, max_w=None):
-    p, w, h = cut.figure(name, max_w or bw + 40, max_h, gray=gray, contrast=(1.12 if gray else 1.04), sat=1.06, part=PART.get(name))
-    return img(p, bx + (bw - w) // 2, bottom - h, w, h, z=z, fit="contain")
+def shot(name, crop, x, y, w, h, title, meta, chip, col, ts=84, z=2):
+    return [
+        img(grade(name, (w, h), crop), x, y, w, h, z=z),
+        box(x, y + h // 2, w, h - h // 2, "linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.78))", z=z + 1),
+        label(chip, x + M, y + 28, bg=col, color="#fff", size=22, z=z + 3),
+        T(title, x + M, y + h - 176, w - 2 * M, 100, ts, "anton", "#fff", nowrap=True, mn=40, lh=1.12, z=z + 3),
+        T(meta, x + M, y + h - 58, w - 2 * M, 30, 22, "oswald", "#fff", weight=500, ls=4, upper=True, nowrap=True, mn=14, z=z + 3, op=0.85),
+    ]
 
 
 def pair_slide_n(i, n):
     a, b, c1, c2, why = PAIRS[i]
-    by, bh, bw = 330, 570, 452
-    bx1, bx2 = 64, 564
     return {"bg": CRM, "els": [
-        T(f"{i+1:02d}", M, 70, 200, 60, 44, "anton", INK, fit=False, lh=1.0, nowrap=True),
-        T("SEVDİYSEN → İZLE", W - M - 500, 84, 500, 34, 24, "oswald", INK, fit=False, weight=500, ls=6, align="right", nowrap=True, op=0.6),
-        box(bx1, by, bw, bh, c1, z=2), box(bx2, by, bw, bh, c2, z=2),
-        fig(a[2], bx1, bw, 880, 640, True, 4, max_w=bw + 20), fig(b[2], bx2, bw, 880, 640, False, 4, max_w=bw + 20),
-        wall(bx1, 836, bw, 64, c1), wall(bx2, 836, bw, 64, c2),
-        box(W // 2 - 48, 560, 96, 96, INK, z=9, radius=300),
-        T("→", W // 2 - 48, 560, 96, 96, 56, "inter", "#fff", fit=False, weight=700, align="center", flex="center", lh=1.0, bleed=True, z=10),
-        T("SEVDİN", bx1, 922, 300, 26, 20, "oswald", INK, fit=False, weight=500, ls=6, op=0.6),
-        T(a[0], bx1, 962, bw, 70, 54, "anton", INK, nowrap=True, mn=26, lh=1.05),
-        T(a[1], bx1, 1036, bw, 28, 17, "oswald", INK, weight=500, ls=3, upper=True, nowrap=True, mn=12, op=0.6),
-        T("İZLE", bx2, 922, 300, 26, 20, "oswald", c2 if c2 != "#ffc933" else INK, fit=False, weight=500, ls=6),
-        T(b[0], bx2, 962, bw, 70, 54, "anton", INK, nowrap=True, mn=26, lh=1.05),
-        T(b[1], bx2, 1036, bw, 28, 17, "oswald", INK, weight=500, ls=3, upper=True, nowrap=True, mn=12, op=0.6),
-        T(why, M, 1096, W - 2 * M, 140, 32, "inter", INK, weight=500, lh=1.4, mn=22),
-        *footer(TH, i + 2, n),
+        T(f"{i+1:02d}", M, 40, 200, 70, 52, "anton", INK, fit=False, lh=1.0, nowrap=True),
+        *shot(a[2], a[3], 0, 120, W, 440, a[0], a[1], "SEVDİN", c1),
+        box(0, 560, W, 90, INK, z=4),
+        T("BUNU SEVDİYSEN, ŞUNA BAK", M, 560, W - 2 * M - 120, 90, 30, "oswald", "#fff", fit=False, weight=500, ls=6, flex="center", nowrap=True, bleed=True, z=6),
+        box(W - M - 90, 545, 90, 90, c2, z=7, radius=300),
+        T("↓", W - M - 90, 545, 90, 90, 56, "inter", "#fff", fit=False, weight=700, align="center", flex="center", lh=1.0, bleed=True, z=8),
+        *shot(b[2], b[3], 0, 650, W, 440, b[0], b[1], "İZLE", c2),
+        T(why, M, 1118, W - 2 * M, 170, 34, "inter", INK, weight=500, lh=1.38, mn=24),
+        T(f"{i+2} / {n}", M, 1284, 200, 30, 20, "oswald", INK, fit=False, weight=500, ls=4, op=0.55),
     ]}
 
 
 def build():
     n = 5
     els = [
-        *kicker(TH, "3 eşleşme", M, 70),
-        T("FİLM BİTTİ,<br>BOŞLUK KALDI", M, 140, W - 2 * M, 340, 170, "anton", INK, nowrap=True, mn=70, lh=1.08),
+        *kicker(TH, "3 eşleşme", M, 50),
+        T("FİLM BİTTİ,<br>BOŞLUK KALDI", M, 135, W - 2 * M, 380, 170, "anton", INK, nowrap=True, mn=70, lh=1.1),
     ]
-    bw, by, bh = 300, 560, 540
+    rh, gap, y0 = 214, 18, 560
     for k, p in enumerate(PAIRS):
-        bx = M + k * (bw + 18)
-        els += [box(bx, by, bw, bh, p[3], z=2), fig(p[0][2], bx, bw, 1070, 640, False, 4, max_w=bw + 20), wall(bx, 1030, bw, 70, p[3])]
-    els += [T("Sevdiğin filmin ardından açılacak 3 yeni kapı.", M, 1150, W - 2 * M - 80, 40, 30, "inter", INK, weight=500, nowrap=True, mn=20, op=0.8),
-            T("Kaydet · Sırayla izle", M, 1206, 500, 30, 22, "oswald", INK, fit=False, weight=500, ls=5, upper=True, nowrap=True, op=0.55),
-            logo("black", W - M - 58, 1252, 58, z=9)]
+        y = y0 + k * (rh + gap)
+        for j, (f, col) in enumerate(((p[0], p[2]), (p[1], p[3]))):
+            x = M + j * 506 + (0 if j == 0 else 0)
+            w = 506 - 12
+            els.append(img(grade(f[2], (w, rh), f[3]), x, y, w, rh, z=2))
+            els.append(box(x, y + rh // 2, w, rh - rh // 2, "linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.75))", z=3))
+            els.append(box(x, y, 10, rh, col, z=4))
+            els.append(T(f[0], x + 28, y + rh - 62, w - 50, 44, 36, "anton", "#fff", nowrap=True, mn=18, lh=1.1, z=5))
+        els.append(box(540 - 36, y + rh // 2 - 36, 72, 72, INK, z=7, radius=300))
+        els.append(T("→", 540 - 36, y + rh // 2 - 36, 72, 72, 40, "inter", "#fff", fit=False, weight=700, align="center", flex="center", lh=1.0, bleed=True, z=8))
+    els += [T("Sevdiğin filmin ardından açılacak 3 yeni kapı.", M, 1262, W - 2 * M - 120, 40, 28, "inter", INK, weight=500, nowrap=True, mn=18, op=0.8)]
     slides = [{"bg": CRM, "els": els}] + [pair_slide_n(i, n) for i in range(3)]
     slides.append(cta_slide(TH, "SEN HANGİ<br>EŞLEŞMEYİ<br>EKLERDİN?", "\"X sevdiysen Y izle\" diye yorumlara yaz.", "Kaydet · Arkadaşına gönder"))
     return {"id": ID, "caption": CAPTION, "slides": slides}

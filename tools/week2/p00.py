@@ -3,6 +3,7 @@ from pro import *
 ID = "2026-10-29_liste_hayati-sorgulatan-4-film"
 PAPER, INK, GRN, CLAY = "#efe7d6", "#1f2a24", "#2f5d46", "#b5532f"
 TH = theme(PAPER, INK, GRN, on_acc="#fff", head="serif", accent_txt=GRN, upper=False)
+LOGO = dict(pos="bl", w=84, on_light="red", on_dark="white")
 
 CAPTION = """Yavaş ama derin. Telefonu bırakıp bir akşamını verebileceğin, bittiğinde "ben ne yapıyorum ya" dedirten 4 sakin film.
 
@@ -34,7 +35,7 @@ def film(i, n):
         T(body, M, 940, W - 2 * M, 130, 34, "inter", INK, weight=500, lh=1.38, mn=24),
         box(M, 1112, W - 2 * M, 2, INK, z=3, op=0.25),
         T(f"“{q}”", M, 1130, W - 2 * M, 80, 44, "caveat", CLAY, weight=700, nowrap=True, mn=26),
-        T(f"{i+1} / 6", M, 1268, 200, 34, 22, "oswald", INK, fit=False, weight=500, ls=4, op=0.6),
+        T(f"{i+2} / 6", W - M - 200, 1284, 200, 30, 22, "oswald", INK, fit=False, weight=500, ls=4, op=0.6, align="right"),
         logo("black", W - M - 58, 1252, 58, z=9),
     ]}
 
