@@ -19,7 +19,11 @@ def cutout(name):
         from rembg import remove, new_session
         _sess = _sess or new_session("u2net")
         src = Image.open(os.path.join(REPO, "assets", "stills", f"w_{name}.jpg")).convert("RGB")
-        remove(src, session=_sess).save(p)
+        out = remove(src, session=_sess, alpha_matting=True, alpha_matting_foreground_threshold=240,
+                     alpha_matting_background_threshold=10, alpha_matting_erode_size=8)
+        a = out.split()[3].filter(ImageFilter.MinFilter(3)).filter(ImageFilter.GaussianBlur(0.8))
+        out.putalpha(a)
+        out.save(p)
     return Image.open(p).convert("RGBA")
 
 
@@ -84,3 +88,28 @@ def pop_frame(name, fw, fh, ext=0.14, warm=0.18, center=None):
     frame.save(fp, quality=94)
     pop.save(pp)
     return {"frame": fp, "pop": pp, "pop_dy": int((top - y0) * s), "pop_h": pop.height}
+
+
+def figure_in_circle(name, cx, cy, D, over=60, wide=1.1, contrast=1.05, sat=1.06):
+    """Figür dairenin içinde durur: alt yarısı daire kenarıyla kırpılır, üst kısmı daireden taşar.
+    Döner: (png yolu, x, y, w, h) — daireyi ayrıca çiz (merkez cx,cy, çap D)."""
+    from PIL import ImageDraw
+    im = cutout(name)
+    x0, y0, x1, y1 = _bbox(im)
+    im = im.crop((x0, y0, x1, y1))
+    s = min((D + over) / im.height, D * wide / im.width)
+    w, h = int(im.width * s), int(im.height * s)
+    im = im.resize((w, h), Image.LANCZOS).filter(ImageFilter.UnsharpMask(1.2, 80, 2))
+    im = _tone(im, False, contrast, sat)
+    R = D / 2
+    fx, fy = int(cx - w / 2), int(cy + R - h)
+    allow = Image.new("L", (w, h), 0)
+    d = ImageDraw.Draw(allow)
+    d.rectangle((0, 0, w, max(0, int(cy - fy))), fill=255)          # daire merkezinin üstü serbest
+    d.ellipse((cx - R - fx, cy - R - fy, cx + R - fx, cy + R - fy), fill=255)
+    allow = allow.filter(ImageFilter.GaussianBlur(0.6))
+    im.putalpha(ImageChops.multiply(im.split()[3], allow))
+    key = hashlib.md5(repr((name, cx, cy, D, over, wide)).encode()).hexdigest()[:10]
+    p = os.path.join(OUT, f"cir_{name}_{key}.png")
+    im.save(p)
+    return p, fx, fy, w, h
