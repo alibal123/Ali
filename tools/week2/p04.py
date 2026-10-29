@@ -10,7 +10,7 @@ Knives Out'u sevdiysen Gosford Park'a, Parasite'i sevdiysen Shoplifters'a, La La
 
 Sen hangi eşleşmeyi eklerdin? "X sevdiysen Y" diye yorumlara yaz.
 
-Yarın 13:00'te: Kasım ayında sinemaya gelecek 5 film."""
+Yarın 13:00'te: Kasım ayında sinemaya gelecek 8 film."""
 
 PAIRS = [
     (("KNIVES OUT", "2019 · Rian Johnson", S("knivesout", 2), .57), ("GOSFORD PARK", "2001 · Robert Altman", S("gosford", 2), .72), "#ff4f5e",

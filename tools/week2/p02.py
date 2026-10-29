@@ -11,7 +11,7 @@ Avengers: Doomsday'de Robert Downey Jr. bu kez Iron Man değil, kötü adam Doct
 
 Sen 18 Aralık'ta hangi salona gireceksin? Avengers için 1, Dune için 2 yaz.
 
-Bugün 18:00'de: Cumartesi gecesi evde kalanlar kulübü için 5 ürkütmeyen film."""
+Bugün 18:00'de: Cumartesi gecesi evde kalanlar kulübü: ruh haline göre 5 film."""
 
 
 def scene(src, crop, shade="linear-gradient(180deg,rgba(0,0,0,.5) 0%,rgba(0,0,0,0) 22%,rgba(0,0,0,.6) 42%,rgba(0,0,0,.94) 62%,rgba(0,0,0,.98) 100%)"):
