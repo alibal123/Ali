@@ -1,9 +1,9 @@
 from pro import *
 
 ID = "2026-11-02_liste_2026-en-yuksek-puanli-5-film"
-TEAL, CRM, INK, RED = "#0e7c7b", "#f6f1e4", "#141a1a", "#d62d20"
-TH = theme(CRM, INK, RED, on_acc="#fff", head="anton")
-LOGO = dict(pos="tr", w=72, on_light="black", on_dark="white", over={1: "white", 2: "white", 3: "white", 4: "white", 5: "white"})
+PAPER, INK, RED, BLUE, CHALK = "#f2e9d2", "#2a2622", "#d3281c", "#1f46a8", "#1f3a32"
+TH = theme(PAPER, INK, RED, on_acc="#fff", head="anton")
+LOGO = dict(pos="tr", w=70, on_light="red", on_dark="white")
 
 CAPTION = """2026 karne günü: takdiri kimler aldı? Eylül 2025'ten bu yana vizyona giren ve en az 1.500 oy almış filmler arasında TMDB izleyici puanına göre en tepedeki 5 film hepsi bu yılın yapımı çıktı.
 
@@ -29,87 +29,98 @@ FILMS = [
 
 
 
-def stamp(x, y, w=300, rot=-9, z=20, size=56):
-    return [box(x, y, w, 100, "rgba(246,241,228,.0)", z=z, border=f"6px solid {RED}", radius=10, rot=rot),
-            T("TAKDİR", x, y, w, 100, size, "anton", RED, fit=False, align="center", flex="center", lh=1.0, ls=6, bleed=True, z=z + 1, rot=rot)]
+COMMENT = ["Küçük ama cesur. Ailecek izlenir.", "Fen dersinde sınıfı ikiye ayırdı. Tebrikler.", "Sahne performansında sınıf birincisi.", "Mahallenin en sevilen öğrencisi, yine zirvede.", "Sınıfın en eski öğrencileri, hâlâ çalışkan."]
+
+
+def paper(extra=()):
+    return [
+        box(0, 0, W, 1350, "repeating-linear-gradient(180deg, transparent 0px, transparent 62px, rgba(60,100,170,.20) 62px, rgba(60,100,170,.20) 64px)", z=1),
+        box(118, 0, 3, 1350, "rgba(211,40,28,.45)", z=1),
+        *extra,
+    ]
+
+
+def stamp(x, y, w=300, rot=-9, z=20, size=58, col=RED):
+    return [box(x, y, w, 104, "rgba(0,0,0,0)", z=z, border=f"7px solid {col}", radius=12, rot=rot),
+            T("TAKDİR", x, y, w, 104, size, "typewriter", col, fit=False, align="center", flex="center", lh=1.0, ls=4, weight=700, bleed=True, z=z + 1, rot=rot)]
 
 
 def cover():
-    els = [
-        box(0, 0, W, 112, INK, z=1),
-        T("2026 SİNEMA KARNESİ", M, 0, 700, 112, 28, "oswald", "#fff", fit=False, weight=500, ls=8, flex="center", nowrap=True, bleed=True, z=3),
-        T("KARNE GÜNÜ:<br>TAKDİRİ KİMLER<br>ALDI?", M, 150, W - 2 * M, 400, 132, "anton", INK, nowrap=True, mn=64, lh=1.12),
-        *stamp(730, 468, 280, rot=-10, size=52),
+    els = paper()
+    els += [
+        T("2026 SİNEMA<br>KARNESİ", 150, 70, W - 150 - M, 250, 96, "typewriter", INK, nowrap=True, mn=50, lh=1.15, weight=700, z=5),
+        T("Öğrenci: Sen   ·   Sınıf: Film Severler   ·   Dönem: 2026", 150, 330, W - 150 - M, 30, 22, "typewriter", INK, nowrap=True, mn=12, op=0.75, z=5),
+        rule(150, 392, W - 150 - M, INK, op=0.9, h=3),
+        T("DERS", 150, 408, 300, 30, 22, "typewriter", INK, fit=False, weight=700, ls=3, z=5, op=0.7),
+        T("NOT", W - M - 200, 408, 200, 30, 22, "typewriter", INK, fit=False, weight=700, ls=3, align="right", z=5, op=0.7),
+        rule(150, 448, W - 150 - M, INK, op=0.9, h=3),
     ]
-    y = 640
+    y = 470
     for i, f in enumerate(FILMS):
         els += [
-            rule(M, y, W - 2 * M, INK, op=0.9, h=3),
-            img(grade(f[6], (170, 100), (0.1, 0, 0.9, 1)), M, y + 14, 170, 100, z=2),
-            T(f[0], M + 200, y + 30, 540, 70, 42, "anton", INK, nowrap=True, mn=22, lh=1.1),
-            T(f[1].replace(".", ","), W - M - 190, y + 6, 190, 112, 72, "anton", RED, fit=False, align="right", lh=1.0, flex="center", bleed=True, nowrap=True),
+            img(grade(f[6], (200, 118), (0.1, 0, 0.9, 1), grain=5), 150, y + 12, 200, 118, z=3, border="4px solid #fff", shadow="0 4px 10px rgba(0,0,0,.25)", rot=(-2 if i % 2 else 2)),
+            T(f[0], 380, y + 48, 470, 50, 32, "typewriter", INK, nowrap=True, mn=16, weight=700, lh=1.2, z=5),
+            T(f[1].replace(".", ","), W - M - 200, y + 4, 200, 130, 112, "caveat", RED, fit=False, weight=700, align="right", lh=1.0, nowrap=True, bleed=True, z=5, rot=-3),
+            rule(150, y + 144, W - 150 - M, INK, op=0.25, h=2),
         ]
-        y += 128
-    els.append(rule(M, y, W - 2 * M, INK, op=0.9, h=3))
-    els.append(T("TMDB izleyici puanı · 10 üzerinden", M, 1278, 700, 30, 20, "oswald", INK, fit=False, weight=500, ls=4, op=0.55, nowrap=True))
-    return {"bg": CRM, "els": els}
+        y += 156
+    els += [*stamp(700, 1218, 320, rot=-8, size=60),
+            T("Notlar TMDB izleyici puanıdır, 10 üzerinden.", 150, 1296, 520, 24, 17, "typewriter", INK, nowrap=True, mn=12, op=0.6, z=5)]
+    return {"bg": PAPER, "els": els}
 
 
 def film(i, n):
-    title, sc, meta, cast, body, src, _c, _t = FILMS[i]
-    return {"bg": CRM, "els": [
-        img(grade(src, (1080, 640), (0, 0, 1, 1)), 0, 0, W, 640, z=1),
-        box(0, 380, W, 260, "linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.55))", z=2),
-        label(f"#{i+1}", M, 50, bg=RED, color="#fff", size=26, z=6),
-        *stamp(730, 560, 280, rot=-8, size=52),
-        T(sc.replace(".", ","), M, 640, 380, 270, 250, "anton", RED, fit=False, lh=1.0, bleed=True, nowrap=True),
-        T("/10", M + 320, 780, 120, 60, 36, "oswald", INK, fit=False, weight=500, ls=3, op=0.6, bleed=True),
-        T("TMDB PUANI", M + 6, 892, 300, 28, 20, "oswald", INK, fit=False, weight=500, ls=5, op=0.6),
-        box(480, 690, 3, 230, INK, z=2, op=0.2),
-        T(title, 520, 700, W - 520 - M, 80, 62, "anton", INK, nowrap=True, mn=30, lh=1.1),
-        T(meta, 520, 800, W - 520 - M, 90, 22, "oswald", INK, weight=500, ls=2, upper=True, mn=14, lh=1.35, op=0.65),
-        rule(M, 950, W - 2 * M, INK, op=0.9, h=3),
-        T("OYUNCULAR", M, 976, 300, 24, 20, "oswald", RED, fit=False, weight=500, ls=5),
-        T(cast, M, 1008, W - 2 * M, 44, 28, "inter", INK, weight=600, nowrap=True, mn=18),
-        T(body, M, 1074, W - 2 * M, 170, 33, "inter", INK, weight=500, lh=1.38, mn=24),
-        T(f"{i+2} / {n}", M, 1278, 200, 30, 20, "oswald", INK, fit=False, weight=500, ls=4, op=0.55),
-    ]}
+    t, sc, meta, cast, body, src, _c, _t = FILMS[i]
+    rot = -2 if i % 2 == 0 else 2
+    els = paper([
+        img(grade(src, (900, 520), (0, 0, 1, 1), grain=5), 90, 100, 900, 520, z=3, border="14px solid #fff", shadow="0 14px 30px rgba(0,0,0,.3)", rot=rot),
+        box(60, 80, 170, 46, "rgba(236,222,160,.8)", z=6, rot=-30), box(850, 80, 170, 46, "rgba(236,222,160,.8)", z=6, rot=28),
+        *stamp(640, 520, 290, rot=-11, size=52),
+        T(t, 150, 690, 600, 140, 54, "typewriter", INK, mn=26, lh=1.15, weight=700, z=5),
+        T(meta, 150, 840, 600, 30, 22, "typewriter", INK, mn=12, weight=400, z=5, op=0.7, nowrap=True),
+        T(f"Oyuncular: {cast}", 150, 880, 600, 70, 22, "typewriter", INK, mn=14, lh=1.35, z=5, op=0.8),
+        box(770, 690, 232, 232, "rgba(0,0,0,0)", z=5, border=f"8px solid {RED}", radius=300, rot=-6),
+        T(sc.replace(".", ","), 770, 690, 232, 232, 120, "caveat", RED, fit=False, weight=700, align="center", flex="center", lh=1.0, bleed=True, z=6, rot=-6),
+        T(body, 150, 968, W - 150 - M, 120, 26, "typewriter", INK, mn=18, lh=1.4, z=5, op=0.9),
+        T("Öğretmen görüşü:", 150, 1094, 600, 40, 34, "caveat", BLUE, fit=False, weight=700, z=5, nowrap=True),
+        T(COMMENT[i], 150, 1146, W - 150 - M, 110, 56, "caveat", BLUE, weight=700, lh=1.1, mn=30, z=5),
+        T(f"{i+2} / {n}", W - M - 140, 1286, 140, 24, 18, "typewriter", INK, fit=False, align="right", z=5, op=0.5),
+    ])
+    return {"bg": PAPER, "els": els}
 
 
 def chart(n):
-    rows = [
-        ("EN İYİ FİLM", "The Odyssey", 48),
-        ("EN İYİ ERKEK OYUNCU", "John Malkovich", 42),
-        ("EN İYİ YARDIMCI KADIN OYUNCU", "Anne Hathaway", 56),
-        ("EN İYİ FİLM ADAYLIĞI", "The Odyssey", 98),
-        ("EN İYİ ERKEK OYUNCU ADAYLIĞI", "Matt Damon", 92),
-    ]
-    els = [
-        T("KARNEDEN SONRA", M, 70, 700, 34, 24, "oswald", RED, fit=False, weight=500, ls=8, nowrap=True),
-        T("OSCAR'I PİYASA<br>KİME VERİYOR?", M, 135, W - 2 * M, 280, 108, "anton", INK, nowrap=True, mn=54, lh=1.12),
-    ]
-    y = 440
+    rows = [("EN İYİ FİLM", "The Odyssey", 48), ("EN İYİ ERKEK OYUNCU", "John Malkovich", 42), ("EN İYİ YARDIMCI KADIN OYUNCU", "Anne Hathaway", 56), ("EN İYİ FİLM ADAYLIĞI", "The Odyssey", 98), ("EN İYİ ERKEK OYUNCU ADAYLIĞI", "Matt Damon", 92)]
+    els = paper([
+        T("KARNEDEN SONRA", 150, 70, 700, 30, 22, "typewriter", RED, fit=False, weight=700, ls=5, nowrap=True, z=5),
+        T("SINIF BİRİNCİSİ<br>KİM OLACAK?", 150, 120, W - 150 - M, 280, 84, "typewriter", INK, nowrap=True, mn=44, lh=1.18, weight=700, z=5),
+        T("Oscar'ı tahmin piyasası nasıl görüyor?", 150, 400, W - 150 - M, 40, 34, "caveat", BLUE, nowrap=True, weight=700, z=5),
+    ])
+    y = 480
     for lab, who, pct in rows:
+        tw_ = W - 150 - M
+        be = int(tw_ * pct / 100)
         els += [
-            T(lab, M, y, W - 2 * M, 28, 20, "oswald", INK, fit=False, weight=500, ls=5, nowrap=True, op=0.6),
-            box(M, y + 36, 968, 76, "rgba(20,26,26,.09)", z=2),
-            box(M, y + 36, int(968 * pct / 100), 76, RED if pct < 60 else INK, z=3),
-            T(who, M + 22, y + 52, 600, 44, 34, "inter", "#fff", fit=False, weight=700, nowrap=True, bleed=True, z=5),
-            (T(f"%{pct}", M + int(968 * pct / 100) - 190, y + 46, 170, 60, 46, "anton", "#fff", fit=False, align="right", lh=1.0, bleed=True, z=5, nowrap=True) if pct >= 60 else T(f"%{pct}", M + int(968 * pct / 100) + 20, y + 46, 170, 60, 46, "anton", INK, fit=False, lh=1.0, bleed=True, z=5, nowrap=True)),
+            T(lab, 150, y, tw_, 26, 18, "typewriter", INK, fit=False, nowrap=True, op=0.65, weight=700, z=5),
+            box(150, y + 36, tw_, 70, "rgba(42,38,34,.08)", z=3, radius=6),
+            box(150, y + 36, be, 70, RED, z=4, radius=6),
+            T(who, 170, y + 50, 560, 44, 34, "caveat", "#fff", fit=False, weight=700, nowrap=True, bleed=True, z=6),
+            (T(f"%{pct}", 150 + be - 180, y + 46, 160, 60, 46, "typewriter", "#fff", fit=False, weight=700, align="right", lh=1.0, nowrap=True, bleed=True, z=6) if pct >= 50 else T(f"%{pct}", 150 + be + 16, y + 46, 160, 60, 46, "typewriter", INK, fit=False, weight=700, lh=1.0, nowrap=True, bleed=True, z=6)),
         ]
-        y += 148
-    els.append(T("Kaynak: Polymarket tahmin piyasası, 29 Ekim 2026. Bunlar tahmindir, sonuç değildir. Oscar töreni 14 Mart 2027.", M, 1210, W - 2 * M, 80, 22, "inter", INK, weight=400, lh=1.4, mn=16, op=0.55))
-    els.append(T(f"7 / {n}", M, 1278, 200, 30, 20, "oswald", INK, fit=False, weight=500, ls=4, op=0.55))
-    return {"bg": CRM, "els": els}
+        y += 140
+    els += [T("Kaynak: Polymarket tahmin piyasası, 29 Ekim 2026. Tahmindir, sonuç değildir. Oscar töreni 14 Mart 2027.", 150, 1190, W - 150 - M, 70, 20, "typewriter", INK, mn=14, lh=1.4, op=0.6, z=5),
+            T(f"{n-1} / {n}", W - M - 140, 1286, 140, 24, 18, "typewriter", INK, fit=False, align="right", z=5, op=0.5)]
+    return {"bg": PAPER, "els": els}
 
 
 def build():
     n = 8
     slides = [cover()] + [film(i, n) for i in range(5)] + [chart(n)]
-    slides.append({"bg": INK, "els": [
-        *stamp(M, 120, 300, rot=-6, size=56),
-        T("SENCE TAKDİRİ<br>HAK EDİYORLAR<br>MI?", M, 300, W - 2 * M, 480, 112, "anton", "#fff", nowrap=True, mn=54, lh=1.14),
-        T("Hangisini izledin? Yorumlara kendi puanını yaz.", M, 860, W - 2 * M, 100, 36, "inter", "#fff", weight=500, lh=1.35, mn=24),
-        label("Kaydet · İzleme listene ekle", M, 1000, bg=RED, size=24),
+    slides.append({"bg": CHALK, "els": [
+        box(40, 40, 1000, 1270, "rgba(0,0,0,0)", z=1, border="10px solid #8a6a43", radius=8),
+        T("Sence<br>takdiri hak<br>ediyorlar mı?", 110, 140, W - 220, 560, 130, "caveat", "#f4f1e6", weight=700, lh=1.05, nowrap=True, mn=70, z=5, rot=-2),
+        T("Hangisini izledin? Yorumlara kendi notunu yaz.", 110, 800, W - 220, 120, 52, "caveat", "#f4f1e6", weight=700, lh=1.15, mn=30, z=5, op=0.9),
+        *stamp(110, 1010, 330, rot=-6, size=60, col="#f4f1e6"),
+        T("Kaydet · İzleme listene ekle", 500, 1050, 480, 40, 26, "typewriter", "#f4f1e6", nowrap=True, mn=14, z=5, op=0.8),
     ]})
     return {"id": ID, "caption": CAPTION, "slides": slides}
