@@ -86,6 +86,66 @@ def publish_instagram(post):
     return call("POST", f"{IG_USER}/media_publish", creation_id=c)["id"]
 
 
+# ---------------- TikTok (Content Posting API, fotoğraf karuseli) ----------------
+TT_ACCESS = os.environ.get("TIKTOK_ACCESS_TOKEN", "")
+TT_REFRESH = os.environ.get("TIKTOK_REFRESH_TOKEN", "")
+TT_KEY = os.environ.get("TIKTOK_CLIENT_KEY", "")
+TT_SECRET = os.environ.get("TIKTOK_CLIENT_SECRET", "")
+# TikTok görselleri yalnızca doğrulanmış alan adından çeker: örn. https://medya.ornek.com/Ali  (GitHub Pages özel alan adı)
+TT_MEDIA_BASE = os.environ.get("TIKTOK_MEDIA_BASE", "").rstrip("/")
+TT_PRIVACY = os.environ.get("TIKTOK_PRIVACY", "SELF_ONLY")  # denetimden geçmemiş uygulama yalnızca SELF_ONLY yapabilir
+TT_API = "https://open.tiktokapis.com/v2"
+
+
+def tt_enabled():
+    return bool((TT_ACCESS or TT_REFRESH) and TT_MEDIA_BASE)
+
+
+def tt_post(path, body, token):
+    req = urllib.request.Request(f"{TT_API}/{path}", data=json.dumps(body).encode(), method="POST",
+                                 headers={"Authorization": f"Bearer {token}", "Content-Type": "application/json; charset=UTF-8"})
+    try:
+        with urllib.request.urlopen(req, timeout=60) as r:
+            return json.load(r)
+    except urllib.error.HTTPError as e:
+        raise RuntimeError(f"TikTok {path}: {e.code} {e.read().decode()[:400]}")
+
+
+def tt_token():
+    """Erişim anahtarı 24 saat geçerli: yenileme anahtarı varsa her çalışmada yeniler."""
+    if TT_REFRESH and TT_KEY and TT_SECRET:
+        data = urllib.parse.urlencode({"client_key": TT_KEY, "client_secret": TT_SECRET,
+                                       "grant_type": "refresh_token", "refresh_token": TT_REFRESH}).encode()
+        req = urllib.request.Request(f"{TT_API}/oauth/token/", data=data, method="POST",
+                                     headers={"Content-Type": "application/x-www-form-urlencoded"})
+        with urllib.request.urlopen(req, timeout=60) as r:
+            tok = json.load(r).get("access_token")
+        if tok:
+            return tok
+    return TT_ACCESS
+
+
+def publish_tiktok(post):
+    folder = post["folder"]
+    items = sorted(f for f in os.listdir(folder) if f.lower().endswith((".jpg", ".jpeg")))[:35]
+    caption = open(os.path.join(folder, "caption.txt"), encoding="utf-8").read().strip()
+    title = " ".join(caption.split())[:90]  # TikTok foto başlığı en çok 90 karakter
+    urls = [f"{TT_MEDIA_BASE}/{folder}/{urllib.parse.quote(f)}" for f in items]
+    print(f"[{post['id']}] TikTok: {len(urls)} görsel, gizlilik {TT_PRIVACY}")
+    if DRY:
+        return "dry-run"
+    token = tt_token()
+    body = {"post_info": {"title": title, "description": caption[:4000], "privacy_level": TT_PRIVACY,
+                          "disable_comment": False, "auto_add_music": True},
+            "source_info": {"source": "PULL_FROM_URL", "photo_cover_index": 0, "photo_images": urls},
+            "post_mode": "DIRECT_POST", "media_type": "PHOTO"}
+    res = tt_post("post/publish/content/init/", body, token)
+    err = res.get("error", {})
+    if err.get("code") not in (None, "ok"):
+        raise RuntimeError(f"TikTok: {err}")
+    return res["data"]["publish_id"]
+
+
 def _norm(s):
     return " ".join((s or "").split())
 
@@ -176,6 +236,12 @@ def main():
                     results["instagram"] = existing
                 else:
                     results["instagram"] = publish_instagram(post)
+            if "tiktok" not in results and tt_enabled():  # Instagram ile aynı saatte, aynı içerik
+                try:
+                    results["tiktok"] = publish_tiktok(post)
+                except Exception as tex:  # TikTok hatası Instagram sonucunu bozmasın
+                    post["tiktok_error"] = str(tex)[:400]
+                    print(f"[{post['id']}] TikTok HATA: {tex}", file=sys.stderr)
             post["status"] = "published"
             post.pop("error", None)
             post["published_at"] = now.isoformat(timespec="minutes")
