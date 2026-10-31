@@ -501,8 +501,13 @@
       "platforms": [
         "instagram"
       ],
-      "status": "planned",
-      "kind": "vizyon"
+      "status": "published",
+      "kind": "vizyon",
+      "results": {
+        "instagram": "18130257139697412"
+      },
+      "tiktok_error": "TikTok post/publish/content/init/: 403 {\"error\":{\"code\":\"unaudited_client_can_only_post_to_private_accounts\",\"message\":\"Please review our integration guidelines at https://developers.tiktok.com/doc/content-sharing-guidelines/\",\"log_id\":\"20261031180120E693D20C929507E35915\"}}",
+      "published_at": "2026-10-31T13:00+03:00"
     },
     {
       "id": "2026-10-31_liste_cadilar-bayrami-5-film",
