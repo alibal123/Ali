@@ -516,8 +516,13 @@
       "platforms": [
         "instagram"
       ],
-      "status": "planned",
-      "kind": "liste"
+      "status": "published",
+      "kind": "liste",
+      "results": {
+        "instagram": "18037739723891576"
+      },
+      "tiktok_error": "TikTok post/publish/content/init/: 403 {\"error\":{\"code\":\"unaudited_client_can_only_post_to_private_accounts\",\"message\":\"Please review our integration guidelines at https://developers.tiktok.com/doc/content-sharing-guidelines/\",\"log_id\":\"202610312301188D24CC98098546FB09FA\"}}",
+      "published_at": "2026-10-31T18:00+03:00"
     },
     {
       "id": "2026-11-01_eslestirme_bunu-sevdiysen",
