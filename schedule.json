@@ -561,8 +561,13 @@
       "platforms": [
         "instagram"
       ],
-      "status": "planned",
-      "kind": "liste"
+      "status": "published",
+      "kind": "liste",
+      "results": {
+        "instagram": "17877708534580755"
+      },
+      "tiktok_error": "TikTok post/publish/content/init/: 403 {\"error\":{\"code\":\"unaudited_client_can_only_post_to_private_accounts\",\"message\":\"Please review our integration guidelines at https://developers.tiktok.com/doc/content-sharing-guidelines/\",\"log_id\":\"2026110223013029F78E125DFD92FCDD0F\"}}",
+      "published_at": "2026-11-02T18:00+03:00"
     },
     {
       "id": "2026-11-03_liste_buyuyunce-vuran-animasyon",
