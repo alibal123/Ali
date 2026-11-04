@@ -591,8 +591,13 @@
       "platforms": [
         "instagram"
       ],
-      "status": "planned",
-      "kind": "vizyon"
+      "status": "published",
+      "kind": "vizyon",
+      "results": {
+        "instagram": "18108438095219831"
+      },
+      "tiktok_error": "TikTok post/publish/content/init/: 403 {\"error\":{\"code\":\"unaudited_client_can_only_post_to_private_accounts\",\"message\":\"Please review our integration guidelines at https://developers.tiktok.com/doc/content-sharing-guidelines/\",\"log_id\":\"20261104192603DD6702CDFBD6CC067A5B\"}}",
+      "published_at": "2026-11-04T14:26+03:00"
     },
     {
       "id": "2026-11-04_liste_battaniye-filmleri",
