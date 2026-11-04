@@ -606,8 +606,13 @@
       "platforms": [
         "instagram"
       ],
-      "status": "planned",
-      "kind": "liste"
+      "status": "published",
+      "kind": "liste",
+      "results": {
+        "instagram": "18412412722089852"
+      },
+      "tiktok_error": "TikTok post/publish/content/init/: 403 {\"error\":{\"code\":\"unaudited_client_can_only_post_to_private_accounts\",\"message\":\"Please review our integration guidelines at https://developers.tiktok.com/doc/content-sharing-guidelines/\",\"log_id\":\"20261104230124241B7C31654A0509E19A\"}}",
+      "published_at": "2026-11-04T18:00+03:00"
     },
     {
       "id": "2026-11-05_liste_tek-mekanda-gecen-5-film",
