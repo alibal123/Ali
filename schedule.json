@@ -621,8 +621,13 @@
       "platforms": [
         "instagram"
       ],
-      "status": "planned",
-      "kind": "liste"
+      "status": "published",
+      "kind": "liste",
+      "results": {
+        "instagram": "18288883117295248"
+      },
+      "tiktok_error": "TikTok post/publish/content/init/: 403 {\"error\":{\"code\":\"unaudited_client_can_only_post_to_private_accounts\",\"message\":\"Please review our integration guidelines at https://developers.tiktok.com/doc/content-sharing-guidelines/\",\"log_id\":\"202611052301383A860EAC89E87A632C99\"}}",
+      "published_at": "2026-11-05T18:00+03:00"
     }
   ]
 }
