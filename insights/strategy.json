@@ -1,79 +1,79 @@
 {
- "generated_at": "2026-11-04T12:16+00:00",
- "followers": 27359,
+ "generated_at": "2026-11-05T12:30+00:00",
+ "followers": 27351,
  "scoring": "beğeni + 3×yorum; 48 saatten genç gönderiler hariç",
  "formats": {
   "BELGESEL": {
    "n": 1,
-   "median": 9,
-   "best": 9,
+   "median": 10,
+   "best": 10,
    "adjusted": 13.7
   },
   "DİĞER": {
    "n": 4,
-   "median": 9.5,
-   "best": 19,
-   "adjusted": 11.7
+   "median": 10.5,
+   "best": 20,
+   "adjusted": 12.2
   },
   "EŞLEŞTİRME": {
    "n": 1,
-   "median": 20,
-   "best": 20,
+   "median": 21,
+   "best": 21,
    "adjusted": 17.3
   },
   "FİLM": {
    "n": 8,
-   "median": 19.0,
-   "best": 55,
-   "adjusted": 18.4
+   "median": 19.5,
+   "best": 56,
+   "adjusted": 18.7
   },
   "HABER": {
    "n": 8,
-   "median": 11.0,
-   "best": 21,
-   "adjusted": 12.0
+   "median": 12.0,
+   "best": 22,
+   "adjusted": 12.7
   },
   "KARŞILAŞTIRMA": {
    "n": 1,
-   "median": 7,
-   "best": 7,
+   "median": 8,
+   "best": 8,
    "adjusted": 13.0
   },
   "LİSTE": {
-   "n": 13,
-   "median": 20,
+   "n": 14,
+   "median": 20.0,
    "best": 1181,
-   "adjusted": 19.5
+   "adjusted": 19.4
   },
   "OYUN": {
    "n": 3,
-   "median": 7,
+   "median": 8,
    "best": 44,
-   "adjusted": 10.6
+   "adjusted": 11.0
   },
   "SAHNE": {
    "n": 1,
-   "median": 17,
-   "best": 17,
+   "median": 18,
+   "best": 18,
    "adjusted": 16.3
   },
   "VERİ": {
    "n": 1,
-   "median": 19,
-   "best": 19,
+   "median": 20,
+   "best": 20,
    "adjusted": 17.0
   }
  },
  "evening_weights": {
-  "BELGESEL": 0.103,
-  "DİĞER": 0.091,
+  "BELGESEL": 0.102,
+  "DİĞER": 0.094,
   "EŞLEŞTİRME": 0.122,
-  "FİLM": 0.128,
-  "KARŞILAŞTIRMA": 0.099,
-  "LİSTE": 0.134,
-  "OYUN": 0.085,
-  "SAHNE": 0.117,
-  "VERİ": 0.121
+  "FİLM": 0.129,
+  "KARŞILAŞTIRMA": 0.098,
+  "LİSTE": 0.133,
+  "OYUN": 0.087,
+  "SAHNE": 0.116,
+  "VERİ": 0.12
  },
  "weekly_plan_20_00": {
   "LİSTE": 1,
@@ -97,14 +97,14 @@
  ],
  "media_types": {
   "CAROUSEL_ALBUM": {
-   "n": 63,
-   "median": 15,
+   "n": 64,
+   "median": 15.5,
    "mean": 48
   },
   "REELS": {
-   "n": 137,
-   "median": 80,
-   "mean": 1419
+   "n": 136,
+   "median": 81.5,
+   "mean": 1430
   }
  },
  "posts": [
@@ -115,27 +115,27 @@
    "likes": 929,
    "comments": 84,
    "score": 1181,
-   "age_h": 810,
+   "age_h": 835,
    "mature": true
   },
   {
    "id": "gun2_incendies",
    "format": "FİLM",
    "slot": "20:00",
-   "likes": 21,
+   "likes": 22,
    "comments": 2,
-   "score": 27,
-   "age_h": 787,
+   "score": 28,
+   "age_h": 811,
    "mature": true
   },
   {
    "id": "gun3_belgesel",
    "format": "BELGESEL",
    "slot": "20:00",
-   "likes": 9,
+   "likes": 10,
    "comments": 0,
-   "score": 9,
-   "age_h": 763,
+   "score": 10,
+   "age_h": 787,
    "mature": true
   },
   {
@@ -145,157 +145,157 @@
    "likes": 23,
    "comments": 7,
    "score": 44,
-   "age_h": 739,
+   "age_h": 763,
    "mature": true
   },
   {
    "id": "gun5_jagten",
    "format": "FİLM",
    "slot": "20:00",
-   "likes": 49,
+   "likes": 50,
    "comments": 2,
-   "score": 55,
-   "age_h": 715,
+   "score": 56,
+   "age_h": 739,
    "mature": true
   },
   {
    "id": "2026-10-06_liste_turk-sinemasi",
    "format": "LİSTE",
    "slot": "18:40",
-   "likes": 108,
+   "likes": 109,
    "comments": 29,
-   "score": 195,
-   "age_h": 692,
+   "score": 196,
+   "age_h": 716,
    "mature": true
   },
   {
    "id": "2026-10-07_eslesme_sevdiysen",
    "format": "EŞLEŞTİRME",
    "slot": "20:00",
-   "likes": 20,
+   "likes": 21,
    "comments": 0,
-   "score": 20,
-   "age_h": 667,
+   "score": 21,
+   "age_h": 691,
    "mature": true
   },
   {
    "id": "2026-10-08_haber_possible-love",
    "format": "HABER",
    "slot": "14:00",
-   "likes": 11,
+   "likes": 12,
    "comments": 2,
-   "score": 17,
-   "age_h": 649,
+   "score": 18,
+   "age_h": 673,
    "mature": true
   },
   {
    "id": "2026-10-08_film_memories-of-murder",
    "format": "FİLM",
    "slot": "20:00",
-   "likes": 22,
+   "likes": 23,
    "comments": 0,
-   "score": 22,
-   "age_h": 643,
+   "score": 23,
+   "age_h": 667,
    "mature": true
   },
   {
    "id": "2026-10-09_haber_primetime",
    "format": "HABER",
    "slot": "14:00",
-   "likes": 10,
+   "likes": 12,
    "comments": 1,
-   "score": 13,
-   "age_h": 625,
+   "score": 15,
+   "age_h": 649,
    "mature": true
   },
   {
    "id": "2026-10-09_oyun_detaydan-filmi-bul",
    "format": "OYUN",
    "slot": "20:00",
-   "likes": 7,
+   "likes": 8,
    "comments": 0,
-   "score": 7,
-   "age_h": 619,
+   "score": 8,
+   "age_h": 643,
    "mature": true
   },
   {
    "id": "2026-10-10_haber_ask-ve-yasam",
    "format": "HABER",
    "slot": "14:00",
-   "likes": 8,
+   "likes": 9,
    "comments": 0,
-   "score": 8,
-   "age_h": 601,
+   "score": 9,
+   "age_h": 625,
    "mature": true
   },
   {
    "id": "2026-10-10_veri_izleyici-elestirmen",
    "format": "VERİ",
    "slot": "20:00",
-   "likes": 7,
+   "likes": 8,
    "comments": 4,
-   "score": 19,
-   "age_h": 595,
+   "score": 20,
+   "age_h": 619,
    "mature": true
   },
   {
    "id": "2026-10-11_haber_digger",
    "format": "HABER",
    "slot": "14:00",
-   "likes": 12,
+   "likes": 13,
    "comments": 0,
-   "score": 12,
-   "age_h": 577,
+   "score": 13,
+   "age_h": 601,
    "mature": true
   },
   {
    "id": "2026-10-11_liste_kara-komedi",
    "format": "LİSTE",
    "slot": "20:00",
-   "likes": 88,
+   "likes": 89,
    "comments": 13,
-   "score": 127,
-   "age_h": 571,
+   "score": 128,
+   "age_h": 595,
    "mature": true
   },
   {
    "id": "2026-10-12_haber_fatherland",
    "format": "HABER",
    "slot": "14:00",
-   "likes": 9,
+   "likes": 10,
    "comments": 4,
-   "score": 21,
-   "age_h": 553,
+   "score": 22,
+   "age_h": 577,
    "mature": true
   },
   {
    "id": "2026-10-12_film_kirmizi",
    "format": "FİLM",
    "slot": "20:00",
-   "likes": 14,
+   "likes": 15,
    "comments": 0,
-   "score": 14,
-   "age_h": 547,
+   "score": 15,
+   "age_h": 571,
    "mature": true
   },
   {
    "id": "2026-10-13_haber_clayface",
    "format": "HABER",
    "slot": "14:00",
-   "likes": 10,
+   "likes": 11,
    "comments": 0,
-   "score": 10,
-   "age_h": 529,
+   "score": 11,
+   "age_h": 553,
    "mature": true
   },
   {
    "id": "2026-10-13_liste_kafanin-icinde",
    "format": "LİSTE",
    "slot": "20:00",
-   "likes": 18,
+   "likes": 19,
    "comments": 0,
-   "score": 18,
-   "age_h": 523,
+   "score": 19,
+   "age_h": 547,
    "mature": true
   },
   {
@@ -305,27 +305,27 @@
    "likes": 2,
    "comments": 0,
    "score": 2,
-   "age_h": 505,
+   "age_h": 529,
    "mature": true
   },
   {
    "id": "2026-10-14_karsilastirma_uzaylilarla-konusmak",
    "format": "KARŞILAŞTIRMA",
    "slot": "20:00",
-   "likes": 7,
+   "likes": 8,
    "comments": 0,
-   "score": 7,
-   "age_h": 499,
+   "score": 8,
+   "age_h": 523,
    "mature": true
   },
   {
    "id": "2026-10-15_haber_you-can-see-everything",
    "format": "HABER",
    "slot": "14:00",
-   "likes": 3,
+   "likes": 4,
    "comments": 0,
-   "score": 3,
-   "age_h": 479,
+   "score": 4,
+   "age_h": 503,
    "mature": true
   },
   {
@@ -335,37 +335,37 @@
    "likes": 6,
    "comments": 0,
    "score": 6,
-   "age_h": 475,
+   "age_h": 499,
    "mature": true
   },
   {
    "id": "2026-10-16_vizyon_bu-hafta",
    "format": "DİĞER",
    "slot": "14:00",
-   "likes": 12,
+   "likes": 13,
    "comments": 0,
-   "score": 12,
-   "age_h": 457,
+   "score": 13,
+   "age_h": 481,
    "mature": true
   },
   {
    "id": "2026-10-16_oyun-haftanin-detaylari",
    "format": "OYUN",
    "slot": "20:00",
-   "likes": 6,
+   "likes": 7,
    "comments": 0,
-   "score": 6,
-   "age_h": 451,
+   "score": 7,
+   "age_h": 475,
    "mature": true
   },
   {
    "id": "2026-10-17_sahne_grand-budapest-oranlar",
    "format": "SAHNE",
    "slot": "20:00",
-   "likes": 17,
+   "likes": 18,
    "comments": 0,
-   "score": 17,
-   "age_h": 427,
+   "score": 18,
+   "age_h": 451,
    "mature": true
   },
   {
@@ -375,177 +375,187 @@
    "likes": 10,
    "comments": 2,
    "score": 16,
-   "age_h": 403,
+   "age_h": 427,
    "mature": true
   },
   {
    "id": "2026-10-19_film_dogville",
    "format": "FİLM",
    "slot": "20:00",
-   "likes": 10,
+   "likes": 11,
    "comments": 0,
-   "score": 10,
-   "age_h": 379,
+   "score": 11,
+   "age_h": 403,
    "mature": true
   },
   {
    "id": "2026-10-20_film_schindler-tek-renk",
    "format": "FİLM",
    "slot": "20:00",
-   "likes": 24,
+   "likes": 25,
    "comments": 6,
-   "score": 42,
-   "age_h": 355,
+   "score": 43,
+   "age_h": 379,
    "mature": true
   },
   {
    "id": "2026-10-21_liste-7-oneri",
    "format": "LİSTE",
    "slot": "20:00",
-   "likes": 18,
+   "likes": 19,
    "comments": 0,
-   "score": 18,
-   "age_h": 331,
+   "score": 19,
+   "age_h": 355,
    "mature": true
   },
   {
    "id": "2026-10-23_liste_gunlerce-pesini-birakmayan",
    "format": "LİSTE",
    "slot": "18:00",
-   "likes": 213,
+   "likes": 222,
    "comments": 24,
-   "score": 285,
-   "age_h": 285,
+   "score": 294,
+   "age_h": 309,
    "mature": true
   },
   {
    "id": "2026-10-25_liste_akil-sagligina-zararlidir",
    "format": "LİSTE",
    "slot": "18:00",
-   "likes": 19,
+   "likes": 20,
    "comments": 1,
-   "score": 22,
-   "age_h": 237,
+   "score": 23,
+   "age_h": 261,
    "mature": true
   },
   {
    "id": "2026-10-26_liste_keanu-son-sahnede-gonullu",
    "format": "LİSTE",
    "slot": "18:00",
-   "likes": 20,
+   "likes": 21,
    "comments": 0,
-   "score": 20,
-   "age_h": 213,
+   "score": 21,
+   "age_h": 237,
    "mature": true
   },
   {
    "id": "2026-10-27_liste_unutanlar-kulubu",
    "format": "LİSTE",
    "slot": "18:00",
-   "likes": 5,
+   "likes": 6,
    "comments": 0,
-   "score": 5,
-   "age_h": 189,
+   "score": 6,
+   "age_h": 213,
    "mature": true
   },
   {
    "id": "2026-10-28_liste_son-seans-kiyamet",
    "format": "LİSTE",
    "slot": "18:00",
-   "likes": 12,
+   "likes": 13,
    "comments": 0,
-   "score": 12,
-   "age_h": 165,
+   "score": 13,
+   "age_h": 189,
    "mature": true
   },
   {
    "id": "2026-10-29_liste_hayati-sorgulatan-4-film",
    "format": "LİSTE",
    "slot": "18:00",
-   "likes": 14,
+   "likes": 15,
    "comments": 0,
-   "score": 14,
-   "age_h": 141,
+   "score": 15,
+   "age_h": 165,
    "mature": true
   },
   {
    "id": "2026-10-30_liste_basa-sardiran-5-film",
    "format": "LİSTE",
    "slot": "18:00",
-   "likes": 31,
+   "likes": 33,
    "comments": 2,
-   "score": 37,
-   "age_h": 117,
+   "score": 39,
+   "age_h": 141,
    "mature": true
   },
   {
    "id": "2026-10-31_vizyon_dunesday",
    "format": "DİĞER",
    "slot": "13:00",
-   "likes": 7,
+   "likes": 8,
    "comments": 0,
-   "score": 7,
-   "age_h": 98,
+   "score": 8,
+   "age_h": 122,
    "mature": true
   },
   {
    "id": "2026-10-31_liste_cadilar-bayrami-5-film",
    "format": "LİSTE",
    "slot": "18:00",
-   "likes": 8,
+   "likes": 9,
    "comments": 0,
-   "score": 8,
-   "age_h": 93,
+   "score": 9,
+   "age_h": 117,
    "mature": true
   },
   {
    "id": "2026-11-01_eslestirme_bunu-sevdiysen",
    "format": "DİĞER",
    "slot": "18:00",
-   "likes": 16,
+   "likes": 17,
    "comments": 1,
-   "score": 19,
-   "age_h": 69,
+   "score": 20,
+   "age_h": 93,
    "mature": true
   },
   {
    "id": "2026-11-02_vizyon_kasim-takvimi",
    "format": "DİĞER",
    "slot": "13:00",
-   "likes": 5,
+   "likes": 7,
    "comments": 0,
-   "score": 5,
-   "age_h": 50,
+   "score": 7,
+   "age_h": 74,
    "mature": true
   },
   {
    "id": "2026-11-02_liste_2026-en-yuksek-puanli-5-film",
    "format": "LİSTE",
    "slot": "18:00",
-   "likes": 10,
+   "likes": 11,
    "comments": 1,
-   "score": 13,
-   "age_h": 45,
-   "mature": false
+   "score": 14,
+   "age_h": 69,
+   "mature": true
   },
   {
    "id": "2026-11-03_liste_buyuyunce-vuran-animasyon",
    "format": "LİSTE",
    "slot": "18:00",
-   "likes": 7,
+   "likes": 8,
    "comments": 0,
-   "score": 7,
-   "age_h": 21,
+   "score": 8,
+   "age_h": 45,
    "mature": false
   },
   {
    "id": "2026-11-04_vizyon_kadrosuyla-gundem",
    "format": "DİĞER",
    "slot": "13:00",
-   "likes": 1,
+   "likes": 3,
    "comments": 0,
-   "score": 1,
-   "age_h": 2,
+   "score": 3,
+   "age_h": 26,
+   "mature": false
+  },
+  {
+   "id": "2026-11-04_liste_battaniye-filmleri",
+   "format": "LİSTE",
+   "slot": "18:00",
+   "likes": 5,
+   "comments": 0,
+   "score": 5,
+   "age_h": 21,
    "mature": false
   }
  ],
@@ -553,7 +563,7 @@
   {
    "date": "2026-04-27",
    "type": "REELS",
-   "likes": 58879,
+   "likes": 58877,
    "comments": 164,
    "caption": "Four Lions",
    "permalink": "https://www.instagram.com/reel/DXoUsCyMfXm/"
@@ -561,7 +571,7 @@
   {
    "date": "2026-04-06",
    "type": "REELS",
-   "likes": 37703,
+   "likes": 37700,
    "comments": 165,
    "caption": "Shrek the Third (2007), taht meselesi yüzünden istemediği bir sorumluluğun eşiğine gelen bir karakterin, kendi",
    "permalink": "https://www.instagram.com/reel/DWyNvIpDP-z/"
@@ -569,7 +579,7 @@
   {
    "date": "2026-04-03",
    "type": "REELS",
-   "likes": 24600,
+   "likes": 24599,
    "comments": 115,
    "caption": "Fantastic Mr. Fox (2009), sakin bir aile hayatı kurmaya çalışırken eski içgüdülerinden vazgeçemeyen bir tilkin",
    "permalink": "https://www.instagram.com/reel/DWqebDiDLC3/"
@@ -577,7 +587,7 @@
   {
    "date": "2026-06-13",
    "type": "REELS",
-   "likes": 14309,
+   "likes": 14307,
    "comments": 96,
    "caption": "964 Pinocchio (1991), hafızası silinmiş ve sokağa terk edilmiş bir sibernetik insanın, kim olduğunu anlamaya ç",
    "permalink": "https://www.instagram.com/reel/DZhX_PYs05V/"
@@ -585,7 +595,7 @@
   {
    "date": "2026-04-05",
    "type": "REELS",
-   "likes": 7491,
+   "likes": 7492,
    "comments": 186,
    "caption": "Duvara Karşı (2004), hayatla bağı zayıflamış iki insanın tesadüfi biçimde aynı noktada buluşmasını anlatırken,",
    "permalink": "https://www.instagram.com/reel/DWvqozNjO8n/"
@@ -593,7 +603,7 @@
   {
    "date": "2026-06-23",
    "type": "REELS",
-   "likes": 6918,
+   "likes": 6919,
    "comments": 203,
    "caption": "Narın Rengi (1969), ünlü bir ozanın hayatını alışılmış bir biyografi gibi anlatmak yerine, onun dünyasını şiir",
    "permalink": "https://www.instagram.com/reel/DZ7N93CsO3n/"
@@ -601,7 +611,7 @@
   {
    "date": "2026-07-16",
    "type": "REELS",
-   "likes": 4326,
+   "likes": 4327,
    "comments": 17,
    "caption": "İstanbul Hatırası: Köprüyü Geçmek (2005), İstanbul’u tarihî yapıları ya da turistik noktalarıyla değil, müziği",
    "permalink": "https://www.instagram.com/reel/Da2ctorsDpj/"
@@ -609,7 +619,7 @@
   {
    "date": "2026-06-29",
    "type": "REELS",
-   "likes": 3811,
+   "likes": 3812,
    "comments": 26,
    "caption": "Bir Koyun Polisiyesi (2026), sessiz ve huzurlu bir köyde yaşayan koyunların, çobanlarının esrarengiz şekilde o",
    "permalink": "https://www.instagram.com/reel/DaKhUprM6Rw/"
@@ -625,7 +635,7 @@
   {
    "date": "2026-06-02",
    "type": "REELS",
-   "likes": 2535,
+   "likes": 2536,
    "comments": 38,
    "caption": "They Will Kill You (2026)",
    "permalink": "https://www.instagram.com/reel/DZFA-9IswUS/"
@@ -633,15 +643,15 @@
   {
    "date": "2026-08-10",
    "type": "REELS",
-   "likes": 2063,
-   "comments": 83,
+   "likes": 2073,
+   "comments": 84,
    "caption": "The Invite (2026), evlilikleri sorunlu bir çiftin üst kattaki komşularını akşam yemeğine davet etmesiyle başlı",
    "permalink": "https://www.instagram.com/reel/Db3g4FGsHLo/"
   },
   {
    "date": "2026-05-06",
    "type": "REELS",
-   "likes": 1972,
+   "likes": 1973,
    "comments": 12,
    "caption": "9 (2009), insanlığın yok olduğu bir dünyada, küçük bez kuklaların hayatta kalma mücadelesini anlatır. Film, gö",
    "permalink": "https://www.instagram.com/reel/DX_bwb-shst/"
@@ -649,7 +659,7 @@
   {
    "date": "2026-04-01",
    "type": "REELS",
-   "likes": 1292,
+   "likes": 1294,
    "comments": 10,
    "caption": "Four Lions (2010), son derece ciddi bir konuyu absürt mizah üzerinden ele alarak radikal düşüncenin içindeki ç",
    "permalink": "https://www.instagram.com/reel/DWmPUkRjDIj/"
@@ -657,7 +667,7 @@
   {
    "date": "2026-05-02",
    "type": "REELS",
-   "likes": 1242,
+   "likes": 1243,
    "comments": 7,
    "caption": "Kagemusha (1980), bir savaş lordunun ölümünün gizlenmesi için ona tıpatıp benzeyen bir hırsızın yerine geçiril",
    "permalink": "https://www.instagram.com/reel/DX1O9_HMhmc/"
@@ -673,7 +683,7 @@
   {
    "date": "2026-07-05",
    "type": "REELS",
-   "likes": 1158,
+   "likes": 1159,
    "comments": 16,
    "caption": "Watchmen (2009), maskeli kahramanların yasaklandığı alternatif bir dünyada geçiyor. Eski kahramanlardan birini",
    "permalink": "https://www.instagram.com/reel/DaZ8TmXMyby/"
@@ -689,7 +699,7 @@
   {
    "date": "2026-05-26",
    "type": "REELS",
-   "likes": 1073,
+   "likes": 1074,
    "comments": 1,
    "caption": "21 & Over (2013), ertesi gün hayatının en önemli mülakatına girecek olan Jeff’in, arkadaşlarının “sadece birka",
    "permalink": "https://www.instagram.com/reel/DYzHJ2osU2u/"
@@ -697,7 +707,7 @@
   {
    "date": "2026-04-30",
    "type": "REELS",
-   "likes": 884,
+   "likes": 885,
    "comments": 14,
    "caption": "Cold Skin (2017), ıssız bir adaya gönderilen bir gözlemcinin, burada yalnız olmadığını fark etmesiyle başlayan",
    "permalink": "https://www.instagram.com/reel/DXwBAwwMiRn/"
@@ -720,43 +730,43 @@
   },
   {
    "date": "2026-10-23",
-   "likes": 213,
+   "likes": 222,
    "comments": 24,
    "caption": "İzledikten sonra günlerce peşini bırakmayan 5 film. Hepsinin ortak noktası: bitince ekranı kapatıyorsun ama ak"
   },
   {
    "date": "2026-10-06",
-   "likes": 108,
+   "likes": 109,
    "comments": 29,
    "caption": "Türk sinemasının sessiz başyapıtları. Gişe rekoru kırmadılar, televizyonda pek dönmediler ama festivallerde öd"
   },
   {
    "date": "2026-06-04",
-   "likes": 112,
+   "likes": 113,
    "comments": 8,
    "caption": "Animasyon devi Pixar son yıllarda ciddi bir krizle boğuşuyor. Bir zamanlar her yeni filmiyle gişeyi domine ede"
   },
   {
    "date": "2026-10-11",
-   "likes": 88,
+   "likes": 89,
    "comments": 13,
    "caption": "Gülerken suçlu hissettiren 5 kara komedi. Hepsinde ciddi, hatta korkunç bir mesele var; ama film seni o mesele"
   },
   {
    "date": "2026-05-05",
-   "likes": 77,
+   "likes": 78,
    "comments": 3,
    "caption": "Üç Renk: Kırmızı (1994), basit gibi başlayan bir karşılaşmanın, iki insanın hayatını yavaş yavaş değiştirmesin"
   },
   {
    "date": "2026-06-06",
-   "likes": 41,
+   "likes": 42,
    "comments": 14,
    "caption": "Odyssey neden bu kadar eleştirildi?"
   },
   {
    "date": "2026-07-12",
-   "likes": 55,
+   "likes": 56,
    "comments": 2,
    "caption": "Dogville (2003), peşindeki insanlardan kaçan genç bir kadının, dağların arasında bulunan küçük bir kasabaya sı"
   }
