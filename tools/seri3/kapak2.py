@@ -635,6 +635,66 @@ def c9():
                 "kaçmanın bir film kadar iyi geldiğini hatırlatacak filmler", "#8fd0ff", "23 KASIM", main_size=72, tail_size=54,
                 filt="filter:contrast(1.1)")
 
+
+# ================================================================ v5: 2, 4, 6, 7, 8, 9 — Anton başlık + tek güçlü ikon/kanca (1, 3, 5, 10 onaylı)
+def svg(path, w, color, sw=0, vb="0 0 24 24", fill=True):
+    return (f'<svg width="{w}" height="{w}" viewBox="{vb}">'
+            f'<path d="{path}" {"fill=" + chr(34) + color + chr(34) if fill else "fill=" + chr(34) + "none" + chr(34)} stroke="{color}" stroke-width="{sw}" stroke-linecap="round" stroke-linejoin="round"/></svg>')
+
+
+def c2():
+    ticks = ('<svg width="230" height="150" viewBox="0 0 46 30"><path d="M3 16l8 8L27 6M19 22l2 2L37 6" fill="none" stroke="#4fc3ff" '
+             'stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>')
+    hook = f'{ticks}<div style="font:500 26px Oswald;letter-spacing:.24em;color:#fff;margin-top:6px">GÖRÜLDÜ · 3 GÜN ÖNCE</div>'
+    return full("bluevalentine_1", "40% 50%", f"{EN('Ghost')}landıktan sonra üç gün boyunca aynı şarkıyı dinleyenlerin,",
+                "terapiye gitmeden önce izlemesi gereken filmler", "#4fc3ff", "9 KASIM", hook=hook,
+                hook_style="left:64px;top:470px", main_size=64, filt="filter:saturate(1.1) brightness(.95)")
+
+
+def c4():
+    bell = svg("M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9M10 21h4M3 3l18 18", 150, "#c8f06a", sw=2, fill=False)
+    return full("wild_3", "50% 50%", "Grup sohbetini sessize alıp kimseye haber vermeden kaybolmak isteyenlerin,",
+                "kaybolmayı en güzel anlatan filmler", "#c8f06a", "13 KASIM", hook=bell, hook_style="left:64px;top:480px;filter:drop-shadow(0 4px 20px rgba(0,0,0,.5))",
+                main_size=66, grad="linear-gradient(180deg,rgba(10,12,8,0) 0%,rgba(10,12,8,.15) 34%,rgba(10,12,8,.94) 64%)")
+
+
+def c6():
+    heart = svg("M12 21s-7.5-4.6-9.5-9.2C1 8 3.5 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.5 0 6 3.5 4.5 7.3C19.5 16.4 12 21 12 21z", 150, "#ff3b4e")
+    hook = f'<div style="display:flex;align-items:center;gap:22px">{heart}<div style="font:400 92px/1 Anton;color:#fff;text-transform:uppercase">EŞLEŞME<br><span style="font:700 italic 54px Playfair Display;text-transform:none;color:#ffd36b">tesadüfen</span></div></div>'
+    return full("amelie_4", "62% 40%", f"{EN('Dating')} uygulamasında kaydırdıkça insanların birbirine benzediğini fark edenlere,",
+                "gerçek bir tesadüfün büyüsünü hatırlatan filmler", "#ffd36b", "17 KASIM", hook=hook,
+                hook_style="left:64px;top:460px;filter:drop-shadow(0 4px 20px rgba(0,0,0,.45))", main_size=58)
+
+
+def c7():
+    pop = ('<svg width="150" height="170" viewBox="0 0 30 34"><circle cx="9" cy="8" r="5" fill="#fff6dc"/><circle cx="15" cy="5" r="5" fill="#fff"/><circle cx="21" cy="8" r="5" fill="#fff6dc"/>'
+           '<circle cx="12" cy="11" r="4.5" fill="#fff"/><circle cx="18" cy="11" r="4.5" fill="#fff"/>'
+           '<path d="M4 12h22l-3 21H7z" fill="#ff3d8b"/><path d="M10 12l1.2 21M15 12v21M20 12l-1.2 21" stroke="#fff" stroke-width="1.8"/></svg>')
+    hook = f'<div style="display:flex;align-items:flex-end;gap:20px">{pop}<div style="font:400 84px/1 Anton;color:#fff;margin-bottom:8px">FİLM<br>GECESİ</div></div>'
+    return full("legallyblonde_4", "58% 30%", "Arkadaşının ilişkisi bittiğinde “tamam, film gecesi yapıyoruz” diyen herkesin,",
+                "kimsenin ağlamadan bitiremediği filmler", "#ff7eb6", "19 KASIM", hook=hook,
+                hook_style="left:64px;top:470px;filter:drop-shadow(0 4px 22px rgba(80,0,40,.55))", main_size=60,
+                grad="linear-gradient(180deg,rgba(40,6,22,0) 0%,rgba(40,6,22,.1) 36%,rgba(40,6,22,.92) 68%)")
+
+
+def c8():
+    hook = ('<div style="display:flex;align-items:center;gap:18px"><svg width="120" height="120" viewBox="0 0 24 24"><path d="M7 2v8a2 2 0 0 0 4 0V2M9 10v12M17 2c-2 1.5-3 4-3 7h3v13" '
+            'fill="none" stroke="#ffb35c" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+            '<div style="font:400 150px/1 Anton;color:#ffb35c">×1</div></div>')
+    return full("lunchbox_4", "78% 50%", "İşten çıkıp evde tek başına yemek yerken “bu da bir hayat” diyenlere,",
+                "tek kişilik sofranın yalnız olmadığını gösteren filmler", "#ffb35c", "21 KASIM", hook=hook,
+                hook_style="left:64px;top:470px;filter:drop-shadow(0 4px 20px rgba(0,0,0,.55))", main_size=62,
+                filt="filter:saturate(.95) sepia(.12)")
+
+
+def c9():
+    plane = svg("M2 16l20-9-6 13-3-5-5 3 1-5z", 120, "#fff")
+    hook = f'<div style="display:flex;align-items:center;gap:20px"><div style="font:400 200px/0.9 Anton;color:#fff">2</div><div style="font:400 92px/0.95 Anton;color:#fff">GÜNLÜK<br><span style="color:#ffd36b">KAÇIŞ</span></div></div>'
+    return full("mammamia_1", "30% 50%", "Yıllık izin hesabı yapıp iki günlük tatile bile sevinenlerin,",
+                "kaçmanın bir film kadar iyi geldiğini hatırlatacak filmler", "#ffd36b", "23 KASIM", hook=hook,
+                hook_style="left:64px;top:430px;filter:drop-shadow(0 4px 22px rgba(0,30,60,.5))", main_size=70, tail_size=52,
+                grad="linear-gradient(180deg,rgba(6,20,36,0) 0%,rgba(6,20,36,.1) 32%,rgba(6,20,36,.9) 66%)")
+
 COVERS = [("situationship", c1), ("ghostlandin", c2), ("red-flag", c3), ("sessize-al", c4), ("dort-yildiz", c5),
           ("tesaduf", c6), ("film-gecesi", c7), ("tek-kisilik-sofra", c8), ("iki-gunluk-kacis", c9), ("alarm-ertele", c10)]
 
