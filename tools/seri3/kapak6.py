@@ -59,7 +59,7 @@ def k_a():
 
 def k_b():
     return full("cmbyn_1", "26% 50%", K_MAIN, K_TAIL, "#ffd36b", "23 KASIM", main_size=70, tail_size=52,
-                hook="sadece iki gün.", hook_style="left:64px;top:560px;font:700 italic 120px/1 'Playfair Display';color:#ffd36b;text-shadow:0 6px 30px rgba(0,0,0,.45)",
+                hook="sadece iki gün.", hook_style="left:64px;top:250px;font:700 italic 120px/1 'Playfair Display';color:#ffd36b;text-shadow:0 6px 30px rgba(0,0,0,.45)",
                 grad="linear-gradient(180deg,rgba(10,10,4,0) 0%,rgba(10,10,4,.1) 38%,rgba(10,10,4,.9) 66%)")
 
 
