@@ -236,7 +236,7 @@ def main():
                     results["instagram"] = existing
                 else:
                     results["instagram"] = publish_instagram(post)
-            if "tiktok" not in results and tt_enabled():  # Instagram ile aynı saatte, aynı içerik
+            if "tiktok" not in results and tt_enabled() and not post.get("tiktok_manual"):  # Instagram ile aynı saatte, aynı içerik
                 try:
                     results["tiktok"] = publish_tiktok(post)
                 except Exception as tex:  # TikTok hatası Instagram sonucunu bozmasın

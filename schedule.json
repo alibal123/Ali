@@ -638,7 +638,8 @@
         "tiktok"
       ],
       "status": "planned",
-      "kind": "liste"
+      "kind": "liste",
+      "tiktok_manual": true
     },
     {
       "id": "2026-11-09_liste_ghostlanma",
@@ -649,7 +650,8 @@
         "tiktok"
       ],
       "status": "planned",
-      "kind": "liste"
+      "kind": "liste",
+      "tiktok_manual": true
     },
     {
       "id": "2026-11-11_liste_red-flag",
@@ -660,7 +662,8 @@
         "tiktok"
       ],
       "status": "planned",
-      "kind": "liste"
+      "kind": "liste",
+      "tiktok_manual": true
     },
     {
       "id": "2026-11-13_liste_sessize-al",
@@ -671,7 +674,8 @@
         "tiktok"
       ],
       "status": "planned",
-      "kind": "liste"
+      "kind": "liste",
+      "tiktok_manual": true
     },
     {
       "id": "2026-11-15_liste_dort-yildiz",
@@ -682,7 +686,8 @@
         "tiktok"
       ],
       "status": "planned",
-      "kind": "liste"
+      "kind": "liste",
+      "tiktok_manual": true
     },
     {
       "id": "2026-11-17_liste_tesaduf",
@@ -693,7 +698,8 @@
         "tiktok"
       ],
       "status": "planned",
-      "kind": "liste"
+      "kind": "liste",
+      "tiktok_manual": true
     },
     {
       "id": "2026-11-19_liste_film-gecesi",
@@ -704,7 +710,8 @@
         "tiktok"
       ],
       "status": "planned",
-      "kind": "liste"
+      "kind": "liste",
+      "tiktok_manual": true
     },
     {
       "id": "2026-11-21_liste_tek-kisilik-sofra",
@@ -715,7 +722,8 @@
         "tiktok"
       ],
       "status": "planned",
-      "kind": "liste"
+      "kind": "liste",
+      "tiktok_manual": true
     },
     {
       "id": "2026-11-23_liste_iki-gunluk-kacis",
@@ -726,7 +734,8 @@
         "tiktok"
       ],
       "status": "planned",
-      "kind": "liste"
+      "kind": "liste",
+      "tiktok_manual": true
     },
     {
       "id": "2026-11-25_liste_alarm-ertele",
@@ -737,7 +746,8 @@
         "tiktok"
       ],
       "status": "planned",
-      "kind": "liste"
+      "kind": "liste",
+      "tiktok_manual": true
     }
   ]
 }
