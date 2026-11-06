@@ -84,3 +84,72 @@ if __name__ == "__main__":
             pg.screenshot(path=os.path.join(out, f"{name}.jpg"), type="jpeg", quality=94)
         b.close()
     print("ok")
+
+
+# ================================================================== v2: iki onaya yakın kapak için ince ayar varyasyonları
+def _tes(still, pos, filt, slogan_top, slogan_size, title_top, title_size, tail_size, grad, title_first=False):
+    slogan = f'<div class="abs" style="left:56px;right:56px;top:{slogan_top}px;font:italic 400 {slogan_size}px/0.88 Anton;color:#fff;text-transform:uppercase">Kaydırma.<br><span style="color:#ffe14d">Karşılaş.</span></div>'
+    title = f'''<div class="abs" style="left:64px;right:64px;top:{title_top}px">
+  <div style="font:400 {title_size}px/1.07 Anton;color:#fff;text-transform:uppercase">{T_MAIN}</div>
+  <div class="serif" style="font-size:{tail_size}px;line-height:1.12;color:#ffe14d;margin-top:10px">{T_TAIL}</div></div>'''
+    return page(f"""
+<div class="bg" style="{ph(still, pos, filt)}"></div>
+<div class="abs" style="inset:0;background:{grad}"></div>
+{title if title_first else slogan}{slogan if title_first else title}
+{meta('5 FİLM · 17 KASIM · KAYDIR →', '#fff')}{logo('white')}
+""", "#000")
+
+
+BW = 'filter:grayscale(1) contrast(1.25) brightness(.85)'
+
+
+def tes_1():  # dengeli: slogan büyük ve alçak, başlık orta boy altında
+    return _tes('chungking_1', '30% 50%', BW, 560, 170, 900, 46, 40,
+                'linear-gradient(180deg,rgba(0,0,0,0) 30%,rgba(0,0,0,.9) 66%)')
+
+
+def tes_2():  # başlık üstte, slogan altta dev
+    return _tes('chungking_1', '30% 50%', BW, 830, 190, 90, 50, 42,
+                'linear-gradient(180deg,rgba(0,0,0,.85) 0%,rgba(0,0,0,.2) 32%,rgba(0,0,0,.1) 52%,rgba(0,0,0,.85) 80%)', title_first=True)
+
+
+def tes_3():  # renkli kare (siyah beyaz değil), dengeli düzen
+    return _tes('chungking_1', '30% 50%', 'filter:saturate(1.1)', 560, 170, 900, 46, 40,
+                'linear-gradient(180deg,rgba(0,0,0,0) 30%,rgba(0,0,0,.9) 66%)')
+
+
+def _kac(still, pos, hook_html, hook_top, title_top, align="center", grad=None):
+    grad = grad or "linear-gradient(180deg,rgba(6,18,10,.75) 0%,rgba(6,18,10,.2) 32%,rgba(6,18,10,.15) 55%,rgba(6,18,10,.9) 78%)"
+    al = f"text-align:{align}"
+    return page(f"""
+<div class="bg" style="{ph(still, pos, 'filter:saturate(1.1)')}"></div>
+<div class="abs" style="inset:0;background:{grad}"></div>
+<div class="abs" style="left:64px;right:64px;top:{hook_top}px;{al}">{hook_html}</div>
+<div class="abs" style="left:64px;right:64px;top:{title_top}px;{al}">
+  <div style="font:400 60px/1.07 Anton;color:#fff;text-transform:uppercase">{K_MAIN}</div>
+  <div class="serif" style="font-size:48px;line-height:1.12;color:#c8f06a;margin-top:12px">{K_TAIL}</div>
+</div>
+{meta('5 FİLM · 23 KASIM · KAYDIR →', '#fff') if align == 'left' else ''}{logo('white')}
+""", "#000")
+
+
+def kac_1():  # aynı fikir, kanca daha büyük ve sola yaslı
+    h = '<div class="osw" style="font-size:22px;color:#d9f0c8">Otomatik yanıt</div><div style="font:700 italic 132px/0.98 \'Playfair Display\';color:#fff;margin-top:14px">Pazartesiye<br>kadar <span style="color:#c8f06a">yokum.</span></div>'
+    return _kac('cmbyn_2', '50% 50%', h, 100, 920, align="left")
+
+
+def kac_2():  # başka kare: pencere kenarı, ortalı
+    h = '<div class="osw" style="font-size:22px;color:#d9f0c8">Otomatik yanıt</div><div style="font:700 italic 110px/1.02 \'Playfair Display\';color:#fff;margin-top:16px">Pazartesiye<br>kadar yokum.</div>'
+    return _kac('cmbyn_1', '28% 50%', h, 90, 930,
+                grad="linear-gradient(180deg,rgba(8,14,10,.8) 0%,rgba(8,14,10,.25) 30%,rgba(8,14,10,.1) 52%,rgba(8,14,10,.92) 76%)")
+
+
+def kac_3():  # kanca e-posta otomatik yanıt satırı gibi, kalın, alt kısım
+    h = ('<div style="display:inline-block;background:rgba(255,255,255,.14);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.25);'
+         'padding:22px 30px;border-radius:18px;font:600 30px Inter;color:#fff">Konu: Ofis dışındayım</div>'
+         '<div style="font:400 140px/0.9 Anton;color:#fff;text-transform:uppercase;margin-top:26px">Pazartesiye<br><span style="color:#c8f06a">kadar yokum.</span></div>')
+    return _kac('cmbyn_2', '50% 50%', h, 330, 930, align="left",
+                grad="linear-gradient(180deg,rgba(6,18,10,.2) 0%,rgba(6,18,10,.35) 30%,rgba(6,18,10,.55) 55%,rgba(6,18,10,.92) 72%)")
+
+
+ITEMS2 = [("06_tesaduf_1", tes_1), ("06_tesaduf_2", tes_2), ("06_tesaduf_3", tes_3), ("09_kacis_1", kac_1), ("09_kacis_2", kac_2), ("09_kacis_3", kac_3)]
