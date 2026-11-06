@@ -695,6 +695,48 @@ def c9():
                 hook_style="left:64px;top:430px;filter:drop-shadow(0 4px 22px rgba(0,30,60,.5))", main_size=70, tail_size=52,
                 grad="linear-gradient(180deg,rgba(6,20,36,0) 0%,rgba(6,20,36,.1) 32%,rgba(6,20,36,.9) 66%)")
 
+
+# ================================================================ v6: 2, 6, 7, 8, 9 — onaylı 4'ün dili: temiz tek özneli kare + tek küçük simge (1, 3, 4, 5, 10 onaylı)
+def icon_hook(svg_html, top=480):
+    return dict(hook=svg_html, hook_style=f"left:64px;top:{top}px;filter:drop-shadow(0 4px 20px rgba(0,0,0,.5))")
+
+
+def c2():
+    ticks = ('<svg width="170" height="110" viewBox="0 0 46 30"><path d="M3 16l8 8L27 6M19 22l2 2L37 6" fill="none" stroke="#7fd6ff" '
+             'stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/></svg>')
+    return full("her_2", "50% 40%", f"{EN('Ghost')}landıktan sonra üç gün boyunca aynı şarkıyı dinleyenlerin,",
+                "terapiye gitmeden önce izlemesi gereken filmler", "#7fd6ff", "9 KASIM", main_size=64,
+                grad="linear-gradient(180deg,rgba(30,4,10,0) 0%,rgba(30,4,10,.1) 38%,rgba(24,4,8,.92) 66%)", **icon_hook(ticks, 500))
+
+
+def c6():
+    heart = svg("M12 21s-7.5-4.6-9.5-9.2C1 8 3.5 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.5 0 6 3.5 4.5 7.3C19.5 16.4 12 21 12 21z", 130, "#ff4d6d", sw=1.8, fill=False)
+    return full("sleepless_4", "70% 40%", f"{EN('Dating')} uygulamasında kaydırdıkça insanların birbirine benzediğini fark edenlere,",
+                "gerçek bir tesadüfün büyüsünü hatırlatan filmler", "#ff8fa3", "17 KASIM", main_size=60,
+                grad="linear-gradient(180deg,rgba(4,4,14,0) 0%,rgba(4,4,14,.1) 40%,rgba(4,4,14,.94) 66%)", **icon_hook(heart, 500))
+
+
+def c7():
+    pop = ('<svg width="140" height="120" viewBox="0 0 28 24"><rect x="2" y="3" width="24" height="15" rx="2.5" fill="none" stroke="#ff7eb6" stroke-width="1.6"/>'
+           '<path d="M12 8v5l4.5-2.5z" fill="#ff7eb6"/><path d="M9 22h10M14 18v4" stroke="#ff7eb6" stroke-width="1.6" stroke-linecap="round"/></svg>')
+    return full("sarahmarshall_2", "38% 50%", "Arkadaşının ilişkisi bittiğinde “tamam, film gecesi yapıyoruz” diyen herkesin,",
+                "kimsenin ağlamadan bitiremediği filmler", "#ff7eb6", "19 KASIM", main_size=60,
+                grad="linear-gradient(180deg,rgba(10,6,4,0) 0%,rgba(10,6,4,.1) 40%,rgba(10,6,4,.93) 66%)", **icon_hook(pop, 480))
+
+
+def c8():
+    fk = svg("M7 2v8a2 2 0 0 0 4 0V2M9 10v12M17 2c-2 1.5-3 4-3 7h3v13", 130, "#ffb35c", sw=1.6, fill=False)
+    return full("juliejulia_4", "52% 40%", "İşten çıkıp evde tek başına yemek yerken “bu da bir hayat” diyenlere,",
+                "tek kişilik sofranın yalnız olmadığını gösteren filmler", "#ffb35c", "21 KASIM", main_size=62,
+                grad="linear-gradient(180deg,rgba(20,14,8,0) 0%,rgba(20,14,8,.12) 38%,rgba(20,14,8,.94) 66%)", **icon_hook(fk, 490))
+
+
+def c9():
+    plane = svg("M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z", 130, "#ffd36b", sw=1.4, fill=False)
+    return full("cmbyn_1", "28% 50%", "Yıllık izin hesabı yapıp iki günlük tatile bile sevinenlerin,",
+                "kaçmanın bir film kadar iyi geldiğini hatırlatacak filmler", "#ffd36b", "23 KASIM", main_size=70, tail_size=52,
+                grad="linear-gradient(180deg,rgba(8,14,10,0) 0%,rgba(8,14,10,.12) 38%,rgba(8,14,10,.93) 66%)", **icon_hook(plane, 470))
+
 COVERS = [("situationship", c1), ("ghostlandin", c2), ("red-flag", c3), ("sessize-al", c4), ("dort-yildiz", c5),
           ("tesaduf", c6), ("film-gecesi", c7), ("tek-kisilik-sofra", c8), ("iki-gunluk-kacis", c9), ("alarm-ertele", c10)]
 
