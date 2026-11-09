@@ -653,9 +653,13 @@
         "instagram",
         "tiktok"
       ],
-      "status": "planned",
+      "status": "published",
       "kind": "liste",
-      "tiktok_manual": true
+      "tiktok_manual": true,
+      "results": {
+        "instagram": "18375853954212920"
+      },
+      "published_at": "2026-11-09T18:00+03:00"
     },
     {
       "id": "2026-11-11_liste_red-flag",
