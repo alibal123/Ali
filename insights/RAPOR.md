@@ -1,6 +1,6 @@
-# Etkileşim raporu — 2026-11-16
+# Etkileşim raporu — 2026-11-17
 
-Takipçi: 27217 · Puan = beğeni + 3×yorum · 48 saatten genç gönderiler puana girmez.
+Takipçi: 27204 · Puan = beğeni + 3×yorum · 48 saatten genç gönderiler puana girmez.
 
 ## Format sıralaması (otomatik gönderiler)
 
@@ -35,11 +35,11 @@ Takipçi: 27217 · Puan = beğeni + 3×yorum · 48 saatten genç gönderiler pua
 
 ## Hesabın en çok tutan 10 gönderisi
 
-- 2026-04-27 REELS · 58773 beğeni · Four Lions
-- 2026-04-06 REELS · 37653 beğeni · Shrek the Third (2007), taht meselesi yüzünden istemediği bir sorumluluğun eşiğine gelen bir karakterin, kendi
-- 2026-04-03 REELS · 24559 beğeni · Fantastic Mr. Fox (2009), sakin bir aile hayatı kurmaya çalışırken eski içgüdülerinden vazgeçemeyen bir tilkin
-- 2026-06-13 REELS · 14300 beğeni · 964 Pinocchio (1991), hafızası silinmiş ve sokağa terk edilmiş bir sibernetik insanın, kim olduğunu anlamaya ç
-- 2026-04-05 REELS · 7496 beğeni · Duvara Karşı (2004), hayatla bağı zayıflamış iki insanın tesadüfi biçimde aynı noktada buluşmasını anlatırken,
+- 2026-04-27 REELS · 58760 beğeni · Four Lions
+- 2026-04-06 REELS · 37647 beğeni · Shrek the Third (2007), taht meselesi yüzünden istemediği bir sorumluluğun eşiğine gelen bir karakterin, kendi
+- 2026-04-03 REELS · 24555 beğeni · Fantastic Mr. Fox (2009), sakin bir aile hayatı kurmaya çalışırken eski içgüdülerinden vazgeçemeyen bir tilkin
+- 2026-06-13 REELS · 14298 beğeni · 964 Pinocchio (1991), hafızası silinmiş ve sokağa terk edilmiş bir sibernetik insanın, kim olduğunu anlamaya ç
+- 2026-04-05 REELS · 7495 beğeni · Duvara Karşı (2004), hayatla bağı zayıflamış iki insanın tesadüfi biçimde aynı noktada buluşmasını anlatırken,
 - 2026-06-23 REELS · 6911 beğeni · Narın Rengi (1969), ünlü bir ozanın hayatını alışılmış bir biyografi gibi anlatmak yerine, onun dünyasını şiir
 - 2026-07-16 REELS · 4322 beğeni · İstanbul Hatırası: Köprüyü Geçmek (2005), İstanbul’u tarihî yapıları ya da turistik noktalarıyla değil, müziği
 - 2026-06-29 REELS · 3810 beğeni · Bir Koyun Polisiyesi (2026), sessiz ve huzurlu bir köyde yaşayan koyunların, çobanlarının esrarengiz şekilde o
@@ -50,54 +50,54 @@ Takipçi: 27217 · Puan = beğeni + 3×yorum · 48 saatten genç gönderiler pua
 
 | Gönderi | Format | Saat | Beğeni | Yorum | Yaş (saat) |
 |---|---|---|---|---|---|
-| 2026-10-06_liste_turk-sinemasi | LİSTE | 18:40 | 109 | 29 | 980 |
-| 2026-10-07_eslesme_sevdiysen | EŞLEŞTİRME | 20:00 | 21 | 0 | 955 |
-| 2026-10-08_film_memories-of-murder | FİLM | 20:00 | 23 | 0 | 931 |
-| 2026-10-08_haber_possible-love | HABER | 14:00 | 12 | 2 | 937 |
-| 2026-10-09_haber_primetime | HABER | 14:00 | 12 | 1 | 913 |
-| 2026-10-09_oyun_detaydan-filmi-bul | OYUN | 20:00 | 8 | 0 | 907 |
-| 2026-10-10_haber_ask-ve-yasam | HABER | 14:00 | 9 | 0 | 889 |
-| 2026-10-10_veri_izleyici-elestirmen | VERİ | 20:00 | 8 | 4 | 883 |
-| 2026-10-11_haber_digger | HABER | 14:00 | 13 | 0 | 865 |
-| 2026-10-11_liste_kara-komedi | LİSTE | 20:00 | 89 | 13 | 859 |
-| 2026-10-12_film_kirmizi | FİLM | 20:00 | 15 | 0 | 835 |
-| 2026-10-12_haber_fatherland | HABER | 14:00 | 10 | 4 | 841 |
-| 2026-10-13_haber_clayface | HABER | 14:00 | 11 | 0 | 817 |
-| 2026-10-13_liste_kafanin-icinde | LİSTE | 20:00 | 19 | 0 | 811 |
-| 2026-10-14_haber_wildwood | HABER | 14:00 | 2 | 0 | 793 |
-| 2026-10-14_karsilastirma_uzaylilarla-konusmak | KARŞILAŞTIRMA | 20:00 | 8 | 0 | 787 |
-| 2026-10-15_film_the-menu | FİLM | 20:00 | 6 | 0 | 763 |
-| 2026-10-15_haber_you-can-see-everything | HABER | 14:00 | 4 | 0 | 768 |
-| 2026-10-16_oyun-haftanin-detaylari | OYUN | 20:00 | 7 | 0 | 739 |
-| 2026-10-16_vizyon_bu-hafta | DİĞER | 14:00 | 13 | 0 | 745 |
-| 2026-10-17_sahne_grand-budapest-oranlar | SAHNE | 20:00 | 18 | 0 | 715 |
-| 2026-10-18_film_kayip-balik-nemo | FİLM | 20:00 | 10 | 2 | 691 |
-| 2026-10-19_film_dogville | FİLM | 20:00 | 11 | 0 | 667 |
-| 2026-10-20_film_schindler-tek-renk | FİLM | 20:00 | 25 | 6 | 643 |
-| 2026-10-21_liste-7-oneri | LİSTE | 20:00 | 19 | 0 | 619 |
-| 2026-10-23_liste_gunlerce-pesini-birakmayan | LİSTE | 18:00 | 273 | 26 | 573 |
-| 2026-10-25_liste_akil-sagligina-zararlidir | LİSTE | 18:00 | 22 | 1 | 525 |
-| 2026-10-26_liste_keanu-son-sahnede-gonullu | LİSTE | 18:00 | 21 | 0 | 501 |
-| 2026-10-27_liste_unutanlar-kulubu | LİSTE | 18:00 | 6 | 0 | 477 |
-| 2026-10-28_liste_son-seans-kiyamet | LİSTE | 18:00 | 13 | 0 | 453 |
-| 2026-10-29_liste_hayati-sorgulatan-4-film | LİSTE | 18:00 | 15 | 0 | 429 |
-| 2026-10-30_liste_basa-sardiran-5-film | LİSTE | 18:00 | 37 | 2 | 405 |
-| 2026-10-31_liste_cadilar-bayrami-5-film | LİSTE | 18:00 | 9 | 0 | 381 |
-| 2026-10-31_vizyon_dunesday | DİĞER | 13:00 | 8 | 0 | 386 |
-| 2026-11-01_eslestirme_bunu-sevdiysen | DİĞER | 18:00 | 20 | 1 | 357 |
-| 2026-11-02_liste_2026-en-yuksek-puanli-5-film | LİSTE | 18:00 | 11 | 1 | 333 |
-| 2026-11-02_vizyon_kasim-takvimi | DİĞER | 13:00 | 7 | 0 | 338 |
-| 2026-11-03_liste_buyuyunce-vuran-animasyon | LİSTE | 18:00 | 8 | 0 | 309 |
-| 2026-11-04_liste_battaniye-filmleri | LİSTE | 18:00 | 7 | 0 | 285 |
-| 2026-11-04_vizyon_kadrosuyla-gundem | DİĞER | 13:00 | 6 | 0 | 290 |
-| 2026-11-05_liste_tek-mekanda-gecen-5-film | LİSTE | 18:00 | 8 | 1 | 261 |
-| 2026-11-07_liste_situationship | LİSTE | 18:00 | 8 | 1 | 213 |
-| 2026-11-09_liste_ghostlanma | LİSTE | 18:00 | 7 | 0 | 165 |
-| 2026-11-11_liste_red-flag | LİSTE | 18:00 | 12 | 0 | 117 |
-| 2026-11-13_liste_sessize-al | LİSTE | 18:00 | 30 | 0 | 69 |
-| 2026-11-15_liste_dort-yildiz | LİSTE | 18:00 | 11 | 0 | 21 (yeni) |
-| gun1_liste | LİSTE | 20:00 | 928 | 84 | 1099 |
-| gun2_incendies | FİLM | 20:00 | 22 | 2 | 1075 |
-| gun3_belgesel | BELGESEL | 20:00 | 10 | 0 | 1051 |
-| gun4_oyun | OYUN | 20:00 | 23 | 7 | 1027 |
-| gun5_jagten | FİLM | 20:00 | 50 | 2 | 1003 |
+| 2026-10-06_liste_turk-sinemasi | LİSTE | 18:40 | 109 | 29 | 1005 |
+| 2026-10-07_eslesme_sevdiysen | EŞLEŞTİRME | 20:00 | 21 | 0 | 980 |
+| 2026-10-08_film_memories-of-murder | FİLM | 20:00 | 23 | 0 | 956 |
+| 2026-10-08_haber_possible-love | HABER | 14:00 | 12 | 2 | 962 |
+| 2026-10-09_haber_primetime | HABER | 14:00 | 12 | 1 | 938 |
+| 2026-10-09_oyun_detaydan-filmi-bul | OYUN | 20:00 | 8 | 0 | 932 |
+| 2026-10-10_haber_ask-ve-yasam | HABER | 14:00 | 9 | 0 | 914 |
+| 2026-10-10_veri_izleyici-elestirmen | VERİ | 20:00 | 8 | 4 | 908 |
+| 2026-10-11_haber_digger | HABER | 14:00 | 13 | 0 | 890 |
+| 2026-10-11_liste_kara-komedi | LİSTE | 20:00 | 89 | 13 | 884 |
+| 2026-10-12_film_kirmizi | FİLM | 20:00 | 15 | 0 | 860 |
+| 2026-10-12_haber_fatherland | HABER | 14:00 | 10 | 4 | 866 |
+| 2026-10-13_haber_clayface | HABER | 14:00 | 11 | 0 | 842 |
+| 2026-10-13_liste_kafanin-icinde | LİSTE | 20:00 | 19 | 0 | 836 |
+| 2026-10-14_haber_wildwood | HABER | 14:00 | 2 | 0 | 818 |
+| 2026-10-14_karsilastirma_uzaylilarla-konusmak | KARŞILAŞTIRMA | 20:00 | 8 | 0 | 812 |
+| 2026-10-15_film_the-menu | FİLM | 20:00 | 6 | 0 | 788 |
+| 2026-10-15_haber_you-can-see-everything | HABER | 14:00 | 4 | 0 | 792 |
+| 2026-10-16_oyun-haftanin-detaylari | OYUN | 20:00 | 7 | 0 | 764 |
+| 2026-10-16_vizyon_bu-hafta | DİĞER | 14:00 | 13 | 0 | 770 |
+| 2026-10-17_sahne_grand-budapest-oranlar | SAHNE | 20:00 | 18 | 0 | 740 |
+| 2026-10-18_film_kayip-balik-nemo | FİLM | 20:00 | 10 | 2 | 716 |
+| 2026-10-19_film_dogville | FİLM | 20:00 | 11 | 0 | 692 |
+| 2026-10-20_film_schindler-tek-renk | FİLM | 20:00 | 25 | 6 | 668 |
+| 2026-10-21_liste-7-oneri | LİSTE | 20:00 | 19 | 0 | 644 |
+| 2026-10-23_liste_gunlerce-pesini-birakmayan | LİSTE | 18:00 | 273 | 26 | 598 |
+| 2026-10-25_liste_akil-sagligina-zararlidir | LİSTE | 18:00 | 22 | 1 | 550 |
+| 2026-10-26_liste_keanu-son-sahnede-gonullu | LİSTE | 18:00 | 21 | 0 | 526 |
+| 2026-10-27_liste_unutanlar-kulubu | LİSTE | 18:00 | 6 | 0 | 502 |
+| 2026-10-28_liste_son-seans-kiyamet | LİSTE | 18:00 | 13 | 0 | 478 |
+| 2026-10-29_liste_hayati-sorgulatan-4-film | LİSTE | 18:00 | 15 | 0 | 454 |
+| 2026-10-30_liste_basa-sardiran-5-film | LİSTE | 18:00 | 37 | 2 | 430 |
+| 2026-10-31_liste_cadilar-bayrami-5-film | LİSTE | 18:00 | 9 | 0 | 406 |
+| 2026-10-31_vizyon_dunesday | DİĞER | 13:00 | 8 | 0 | 411 |
+| 2026-11-01_eslestirme_bunu-sevdiysen | DİĞER | 18:00 | 20 | 1 | 382 |
+| 2026-11-02_liste_2026-en-yuksek-puanli-5-film | LİSTE | 18:00 | 11 | 1 | 358 |
+| 2026-11-02_vizyon_kasim-takvimi | DİĞER | 13:00 | 7 | 0 | 363 |
+| 2026-11-03_liste_buyuyunce-vuran-animasyon | LİSTE | 18:00 | 8 | 0 | 334 |
+| 2026-11-04_liste_battaniye-filmleri | LİSTE | 18:00 | 7 | 0 | 310 |
+| 2026-11-04_vizyon_kadrosuyla-gundem | DİĞER | 13:00 | 6 | 0 | 315 |
+| 2026-11-05_liste_tek-mekanda-gecen-5-film | LİSTE | 18:00 | 8 | 2 | 286 |
+| 2026-11-07_liste_situationship | LİSTE | 18:00 | 8 | 1 | 238 |
+| 2026-11-09_liste_ghostlanma | LİSTE | 18:00 | 8 | 0 | 190 |
+| 2026-11-11_liste_red-flag | LİSTE | 18:00 | 13 | 0 | 142 |
+| 2026-11-13_liste_sessize-al | LİSTE | 18:00 | 32 | 0 | 94 |
+| 2026-11-15_liste_dort-yildiz | LİSTE | 18:00 | 13 | 0 | 46 (yeni) |
+| gun1_liste | LİSTE | 20:00 | 928 | 84 | 1124 |
+| gun2_incendies | FİLM | 20:00 | 22 | 2 | 1100 |
+| gun3_belgesel | BELGESEL | 20:00 | 10 | 0 | 1076 |
+| gun4_oyun | OYUN | 20:00 | 23 | 7 | 1052 |
+| gun5_jagten | FİLM | 20:00 | 50 | 2 | 1028 |
