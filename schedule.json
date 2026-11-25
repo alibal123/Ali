@@ -781,9 +781,13 @@
         "instagram",
         "tiktok"
       ],
-      "status": "planned",
+      "status": "published",
       "kind": "liste",
-      "tiktok_manual": true
+      "tiktok_manual": true,
+      "results": {
+        "instagram": "17916585528603611"
+      },
+      "published_at": "2026-11-25T18:00+03:00"
     }
   ]
 }
