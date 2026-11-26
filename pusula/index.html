@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Pusula: kurs merkezi yönetim ve rehberlik paneli, canlı demo">
+<title>Pusula · Canlı Demo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* VOICE: gerçek bir ürün; sakin, net, iş aracı. Abartı yok.
+   IDEA: Pusula kurum panelinin kendisi — uydurma bir kurumla, tıklanarak gezilen canlı kopya.
+   PICTURE: ürünün ekranları (karşılama bandı, grafikler, öğrenci kartı) + Ekip 1 akış şeması.
+   COLOUR and TYPE: Pusula'nın kendi kimliği — kurum turuncusu tek vurgu, serin kâğıt zemin, mürekkep laciverti; Bricolage + Hanken (ürünün markası).
+   LAYOUT: sol menü + üst başlık + içerik; 860px altında menü üstte yatay kayar. */
+:root{color-scheme:light;
+--paper:#F4F6F8;--surface:#fff;--ink:#172A3A;--ink-2:#51657A;--ink-3:#5C6D7E;--line:#E0E6EC;--line-2:#EDF1F4;
+--brand:#C2410C;--brand-deep:#9A3412;--brand-wash:#FCECE0;--accent:#F07000;--hover:#FFF6EE;
+--iyi:#2A7860;--iyi-z:#E7F4EE;--orta:#9A6100;--orta-z:#FFF4DE;--kotu:#B4472F;--kotu-z:#FBECE7;
+--r:14px;--shadow:0 1px 2px rgba(23,42,58,.06),0 1px 3px rgba(23,42,58,.05);--shadow-l:0 8px 30px rgba(23,42,58,.16);
+--fd:"Bricolage Grotesque",system-ui,sans-serif;--fb:"Hanken Grotesk",system-ui,-apple-system,sans-serif}
+*{box-sizing:border-box;min-width:0}
+html,body{margin:0}
+body{font:15px/1.5 var(--fb);background:var(--paper);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:clip}
+h1,h2,h3{font-family:var(--fd);font-weight:700;letter-spacing:-.015em;margin:0;line-height:1.15}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
+main:focus,main:focus-visible{outline:none}
+.tnum{font-variant-numeric:tabular-nums}
+.soluk{color:var(--ink-3)}.iyi{color:var(--iyi)}.orta{color:var(--orta)}.kotu{color:var(--kotu)}
+.ico{width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+[hidden]{display:none!important}
+
+/* giriş */
+.giris{min-height:100vh;display:grid;grid-template-columns:1.1fr 1fr}
+.giris-sol{position:relative;padding:40px clamp(24px,5vw,64px);background:linear-gradient(160deg,#FFF6EC,#FDE6D2);display:flex;flex-direction:column;gap:28px;overflow:hidden}
+.giris-sol .foto{flex:1;min-height:260px;border-radius:22px;background:url(img/giris-hero.jpg) center/cover;box-shadow:var(--shadow-l)}
+.giris-sol h1{font-size:clamp(30px,3.6vw,46px);line-height:1.05;text-wrap:balance}
+.giris-sol h1 em{font-style:normal;color:var(--brand)}
+.giris-sag{display:grid;place-items:center;padding:32px 20px;background:#fff}
+.giris-kart{width:min(420px,100%);display:flex;flex-direction:column;gap:14px}
+.giris-kart h2{font-size:28px}
+.giris-kart p{margin:0;color:var(--ink-2)}
+.rol{all:unset;box-sizing:border-box;cursor:pointer;display:flex;align-items:center;gap:14px;padding:16px 18px;border:1px solid var(--line);border-radius:14px;background:#fff;transition:border-color .15s,background .15s,transform .1s}
+.rol:hover{border-color:#F3D3BC;background:var(--hover)}.rol:active{transform:scale(.99)}
+.rol b{display:block;font:700 16px var(--fd)}.rol span{font-size:13.5px;color:var(--ink-3)}
+.rol .ikon{display:grid;place-items:center;width:44px;height:44px;border-radius:12px;background:var(--brand-wash);color:var(--brand)}
+.rol.ana{background:var(--brand);border-color:var(--brand);color:#fff}.rol.ana span{color:#FFE3CF}.rol.ana .ikon{background:rgba(255,255,255,.18);color:#fff}.rol.ana:hover{background:var(--brand-deep)}
+.logo{display:flex;align-items:center;gap:10px}
+.logo i{display:grid;place-items:center;width:36px;height:36px;border-radius:10px;background:var(--accent);color:#fff}
+.logo b{font:700 19px var(--fd)}.logo small{display:block;font-size:12px;color:var(--ink-3);line-height:1.2}
+.demo-not{font-size:12.5px;color:var(--ink-3);border-top:1px solid var(--line-2);padding-top:12px}
+
+/* çatı */
+.cati{display:grid;grid-template-columns:240px minmax(0,1fr);min-height:100vh}
+.yan{position:sticky;top:0;height:100vh;overflow:auto;background:#fff;border-right:1px solid var(--line);padding:18px 12px;display:flex;flex-direction:column;gap:6px}
+.yan .logo{padding:2px 8px 12px}
+.yan h4{margin:12px 10px 4px;font:700 11px var(--fd);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
+.yan a{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:10px;color:var(--ink-2);text-decoration:none;font-weight:600;font-size:14px}
+.yan a:hover{background:#F6F7F9;color:var(--ink)}
+.yan a.secili{background:var(--brand-wash);color:var(--brand-deep)}
+.yan a .say{margin-left:auto;font-size:11.5px;background:var(--kotu);color:#fff;border-radius:99px;padding:1px 7px}
+.yan .alt{margin-top:auto;padding:12px 8px 0;border-top:1px solid var(--line-2);display:flex;align-items:center;gap:10px;font-size:13px}
+.av{display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:#FDEBDD;color:var(--brand-deep);font:700 13px var(--fd);flex:none}
+.av.b{width:56px;height:56px;font-size:19px}
+.ust{position:sticky;top:0;z-index:5;display:flex;align-items:center;gap:12px;padding:12px clamp(16px,3vw,28px);background:rgba(244,246,248,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.ust small{display:block;font:700 11px var(--fd);letter-spacing:.07em;text-transform:uppercase;color:var(--brand)}
+.ust h1{font-size:19px}
+.ust .sag{margin-left:auto;display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+.etiket-demo{font-size:12px;font-weight:700;color:var(--orta);background:var(--orta-z);padding:4px 10px;border-radius:99px;white-space:nowrap}
+main{padding:20px clamp(16px,3vw,28px) 60px;max-width:1280px}
+@media(max-width:860px){
+ .cati{grid-template-columns:1fr}
+ .yan{position:sticky;top:0;z-index:8;height:auto;flex-direction:row;align-items:center;overflow-x:auto;padding:8px 10px;border-right:0;border-bottom:1px solid var(--line);gap:4px}
+ .yan h4,.yan .alt,.yan .logo small{display:none}.yan .logo{padding:0 8px 0 0}.yan .logo b{display:none}
+ .yan a{flex:none;white-space:nowrap;padding:8px 10px}
+ .ust{position:static}.giris{grid-template-columns:1fr}.giris-sol .foto{min-height:220px}}
+
+/* ortak */
+.kart{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow)}
+.kart-bas{display:flex;align-items:flex-start;gap:12px;padding:16px 18px 10px}
+.kart-bas h2{font-size:16.5px}.kart-bas p{margin:3px 0 0;color:var(--ink-2);font-size:13.5px}
+.kart-bas .sag{margin-left:auto;display:flex;gap:8px}
+.ic{padding:4px 18px 18px}
+.izgara{display:grid;gap:14px}
+.k4{grid-template-columns:repeat(4,minmax(0,1fr))}.k3{grid-template-columns:repeat(3,minmax(0,1fr))}.k2{grid-template-columns:minmax(0,1.15fr) minmax(0,1fr)}.k2e{grid-template-columns:1fr 1fr}
+@media(max-width:1000px){.k4{grid-template-columns:repeat(2,minmax(0,1fr))}.k3,.k2,.k2e{grid-template-columns:1fr}}
+.bosluk{height:14px}
+.kpi{all:unset;box-sizing:border-box;display:flex;flex-direction:column;gap:2px;padding:14px 16px;background:#fff;border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);cursor:default}
+a.kpi,button.kpi{cursor:pointer}a.kpi:hover,button.kpi:hover{border-color:#F3D3BC;background:var(--hover)}
+.kpi span{font-size:12.5px;color:var(--ink-3);font-weight:600}
+.kpi b{font:700 clamp(22px,2.4vw,28px) var(--fd);font-variant-numeric:tabular-nums}
+.kpi small{font-size:12.5px;color:var(--ink-3)}
+.rozet{display:inline-flex;align-items:center;gap:4px;padding:3px 9px;border-radius:99px;font-size:12px;font-weight:700;background:#F1F3F5;color:var(--ink-2);white-space:nowrap}
+.rozet.iyi{background:var(--iyi-z);color:var(--iyi)}.rozet.orta{background:var(--orta-z);color:var(--orta)}.rozet.kotu{background:var(--kotu-z);color:var(--kotu)}.rozet.dolu{background:var(--kotu);color:#fff}.rozet.marka{background:var(--brand-wash);color:var(--brand-deep)}
+.btn{all:unset;box-sizing:border-box;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:40px;padding:8px 14px;border-radius:10px;border:1px solid var(--line);background:#fff;font-weight:600;font-size:14px;color:var(--ink);transition:background .15s,border-color .15s;white-space:nowrap}
+.btn:hover{background:var(--hover);border-color:#F3D3BC}
+.btn.ana{background:var(--brand);border-color:var(--brand);color:#fff}.btn.ana:hover{background:var(--brand-deep)}
+.btn.kucuk{min-height:34px;padding:6px 11px;font-size:13px}
+.btn:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
+.cipler{display:flex;flex-wrap:wrap;gap:8px}
+.cip{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:7px;padding:7px 13px;border-radius:99px;border:1px solid var(--line);background:#fff;font-size:13.5px;font-weight:600;color:var(--ink-2)}
+.cip span{font-size:11.5px;color:var(--ink-3)}
+.cip:hover{border-color:#F3D3BC;background:var(--hover)}
+.cip.secili{background:var(--ink);border-color:var(--ink);color:#fff}.cip.secili span{color:rgba(255,255,255,.75)}
+.cip:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
+.tablo{width:100%;border-collapse:collapse;font-size:14px}
+.tablo th{text-align:left;font-size:11.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-3);padding:8px 10px;border-bottom:1px solid var(--line);font-weight:700;white-space:nowrap}
+.tablo td{padding:9px 10px;border-bottom:1px solid var(--line-2)}
+.tablo td.s,.tablo th.s{text-align:right;font-variant-numeric:tabular-nums}
+.tablo tr.tik{cursor:pointer}.tablo tr.tik:hover td{background:var(--hover)}
+.tablo th button{all:unset;cursor:pointer}.tablo th button:hover{color:var(--brand)}
+.scroll{overflow-x:auto}
+.cubuk{height:8px;border-radius:8px;background:#EEF1F4;overflow:hidden}.cubuk i{display:block;height:100%;border-radius:8px;background:var(--brand)}
+.cubuk.iyi i{background:var(--iyi)}.cubuk.orta i{background:#E8A33D}.cubuk.kotu i{background:var(--kotu)}
+.satir-bar{display:grid;grid-template-columns:minmax(90px,150px) minmax(0,1fr) 84px;gap:10px;align-items:center;padding:6px 0;font-size:14px}
+.satir-bar b{text-align:right;font-variant-numeric:tabular-nums;font-weight:700}
+.fig{position:relative;height:240px}.fig>svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.fig.kisa{height:190px}
+.lejant{display:flex;gap:14px;flex-wrap:wrap;font-size:12.5px;color:var(--ink-3);padding:0 18px 14px}
+.lejant i{display:inline-block;width:14px;height:3px;border-radius:2px;background:var(--brand);vertical-align:middle;margin-right:6px}.lejant i.k{background:repeating-linear-gradient(90deg,#7A8CA0 0 4px,transparent 4px 7px)}
+.dipnot{font-size:12.5px;color:var(--ink-3);margin:10px 2px 0}
+.ara{position:relative;flex:1 1 240px}.ara .ico{position:absolute;left:12px;top:50%;transform:translateY(-50%);color:var(--ink-3)}
+.ara input{width:100%;height:42px;padding:0 12px 0 38px;border-radius:10px;border:1px solid var(--line);background:#fff;font-size:16px}
+.ara input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 4px rgba(240,112,0,.13)}
+select,.alan input,.alan textarea{height:42px;border-radius:10px;border:1px solid var(--line);padding:0 10px;background:#fff;font-size:16px;width:100%}
+.alan textarea{height:auto;min-height:96px;padding:10px;resize:vertical}
+.alan{display:flex;flex-direction:column;gap:5px;font-size:13px;font-weight:600;color:var(--ink-2)}
+.arac{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:14px}
+
+/* ana sayfa */
+.bant{position:relative;border-radius:18px;overflow:hidden;padding:clamp(22px,3vw,34px);background:#FBEBDD url(img/panel-banner.jpg) right center/cover;min-height:170px;display:flex;flex-direction:column;justify-content:center;gap:6px;border:1px solid #F3DCC8}
+.bant.sinav{background-image:url(img/sinav-banner.jpg)}
+.bant small{font:700 11.5px var(--fd);letter-spacing:.07em;text-transform:uppercase;color:var(--brand)}
+.bant h2{font-size:clamp(24px,3vw,34px);max-width:60%}.bant p{margin:0;color:var(--ink-2);max-width:56%}
+@media(max-width:700px){.bant{background-position:75% center}.bant h2,.bant p{max-width:100%}.bant::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(253,240,229,.95),rgba(253,240,229,.7))}.bant>*{position:relative}}
+.is{display:flex;gap:12px;align-items:flex-start;padding:11px 18px;border-top:1px solid var(--line-2)}
+.is:hover{background:var(--hover)}
+.is .tik{all:unset;cursor:pointer;flex:none;width:20px;height:20px;border-radius:6px;border:1.5px solid var(--ink-3);margin-top:2px;display:grid;place-items:center;color:#fff}
+.is .tik[aria-pressed="true"]{background:var(--iyi);border-color:var(--iyi)}
+.is.bitti .metin{opacity:.5;text-decoration:line-through}
+.is .metin{flex:1;cursor:pointer}.is .metin b{display:block;font-size:14.5px}.is .metin span{font-size:13px;color:var(--ink-3)}
+.akis-serit{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;padding:6px 18px 18px}
+.akis-serit div{position:relative;padding:10px 12px 0 22px;border-top:3px solid var(--line)}
+.akis-serit div::before{content:"";position:absolute;left:0;top:-8px;width:13px;height:13px;border-radius:50%;background:#fff;border:3px solid var(--iyi)}
+.akis-serit b{display:block;font-size:14px}.akis-serit span{font-size:12.5px;color:var(--ink-3)}
+@media(max-width:700px){.akis-serit{grid-template-columns:1fr 1fr;row-gap:14px}}
+
+/* öğrenci */
+.agac{padding:10px}
+.agac button{all:unset;box-sizing:border-box;cursor:pointer;display:flex;width:100%;padding:8px 10px;border-radius:10px;font-size:14px;color:var(--ink-2)}
+.agac button b{margin-left:auto;font-size:12px;color:var(--ink-3)}
+.agac button:hover{background:#F6F7F9}.agac button.secili{background:var(--brand-wash);color:var(--brand-deep);font-weight:700}
+.iki{display:grid;grid-template-columns:230px minmax(0,1fr);gap:14px;align-items:start}
+@media(max-width:900px){.iki{grid-template-columns:1fr}}
+.osatir{all:unset;box-sizing:border-box;cursor:pointer;display:grid;grid-template-columns:40px minmax(150px,1.5fr) minmax(90px,.8fr) minmax(110px,1fr) 110px;gap:12px;align-items:center;width:100%;padding:9px 16px;border-top:1px solid var(--line-2)}
+.osatir:hover{background:var(--hover)}
+.osatir .ad b{display:block;font-size:14.5px}.osatir .ad small{font-size:12.5px;color:var(--ink-3)}
+@media(max-width:640px){.osatir{grid-template-columns:40px minmax(0,1fr) 90px}.osatir .gizle{display:none}}
+.ogr-bas{display:flex;flex-wrap:wrap;align-items:center;gap:16px;padding:18px}
+.ogr-bas h2{font-size:24px}.ogr-bas p{margin:3px 0 0;color:var(--ink-3);font-size:13.5px}
+.ogr-bas .sag{margin-left:auto;display:flex;gap:8px;flex-wrap:wrap}
+.risk-kutu{padding:16px 18px;border-radius:var(--r);border:1px solid}
+.risk-kutu.y{background:var(--kotu-z);border-color:#F1CFC4}.risk-kutu.o{background:var(--orta-z);border-color:#F2DDB2}.risk-kutu.d{background:var(--iyi-z);border-color:#CDE6DA}
+.risk-kutu b{font:700 16px var(--fd)}.risk-kutu ul{margin:8px 0 0;padding-left:18px;font-size:14px}
+.gunler{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:5px;padding:0 18px 6px}
+.gunler i{aspect-ratio:1.3;border-radius:6px;display:grid;place-items:center;font:600 10.5px var(--fb);font-style:normal;color:#fff}
+.g-G{background:var(--iyi)}.g-Y{background:var(--kotu)}.g-C{background:#E8A33D}.g-I{background:#9AA9B8}
+.notlar{list-style:none;margin:0;padding:0 18px 16px}
+.notlar li{position:relative;padding:0 0 14px 20px;border-left:2px solid var(--line-2);margin-left:6px}
+.notlar li::before{content:"";position:absolute;left:-7px;top:3px;width:12px;height:12px;border-radius:50%;background:#fff;border:2px solid var(--brand)}
+.notlar b{font-size:14px}.notlar small{color:var(--ink-3);font-size:12.5px;margin-left:6px}.notlar p{margin:3px 0 0;font-size:14px;color:var(--ink-2)}
+
+/* takip */
+.takip{display:grid;grid-template-columns:44px minmax(0,1fr) auto;gap:14px;align-items:center;padding:14px 18px;border-top:1px solid var(--line-2)}
+.takip .nedenler{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.puan{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;font:700 17px var(--fd);color:#fff}
+@media(max-width:640px){.takip{grid-template-columns:44px minmax(0,1fr)}.takip .eylem{grid-column:1/-1;display:flex;gap:8px}}
+
+/* yoklama */
+.gun-serit{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px}
+.gun{all:unset;cursor:pointer;flex:none;text-align:center;padding:8px 14px;border-radius:12px;border:1px solid var(--line);background:#fff;min-width:74px}
+.gun b{display:block;font:700 18px var(--fd)}.gun span{font-size:12px;color:var(--ink-3)}
+.gun.secili{background:var(--ink);border-color:var(--ink);color:#fff}.gun.secili span{color:#cfd8e1}
+.durum{display:inline-flex;padding:3px;border-radius:10px;background:#F1F3F5;gap:2px}
+.durum button{all:unset;cursor:pointer;padding:6px 10px;border-radius:8px;font-size:13px;font-weight:700;color:var(--ink-3)}
+.durum button[aria-pressed="true"].G{background:var(--iyi);color:#fff}.durum button[aria-pressed="true"].Y{background:var(--kotu);color:#fff}.durum button[aria-pressed="true"].C{background:#E8A33D;color:#172A3A}.durum button[aria-pressed="true"].I{background:#7A8CA0;color:#fff}
+
+/* sınav */
+.skart{all:unset;box-sizing:border-box;cursor:pointer;display:grid;grid-template-columns:58px minmax(0,1fr);gap:12px;padding:14px;border-radius:var(--r);background:#fff;border:1px solid var(--line);box-shadow:var(--shadow);border-left:4px solid var(--iyi)}
+.skart:hover{background:var(--hover)}
+.skart.plan{border-left-color:#7A8CA0}.skart.yari{border-left-color:#E8A33D}
+.tarih-blok{text-align:center;border-radius:10px;background:#F6F7F9;padding:6px 0}.tarih-blok b{display:block;font:700 22px var(--fd);line-height:1}.tarih-blok span{font-size:11.5px;font-weight:700;color:var(--ink-3);text-transform:uppercase}
+.skart h3{font-size:15px}.skart .bilgi{display:flex;gap:14px;flex-wrap:wrap;font-size:13px;color:var(--ink-3);margin-top:6px}.skart .bilgi b{color:var(--ink);font-variant-numeric:tabular-nums}
+.histo{display:flex;align-items:flex-end;gap:6px;height:180px;padding:10px 18px 0}
+.histo div{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;gap:4px}
+.histo i{width:100%;background:var(--brand);border-radius:6px 6px 0 0;min-height:2px;opacity:.85}
+.histo small{font-size:11px;color:var(--ink-3);white-space:nowrap}.histo b{font-size:12px}
+.isi td.h{text-align:center;font-weight:700;cursor:pointer;border:2px solid #fff;border-radius:8px}
+.h1{background:var(--kotu-z);color:var(--kotu)}.h2{background:var(--orta-z);color:var(--orta)}.h3{background:var(--iyi-z);color:var(--iyi)}
+.isi td.h:hover,.isi td.h.secili{outline:2px solid var(--brand);outline-offset:-2px}
+
+/* ekip 1 */
+.ekip-bas{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:20px;align-items:center;padding:clamp(20px,3vw,32px);border-radius:18px;background:linear-gradient(135deg,#172A3A,#24425A);color:#fff}
+.ekip-bas small{font:700 11.5px var(--fd);letter-spacing:.07em;text-transform:uppercase;color:#FFB27A}
+.ekip-bas h2{font-size:clamp(26px,3.2vw,38px);margin:6px 0 10px}.ekip-bas p{margin:0;color:#D4DEE8;font-size:15.5px}
+.olcek{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.olcek div{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:12px 14px}
+.olcek b{display:block;font:700 24px var(--fd)}.olcek span{font-size:12.5px;color:#C2CFDC}
+@media(max-width:900px){.ekip-bas{grid-template-columns:1fr}}
+.akis{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:26px;padding:8px 18px 20px}
+.dugum{position:relative;background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px;box-shadow:var(--shadow)}
+.dugum h3{font-size:15px;display:flex;align-items:center;gap:8px}.dugum h3 i{font-style:normal;display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--brand);color:#fff;font-size:12px}
+.dugum ul{margin:8px 0 0;padding-left:16px;font-size:13px;color:var(--ink-2)}.dugum li{margin:2px 0}
+.dugum:not(:last-child)::after{content:"";position:absolute;right:-22px;top:50%;width:18px;height:2px;background:var(--brand)}
+.dugum:not(:last-child)::before{content:"";position:absolute;right:-23px;top:calc(50% - 4px);border:5px solid transparent;border-left-color:var(--brand);border-right:0}
+.dugum.vurgu{border-color:var(--brand);box-shadow:0 0 0 3px rgba(194,65,12,.12)}
+.nabiz{position:absolute;right:-22px;top:calc(50% - 3px);width:7px;height:7px;border-radius:50%;background:var(--accent);animation:akis 1.6s linear infinite}
+@keyframes akis{from{transform:translateX(0);opacity:1}to{transform:translateX(16px);opacity:0}}
+@media(prefers-reduced-motion:reduce){.nabiz{display:none}}
+@media(max-width:1100px){.akis{grid-template-columns:1fr;gap:22px}.dugum:not(:last-child)::after{right:auto;left:50%;top:auto;bottom:-18px;width:2px;height:14px}.dugum:not(:last-child)::before{right:auto;left:calc(50% - 4px);top:auto;bottom:-22px;border:5px solid transparent;border-top-color:var(--brand);border-bottom:0}.nabiz{display:none}}
+.saat{display:grid;grid-template-columns:110px minmax(0,1fr);gap:14px;padding:12px 18px;border-top:1px solid var(--line-2)}
+.saat b{font:700 15px var(--fd);color:var(--brand)}.saat p{margin:2px 0 0;font-size:13.5px;color:var(--ink-2)}
+.telefon{max-width:360px;margin:0 auto;border-radius:28px;background:#E9E2D9;padding:16px 12px;border:8px solid #172A3A}
+.balon{background:#fff;border-radius:12px 12px 12px 4px;padding:10px 12px;font-size:13.5px;margin-bottom:10px;box-shadow:0 1px 1px rgba(0,0,0,.08);white-space:pre-line}
+.balon .kim{font-weight:700;color:var(--brand);font-size:12.5px;display:block;margin-bottom:2px}
+.balon .ek{all:unset;cursor:pointer;display:block;margin-top:8px;padding:8px 10px;border-radius:8px;background:#F4F6F8;font-size:12.5px;font-weight:600}
+.balon .ek:hover{background:var(--brand-wash)}
+.balon time{display:block;text-align:right;font-size:11px;color:var(--ink-3)}
+.bulgu .rozet{flex:none}.bulgu{display:flex;gap:10px;align-items:flex-start;padding:10px 18px;border-top:1px solid var(--line-2);font-size:14px}
+.kural{padding:14px 16px}.kural b{display:block;font:700 15px var(--fd);margin-bottom:3px}.kural span{font-size:13.5px;color:var(--ink-2)}
+
+/* onay */
+.onay{padding:16px 18px;border-top:1px solid var(--line-2);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px}
+.onay .mesaj{margin-top:8px;padding:10px 12px;border-radius:10px;background:#F7F8FA;font-size:14px;white-space:pre-line;border:1px solid var(--line-2)}
+.onay textarea{width:100%;min-height:110px;margin-top:8px;border-radius:10px;border:1px solid var(--accent);padding:10px;font-size:15px}
+.onay .eylem{display:flex;flex-direction:column;gap:8px}
+@media(max-width:700px){.onay{grid-template-columns:1fr}.onay .eylem{flex-direction:row;flex-wrap:wrap}}
+
+/* rapor kağıdı */
+.kagit{max-width:860px;margin:0 auto;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow-l);border-radius:6px;padding:clamp(18px,4vw,44px)}
+.kagit header{display:flex;align-items:flex-start;gap:12px;border-bottom:3px solid var(--accent);padding-bottom:12px;margin-bottom:18px}
+.kagit header h2{font-size:22px}.kagit header p{margin:2px 0 0;color:var(--ink-3);font-size:13px}
+.kagit h3{font-size:15.5px;margin:20px 0 8px}
+.kagit .kutular{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.kagit .kutular div{border:1px solid var(--line);border-radius:10px;padding:10px 12px}.kagit .kutular b{display:block;font:700 20px var(--fd)}.kagit .kutular span{font-size:12px;color:var(--ink-3)}
+@media(max-width:640px){.kagit .kutular{grid-template-columns:1fr 1fr}}
+.kagit .fig{border:1px solid var(--line-2);border-radius:10px}
+.madde{display:flex;gap:10px;padding:10px 12px;border-radius:10px;background:#FFF8F2;border:1px solid #F7DFCB;margin-bottom:8px;font-size:14.5px}
+.madde b.n{flex:none;display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--brand);color:#fff;font-size:13px}
+.sekme{display:flex;gap:4px;padding:4px;background:#ECEFF2;border-radius:12px;width:max-content;max-width:100%;overflow-x:auto}
+.sekme button{all:unset;cursor:pointer;padding:8px 14px;border-radius:9px;font-weight:600;font-size:14px;color:var(--ink-2);white-space:nowrap}
+.sekme button[aria-selected="true"]{background:#fff;color:var(--brand);box-shadow:var(--shadow)}
+.sekme button:focus-visible{outline:2px solid var(--brand)}
+
+/* veli */
+.veli-bant{display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding:clamp(18px,3vw,28px);border-radius:18px;background:#FDF0E4 url(img/benim-hero.jpg) right center/cover;border:1px solid #F3DCC8;min-height:160px}
+.veli-bant h2{font-size:clamp(22px,2.8vw,30px)}.veli-bant p{margin:3px 0 0;color:var(--ink-2)}
+.veli-bant .siralar{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}.veli-bant .siralar span{background:rgba(255,255,255,.85);border:1px solid #F3DCC8;border-radius:10px;padding:6px 12px;font-size:12.5px;color:var(--ink-3)}.veli-bant .siralar b{display:block;font:700 17px var(--fd);color:var(--brand)}
+.onizleme{display:flex;gap:12px;align-items:center;flex-wrap:wrap;padding:10px 14px;border-radius:12px;background:#EAF1F7;border:1px solid #CFDDEA;margin-bottom:14px;font-size:14px}
+.onizleme select{width:auto;min-width:200px}
+
+/* modal ve toast */
+.perde{position:fixed;inset:0;z-index:30;background:rgba(23,42,58,.45);display:grid;place-items:start center;overflow:auto;padding:30px 12px}
+.perde .kapat{position:sticky;top:0;margin-left:auto;display:flex;justify-content:flex-end;max-width:860px;width:100%;margin-bottom:8px}
+.toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%) translateY(20px);opacity:0;z-index:40;background:var(--ink);color:#fff;padding:11px 18px;border-radius:12px;font-size:14px;box-shadow:var(--shadow-l);transition:.25s;pointer-events:none;max-width:90vw}
+.toast.acik{opacity:1;transform:translateX(-50%)}
+
+/* ağ, koordinasyon, veli ekleri */
+.ag-bas{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:20px;align-items:center;padding:clamp(20px,3vw,32px);border-radius:18px;background:linear-gradient(135deg,#FFF7F0,#FDE9DA);border:1px solid #F3DCC8}
+.ag-bas small{font:700 11.5px var(--fd);letter-spacing:.07em;text-transform:uppercase;color:var(--brand)}
+.ag-bas h2{font-size:clamp(24px,3vw,34px);margin:6px 0 10px;text-wrap:balance}.ag-bas p{margin:0;color:var(--ink-2);font-size:15.5px}
+.ag-bas .olcek div,.ekip-bas .olcek div{background:#fff;border:1px solid #F3DCC8}.ag-bas .olcek b,.ekip-bas .olcek b{color:var(--brand-deep)}.ag-bas .olcek span,.ekip-bas .olcek span{color:var(--ink-3)}
+@media(max-width:900px){.ag-bas{grid-template-columns:1fr}}
+.ag-kurumlar{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.ag-k{padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:#fff;display:flex;flex-direction:column;gap:3px;font-size:12.5px;transition:background .3s,border-color .3s}
+.ag-k b{font:700 15px var(--fd)}.ag-k .d{display:flex;align-items:center;gap:6px;font-weight:700;font-size:12.5px;color:var(--ink-2)}
+.ag-k .d i{width:8px;height:8px;border-radius:50%;background:#C9D2DB}
+.ag-k.gelen{border-color:#F2DDB2;background:#FFFBF2}.ag-k.gelen .d i{background:#E8A33D}.ag-k.okundu{border-color:#CDE6DA;background:#F6FBF8}.ag-k.okundu .d i{background:var(--iyi)}
+@media(max-width:900px){.ag-kurumlar{grid-template-columns:1fr 1fr}}
+.zaman{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));padding:6px 18px 18px}
+.zaman div{padding:12px 10px 0 0;border-top:3px solid var(--line)}.zaman div.ok{border-top-color:var(--iyi)}
+.zaman b{display:block;font:700 16px var(--fd);color:var(--brand)}.zaman span{font-size:12.5px;color:var(--ink-2)}
+@media(max-width:800px){.zaman{grid-template-columns:1fr 1fr;row-gap:12px}}
+.txt{font:12px/1.6 ui-monospace,Menlo,monospace;background:#F6F8FA;color:#24394D;border:1px solid var(--line);border-radius:10px;padding:12px 14px;overflow-x:auto;white-space:pre;margin:0 18px 10px}
+.sayfalama{display:flex;gap:8px;align-items:center;justify-content:flex-end;padding:10px 18px;flex-wrap:wrap}
+.btn[disabled]{opacity:.45;pointer-events:none}
+.adim{display:grid;grid-template-columns:150px minmax(0,1fr);gap:14px;padding:12px 18px;border-top:1px solid var(--line-2);align-items:start}.adim>b{font:700 14.5px var(--fd);color:var(--brand)}
+.kanit{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.4fr);gap:14px;padding:14px 18px;border-top:1px solid var(--line-2)}
+@media(max-width:700px){.kanit,.adim{grid-template-columns:1fr}}
+.liste{margin:0;padding:0 18px 18px 36px;font-size:14px;color:var(--ink-2)}.liste li{margin:5px 0}
+.ag-serit{display:flex;align-items:center;gap:14px;padding:14px 18px;border-radius:var(--r);background:#fff;border:1px solid #F3D3BC;box-shadow:var(--shadow);text-decoration:none;color:var(--ink);flex-wrap:wrap}
+.ag-serit:hover{background:var(--hover)}.ag-serit div{flex:1;min-width:200px}.ag-serit b{display:block;font:700 15.5px var(--fd)}.ag-serit span{font-size:13.5px;color:var(--ink-3)}
+.rozetler{display:grid;gap:10px}.rozetler div{display:grid;grid-template-columns:32px minmax(0,1fr);column-gap:10px;align-items:center}.rozetler i{grid-row:span 2;display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--iyi-z);color:var(--iyi)}.rozetler b{font-size:14px}.rozetler span{font-size:12.5px;color:var(--ink-3)}
+.prog td,.prog th{text-align:center;font-size:13px}.prog td:first-child{text-align:left}
+.duyuru-kart{border-color:#F3D3BC;background:#FFFAF5}
+/* Ekip 1 açık tema */
+.ekip-bas{background:linear-gradient(135deg,#FFF7F0,#FDE9DA)!important;color:var(--ink)!important;border:1px solid #F3DCC8}
+.ekip-bas small{color:var(--brand)!important}.ekip-bas p{color:var(--ink-2)!important}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="i-pusula" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.2"/><path d="M15.6 8.4l-2 5.2-5.2 2 2-5.2z"/></symbol>
+<symbol id="i-panel" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></symbol>
+<symbol id="i-ogrenci" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 20a5.5 5.5 0 0 1 11 0"/><path d="M16 4.5a3.2 3.2 0 0 1 0 7"/><path d="M18 14.2a5.5 5.5 0 0 1 2.5 4.6"/></symbol>
+<symbol id="i-radar" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><path d="M12 12l6-6"/></symbol>
+<symbol id="i-yoklama" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="17" rx="2"/><path d="M8 3v3M16 3v3M8.5 13l2 2 4-4.5"/></symbol>
+<symbol id="i-deneme" viewBox="0 0 24 24"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></symbol>
+<symbol id="i-harita" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></symbol>
+<symbol id="i-rehberlik" viewBox="0 0 24 24"><path d="M21 11.5a8.5 8.5 0 0 1-12.2 7.6L3 21l1.9-5.8A8.5 8.5 0 1 1 21 11.5z"/></symbol>
+<symbol id="i-goz" viewBox="0 0 24 24"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></symbol>
+<symbol id="i-ekip" viewBox="0 0 24 24"><rect x="4" y="7" width="16" height="12" rx="3"/><path d="M12 3v4M9 12h.01M15 12h.01M9.5 15.5h5"/></symbol>
+<symbol id="i-rapor" viewBox="0 0 24 24"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></symbol>
+<symbol id="i-gonder" viewBox="0 0 24 24"><path d="M21 3 10 14"/><path d="M21 3l-7 18-4-7-7-4z"/></symbol>
+<symbol id="i-ara" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></symbol>
+<symbol id="i-geri" viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></symbol>
+<symbol id="i-cikis" viewBox="0 0 24 24"><path d="M15 3h3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-3M10 17l5-5-5-5M15 12H3"/></symbol>
+<symbol id="i-ag" viewBox="0 0 24 24"><circle cx="12" cy="5" r="2.5"/><circle cx="5" cy="18" r="2.5"/><circle cx="19" cy="18" r="2.5"/><path d="M12 7.5v4M12 11.5l-5.2 4.6M12 11.5l5.2 4.6"/></symbol><symbol id="i-koord" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M9 9v11"/></symbol><symbol id="i-kisi" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 20a7 7 0 0 1 14 0"/></symbol><symbol id="i-tik" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+</defs></svg>
+
+<div id="giris" class="giris">
+ <div class="giris-sol">
+  <div class="logo"><i><svg class="ico"><use href="#i-pusula"/></svg></i><div><b>Pusula</b><small>Kurs yönetim ve rehberlik paneli</small></div></div>
+  <div class="foto" role="img" aria-label="Pusula, kitaplar ve gelişim grafiği"></div>
+  <h1>Her öğrencinin <em>yönünü</em> birlikte bulalım.</h1>
+ </div>
+ <div class="giris-sag">
+  <div class="giris-kart">
+   <span class="rozet marka" style="width:max-content">Canlı demo</span>
+   <h2>Örnek Kurs Merkezi</h2>
+   <p>Bu demo uydurma bir kurum ve uydurma öğrencilerle çalışır. Gerçek kurulumda rehber, öğretmen, yönetici, öğrenci ve veli aynı sistemde kendi ekranını görür. Bir rol seç:</p>
+   <button class="rol ana" data-rol="rehber"><span class="ikon"><svg class="ico"><use href="#i-rehberlik"/></svg></span><div><b>Rehber öğretmen olarak gir</b><span>Bütün ekranlar: öğrenciler, takip, sınavlar, Ekip 1</span></div></button>
+   <button class="rol" data-rol="veli"><span class="ikon"><svg class="ico"><use href="#i-goz"/></svg></span><div><b>Veli olarak gir</b><span>Yalnızca kendi çocuğunu görür</span></div></button>
+   <button class="rol" data-rol="ag"><span class="ikon"><svg class="ico"><use href="#i-ag"/></svg></span><div><b>Kurum ağını gör</b><span>8 kurum, binlerce öğrenci: tek sınav, bir saatte sonuç</span></div></button>
+   <button class="rol" data-rol="ekip"><span class="ikon"><svg class="ico"><use href="#i-ekip"/></svg></span><div><b>Ekip 1'i tanı</b><span>Arka planda çalışan otomatik asistan ve örnek raporlar</span></div></button>
+   <p class="demo-not">Bu sayfadaki bütün kişiler, sınavlar ve sonuçlar örnek olarak üretilmiştir; gerçek bir öğrenciye ait değildir.</p>
+  </div>
+ </div>
+</div>
+
+<div id="uygulama" class="cati" hidden>
+ <aside class="yan" id="yan"></aside>
+ <div>
+  <header class="ust"><div><small id="ust-etiket"></small><h1 id="ust-baslik"></h1></div>
+   <div class="sag"><span class="etiket-demo">Demo verisi</span><span class="soluk" style="font-size:13px">26 Kasım 2026 Perşembe</span><button class="btn kucuk" id="cikis"><svg class="ico"><use href="#i-cikis"/></svg>Rol değiştir</button></div></header>
+  <main id="ana" tabindex="-1"></main>
+ </div>
+</div>
+<div id="modal" class="perde" hidden></div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+<script>
+{
+/* ---------- yardımcılar ---------- */
+const NS='http://www.w3.org/2000/svg';
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const AY=['Ocak','Şubat','Mart','Nisan','Mayıs','Haziran','Temmuz','Ağustos','Eylül','Ekim','Kasım','Aralık'];
+const GUNAD=['Pazar','Pazartesi','Salı','Çarşamba','Perşembe','Cuma','Cumartesi'];
+const pad=n=>String(n).padStart(2,'0');
+const D=s=>new Date(s+'T12:00:00');
+const iso=d=>d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate());
+const tarih=(s,yil)=>{const d=D(s);return d.getDate()+' '+AY[d.getMonth()]+(yil?' '+d.getFullYear():'')};
+const kisaAy=s=>AY[D(s).getMonth()].slice(0,3);
+const ekle=(s,n)=>{const d=D(s);d.setDate(d.getDate()+n);return iso(d)};
+const fark=(a,b)=>Math.round((D(b)-D(a))/864e5);
+const f1=n=>(Math.round(n*10)/10).toLocaleString('tr-TR',{minimumFractionDigits:1,maximumFractionDigits:1});
+const f0=n=>Math.round(n).toLocaleString('tr-TR');
+const yuzde=n=>'%'+Math.round(n);
+const ort=a=>a.length?a.reduce((x,y)=>x+y,0)/a.length:0;
+const bas=ad=>ad.split(' ').map(x=>x[0]).slice(0,2).join('');
+const BUGUN='2026-11-26';
+let tohum=20261126;
+const r=()=>{tohum|=0;tohum=tohum+0x6D2B79F5|0;let t=Math.imul(tohum^tohum>>>15,1|tohum);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296};
+const sec=a=>a[Math.floor(r()*a.length)];
+const cl=(v,a,b)=>Math.max(a,Math.min(b,v));
+const nrm=()=>(r()+r()+r()-1.5)/1.5;
+const ico=id=>`<svg class="ico" aria-hidden="true"><use href="#i-${id}"/></svg>`;
+
+/* ---------- örnek veri ---------- */
+const KURUM='Örnek Kurs Merkezi';
+const DERS={TYT:[{k:'tr',ad:'Türkçe',max:40,hoca:'Ece Varol'},{k:'sos',ad:'Sosyal Bilimler',max:20,hoca:'Kaan Tekin'},{k:'mat',ad:'Matematik',max:40,hoca:'Selim Aras'},{k:'fen',ad:'Fen Bilimleri',max:20,hoca:'Gizem Ural'}],
+ LGS:[{k:'tr',ad:'Türkçe',max:20,hoca:'Ece Varol'},{k:'mat',ad:'Matematik',max:20,hoca:'Selim Aras'},{k:'fen',ad:'Fen Bilimleri',max:20,hoca:'Gizem Ural'},{k:'ink',ad:'İnkılap Tarihi',max:10,hoca:'Kaan Tekin'},{k:'din',ad:'Din Kültürü',max:10,hoca:'Hakan Er'},{k:'ing',ad:'İngilizce',max:10,hoca:'Nil Saydam'}]};
+const KONU={TYT:{tr:['Sözcükte anlam','Cümlede anlam','Paragraf','Ses bilgisi','Yazım kuralları','Noktalama'],sos:['İlk Türk devletleri','Osmanlı kuruluş dönemi','Harita bilgisi','İklim bilgisi','Nüfus ve yerleşme'],mat:['Temel kavramlar','Bölme ve bölünebilme','Rasyonel sayılar','Problemler','Fonksiyonlar','Olasılık','Üçgenler'],fen:['Kuvvet ve hareket','Elektrik','Atom ve periyodik sistem','Karışımlar','Hücre','Kalıtım']},
+ LGS:{tr:['Fiilimsiler','Cümlenin ögeleri','Paragraf','Söz sanatları'],mat:['Çarpanlar ve katlar','Üslü ifadeler','Kareköklü ifadeler','Veri analizi','Olasılık'],fen:['Mevsimler ve iklim','DNA ve genetik kod','Basınç','Madde ve endüstri'],ink:['Bir kahraman doğuyor','Millî uyanış','Ya istiklal ya ölüm'],din:['Kader inancı','Zekât ve sadaka'],ing:['Friendship','Teen life','In the kitchen']}};
+const SINIF=[{k:'msay',ad:'Mezun Sayısal',kisa:'Mezun SAY',tur:'TYT',n:10,alan:'SAY',o:.62},{k:'mea',ad:'Mezun Eşit Ağırlık',kisa:'Mezun EA',tur:'TYT',n:8,alan:'EA',o:.56},{k:'12say',ad:'12. Sınıf Sayısal',kisa:'12 SAY',tur:'TYT',n:9,alan:'SAY',o:.5},{k:'12ea',ad:'12. Sınıf Eşit Ağırlık',kisa:'12 EA',tur:'TYT',n:8,alan:'EA',o:.47},{k:'11',ad:'11. Sınıf',kisa:'11',tur:'TYT',n:6,alan:'',o:.4},{k:'8',ad:'8. Sınıf (LGS)',kisa:'8 LGS',tur:'LGS',n:9,alan:'',o:.6}];
+const SK=Object.fromEntries(SINIF.map(s=>[s.k,s]));
+const DEN=[{id:'t1',tur:'TYT',ad:'TYT Genel Deneme 1',t:'2026-09-13'},{id:'t2',tur:'TYT',ad:'TYT Genel Deneme 2',t:'2026-09-27'},{id:'t3',tur:'TYT',ad:'TYT Genel Deneme 3',t:'2026-10-11',konuYok:1},{id:'t4',tur:'TYT',ad:'TYT Genel Deneme 4',t:'2026-10-25'},{id:'t5',tur:'TYT',ad:'TYT Genel Deneme 5',t:'2026-11-08'},{id:'t6',tur:'TYT',ad:'TYT Genel Deneme 6',t:'2026-11-22'},{id:'t7',tur:'TYT',ad:'TYT Genel Deneme 7',t:'2026-11-28',plan:1},
+ {id:'l1',tur:'LGS',ad:'LGS Genel Deneme 1',t:'2026-09-20'},{id:'l2',tur:'LGS',ad:'LGS Genel Deneme 2',t:'2026-10-18'},{id:'l3',tur:'LGS',ad:'LGS Genel Deneme 3',t:'2026-11-01'},{id:'l4',tur:'LGS',ad:'LGS Genel Deneme 4',t:'2026-11-15'},{id:'l5',tur:'LGS',ad:'LGS Genel Deneme 5',t:'2026-11-29',plan:1}];
+const DK=Object.fromEntries(DEN.map(d=>[d.id,d]));
+const yapilan=tur=>DEN.filter(d=>d.tur===tur&&!d.plan);
+const MAX={TYT:120,LGS:90},ESIK={TYT:10,LGS:5};
+const KIZ=['Defne','Zeynep','Ecrin','Azra','Nehir','Duru','Asya','Lina','Ada','Ceren','İpek','Melis','Selin','Derin','Eylül','Nisa','Yaren','Beren'],ERK=['Kerem','Emir','Arda','Yiğit','Alp','Deniz','Efe','Kaan','Baran','Ege','Batu','Tuna','Umut','Atlas','Çınar','Doruk','Aras','Poyraz'],SOY=['Yalın','Karaca','Özkan','Tunç','Erdem','Akın','Sever','Güneri','Aydın','Bozkurt','Çetin','Ilgaz','Korkmaz','Ulaş','Toprak','Yazıcı','Demirel','Sezer','Oral','Kaya','Altay','Güven','Aslan','Esen','Uysal'],ANNE=['Ayşe','Fatma','Emine','Hülya','Serap','Gül','Derya','Sevgi','Nermin','Aylin','Özlem','Canan'];
+const HEDEF=['Bilgisayar Mühendisliği','Tıp','Hukuk','Psikoloji','İşletme','Endüstri Mühendisliği','Rehberlik ve PDR','Mimarlık','Diş Hekimliği','İktisat'];
+const GKONU=['Deneme sonrası değerlendirme','Çalışma programı','Sınav kaygısı ve motivasyon','Veli görüşmesi','Hedef belirleme','Devamsızlık görüşmesi'];
+const GNOT={'Deneme sonrası değerlendirme':a=>`${a} ile son deneme konuşuldu; yanlışların çoğu dikkat hatası. Her denemeden sonra yanlış defteri tutulacak.`,'Çalışma programı':a=>`${a} için haftalık program yeniden yapıldı: hafta içi günde 60 TYT sorusu, hafta sonu 1 deneme.`,'Sınav kaygısı ve motivasyon':a=>`${a} denemelerde süre baskısı yaşadığını anlattı. Nefes çalışması ve süreli mini testler önerildi.`,'Veli görüşmesi':a=>`Veliyle ${a}'in son iki ayı konuşuldu. Evde telefon kullanımı için ortak kural kondu.`,'Hedef belirleme':a=>`${a} hedef bölümünü netleştirdi; gereken net ile şimdiki net arasındaki fark birlikte hesaplandı.`,'Devamsızlık görüşmesi':a=>`${a}'in devamsızlık nedeni konuşuldu; uyku düzeni sorunu. Veli bilgilendirildi.`};
+const GUNLER=[];{let d=BUGUN;while(GUNLER.length<20){const g=D(d).getDay();if(g>0&&g<6)GUNLER.unshift(d);d=ekle(d,-1)}}
+
+const OGR=[];const kullanilan=new Set();
+SINIF.forEach(s=>{for(let i=0;i<s.n;i++){let ad,kiz;do{kiz=r()<.5;ad=(kiz?sec(KIZ):sec(ERK))+' '+sec(SOY)}while(kullanilan.has(ad));kullanilan.add(ad);
+ const o={no:OGR.length+1,id:'ORN-'+(1001+OGR.length),ad,ilk:ad.split(' ')[0],sinif:s.k,tur:s.tur,yet:cl(s.o+nrm()*.17,.2,.88),egim:.012+nrm()*.02,devE:cl(.94+nrm()*.05,.8,.995),bias:{},kacir:{},gor:[]};
+ DERS[s.tur].forEach(d=>o.bias[d.k]=nrm()*.11+(s.alan==='SAY'&&d.k==='sos'?-.08:0)+(s.alan==='EA'&&d.k==='fen'?-.12:0)+(s.alan==='SAY'&&d.k==='mat'?.05:0));
+ const soy=ad.split(' ').slice(-1)[0];o.veli={ad:sec(ANNE)+' '+soy,tel:'05'+(30+Math.floor(r()*25))+' *** ** '+pad(Math.floor(r()*100))};
+ o.hedef=s.tur==='LGS'?sec(['Fen lisesi','Anadolu lisesi (ilk %3)','Anadolu lisesi (ilk %10)']):sec(HEDEF);
+ OGR.push(o)}});
+const S=k=>OGR.filter(o=>o.sinif===k);
+const sA=S('12ea')[2],sB=S('msay')[3],sC=S('12say')[1],sD=S('8')[4],sE=S('mea')[1],sY=S('msay')[0],sV=S('12say')[4];
+sA.kacir={t5:1,t6:1};sA.devamsiz=4;sB.dusus=14;sC.devE=.7;sC.yet=cl(sC.yet-.13,.2,.9);sD.dusus=7;sE.kacir={t5:1,t6:1};sY.yet=.7;sY.egim=.025;sB.ekYok=1;sC.dusus=11;sE.gorGun=58;sV.yet=.66;sV.egim=.028;
+OGR.forEach(o=>{const dl=DERS[o.tur],arr=yapilan(o.tur);o.son=[];
+ arr.forEach((d,i)=>{if(o.kacir[d.id]||(!o.dusus&&!o.kacir.t6&&o!==sY&&o!==sV&&r()<.05&&i<arr.length-2)){o.son.push({den:d.id,yok:1});return}
+  const n={};let top=0;dl.forEach(x=>{const p=cl(o.yet+o.bias[x.k]+o.egim*(i-2)+nrm()*.06,.03,.98);n[x.k]=Math.round(p*x.max*4)/4;top+=n[x.k]});o.son.push({den:d.id,n,top})});
+ if(o.dusus){const L=o.son[o.son.length-1],P=o.son[o.son.length-2];const hedef=P.top-o.dusus-0.5,k=hedef/L.top;L.top=0;dl.forEach(x=>{L.n[x.k]=Math.round(L.n[x.k]*k*4)/4;L.top+=L.n[x.k]})}
+ const var_=o.son.filter(x=>!x.yok).slice(-3);o.konu={};
+ dl.forEach(x=>{const dp=ort(var_.map(v=>v.n[x.k]))/x.max;KONU[o.tur][x.k].forEach(t=>o.konu[x.k+'|'+t]=Math.round(cl(dp+nrm()*.28,0,1)*100))});
+ o.devam=GUNLER.map(()=>{if(r()<o.devE)return r()<.05?'C':'G';return r()<.25?'I':'Y'});
+ if(o.devamsiz)for(let i=1;i<=o.devamsiz;i++)o.devam[o.devam.length-i]='Y';
+ if(o===sC){[3,5,8,11,15].forEach(i=>o.devam[i]='Y')}
+ if(o.ekYok){[11,14,17].forEach(i=>o.devam[i]='Y')}
+ const ng=o===sA||o===sB?1:Math.floor(r()*3.2);const gs=[];for(let i=0;i<ng;i++)gs.push(ekle('2026-09-08',Math.floor(r()*75)));gs.sort();
+ if(o===sA)gs[0]=ekle(BUGUN,-62);if(o===sB)gs[0]=ekle(BUGUN,-51);if(o.gorGun){gs.length=1;gs[0]=ekle(BUGUN,-o.gorGun)}
+ o.gor=gs.map(t=>{const k=sec(GKONU);return{t,konu:k,not:GNOT[k](o.ilk)}});
+ const sn=o.son.filter(x=>!x.yok);const s0=sn.length?sn[sn.length-1].top:0;o.hedefNet=Math.min(MAX[o.tur]-4,Math.round(s0+(o.tur==='LGS'?8:14)+r()*8));});
+/* bugünkü görüşmeler */
+const BUGUN_GOR=[{saat:'10.40',o:sB,konu:'Deneme sonrası değerlendirme'},{saat:'14.20',o:S('12ea')[5],konu:'Hedef belirleme'}];
+/* ortalamalar */
+const SORT={};SINIF.forEach(s=>{SORT[s.k]={};yapilan(s.tur).forEach(d=>{SORT[s.k][d.id]=ort(S(s.k).map(o=>o.son.find(x=>x.den===d.id)).filter(x=>x&&!x.yok).map(x=>x.top))})});
+const sonuclar=id=>OGR.filter(o=>o.tur===DK[id].tur).map(o=>({o,s:o.son.find(x=>x.den===id)})).filter(x=>x.s&&!x.s.yok);
+const KORT=id=>ort(sonuclar(id).map(x=>x.s.top));
+const sonDeneme=tur=>yapilan(tur).slice(-1)[0];
+const sonNet=o=>{const s=o.son.filter(x=>!x.yok);return s.length?s[s.length-1]:null};
+/* risk */
+function risk(o){const n=[];let p=0;let ard=0;for(let i=o.devam.length-1;i>=0&&o.devam[i]==='Y';i--)ard++;
+ if(ard>=3){p+=30;n.push(ard+' gündür gelmiyor')}
+ const yok=o.devam.slice(-10).filter(x=>x==='Y').length;if(yok>=3){p+=15;n.push('son 2 haftada '+yok+' gün yok')}
+ const sn=o.son;const L=sn[sn.length-1],P=sn[sn.length-2];
+ if(L&&P&&!L.yok&&!P.yok&&P.top-L.top>=ESIK[o.tur]){p+=25;n.push('son denemede '+f1(P.top-L.top)+' net düştü')}
+ const sd=sonDeneme(o.tur);if(L&&!L.yok){const a=SORT[o.sinif][sd.id]-L.top;if(a>=ESIK[o.tur]){p+=15;n.push('sınıf ortalamasının '+f1(a)+' net altında')}}
+ let kac=0;for(let i=sn.length-1;i>=0&&sn[i].yok;i--)kac++;if(kac>=2){p+=20;n.push('üst üste '+kac+' denemeye girmedi')}
+ const sg=o.gor.length?fark(o.gor[o.gor.length-1].t,BUGUN):null;if(sg===null){p+=10;n.push('henüz rehberlik görüşmesi yok')}else if(sg>45){p+=15;n.push('son görüşme '+sg+' gün önce')}
+ return{p:Math.min(p,100),n,ard,yok,sg}}
+OGR.forEach(o=>{o.risk=risk(o);o.devYuzde=100*o.devam.filter(x=>x==='G'||x==='C').length/o.devam.length});
+const RK=p=>p>=50?'kotu':p>=30?'orta':'iyi';
+const RAD=p=>p>=50?'Yakın takip':p>=30?'İzlenmeli':'Olağan';
+
+/* ---------- durum ---------- */
+const st={anket:{},talep:[],ag:{durum:'bos',adim:0,kosular:[],ara:'',kurum:'hepsi',sayfa:0},rol:null,veliOgr:sV.no,grup:'hepsi',ara:'',isler:{},planli:{},sinavF:'Tümü',isiTur:'TYT',isiSec:null,yokGun:BUGUN,yokSinif:'12say',yokSaat:1,yok:{},rapor:'karne',raporOgr:sV.no,onay:null,ekGor:[],siralama:{k:'top',y:-1}};
+const sonra=[];const gozler=[];
+const toast=m=>{const t=document.getElementById('toast');t.textContent=m;t.classList.add('acik');clearTimeout(toast.z);toast.z=setTimeout(()=>t.classList.remove('acik'),2600)};
+
+/* ---------- grafik ---------- */
+function cizgiGrafik(id,etiket,seriler,opt={}){sonra.push(()=>{const kutu=document.getElementById(id);if(!kutu)return;const s=document.createElementNS(NS,'svg');kutu.appendChild(s);
+ const ciz=()=>{const W=kutu.clientWidth,H=kutu.clientHeight;if(!W||!H)return;const dar=W<520;const m={l:dar?28:36,r:dar?14:22,t:18,b:dar?22:28};
+  const tum=seriler.flatMap(x=>x.d).filter(v=>v!=null);if(opt.hedef!=null)tum.push(opt.hedef);let lo=opt.min!=null?opt.min:Math.floor((Math.min(...tum)-4)/5)*5,hi=opt.max!=null?opt.max:Math.ceil((Math.max(...tum)+4)/5)*5;if(hi===lo)hi=lo+10;
+  const n=etiket.length,x=i=>m.l+(n===1?.5:i/(n-1))*(W-m.l-m.r),y=v=>m.t+(1-(v-lo)/(hi-lo))*(H-m.t-m.b);let h='';
+  for(let k=0;k<=4;k++){const v=lo+(hi-lo)*k/4,yy=y(v);h+=`<line x1="${m.l}" x2="${W-m.r}" y1="${yy}" y2="${yy}" stroke="#EDF1F4"/><text x="${m.l-6}" y="${yy+4}" text-anchor="end" font-size="11" fill="#5C6D7E">${Math.round(v)}</text>`}
+  etiket.forEach((e,i)=>{if(dar&&n>5&&i%2&&i!==n-1)return;h+=`<text x="${x(i)}" y="${H-6}" text-anchor="middle" font-size="11" fill="#5C6D7E">${esc(e)}</text>`});
+  seriler.forEach((se,si)=>{let path='',ilk=true,pts=[];se.d.forEach((v,i)=>{if(v==null){ilk=true;return}path+=(ilk?'M':'L')+x(i)+' '+y(v);ilk=false;pts.push([x(i),y(v),v])});
+   if(se.alan&&pts.length>1)h+=`<path d="M${pts[0][0]} ${H-m.b}${pts.map(p=>'L'+p[0]+' '+p[1]).join('')}L${pts[pts.length-1][0]} ${H-m.b}Z" fill="${se.renk}" opacity=".08"/>`;
+   h+=`<path d="${path}" fill="none" stroke="${se.renk}" stroke-width="${se.kesik?1.6:2.4}" ${se.kesik?'stroke-dasharray="5 4"':''} stroke-linejoin="round"/>`;
+   if(!se.kesik)pts.forEach((p,i)=>{h+=`<circle cx="${p[0]}" cy="${p[1]}" r="3.5" fill="#fff" stroke="${se.renk}" stroke-width="2"/>`;if(i===pts.length-1||(!dar&&opt.hepsi))h+=`<text x="${p[0]}" y="${p[1]-9}" text-anchor="${i===0&&pts.length>1?'start':'middle'}" font-size="11.5" font-weight="700" fill="${se.renk}">${f1(p[2])}</text>`})});
+  if(opt.hedef!=null&&opt.hedef<=hi&&opt.hedef>=lo){const yy=y(opt.hedef);h+=`<line x1="${m.l}" x2="${W-m.r}" y1="${yy}" y2="${yy}" stroke="#2A7860" stroke-dasharray="2 4" stroke-width="1.5"/><text x="${W-m.r}" y="${yy-5}" text-anchor="end" font-size="11" font-weight="700" fill="#2A7860">hedef ${f0(opt.hedef)}</text>`}
+  s.setAttribute('viewBox',`0 0 ${W} ${H}`);s.innerHTML=h};
+ ciz();const ro=new ResizeObserver(ciz);ro.observe(kutu);gozler.push(ro)})}
+function radar(id,eks,a,b){sonra.push(()=>{const kutu=document.getElementById(id);if(!kutu)return;const s=document.createElementNS(NS,'svg');kutu.appendChild(s);
+ const ciz=()=>{const W=kutu.clientWidth,H=kutu.clientHeight;if(!W)return;const cx=W/2,cy=H/2,R=Math.min(W,H)/2-34,n=eks.length;const p=(i,v)=>[cx+Math.sin(2*Math.PI*i/n)*R*v,cy-Math.cos(2*Math.PI*i/n)*R*v];let h='';
+  [.25,.5,.75,1].forEach(k=>h+=`<polygon points="${eks.map((_,i)=>p(i,k).join(',')).join(' ')}" fill="none" stroke="#E0E6EC"/>`);
+  eks.forEach((e,i)=>{const[q,w]=p(i,1.18);h+=`<line x1="${cx}" y1="${cy}" x2="${p(i,1)[0]}" y2="${p(i,1)[1]}" stroke="#EDF1F4"/><text x="${q}" y="${w+4}" text-anchor="middle" font-size="11.5" fill="#51657A">${esc(e)}</text>`});
+  h+=`<polygon points="${b.map((v,i)=>p(i,v).join(',')).join(' ')}" fill="none" stroke="#7A8CA0" stroke-dasharray="4 3"/>`;
+  h+=`<polygon points="${a.map((v,i)=>p(i,v).join(',')).join(' ')}" fill="rgba(194,65,12,.16)" stroke="#C2410C" stroke-width="2"/>`;
+  s.setAttribute('viewBox',`0 0 ${W} ${H}`);s.innerHTML=h};ciz();const ro=new ResizeObserver(ciz);ro.observe(kutu);gozler.push(ro)})}
+const cubuk=(v,max,sinif)=>`<div class="cubuk ${sinif||''}"><i style="width:${cl(100*v/max,0,100)}%"></i></div>`;
+const seviye=p=>p<50?'kotu':p<70?'orta':'iyi';
+
+/* ---------- menü ---------- */
+const MENU=[['Genel',[['ana-sayfa','Ana Sayfa','panel']]],['Öğrenci',[['ogrenciler','Öğrenciler','ogrenci'],['takip','Takip Listesi','radar'],['rehberlik','Rehberlik','rehberlik'],['yoklama','Yoklama','yoklama']]],['Akademik',[['sinav','Sınav Merkezi','deneme'],['isi','Konu Isı Haritası','harita']]],['Kurum ağı',[['ag','Ağ sınav merkezi','ag'],['koordinasyon','Koordinasyon','koord']]],['Veli',[['veli','Veli ekranı','goz']]],['Ekip 1',[['ekip1','Otomatik asistan','ekip'],['onay','Gönderim onayı','gonder'],['raporlar','Örnek raporlar','rapor']]],['Hakkında',[['yetkinlik','Bu sistemi kuran','kisi']]]];
+function menuCiz(aktif){const y=document.getElementById('yan');
+ const veli=st.rol==='veli';const m=veli?[['Veli',[['veli','Benim Pusulam','goz']]]]:MENU;
+ const bekleyen=onayListe().filter(x=>x.d==='bekliyor').length;
+ y.innerHTML=`<div class="logo"><i>${ico('pusula')}</i><div><b>Pusula</b><small>${KURUM}</small></div></div>`+m.map(([g,l])=>`<h4>${g}</h4>`+l.map(([h,a,i])=>`<a href="#${h}" class="${aktif===h?'secili':''}" ${aktif===h?'aria-current="page"':''}>${ico(i)}${a}${h==='onay'&&bekleyen?`<span class="say">${bekleyen}</span>`:''}${h==='takip'?`<span class="say">${OGR.filter(o=>o.risk.p>=50).length}</span>`:''}</a>`).join('')).join('')+
+ `<div class="alt">${veli?`<span class="av">${bas(OGR[st.veliOgr-1].veli.ad)}</span><div><b>${esc(OGR[st.veliOgr-1].veli.ad)}</b><br><span class="soluk">Veli</span></div>`:`<span class="av">AB</span><div><b>Ali Can Bal</b><br><span class="soluk">Rehber öğretmen</span></div>`}</div>`}
+const baslik=(e,b)=>{document.getElementById('ust-etiket').textContent=e;document.getElementById('ust-baslik').textContent=b;document.title=b+' · Pusula demo'};
+
+/* ---------- sayfalar ---------- */
+function anaSayfa(){baslik('Genel','Ana Sayfa');
+ const sd=sonDeneme('TYT'),onc=yapilan('TYT').slice(-2)[0];const k=KORT(sd.id),ko=KORT(onc.id);
+ const son5=GUNLER.slice(-5);const dv=100*ort(OGR.map(o=>o.devam.slice(-5).filter(x=>x==='G'||x==='C').length/5));
+ const yakin=OGR.filter(o=>o.risk.p>=50).sort((a,b)=>b.risk.p-a.risk.p);
+ const isler=[...yakin.slice(0,3).map(o=>({id:'r'+o.no,e:['Acil','kotu dolu'],b:'Veli araması: '+o.ad,a:SK[o.sinif].kisa+' · '+o.risk.n.slice(0,2).join(', '),git:'#ogrenci-'+o.no})),
+  ...BUGUN_GOR.map(g=>({id:'g'+g.o.no,e:['Görüşme','iyi'],b:g.saat+' görüşme: '+g.o.ad,a:g.konu+' · hazırlık sayfası hazır',git:'#ogrenci-'+g.o.no})),
+  ...st.talep.map((t,i)=>({id:'t'+i,e:['Veli talebi','marka'],b:'Görüşme talebi: '+OGR[t.o-1].veli.ad,a:OGR[t.o-1].ad+' · '+tarih(t.g)+' '+t.s,git:'#ogrenci-'+t.o})),
+  {id:'onay',e:['Onay','marka'],b:onayListe().filter(x=>x.d==='bekliyor').length+' mesaj onayını bekliyor',a:'Ekip 1 hazırladı; sen onaylamadan hiçbiri gitmez',git:'#onay'},
+  {id:'den',e:['Deneme','orta'],b:'Cumartesi: TYT Genel Deneme 7',a:'Duyuru ve katılım anketi taslağı hazır',git:'#onay'},
+  {id:'konu',e:['Önemli','orta'],b:'TYT Genel Deneme 3: konu analizi yok',a:'Yalnızca netler var; kazanım listesi gelirse kendiliğinden hesaplanır',git:'#ekip1'}];
+ const kalan=isler.filter(i=>!st.isler[i.id]).length;
+ const saat=new Date().getHours();const selam=saat<12?'Günaydın':saat<18?'İyi günler':'İyi akşamlar';
+ const sinifSira=SINIF.filter(s=>s.tur==='TYT').map(s=>({s,v:SORT[s.k][sd.id]})).sort((a,b)=>b.v-a.v);
+ cizgiGrafik('g-kurum',yapilan('TYT').map(d=>d.ad.replace('TYT Genel Deneme ','D')),[{d:yapilan('TYT').map(d=>KORT(d.id)),renk:'#C2410C',alan:1}],{hepsi:1});
+ return `<section class="bant"><small>Pusula · ${KURUM}</small><h2>${selam}, Ali</h2><p>26 Kasım Perşembe · bugün <b>${kalan}</b> iş seni bekliyor</p></section><div class="bosluk"></div>
+ <div class="izgara k4"><a class="kpi" href="#sinav-${sd.id}"><span>Son TYT ortalaması</span><b>${f1(k)}</b><small class="${k>=ko?'iyi':'kotu'}">${k>=ko?'▲':'▼'} ${f1(Math.abs(k-ko))} · ${sd.ad.replace('TYT Genel ','')}</small></a>
+ <a class="kpi" href="#yoklama"><span>Son 5 gün devam</span><b>${yuzde(dv)}</b><small>${tarih(son5[0])} – ${tarih(son5[4])}</small></a>
+ <a class="kpi" href="#takip"><span>Yakın takip</span><b class="kotu">${yakin.length}</b><small>risk puanı 50 ve üstü</small></a>
+ <a class="kpi" href="#ogrenciler"><span>Öğrenci</span><b>${OGR.length}</b><small>${OGR.filter(o=>o.tur==='TYT').length} YKS · ${OGR.filter(o=>o.tur==='LGS').length} LGS</small></a></div><div class="bosluk"></div>
+ <div class="izgara k2"><section class="kart"><div class="kart-bas"><div><h2>Bugün yapılacaklar</h2><p>Ekip 1'in bulguları, görüşmeler, onaylar ve yaklaşan denemeler tek listede</p></div></div>
+ ${isler.map(i=>`<div class="is ${st.isler[i.id]?'bitti':''}"><button class="tik" data-is="${i.id}" aria-pressed="${!!st.isler[i.id]}" aria-label="Tamamlandı olarak işaretle">${st.isler[i.id]?ico('tik'):''}</button><span class="rozet ${i.e[1]}">${i.e[0]}</span><div class="metin" data-git="${i.git}"><b>${esc(i.b)}</b><span>${esc(i.a)}</span></div></div>`).join('')}</section>
+ <section class="kart"><div class="kart-bas"><div><h2>Kurum net seyri</h2><p>Her nokta: o denemeye giren YKS öğrencilerinin ortalama toplam neti</p></div><div class="sag"><span class="rozet">TYT</span></div></div><div class="ic"><div class="fig" id="g-kurum"></div></div></section></div><div class="bosluk"></div>
+ <a class="ag-serit" href="#ag"><span class="av" style="background:var(--brand);color:#fff">${ico('ag')}</span><div><b>Kurum ağı: 8 kurum, ${f0s(AG_TOP)} öğrenci</b><span>Cumartesi TYT Ortak Deneme 7 · bütün kurumların sonuçları son oturumdan sonra bir saat içinde</span></div><span class="btn kucuk">Ağ sınav merkezi</span></a><div class="bosluk"></div>
+ <section class="kart"><div class="kart-bas"><div><h2>Sistem nasıl işliyor</h2><p>Kaynaklar her akşam birleşir, Pusula güncellenir, Ekip 1 raporları hazırlar.</p></div><div class="sag"><a class="btn kucuk" href="#ekip1">Ayrıntı</a></div></div>
+ <div class="akis-serit"><div><b>Kaynaklar</b><span>yoklama · deneme sonuçları · listeler</span></div><div><b>Veri merkezi</b><span>dün 21.41 · eşleştirildi</span></div><div><b>Pusula</b><span>${OGR.length} öğrenci · güncel</span></div><div><b>Ekip 1</b><span>3 rapor · ${onayListe().length} taslak</span></div></div></section><div class="bosluk"></div>
+ <div class="izgara k2e"><section class="kart"><div class="kart-bas"><div><h2>Sınıf sıralaması</h2><p>${sd.ad} · sınıf ortalaması</p></div></div><div class="ic">${sinifSira.map(x=>`<div class="satir-bar"><span>${x.s.kisa}</span>${cubuk(x.v,MAX.TYT)}<b>${f1(x.v)}</b></div>`).join('')}</div></section>
+ <section class="kart"><div class="kart-bas"><div><h2>Yaklaşanlar</h2><p>Takvimden</p></div></div>${[['28 Kasım Cumartesi','TYT Genel Deneme 7','YKS sınıfları · 09.30'],['29 Kasım Pazar','LGS Genel Deneme 5','8. sınıf · 10.00'],['30 Kasım Pazartesi','Haftalık rehberlik özeti','Ekip 1 · 08.12'],['2 Aralık Çarşamba','Veli toplantısı','12. sınıflar · 18.30']].map(x=>`<div class="is"><span class="rozet">${x[0]}</span><div class="metin"><b>${x[1]}</b><span>${x[2]}</span></div></div>`).join('')}</section></div>`}
+
+function ogrenciler(){baslik('Öğrenci','Öğrenciler');
+ const q=st.ara.toLocaleLowerCase('tr');const liste=OGR.filter(o=>(st.grup==='hepsi'||o.sinif===st.grup)&&(!q||o.ad.toLocaleLowerCase('tr').includes(q)));
+ return `<div class="iki"><nav class="kart agac" aria-label="Gruplar"><button data-grup="hepsi" class="${st.grup==='hepsi'?'secili':''}">Tüm öğrenciler<b>${OGR.length}</b></button>${SINIF.map(s=>`<button data-grup="${s.k}" class="${st.grup===s.k?'secili':''}">${s.ad}<b>${S(s.k).length}</b></button>`).join('')}</nav>
+ <div><div class="arac"><label class="ara">${ico('ara')}<input id="ara" type="search" placeholder="Öğrenci ara" value="${esc(st.ara)}" aria-label="Öğrenci ara"></label><span class="soluk">${liste.length} öğrenci</span></div>
+ <section class="kart"><div class="osatir" style="cursor:default;font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--ink-3)"><span></span><span>Öğrenci</span><span class="gizle">Son net</span><span class="gizle">Devam (20 gün)</span><span>Durum</span></div>
+ ${liste.map(o=>{const L=sonNet(o);return `<a class="osatir" href="#ogrenci-${o.no}"><span class="av">${bas(o.ad)}</span><span class="ad"><b>${esc(o.ad)}</b><small>${SK[o.sinif].kisa} · ${o.id}</small></span><span class="gizle tnum">${L?f1(L.top):'—'}</span><span class="gizle" style="display:flex;gap:8px;align-items:center">${cubuk(o.devYuzde,100,o.devYuzde<80?'kotu':o.devYuzde<90?'orta':'iyi')}<span class="tnum" style="font-size:13px">${yuzde(o.devYuzde)}</span></span><span class="rozet ${RK(o.risk.p)}">${RAD(o.risk.p)}</span></a>`}).join('')||'<p class="ic soluk">Aramaya uyan öğrenci yok.</p>'}</section></div></div>`}
+
+function ogrenciKart(no){const o=OGR[no-1];if(!o)return ogrenciler();const s=SK[o.sinif];baslik('Öğrenci',o.ad);
+ const arr=yapilan(o.tur);const L=sonNet(o);const sd=sonDeneme(o.tur);const fk=L?L.top-SORT[o.sinif][sd.id]:0;
+ cizgiGrafik('g-ogr',arr.map(d=>d.ad.replace(/(TYT|LGS) Genel Deneme /,'D')),[{d:arr.map(d=>{const x=o.son.find(y=>y.den===d.id);return x&&!x.yok?x.top:null}),renk:'#C2410C',alan:1},{d:arr.map(d=>SORT[o.sinif][d.id]),renk:'#7A8CA0',kesik:1}],{hedef:o.hedefNet});
+ const konular=Object.entries(o.konu).map(([k,v])=>{const[d,t]=k.split('|');return{d,t,v}});const zayif=[...konular].sort((a,b)=>a.v-b.v).slice(0,6),guclu=[...konular].sort((a,b)=>b.v-a.v).slice(0,4);
+ const dAd=k=>DERS[o.tur].find(x=>x.k===k).ad;const rk=o.risk.p>=50?'y':o.risk.p>=30?'o':'d';
+ return `<a class="btn kucuk" href="#ogrenciler">${ico('geri')}Öğrenciler</a><div class="bosluk"></div>
+ <section class="kart ogr-bas"><span class="av b">${bas(o.ad)}</span><div><h2>${esc(o.ad)}</h2><p>${s.ad} · ${o.id} · Veli: ${esc(o.veli.ad)} (${o.veli.tel}) · Hedef: ${esc(o.hedef)}</p></div>
+ <div class="sag"><button class="btn" data-hazirlik="${o.no}">${ico('rehberlik')}Görüşme hazırlık sayfası</button><button class="btn" data-veligoz="${o.no}">${ico('goz')}Veli gözüyle gör</button><button class="btn" data-karne="${o.no}">${ico('rapor')}Gelişim karnesi</button></div></section><div class="bosluk"></div>
+ <div class="izgara k2"><div class="risk-kutu ${rk}"><b>${RAD(o.risk.p)} · risk puanı ${o.risk.p}</b>${o.risk.n.length?`<ul>${o.risk.n.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`:'<p style="margin:6px 0 0">Takip gerektiren bir durum yok.</p>'}</div>
+ <div class="izgara k2e"><div class="kpi"><span>Son net</span><b>${L?f1(L.top):'—'}</b><small>${L?DK[L.den].ad:'sınava girmedi'}</small></div><div class="kpi"><span>Sınıf ortalamasına göre</span><b class="${fk>=0?'iyi':'kotu'}">${fk>=0?'+':''}${f1(fk)}</b><small>sınıf ort. ${f1(SORT[o.sinif][sd.id])}</small></div><div class="kpi"><span>Devam (20 gün)</span><b>${yuzde(o.devYuzde)}</b><small>${o.devam.filter(x=>x==='Y').length} gün gelmedi</small></div><div class="kpi"><span>Son görüşme</span><b>${o.risk.sg==null?'—':o.risk.sg+' gün'}</b><small>${o.gor.length} kayıtlı görüşme</small></div></div></div><div class="bosluk"></div>
+ <div class="izgara k2"><section class="kart"><div class="kart-bas"><div><h2>Net seyri</h2><p>Toplam net · kesikli çizgi sınıf ortalaması · yeşil çizgi hedef</p></div></div><div class="ic"><div class="fig" id="g-ogr"></div></div></section>
+ <section class="kart"><div class="kart-bas"><div><h2>Ders netleri</h2><p>${L?DK[L.den].ad:''} · sınıf ortalamasıyla</p></div></div><div class="ic">${L?DERS[o.tur].map(d=>{const so=ort(sonuclar(L.den).filter(x=>x.o.sinif===o.sinif).map(x=>x.s.n[d.k]));return `<div class="satir-bar"><span>${d.ad}</span>${cubuk(L.n[d.k],d.max,L.n[d.k]>=so?'iyi':'kotu')}<b>${f1(L.n[d.k])}<small class="soluk" style="font-weight:500"> /${f1(so)}</small></b></div>`}).join(''):''}<p class="dipnot">Sağdaki küçük sayı sınıf ortalaması.</p></div></section></div><div class="bosluk"></div>
+ <div class="izgara k3"><section class="kart"><div class="kart-bas"><div><h2>Öncelikli konular</h2><p>Başarısı en düşük konular</p></div></div><div class="ic">${zayif.map(z=>`<div class="satir-bar"><span title="${esc(dAd(z.d))}">${esc(z.t)}</span>${cubuk(z.v,100,seviye(z.v))}<b>${yuzde(z.v)}</b></div>`).join('')}</div></section>
+ <section class="kart"><div class="kart-bas"><div><h2>Devam (son 20 iş günü)</h2><p>Yeşil geldi · kırmızı gelmedi · sarı geç · gri izinli</p></div></div><div class="gunler">${o.devam.map((x,i)=>`<i class="g-${x}" title="${tarih(GUNLER[i])}">${D(GUNLER[i]).getDate()}</i>`).join('')}</div><p class="dipnot" style="padding:0 18px 14px">${tarih(GUNLER[0])} – ${tarih(GUNLER[19])}</p></section>
+ <section class="kart"><div class="kart-bas"><div><h2>Görüşme notları</h2><p>Rehberlik kayıtları</p></div></div>${o.gor.length?`<ul class="notlar">${[...o.gor].reverse().map(g=>`<li><b>${esc(g.konu)}</b><small>${tarih(g.t,1)}</small><p>${esc(g.not)}</p></li>`).join('')}</ul>`:'<p class="ic soluk">Henüz görüşme kaydı yok.</p>'}</section></div>
+ <p class="dipnot">Güçlü konular: ${guclu.map(g=>esc(g.t)+' '+yuzde(g.v)).join(' · ')}</p>`}
+
+function takip(){baslik('Öğrenci','Takip Listesi');const l=OGR.filter(o=>o.risk.p>=30).sort((a,b)=>b.risk.p-a.risk.p);
+ return `<div class="izgara k3"><div class="kpi"><span>Yakın takip (50+)</span><b class="kotu">${l.filter(o=>o.risk.p>=50).length}</b><small>veli araması önerilir</small></div><div class="kpi"><span>İzlenmeli (30–49)</span><b class="orta">${l.filter(o=>o.risk.p<50).length}</b><small>bu hafta görüşme</small></div><div class="kpi"><span>Planlanan görüşme</span><b>${Object.keys(st.planli).length}</b><small>bu ekrandan eklenen</small></div></div><div class="bosluk"></div>
+ <section class="kart"><div class="kart-bas"><div><h2>Kimi, neden aramalıyım?</h2><p>Liste sezgiyle değil, aşağıdaki açık kurallarla her akşam yeniden hesaplanır.</p></div></div>
+ ${l.map(o=>`<div class="takip"><span class="puan" style="background:${o.risk.p>=50?'var(--kotu)':'#C98A1A'}">${o.risk.p}</span><div><a class="p" href="#ogrenci-${o.no}" style="font-weight:700;color:var(--ink);text-decoration:none">${esc(o.ad)}</a> <span class="soluk">· ${SK[o.sinif].kisa} · veli ${esc(o.veli.ad)}</span><div class="nedenler">${o.risk.n.map(n=>`<span class="rozet ${RK(o.risk.p)}">${esc(n)}</span>`).join('')}</div></div>
+ <div class="eylem"><a class="btn kucuk" href="#ogrenci-${o.no}">Kartı aç</a> <button class="btn kucuk ${st.planli[o.no]?'':'ana'}" data-planla="${o.no}">${st.planli[o.no]?ico('tik')+'Planlandı':'Görüşme planla'}</button></div></div>`).join('')}</section>
+ <p class="dipnot">Puan kuralları: üst üste 3+ gün gelmeme 30 · son 2 haftada 3+ gün yok 15 · son denemede belirgin düşüş (TYT 10, LGS 5 net) 25 · sınıf ortalamasının belirgin altında 15 · üst üste 2+ denemeye girmeme 20 · son görüşmenin 45 günü aşması 15 · hiç görüşme olmaması 10.</p>`}
+
+function rehberlik(){baslik('Öğrenci','Rehberlik');const tum=[...OGR.flatMap(o=>o.gor.map(g=>({...g,o}))),...st.ekGor].sort((a,b)=>a.t<b.t?1:-1);
+ const aylar={};tum.forEach(g=>{const k=g.t.slice(0,7);(aylar[k]=aylar[k]||[]).push(g)});const hic=OGR.filter(o=>!o.gor.length&&!st.ekGor.some(g=>g.o===o)).length;
+ return `<div class="izgara k3"><div class="kpi"><span>Kasım görüşmeleri</span><b>${(aylar['2026-11']||[]).length}</b><small>bu ay kayda geçen</small></div><div class="kpi"><span>Bugün planlı</span><b>${BUGUN_GOR.length}</b><small>${BUGUN_GOR.map(g=>g.saat).join(' · ')}</small></div><div class="kpi"><span>Hiç görüşülmeyen</span><b class="orta">${hic}</b><small>öğrenci</small></div></div><div class="bosluk"></div>
+ <div class="izgara k2" style="grid-template-columns:minmax(0,1fr) minmax(0,1.3fr)"><section class="kart"><div class="kart-bas"><div><h2>Yeni görüşme notu</h2><p>Kaydedilen not öğrencinin kartına tarihle düşer.</p></div></div><form class="ic" id="gor-form" style="display:grid;gap:12px">
+ <label class="alan">Öğrenci<select id="gf-o">${OGR.map(o=>`<option value="${o.no}">${esc(o.ad)} · ${SK[o.sinif].kisa}</option>`).join('')}</select></label>
+ <label class="alan">Konu<select id="gf-k">${GKONU.map(k=>`<option>${k}</option>`).join('')}</select></label>
+ <label class="alan">Not<textarea id="gf-n" placeholder="Görüşmede konuşulanlar ve kararlar"></textarea></label><button class="btn ana" type="submit">Kaydet</button></form></section>
+ <section class="kart"><div class="kart-bas"><div><h2>Görüşme kayıtları</h2><p>Aylara göre, en yenisi üstte</p></div></div>${Object.entries(aylar).map(([k,l])=>`<h3 style="font-size:13px;padding:10px 18px 4px;color:var(--ink-3)">${AY[+k.slice(5)-1]} ${k.slice(0,4)} · ${l.length}</h3>`+l.slice(0,8).map(g=>`<div class="is"><span class="rozet">${tarih(g.t)}</span><div class="metin" data-git="#ogrenci-${g.o.no}"><b>${esc(g.o.ad)} <span class="soluk" style="font-weight:500">· ${esc(g.konu)}</span></b><span>${esc(g.not)}</span></div></div>`).join('')).join('')}</section></div>`}
+
+function yoklama(){baslik('Öğrenci','Yoklama');const gunler=GUNLER.slice(-5);const gi=GUNLER.indexOf(st.yokGun);const l=S(st.yokSinif);
+ const anahtar=o=>st.yokGun+'|'+st.yokSaat+'|'+o.no;const dur=o=>st.yok[anahtar(o)]||o.devam[gi];const say=k=>l.filter(o=>dur(o)===k).length;
+ const SAATLER=['09.00','09.50','10.40','11.30','13.10','14.00'];
+ return `<div class="gun-serit">${gunler.map(g=>`<button class="gun ${g===st.yokGun?'secili':''}" data-gun="${g}"><span>${GUNAD[D(g).getDay()]}</span><b>${D(g).getDate()}</b><span>${kisaAy(g)}</span></button>`).join('')}</div><div class="bosluk"></div>
+ <div class="arac"><div class="cipler">${SINIF.map(s=>`<button class="cip ${st.yokSinif===s.k?'secili':''}" data-ysinif="${s.k}">${s.kisa}<span>${S(s.k).length}</span></button>`).join('')}</div>
+ <label class="alan" style="flex-direction:row;align-items:center;gap:8px;margin-left:auto">Ders<select id="yok-saat" style="width:auto">${SAATLER.map((s,i)=>`<option value="${i+1}" ${st.yokSaat===i+1?'selected':''}>${i+1}. ders · ${s}</option>`).join('')}</select></label></div>
+ <div class="izgara k4"><div class="kpi"><span>Geldi</span><b class="iyi">${say('G')}</b></div><div class="kpi"><span>Gelmedi</span><b class="kotu">${say('Y')}</b></div><div class="kpi"><span>Geç</span><b class="orta">${say('C')}</b></div><div class="kpi"><span>İzinli</span><b>${say('I')}</b></div></div><div class="bosluk"></div>
+ <section class="kart"><div class="kart-bas"><div><h2>${SK[st.yokSinif].ad} · ${tarih(st.yokGun)} · ${st.yokSaat}. ders</h2><p>Öğretmen kendi ekranından da girebilir. Değiştirince özet anında güncellenir.</p></div><div class="sag"><button class="btn kucuk ana" id="yok-kaydet">Kaydet</button></div></div>
+ <div class="scroll"><table class="tablo"><tbody>${l.map(o=>{const d=dur(o);return `<tr><td style="width:44px"><span class="av">${bas(o.ad)}</span></td><td><b>${esc(o.ad)}</b><br><span class="soluk" style="font-size:12.5px">20 günde ${o.devam.filter(x=>x==='Y').length} gün gelmedi</span></td><td class="s"><div class="durum" role="group" aria-label="${esc(o.ad)} yoklama">${[['G','Geldi'],['Y','Gelmedi'],['C','Geç'],['I','İzinli']].map(([k,a])=>`<button class="${k}" data-yok="${o.no}" data-d="${k}" aria-pressed="${d===k}">${a}</button>`).join('')}</div></td></tr>`}).join('')}</tbody></table></div></section>`}
+
+function sinavMerkezi(){baslik('Akademik','Sınav Merkezi');const l=DEN.filter(d=>st.sinavF==='Tümü'||d.tur===st.sinavF).sort((a,b)=>a.t<b.t?1:-1);
+ const durum=d=>d.plan?['Planlandı','plan']:d.konuYok?['Sonuçlandı · konu analizi yok','yari']:['Konu analizli','iyi'];
+ return `<section class="bant sinav"><small>Sınav Merkezi</small><h2>Her deneme, baştan sona tek ekranda</h2><p>${DEN.length} deneme · ${DEN.filter(d=>!d.plan).length} sonuçlandı · ${DEN.filter(d=>!d.plan).reduce((a,d)=>a+sonuclar(d.id).length,0)} öğrenci sonucu</p></section><div class="bosluk"></div>
+ <div class="arac"><div class="cipler">${['Tümü','TYT','LGS'].map(f=>`<button class="cip ${st.sinavF===f?'secili':''}" data-sf="${f}">${f}<span>${f==='Tümü'?DEN.length:DEN.filter(d=>d.tur===f).length}</span></button>`).join('')}</div></div>
+ <div class="izgara k3">${l.map(d=>{const[u,c]=durum(d);const s=sonuclar(d.id);return `<a class="skart ${c}" href="${d.plan?'#sinav':'#sinav-'+d.id}"><div class="tarih-blok"><b>${D(d.t).getDate()}</b><span>${kisaAy(d.t)}</span></div><div><span class="soluk" style="font-size:12px;font-weight:700">${d.tur}</span><h3>${d.ad}</h3><div class="bilgi">${d.plan?`<span>${tarih(d.t)} · duyuru taslağı hazır</span>`:`<span><b>${s.length}</b> öğrenci</span><span><b>${f1(KORT(d.id))}</b> ort. net</span>`}</div><span class="rozet ${c==='plan'?'':c==='yari'?'orta':'iyi'}" style="margin-top:8px">${u}</span></div></a>`}).join('')}</div>`}
+
+function sinavDetay(id){const d=DK[id];if(!d||d.plan)return sinavMerkezi();baslik('Akademik',d.ad);const s=sonuclar(id);const dl=DERS[d.tur];const arr=yapilan(d.tur);const i=arr.indexOf(d);const onc=arr[i-1];
+ const k=KORT(id);const ust=Math.max(...s.map(x=>x.s.top));const kova=d.tur==='TYT'?[0,20,40,60,80,100,120]:[0,15,30,45,60,75,90];const h=kova.slice(0,-1).map((a,j)=>s.filter(x=>x.s.top>=a&&(x.s.top<kova[j+1]||(j===kova.length-2&&x.s.top<=kova[j+1]))).length);const hm=Math.max(...h,1);
+ const deg=onc?s.map(x=>{const p=x.o.son.find(y=>y.den===onc.id);return p&&!p.yok?{o:x.o,f:x.s.top-p.top}:null}).filter(Boolean).sort((a,b)=>b.f-a.f):[];
+ const girmeyen=OGR.filter(o=>o.tur===d.tur&&!s.some(x=>x.o===o));const sk=st.siralama;const sirali=[...s].sort((a,b)=>sk.y*((sk.k==='top'?a.s.top:sk.k==='ad'?0:a.s.n[sk.k])-(sk.k==='top'?b.s.top:sk.k==='ad'?0:b.s.n[sk.k]))||(sk.k==='ad'?a.o.ad.localeCompare(b.o.ad,'tr'):0));
+ return `<a class="btn kucuk" href="#sinav">${ico('geri')}Sınav Merkezi</a><div class="bosluk"></div>
+ <div class="izgara k4"><div class="kpi"><span>Katılım</span><b>${s.length}</b><small>${girmeyen.length} öğrenci girmedi</small></div><div class="kpi"><span>Kurum ortalaması</span><b>${f1(k)}</b><small>${onc?(k>=KORT(onc.id)?'▲ ':'▼ ')+f1(Math.abs(k-KORT(onc.id)))+' önceki denemeye göre':'ilk deneme'}</small></div><div class="kpi"><span>En yüksek</span><b>${f1(ust)}</b><small>${esc(s.find(x=>x.s.top===ust).o.ad)}</small></div><div class="kpi"><span>Konu analizi</span><b>${d.konuYok?'Yok':'Var'}</b><small>${d.konuYok?'yalnızca netler geldi':'kazanım bazında'}</small></div></div><div class="bosluk"></div>
+ <div class="izgara k2e"><section class="kart"><div class="kart-bas"><div><h2>Net dağılımı</h2><p>Kaç öğrenci hangi aralıkta</p></div></div><div class="histo">${h.map((v,j)=>`<div><b>${v}</b><i style="height:${100*v/hm}%"></i><small>${kova[j]}–${kova[j+1]}</small></div>`).join('')}</div><div class="bosluk"></div></section>
+ <section class="kart"><div class="kart-bas"><div><h2>Sınıf ortalamaları</h2><p>Toplam net</p></div></div><div class="ic">${SINIF.filter(x=>x.tur===d.tur).map(x=>({x,v:SORT[x.k][id]})).sort((a,b)=>b.v-a.v).map(({x,v})=>`<div class="satir-bar"><span>${x.kisa}</span>${cubuk(v,MAX[d.tur])}<b>${f1(v)}</b></div>`).join('')}<h3 style="font-size:14px;margin:14px 0 4px">Ders ortalamaları</h3>${dl.map(x=>{const v=ort(s.map(y=>y.s.n[x.k]));return `<div class="satir-bar"><span>${x.ad}</span>${cubuk(v,x.max,seviye(100*v/x.max))}<b>${f1(v)}<small class="soluk" style="font-weight:500">/${x.max}</small></b></div>`}).join('')}</div></section></div><div class="bosluk"></div>
+ <section class="kart"><div class="kart-bas"><div><h2>Sıralama</h2><p>Sütun başlığına tıklayarak sırala</p></div></div><div class="scroll"><table class="tablo"><thead><tr><th class="s">#</th><th><button data-sir="ad">Öğrenci</button></th><th>Sınıf</th>${dl.map(x=>`<th class="s"><button data-sir="${x.k}">${x.ad.split(' ')[0]}</button></th>`).join('')}<th class="s"><button data-sir="top">Toplam ${sk.k==='top'?(sk.y<0?'↓':'↑'):''}</button></th></tr></thead>
+ <tbody>${sirali.map((x,j)=>`<tr class="tik" data-git="#ogrenci-${x.o.no}"><td class="s">${j+1}</td><td><b>${esc(x.o.ad)}</b></td><td>${SK[x.o.sinif].kisa}</td>${dl.map(y=>`<td class="s">${f1(x.s.n[y.k])}</td>`).join('')}<td class="s"><b>${f1(x.s.top)}</b></td></tr>`).join('')}</tbody></table></div></section><div class="bosluk"></div>
+ <div class="izgara k3"><section class="kart"><div class="kart-bas"><div><h2>Yükselenler</h2><p>Önceki denemeye göre</p></div></div><div class="ic">${deg.slice(0,5).map(x=>`<div class="satir-bar"><span>${esc(x.o.ad)}</span><span class="soluk">${SK[x.o.sinif].kisa}</span><b class="iyi">+${f1(x.f)}</b></div>`).join('')||'<p class="soluk">Karşılaştırma yok</p>'}</div></section>
+ <section class="kart"><div class="kart-bas"><div><h2>Düşenler</h2><p>Önceki denemeye göre</p></div></div><div class="ic">${deg.slice(-5).reverse().map(x=>`<div class="satir-bar"><span>${esc(x.o.ad)}</span><span class="soluk">${SK[x.o.sinif].kisa}</span><b class="${x.f<0?'kotu':''}">${f1(x.f)}</b></div>`).join('')||'<p class="soluk">Karşılaştırma yok</p>'}</div></section>
+ <section class="kart"><div class="kart-bas"><div><h2>Sınava girmeyenler</h2><p>${girmeyen.length} öğrenci</p></div></div><div class="ic">${girmeyen.map(o=>`<div class="satir-bar"><a href="#ogrenci-${o.no}" style="color:var(--ink)">${esc(o.ad)}</a><span class="soluk">${SK[o.sinif].kisa}</span><b></b></div>`).join('')||'<p class="soluk">Herkes girdi.</p>'}</div></section></div>`}
+
+function isi(){baslik('Akademik','Konu Isı Haritası');const tur=st.isiTur;const sl=SINIF.filter(s=>s.tur===tur),dl=DERS[tur];
+ const deger=(sk,dk)=>ort(S(sk).flatMap(o=>Object.entries(o.konu).filter(([k])=>k.startsWith(dk+'|')).map(([,v])=>v)));
+ let detay='';if(st.isiSec){const[sk,dk]=st.isiSec.split('/');if(SK[sk]&&SK[sk].tur===tur){const tl=KONU[tur][dk].map(t=>{const v=S(sk).map(o=>o.konu[dk+'|'+t]);return{t,v:ort(v),alt:v.filter(x=>x<50).length,k:ort(OGR.filter(o=>o.tur===tur).map(o=>o.konu[dk+'|'+t]))}}).sort((a,b)=>a.v-b.v);
+  detay=`<section class="kart"><div class="kart-bas"><div><h2>${SK[sk].kisa} · ${dl.find(x=>x.k===dk).ad}</h2><p>En zayıf konular · kurum ortalamasıyla · %50 altındaki öğrenci sayısı</p></div></div><div class="scroll"><table class="tablo"><thead><tr><th>Konu</th><th class="s">Sınıf</th><th class="s">Kurum</th><th class="s">%50 altı</th></tr></thead><tbody>${tl.map(x=>`<tr><td>${esc(x.t)}</td><td class="s"><span class="rozet ${seviye(x.v)}">${yuzde(x.v)}</span></td><td class="s">${yuzde(x.k)}</td><td class="s">${x.alt} öğrenci</td></tr>`).join('')}</tbody></table></div><p class="dipnot" style="padding:0 18px 14px">Ekip 1, öğrencilerin yarısından fazlasının %50 altında kaldığı konuları "ortak eksik" olarak hocaya önerir.</p></section>`}}
+ return `<div class="arac"><div class="cipler">${['TYT','LGS'].map(t=>`<button class="cip ${tur===t?'secili':''}" data-isi="${t}">${t}</button>`).join('')}</div><span class="soluk">Hücreye tıkla: o sınıfın o dersteki en zayıf konuları</span></div>
+ <section class="kart"><div class="kart-bas"><div><h2>Sınıf × ders ortalama konu başarısı</h2><p>Kırmızı %50 altı · sarı %50–69 · yeşil %70 ve üstü</p></div></div><div class="scroll ic"><table class="tablo isi"><thead><tr><th>Sınıf</th>${dl.map(d=>`<th style="text-align:center">${d.ad}</th>`).join('')}</tr></thead><tbody>${sl.map(s=>`<tr><td><b>${s.kisa}</b></td>${dl.map(d=>{const v=deger(s.k,d.k);const c=v<50?'h1':v<70?'h2':'h3';return `<td class="h ${c} ${st.isiSec===s.k+'/'+d.k?'secili':''}" data-hucre="${s.k}/${d.k}" tabindex="0" role="button">${yuzde(v)}</td>`}).join('')}</tr>`).join('')}</tbody></table></div></section><div class="bosluk"></div>${detay}`}
+
+function veli(){const o=OGR[st.veliOgr-1];const veliRol=st.rol==='veli';baslik(veliRol?'Veli':'Veli','Benim Pusulam');
+ const arr=yapilan(o.tur);const L=sonNet(o);const sd=sonDeneme(o.tur);const sonuc=sonuclar(sd.id);const sinifL=sonuc.filter(x=>x.o.sinif===o.sinif).sort((a,b)=>b.s.top-a.s.top),kurumL=[...sonuc].sort((a,b)=>b.s.top-a.s.top);
+ const si=sinifL.findIndex(x=>x.o===o)+1,ki=kurumL.findIndex(x=>x.o===o)+1;const dl=DERS[o.tur];const var_=o.son.filter(x=>!x.yok).slice(-3);
+ const a=dl.map(d=>ort(var_.map(v=>v.n[d.k]))/d.max),b=dl.map(d=>ort(OGR.filter(x=>x.sinif===o.sinif).flatMap(x=>x.son.filter(y=>!y.yok).slice(-3).map(v=>v.n[d.k])))/d.max);
+ cizgiGrafik('g-veli',arr.map(d=>d.ad.replace(/(TYT|LGS) Genel Deneme /,'D')),[{d:arr.map(d=>{const x=o.son.find(y=>y.den===d.id);return x&&!x.yok?x.top:null}),renk:'#C2410C',alan:1},{d:arr.map(d=>SORT[o.sinif][d.id]),renk:'#7A8CA0',kesik:1}],{hedef:o.hedefNet});
+ radar('g-radar',dl.map(d=>d.ad.split(' ')[0]),a,b);
+ const konular=Object.entries(o.konu).map(([k,v])=>({t:k.split('|')[1],v}));const onc=[...konular].sort((x,y)=>x.v-y.v).slice(0,4),gu=[...konular].sort((x,y)=>y.v-x.v).slice(0,4);
+ return `${veliRol?'':`<div class="onizleme">${ico('goz')}<b>Rehber önizlemesi:</b> veli bu ekranı görür, başka hiçbir öğrenciyi göremez.<select id="veli-sec" aria-label="Önizlenen öğrenci">${OGR.map(x=>`<option value="${x.no}" ${x.no===o.no?'selected':''}>${esc(x.ad)} · ${SK[x.sinif].kisa}</option>`).join('')}</select></div>`}
+ <section class="veli-bant"><span class="av b" style="background:var(--brand);color:#fff">${bas(o.ad)}</span><div><small class="kotu" style="font:700 11.5px var(--fd);letter-spacing:.07em;text-transform:uppercase;color:var(--brand)">${veliRol?'Hoş geldiniz':'İyi günler'}</small><h2>${esc(o.ilk)}, yolun burada.</h2><p>${SK[o.sinif].ad} · ${arr.length} deneme · son: ${sd.ad}</p>
+ <div class="siralar"><span><b>${si?si+'/'+sinifL.length:'—'}</b>sınıf sırası</span><span><b>${ki?ki+'/'+kurumL.length:'—'}</b>kurum sırası</span><span><b>${L?f1(L.top):'—'}</b>son net</span></div></div></section><div class="bosluk"></div>
+ <div class="izgara k4"><div class="kpi"><span>Sınıf ortalamasına göre</span><b class="${L&&L.top>=SORT[o.sinif][sd.id]?'iyi':'kotu'}">${L?(L.top>=SORT[o.sinif][sd.id]?'+':'')+f1(L.top-SORT[o.sinif][sd.id]):'—'}</b><small>sınıf ort. ${f1(SORT[o.sinif][sd.id])}</small></div><div class="kpi"><span>Devam (20 gün)</span><b>${yuzde(o.devYuzde)}</b><small>${o.devam.filter(x=>x==='Y').length} gün gelmedi</small></div><div class="kpi"><span>Öncelikli konu</span><b>${konular.filter(x=>x.v<50).length}</b><small>başarısı %50 altında</small></div><div class="kpi"><span>Hedefe kalan</span><b>${L?f1(Math.max(0,o.hedefNet-L.top)):'—'}</b><small>${esc(o.hedef)} · ${o.hedefNet} net</small></div></div><div class="bosluk"></div>
+ <div class="izgara k2"><section class="kart"><div class="kart-bas"><div><h2>Net yolculuğu</h2><p>Kesikli çizgi sınıf ortalaması · yeşil çizgi hedef</p></div></div><div class="ic"><div class="fig" id="g-veli"></div></div></section>
+ <section class="kart"><div class="kart-bas"><div><h2>Ders profili</h2><p>Son 3 deneme · sınıfla karşılaştırma</p></div></div><div class="ic"><div class="fig" id="g-radar" style="height:250px"></div></div><div class="lejant"><span><i></i>${esc(o.ilk)}</span><span><i class="k"></i>Sınıf ortalaması</span></div></section></div><div class="bosluk"></div>
+ <div class="izgara k2e"><section class="kart"><div class="kart-bas"><div><h2>Öncelikli konular</h2><p>Bu hafta odaklanılacaklar</p></div></div><div class="ic">${onc.map(z=>`<div class="satir-bar"><span>${esc(z.t)}</span>${cubuk(z.v,100,seviye(z.v))}<b>${yuzde(z.v)}</b></div>`).join('')}</div></section>
+ <section class="kart"><div class="kart-bas"><div><h2>Güçlü olduğu konular</h2><p>Böyle devam</p></div></div><div class="ic">${gu.map(z=>`<div class="satir-bar"><span>${esc(z.t)}</span>${cubuk(z.v,100,'iyi')}<b>${yuzde(z.v)}</b></div>`).join('')}</div></section></div>`}
+
+/* ---------- Ekip 1 ---------- */
+function onayListe(){if(st.onay)return st.onay;const sd=sonDeneme('TYT');
+ st.onay=[{id:1,tur:'Devamsızlık bildirimi',kime:sA.veli.ad+' (veli) · '+sA.ad,d:'bekliyor',m:`Sayın ${sA.veli.ad},\n${sA.ilk} son ${sA.risk.ard} gündür kursa gelmiyor. Bilginiz var mı? Uygun olduğunuz bir saatte kısa bir görüşme yapmak isterim.\nRehber Öğretmen Ali Can Bal`},
+ {id:2,tur:'Deneme karnesi',kime:sY.veli.ad+' (veli) · '+sY.ad,d:'bekliyor',ek:`${sd.ad} - ${sY.ad} karnesi.pdf`,m:`Sayın ${sY.veli.ad},\n${sY.ilk}'in ${sd.ad} karnesi ektedir. Son denemede ${f1(sonNet(sY).top)} net yaptı; sınıf ortalamasının ${f1(sonNet(sY).top-SORT[sY.sinif][sd.id])} net üstünde. Tebrik ederiz.`},
+ {id:3,tur:'Deneme duyurusu (grup)',kime:'12 SAY öğrenci grubu',d:'bekliyor',m:`Cumartesi 28 Kasım 09.30'da TYT Genel Deneme 7 yapılacaktır. Lütfen 09.15'te sınıfta olun.\n\nAnket: Denemeye katılacak mısın?  ○ Evet  ○ Hayır`},
+ {id:4,tur:'Görüşme daveti',kime:sB.veli.ad+' (veli) · '+sB.ad,d:'bekliyor',m:`Sayın ${sB.veli.ad},\n${sB.ilk}'in son denemesini birlikte değerlendirmek için bu hafta 20 dakikalık bir görüşme yapmak isterim. Size uygun gün ve saati yazabilir misiniz?\nRehber Öğretmen Ali Can Bal`}];return st.onay}
+function onay(){baslik('Ekip 1','Gönderim onayı');const l=onayListe();
+ return `<section class="kart"><div class="kart-bas"><div><h2>Gitmeden önce senin onayın</h2><p>Ekip 1 mesajları hazırlar ama veliye, öğrenciye ya da gruba hiçbir şeyi kendi başına göndermez. Kişisel sonuçlar asla sınıf grubuna gitmez.</p></div></div>
+ ${l.map(x=>`<div class="onay"><div><span class="rozet ${x.d==='gonderildi'?'iyi':x.d==='iptal'?'':'marka'}">${x.d==='gonderildi'?'Gönderildi (demo)':x.d==='iptal'?'Vazgeçildi':x.tur}</span> <b style="margin-left:6px">${esc(x.kime)}</b>
+ ${x.duzen?`<textarea data-metin="${x.id}" aria-label="Mesaj metni">${esc(x.m)}</textarea>`:`<div class="mesaj">${esc(x.m)}</div>`}${x.ek?`<p class="dipnot">Ek: ${esc(x.ek)}</p>`:''}</div>
+ <div class="eylem">${x.d==='bekliyor'?`<button class="btn kucuk ana" data-onayla="${x.id}">${ico('gonder')}Onayla ve gönder</button><button class="btn kucuk" data-duzenle="${x.id}">${x.duzen?'Düzenlemeyi bitir':'Düzenle'}</button><button class="btn kucuk" data-vazgec="${x.id}">Vazgeç</button>`:`<button class="btn kucuk" data-geri="${x.id}">Geri al</button>`}</div></div>`).join('')}</section>
+ <p class="dipnot">Demo: "Onayla ve gönder" hiçbir yere mesaj göndermez, yalnızca akışı gösterir. Gerçek kurulumda onaylanan mesajlar her 10 dakikada bir WhatsApp üzerinden tek tek ve aralıklı gönderilir.</p>`}
+
+function ekip1(){baslik('Ekip 1','Otomatik asistan');const sd=sonDeneme('TYT'),onc=yapilan('TYT').slice(-2)[0];const s=sonuclar(sd.id);
+ const enDusuk=SINIF.filter(x=>x.tur==='TYT').map(x=>({x,v:SORT[x.k][sd.id]})).sort((a,b)=>a.v-b.v)[0];
+ const dusen=s.filter(x=>{const p=x.o.son.find(y=>y.den===onc.id);return p&&!p.yok&&p.top-x.s.top>=10}).length;const yakin=OGR.filter(o=>o.risk.p>=50).length;
+ const uzun=OGR.filter(o=>o.risk.ard>=3||o.risk.yok>=3).length;const bekl=onayListe().filter(x=>x.d==='bekliyor').length;
+ return `<section class="ekip-bas"><div><small>Ekip 1 · kurum operasyon asistanı</small><h2>Rehberin elle yaptığı veri işini akşamları kendisi yapar.</h2><p>Sabah önüme kimi aramam, kiminle görüşmem ve hangi sınıfın hangi konuda zorlandığı hazır gelir. Veliye ya da öğrenciye hiçbir şey benim onayım olmadan gitmez.</p></div>
+ <div class="olcek"><div><b>430+</b><span>öğrenci tek listede</span></div><div><b>2.100+</b><span>deneme sonucu</span></div><div><b>10.000+</b><span>yoklama kaydı</span></div><div><b>40.000+</b><span>konu başarı satırı</span></div></div></section>
+ <p class="dipnot">Üstteki sayılar gerçek kurulumun toplam ölçeğidir (isimsiz). Bu demodaki öğrenciler ve sonuçlar uydurmadır.</p><div class="bosluk"></div>
+ <section class="kart"><div class="kart-bas"><div><h2>Nasıl çalışır</h2><p>Dağınık dosyalar tek doğru kaynağa dönüşür, oradan rapora ve onaylı mesaja gider.</p></div></div>
+ <div class="akis"><div class="dugum"><h3><i>1</i>Kaynaklar</h3><ul><li>Yoklama dışa aktarımı</li><li>Deneme sonuç dosyaları ve karneler</li><li>Optik okuyucu çıktıları</li><li>Öğrenci ve veli rehberi</li><li>Kayıt listeleri</li></ul><span class="nabiz"></span></div>
+ <div class="dugum"><h3><i>2</i>Veri merkezi</h3><ul><li>İsimleri eşleştirir, tekrarları birleştirir</li><li>Her öğrenciye kalıcı kimlik verir</li><li>Çelişkileri "kontrol edilecekler"e yazar, tahmin yapmaz</li></ul><span class="nabiz"></span></div>
+ <div class="dugum"><h3><i>3</i>Pusula</h3><ul><li>Öğrenci kartları</li><li>Takip listesi</li><li>Sınav merkezi, ısı haritası</li><li>Veli ekranı</li></ul><span class="nabiz"></span></div>
+ <div class="dugum vurgu"><h3><i>4</i>Ekip 1</h3><ul><li>Deneme ders-konu raporu</li><li>Neti düşenler raporu</li><li>Devam raporu</li><li>Haftalık rehberlik özeti</li><li>Görüşme hazırlık sayfası</li></ul><span class="nabiz"></span></div>
+ <div class="dugum"><h3><i>5</i>Rehber</h3><ul><li>Sabah WhatsApp'a özet ve PDF</li><li>Onay kuyruğu</li><li>Onaylanan mesaj veliye</li></ul></div></div></section><div class="bosluk"></div>
+ <div class="izgara k2"><section class="kart"><div class="kart-bas"><div><h2>Ne zaman ne yapar</h2><p>Kurumun bilgisayarında kendiliğinden çalışır; kimsenin bir şey başlatmasına gerek yoktur.</p></div></div>
+ ${[['Her 10 dk','Excel\'de ya da Pusula\'da yapılan düzeltmeleri eşitler; onaylanan mesajları gönderir.'],['Her akşam 21.41','Gece taraması: yeni sonuç dosyalarını okur, raporları üretir, risk puanlarını yeniden hesaplar, sistemin sağlığını kontrol eder.'],['3 günde bir 19.07','Devam raporu: kim kaç gün gelmedi, kimin velisi aranmalı.'],['Pazartesi 08.12','Haftalık rehberlik özeti: bu hafta görüşülecekler, düşenler, yaklaşan denemeler.'],['Sonuç gelince','Ders-konu raporu (hocalara iletmek için) ve neti belirgin düşen öğrenciler.']].map(x=>`<div class="saat"><b>${x[0]}</b><p>${x[1]}</p></div>`).join('')}</section>
+ <section class="kart"><div class="kart-bas"><div><h2>Bu sabah gelen özet</h2><p>Rehberin telefonuna, yalnızca rehbere</p></div></div><div class="ic"><div class="telefon">
+ <div class="balon"><span class="kim">Ekip 1 · gece taraması</span>${esc(sd.ad)} işlendi: ${s.length} öğrenci, kurum ortalaması ${f1(KORT(sd.id))} net. En düşük sınıf ${enDusuk.x.kisa} (${f1(enDusuk.v)}).
+Neti belirgin düşen: ${dusen} öğrenci.
+Yakın takipte: ${yakin} öğrenci (görüşme hazırlık sayfaları hazır).
+Onay bekleyen: ${bekl} mesaj.<button class="ek" data-rapor="konu">${ico('rapor')} ${esc(sd.ad)} - Ders ve Konu Raporu.pdf</button><time>21.43</time></div>
+ <div class="balon"><span class="kim">Ekip 1 · devam raporu</span>Son 5 gün: ${OGR.filter(o=>o.devam.slice(-5).includes('Y')).length} öğrenci en az bir gün gelmedi. Uzun süreli devamsızlık: ${uzun} öğrenci, veli araması önerilir.<button class="ek" data-rapor="devam">${ico('rapor')} Devam Raporu (${D(GUNLER[15]).getDate()}–${tarih(BUGUN)}).pdf</button><time>19.08</time></div></div></div></section></div><div class="bosluk"></div>
+ <div class="izgara k2"><section class="kart"><div class="kart-bas"><div><h2>Sistem durumu</h2><p>Son tarama dün 21.41 · durum yeşil</p></div><div class="sag"><button class="btn kucuk" id="tara">Şimdi tara</button></div></div>
+ ${[['orta','Önemli','TYT Genel Deneme 3: konu analizi yok','Yalnızca netler geldi. Kazanım listesi klasöre konursa konu başarısı optik veriden kendiliğinden hesaplanır.'],['orta','Önemli',`${yakin} öğrenci yakın takipte`,'Görüşme hazırlık sayfaları üretildi; Takip Listesi\'nde.'],['','Bilgi','2 kayıt kontrol bekliyor','İki öğrencide veli telefonu aynı görünüyor; tahmin yapılmadı, rehbere soruldu.'],['','Bilgi','Yaklaşan: TYT Genel Deneme 7 (28 Kasım)','Duyuru ve katılım anketi taslağı onay kuyruğunda.']].map(x=>`<div class="bulgu"><span class="rozet ${x[0]}">${x[1]}</span><div><b>${x[2]}</b><br><span class="soluk">${x[3]}</span></div></div>`).join('')}</section>
+ <section class="kart"><div class="kart-bas"><div><h2>Güvenlik kuralları</h2><p>Çocuk verisiyle çalışıldığı için</p></div></div><div class="izgara k2e" style="padding:0 6px 10px">${[['Onaysız gönderim yok','Veliye, öğrenciye, öğretmene giden her mesaj tek tek onaylanır.'],['Kişisel sonuç gruba gitmez','Karneler ve notlar yalnızca ilgili veliye gider.'],['Veri kurumda kalır','Öğrenci verisi kurumun bilgisayarında tutulur; buluta gönderilmez.'],['Her değişiklikten önce yedek','Dosyaya yazmadan önce kopya alınır; geri dönülebilir.']].map(x=>`<div class="kural"><b>${x[0]}</b><span>${x[1]}</span></div>`).join('')}</div></section></div><div class="bosluk"></div>
+ <section class="kart"><div class="kart-bas"><div><h2>Başka bir kuruma uyarlanırsa</h2><p>Yapı aynı kalır, ölçülen şey değişir.</p></div></div><div class="izgara k4" style="padding:0 18px 18px">${[['Seans devamı','Gelmeyen öğrenci ilk gün fark edilir, aile aranır.'],['Amaç takibi','BEP\'teki kısa dönemli amaçların ilerlemesi haftalık izlenir.'],['Gelişim raporu','Dönem sonu aileye grafikli, anlaşılır rapor.'],['Aile görüşmesi','Her görüşmeye önceki notlar ve son durumla girilir.']].map(x=>`<div class="kpi"><span>${x[0]}</span><small style="font-size:13.5px;color:var(--ink-2)">${x[1]}</small></div>`).join('')}</div></section>
+ <div class="bosluk"></div><div class="cipler"><a class="btn ana" href="#raporlar">${ico('rapor')}Örnek raporları gör</a><a class="btn" href="#onay">${ico('gonder')}Onay kuyruğu</a><a class="btn" href="#takip">${ico('radar')}Takip Listesi</a></div>`}
+
+/* ---------- raporlar ---------- */
+function kagitBas(b,a){return `<header><span class="logo"><i>${ico('pusula')}</i></span><div><h2>${b}</h2><p>${KURUM} · ${a}</p></div><span class="rozet" style="margin-left:auto">Örnek veri</span></header>`}
+function karne(o){const arr=yapilan(o.tur);const L=sonNet(o);const sd=sonDeneme(o.tur);const dl=DERS[o.tur];
+ cizgiGrafik('g-karne',arr.map(d=>d.ad.replace(/(TYT|LGS) Genel Deneme /,'D')),[{d:arr.map(d=>{const x=o.son.find(y=>y.den===d.id);return x&&!x.yok?x.top:null}),renk:'#C2410C',alan:1},{d:arr.map(d=>SORT[o.sinif][d.id]),renk:'#7A8CA0',kesik:1}],{hepsi:1});
+ const konular=Object.entries(o.konu).map(([k,v])=>{const[d,t]=k.split('|');return{d,t,v}});const onc=konular.filter(x=>x.v<50).sort((a,b)=>a.v-b.v);const tam=konular.filter(x=>x.v>=85);
+ const ilk=o.son.find(x=>!x.yok);const deg=L&&ilk?L.top-ilk.top:0;const enZayif=dl.map(d=>({d,v:L?L.n[d.k]/d.max:0})).sort((a,b)=>a.v-b.v)[0];
+ return `<article class="kagit">${kagitBas('Öğrenci Gelişim ve Konu Analizi Karnesi',SK[o.sinif].ad+' · '+tarih(BUGUN,1))}
+ <h3 style="margin-top:0">${esc(o.ad)}</h3><div class="kutular"><div><b>${L?f1(L.top):'—'}</b><span>son net (${L?DK[L.den].ad.replace(/(TYT|LGS) Genel /,''):''})</span></div><div><b class="${deg>=0?'iyi':'kotu'}">${deg>=0?'+':''}${f1(deg)}</b><span>dönem başından bu yana</span></div><div><b>${yuzde(o.devYuzde)}</b><span>devam (20 gün)</span></div><div><b>${onc.length}</b><span>öncelikli konu</span></div></div>
+ <h3>Net gelişimi</h3><div class="fig kisa" id="g-karne"></div><div class="lejant" style="padding:8px 0 0"><span><i></i>${esc(o.ilk)}</span><span><i class="k"></i>Sınıf ortalaması</span></div>
+ <h3>Ders netleri (son deneme)</h3><div class="scroll"><table class="tablo"><thead><tr><th>Ders</th><th class="s">Net</th><th class="s">Sınıf ort.</th><th class="s">Başarı</th></tr></thead><tbody>${L?dl.map(d=>{const so=ort(sonuclar(L.den).filter(x=>x.o.sinif===o.sinif).map(x=>x.s.n[d.k]));const p=100*L.n[d.k]/d.max;return `<tr><td>${d.ad}</td><td class="s"><b>${f1(L.n[d.k])}</b></td><td class="s">${f1(so)}</td><td class="s"><span class="rozet ${seviye(p)}">${yuzde(p)}</span></td></tr>`}).join(''):''}</tbody></table></div>
+ <h3>Öncelikli konular</h3>${onc.slice(0,6).map(z=>`<div class="satir-bar"><span>${esc(z.t)}</span>${cubuk(z.v,100,seviye(z.v))}<b>${yuzde(z.v)}</b></div>`).join('')||'<p class="soluk">%50 altında konu yok.</p>'}
+ <h3>Tam başarı gösterdiği konular</h3><p style="margin:0">${tam.map(z=>esc(z.t)).join(' · ')||'—'}</p>
+ <h3>Değerlendirme</h3><p style="margin:0">${esc(o.ilk)} dönem başından bu yana ${f1(Math.abs(deg))} net ${deg>=0?'ilerledi':'geriledi'}. En çok desteğe ihtiyaç duyduğu ders ${enZayif.d.ad}; özellikle ${esc(onc.slice(0,2).map(x=>x.t).join(' ve ')||enZayif.d.ad)} konularına haftalık tekrar önerilir. Hedefi ${esc(o.hedef)} için ${L?f1(Math.max(0,o.hedefNet-L.top)):'—'} net daha gerekiyor.</p></article>`}
+function devamRaporu(){const g=GUNLER.slice(-5);const uzun=OGR.filter(o=>o.risk.ard>=3||o.risk.yok>=3).sort((a,b)=>b.risk.ard-a.risk.ard||b.risk.yok-a.risk.yok);
+ return `<article class="kagit">${kagitBas('Devam Raporu',tarih(g[0])+' – '+tarih(g[4],1))}
+ <div class="kutular"><div><b>${OGR.filter(o=>o.devam.slice(-5).includes('Y')).length}</b><span>en az bir gün gelmeyen</span></div><div><b class="kotu">${uzun.length}</b><span>uzun süreli devamsızlık</span></div><div><b>${yuzde(100*ort(OGR.map(o=>o.devam.slice(-5).filter(x=>x==='G'||x==='C').length/5)))}</b><span>kurum katılımı</span></div><div><b>${OGR.filter(o=>o.devam.slice(-5).includes('C')).length}</b><span>geç kalan</span></div></div>
+ <h3>Veli araması önerilenler</h3><div class="scroll"><table class="tablo stack"><thead><tr><th>Öğrenci</th><th>Sınıf</th><th>Durum</th><th>Veli</th></tr></thead><tbody>${uzun.map(o=>`<tr><td><b>${esc(o.ad)}</b></td><td>${SK[o.sinif].kisa}</td><td>${o.risk.ard>=3?o.risk.ard+' gündür gelmiyor':'son 2 haftada '+o.risk.yok+' gün yok'}</td><td>${esc(o.veli.ad)} · ${o.veli.tel}</td></tr>`).join('')}</tbody></table></div>
+ <h3>Sınıflara göre katılım (son 5 gün)</h3>${SINIF.map(s=>{const v=100*ort(S(s.k).map(o=>o.devam.slice(-5).filter(x=>x==='G'||x==='C').length/5));return `<div class="satir-bar"><span>${s.kisa}</span>${cubuk(v,100,v<85?'kotu':v<93?'orta':'iyi')}<b>${yuzde(v)}</b></div>`}).join('')}
+ <p class="dipnot">Kural: üst üste 3 gün gelmeme ya da son 14 günde 3 tam gün devamsızlık "uzun süreli" sayılır. Sınıfın %80'inden fazlasının gelmediği günler (tatil, etkinlik) sayılmaz.</p></article>`}
+function konuRaporu(){const sd=sonDeneme('TYT'),onc=yapilan('TYT').slice(-2)[0];const s=sonuclar(sd.id);const dl=DERS.TYT;const tyt=OGR.filter(o=>o.tur==='TYT');
+ const dusen=s.map(x=>{const p=x.o.son.find(y=>y.den===onc.id);return p&&!p.yok?{o:x.o,a:p.top,b:x.s.top}:null}).filter(x=>x&&x.a-x.b>=10).sort((a,b)=>(b.a-b.b)-(a.a-a.b));
+ return `<article class="kagit">${kagitBas(sd.ad+' · Ders ve Konu Raporu',tarih(sd.t,1)+' · '+s.length+' öğrenci')}
+ ${dl.map(d=>{const v=ort(s.map(x=>x.s.n[d.k]));const tl=KONU.TYT[d.k].map(t=>{const a=tyt.map(o=>o.konu[d.k+'|'+t]);return{t,v:ort(a),alt:a.filter(x=>x<50).length}}).sort((a,b)=>a.v-b.v);
+ return `<h3>${d.ad} <span class="soluk" style="font:500 13px var(--fb)">· ${d.hoca} · kurum ort. ${f1(v)}/${d.max}</span></h3><div class="scroll"><table class="tablo"><thead><tr><th>Konu</th><th class="s">Kurum başarısı</th><th class="s">%50 altı</th></tr></thead><tbody>${tl.slice(0,4).map(x=>`<tr><td>${esc(x.t)}${x.alt>tyt.length/2?' <span class="rozet kotu">ortak eksik</span>':''}</td><td class="s"><span class="rozet ${seviye(x.v)}">${yuzde(x.v)}</span></td><td class="s">${x.alt} öğrenci</td></tr>`).join('')}</tbody></table></div>`}).join('')}
+ <h3>Neti belirgin düşen öğrenciler (10+ net)</h3><div class="scroll"><table class="tablo"><thead><tr><th>Öğrenci</th><th>Sınıf</th><th class="s">${onc.ad.replace('TYT Genel ','')}</th><th class="s">${sd.ad.replace('TYT Genel ','')}</th><th class="s">Fark</th></tr></thead><tbody>${dusen.map(x=>`<tr><td><b>${esc(x.o.ad)}</b></td><td>${SK[x.o.sinif].kisa}</td><td class="s">${f1(x.a)}</td><td class="s">${f1(x.b)}</td><td class="s kotu"><b>${f1(x.b-x.a)}</b></td></tr>`).join('')||'<tr><td colspan="5" class="soluk">Belirgin düşüş yok.</td></tr>'}</tbody></table></div>
+ <p class="dipnot">Bu rapor yalnızca rehbere gelir; rehber ders sayfalarını ilgili öğretmen gruplarına kendisi iletir.</p></article>`}
+function hazirlik(o){const L=sonNet(o);const sd=sonDeneme(o.tur);const dl=DERS[o.tur];
+ cizgiGrafik('g-haz',yapilan(o.tur).map(d=>d.ad.replace(/(TYT|LGS) Genel Deneme /,'D')),[{d:yapilan(o.tur).map(d=>{const x=o.son.find(y=>y.den===d.id);return x&&!x.yok?x.top:null}),renk:'#C2410C',alan:1},{d:yapilan(o.tur).map(d=>SORT[o.sinif][d.id]),renk:'#7A8CA0',kesik:1}],{});
+ const konular=Object.entries(o.konu).map(([k,v])=>{const[d,t]=k.split('|');return{d,t,v}});
+ const dersFark=L?dl.map(d=>({d,f:L.n[d.k]-ort(sonuclar(L.den).filter(x=>x.o.sinif===o.sinif).map(x=>x.s.n[d.k]))})).sort((a,b)=>a.f-b.f):[];
+ const md=[];if(o.risk.ard>=3||o.risk.yok>=3)md.push(`Devam: ${o.risk.ard>=3?o.risk.ard+' gündür gelmiyor':'son 2 haftada '+o.risk.yok+' gün yok'}. Önce nedenini dinle, sonra veliyle ortak bir plan yap.`);
+ const kac=o.risk.n.find(x=>x.includes('denemeye girmedi'));if(kac)md.push(`Denemeler: ${kac}. Neden girmediğini sor; bir sonraki deneme için birlikte karar ver.`);
+ const dus=o.risk.n.find(x=>x.includes('düştü'));if(dus)md.push(`Son deneme: ${dus}. Hangi derste düştüğüne birlikte bak; kaygı ya da süre sorunu olup olmadığını konuş.`);
+ if(dersFark[0]&&md.length<3){const z=konular.filter(x=>x.d===dersFark[0].d.k).sort((a,b)=>a.v-b.v).slice(0,2);md.push(`${dersFark[0].d.ad}: sınıf ortalamasının ${f1(Math.abs(dersFark[0].f))} net ${dersFark[0].f<0?'altında':'üstünde'}. Öncelik: ${z.map(x=>x.t+' ('+yuzde(x.v)+')').join(', ')}.`)}
+ if(md.length<3&&L)md.push(`Hedef: ${o.hedef} için ${o.hedefNet} net. Şu an ${f1(L.top)}; aradaki ${f1(Math.max(0,o.hedefNet-L.top))} net için haftalık soru hedefi belirle.`);
+ if(md.length<3&&dersFark.length)md.push(`Güçlü yanı: ${dersFark[dersFark.length-1].d.ad}. Görüşmeyi bununla açmak motivasyonu artırır.`);
+ const sonG=o.gor[o.gor.length-1];
+ return `<article class="kagit">${kagitBas('Görüşme Hazırlık Sayfası',SK[o.sinif].ad+' · '+tarih(BUGUN,1))}
+ <h3 style="margin-top:0">${esc(o.ad)} <span class="soluk" style="font:500 13px var(--fb)">· veli ${esc(o.veli.ad)} · ${o.veli.tel}</span></h3>
+ <div class="kutular"><div><b class="${o.risk.p>=50?'kotu':o.risk.p>=30?'orta':'iyi'}">${o.risk.p}</b><span>risk puanı</span></div><div><b>${L?f1(L.top):'—'}</b><span>son net</span></div><div><b>${yuzde(o.devYuzde)}</b><span>devam (20 gün)</span></div><div><b>${o.risk.sg==null?'—':o.risk.sg+' gün'}</b><span>son görüşmeden beri</span></div></div>
+ <h3>Konuşulacak 3 madde</h3>${md.slice(0,3).map((m,i)=>`<div class="madde"><b class="n">${i+1}</b><span>${esc(m)}</span></div>`).join('')}
+ <h3>Net seyri</h3><div class="fig kisa" id="g-haz"></div>
+ <h3>Önceki görüşme</h3><p style="margin:0">${sonG?`<b>${tarih(sonG.t,1)} · ${esc(sonG.konu)}</b><br>${esc(sonG.not)}`:'Bu öğrenciyle henüz görüşme yapılmadı.'}</p>
+ <h3>Not alanı</h3><div style="height:90px;border:1px dashed var(--line-strong,#7A8CA0);border-radius:10px"></div></article>`}
+function raporlar(){baslik('Ekip 1','Örnek raporlar');const sekmeler=[['karne','Gelişim karnesi'],['hazirlik','Görüşme hazırlık'],['devam','Devam raporu'],['konu','Ders-konu raporu']];const o=OGR[st.raporOgr-1];
+ const ic=st.rapor==='karne'?karne(o):st.rapor==='hazirlik'?hazirlik(o):st.rapor==='devam'?devamRaporu():konuRaporu();
+ return `<div class="arac"><div class="sekme" role="tablist">${sekmeler.map(([k,a])=>`<button role="tab" aria-selected="${st.rapor===k}" data-sekme="${k}">${a}</button>`).join('')}</div>${st.rapor==='karne'||st.rapor==='hazirlik'?`<label class="alan" style="flex-direction:row;align-items:center;gap:8px;margin-left:auto">Öğrenci<select id="rapor-ogr" style="width:auto">${OGR.map(x=>`<option value="${x.no}" ${x.no===o.no?'selected':''}>${esc(x.ad)} · ${SK[x.sinif].kisa}</option>`).join('')}</select></label>`:''}</div>
+ <p class="dipnot" style="margin:-4px 2px 14px">Gerçek kurulumda bu raporlar PDF olarak üretilir ve rehberin WhatsApp'ına gelir. Burada uydurma veriyle aynı içerik gösteriliyor.</p>${ic}`}
+
+/* ---------- kurum ağı ---------- */
+const AGK=[['ist','İstanbul',420,0],['ank','Ankara',560,.03],['izm','İzmir',610,.02],['brs','Bursa',380,-.02],['ant','Antalya',720,0],['koc','Kocaeli',330,-.03],['esk','Eskişehir',290,.04],['trb','Trabzon',410,-.01]];
+const AG_TOP=AGK.reduce((a,k)=>a+k[2],0);
+const SORU=[];DERS.TYT.forEach(d=>{const ks=KONU.TYT[d.k];for(let i=0;i<d.max;i++)SORU.push({d:d.k,konu:ks[Math.floor(i*ks.length/d.max)]})});
+const BLOK=[];{let s=0;DERS.TYT.forEach(d=>{BLOK.push([s,s+d.max,d.k]);s+=d.max})}
+const BMAP=new Int16Array(120);BLOK.forEach(([a,b])=>{for(let j=a;j<b;j++)BMAP[j]=a+(b-1-j)});
+const SAATLER_AG=['12.50','12.53','12.55','12.58','13.00','13.02','13.04','13.06','16.50','16.52','16.55','16.57','16.59','17.01','17.03','17.05'];
+const baslikHarf=s=>s.split(' ').map(w=>w.charAt(0)+w.slice(1).toLocaleLowerCase('tr')).join(' ');
+const f0s=n=>Math.round(n).toLocaleString('tr-TR');
+function agUret(hedef){let s2=hedef*7+11;const q=()=>{s2|=0;s2=s2+0x6D2B79F5|0;let t=Math.imul(s2^s2>>>15,1|s2);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296};
+ const H='ABCDE';const key=Array.from({length:120},()=>H[Math.floor(q()*5)]).join('');const zor=Float32Array.from({length:120},()=>(q()-.5)*.5);
+ const olcek=hedef/AG_TOP;const dosyalar=[];let sira=0;
+ AGK.forEach(([k,ad,n,ofs],ki)=>{const N=Math.round(n*olcek),sab=Math.round(N*.64);
+  [['sabah',sab],['oglen',N-sab]].forEach(([ot,m])=>{const sat=[];for(let i=0;i<m;i++){sira++;const ab=cl(.5+ofs+(q()+q()+q()-1.5)*.32,.08,.95);
+   const no='5'+ki+String(sira).padStart(9,'0');const ad2=((q()<.5?KIZ:ERK)[Math.floor(q()*18)]+' '+SOY[Math.floor(q()*SOY.length)]).toLocaleUpperCase('tr');
+   const kit=q()<.004?' ':(q()<.5?'A':'B');let c='';
+   for(let j=0;j<120;j++){const qi=kit==='B'?BMAP[j]:j;const p=ab+zor[qi];const r=q();if(r<p)c+=key[qi];else if(r<p+(1-p)*.3)c+=' ';else{let w=H[Math.floor(q()*5)];if(w===key[qi])w=H[(H.indexOf(w)+1)%5];c+=w}}
+   sat.push(no+ad2.padEnd(24).slice(0,24)+kit+c)}
+   dosyalar.push({k,ad,ot,sat,dosya:ad.toLocaleUpperCase('tr')+'_TYT7_'+(ot==='sabah'?'SABAH':'OGLEN')+'.txt'})})});
+ const tr=dosyalar.find(d=>d.k==='trb'&&d.ot==='oglen');tr.sat=tr.sat.map(x=>' '+x);
+ const iz=dosyalar.find(d=>d.k==='izm'&&d.ot==='sabah'),an=dosyalar.find(d=>d.k==='ank'&&d.ot==='oglen');an.sat.push(...iz.sat.slice(0,4));
+ dosyalar.forEach(d=>{d.txt=d.sat.join('\n');d.satir=d.sat.length;delete d.sat});return{dosyalar,key}}
+function agOku(paket){const t0=performance.now();const{key,dosyalar}=paket;const sonuc=[],sorun=[],gorulen=new Map();const qDog=new Int32Array(120*AGK.length),qSay=new Int32Array(AGK.length);let satir=0;
+ const oku=(l,o)=>({no:l.substr(o,11).trim(),ad:l.substr(o+11,24).trim(),kit:l[o+35],c:l.substr(o+36,120)});
+ const net=(c,kit)=>{const r={top:0};for(const[a,b,dk]of BLOK){let D=0,Y=0;for(let j=a;j<b;j++){const ch=c[j];if(ch===' '||ch===undefined)continue;if(ch===key[kit==='B'?BMAP[j]:j])D++;else Y++}r[dk]=D-Y/4;r.top+=r[dk]}return r};
+ dosyalar.forEach(d=>{const ki=AGK.findIndex(x=>x[0]===d.k);const L=d.txt.split('\n');satir+=L.length;let o=0;
+  const ornek=L.slice(0,40),ortN=off=>ornek.reduce((a,l)=>{const x=oku(l,off);return a+net(x.c,x.kit==='B'?'B':'A').top},0)/ornek.length;const o0=ortN(0);
+  if(o0<15){const o1=ortN(1);if(o1>o0+10){o=1;sorun.push({tur:'Optik şablonu',k:d.ad,m:`${d.dosya}: satırlar 1 karakter kaymış, netlerin çoğu düşük çıktı (ort. ${f1(o0)}). Kaydırılarak yeniden okundu (ort. ${f1(o1)}); kuruma bildirildi.`})}}
+  for(const l of L){if(!l.trim())continue;const x=oku(l,o);let kit=x.kit;
+   if(kit!=='A'&&kit!=='B'){const a=net(x.c,'A'),b=net(x.c,'B');kit=a.top>=b.top?'A':'B';sorun.push({tur:'Kitapçık boş',k:d.ad,m:`${baslikHarf(x.ad)} (${d.ad}): kitapçık türü işaretlenmemiş. İki anahtarla da okundu, ${kit} kitapçığı tutarlı (${f1(Math.max(a.top,b.top))} net).`})}
+   if(gorulen.has(x.no)){sorun.push({tur:'Çift kayıt',k:d.ad,m:`${baslikHarf(x.ad)} (${x.no}) hem ${gorulen.get(x.no)} hem ${d.ad} dosyasında. İlk kayıt tutuldu, iki kuruma da soruldu.`});continue}
+   gorulen.set(x.no,d.ad);const n=net(x.c,kit);for(let j=0;j<120;j++){const qi=kit==='B'?BMAP[j]:j;if(x.c[j]===key[qi])qDog[ki*120+qi]++}qSay[ki]++;sonuc.push({no:x.no,ad:x.ad,ki,ot:d.ot,n})}});
+ sonuc.sort((a,b)=>b.n.top-a.n.top);sonuc.forEach((x,i)=>x.s=i+1);return{sonuc,sorun,qDog,qSay,ms:performance.now()-t0,satir}}
+function agBaslat(n,canli){const t0=performance.now();const paket=agUret(n);const uretMs=performance.now()-t0;const A=st.ag;A.paket=paket;A.uretMs=uretMs;A.sayfa=0;
+ if(canli){A.durum='akiyor';A.adim=0;ciz();clearInterval(A.z);A.z=setInterval(()=>{A.adim++;if(A.adim>=16){clearInterval(A.z);agBitir()}else if(location.hash==='#ag')ciz()},320)}else agBitir()}
+function agBitir(){const A=st.ag;const r=agOku(A.paket);A.r=r;A.durum='bitti';A.adim=16;A.kosular=A.kosular.filter(k=>k.n!==r.sonuc.length);A.kosular.push({n:r.sonuc.length,satir:r.satir,ms:r.ms});A.kosular.sort((a,b)=>a.n-b.n);if(location.hash==='#ag')ciz()}
+function agSayfa(){baslik('Kurum ağı','Ağ sınav merkezi');const A=st.ag;
+ const kurumKart=AGK.map(([k,ad],ki)=>{const sab=A.adim>ki,ogl=A.adim>ki+8;const ok=A.durum==='bitti';return `<div class="ag-k ${ok?'okundu':sab?'gelen':''}"><b>${ad}</b><span class="d"><i></i>${ok?'okundu':sab||ogl?'txt geldi':'bekleniyor'}</span><span class="soluk">Sabah: ${sab?SAATLER_AG[ki]:'—'} · Öğlen: ${ogl?SAATLER_AG[ki+8]:'—'}</span></div>`}).join('');
+ const giris=`<section class="ag-bas"><div><small>Kurum ağı · ortak deneme</small><h2>Bir kurumda yaptığım işi, ağdaki bütün kurumlar için tek seferde yaparım.</h2><p>Her kurum oturum bitince optik okuyucu çıktısını (txt) gönderir. Dosyalar birleştirilir, kontrol edilir, tek cevap anahtarıyla okunur. Kurumlar arası sıralama, kurum raporları ve karneler son oturumdan sonraki bir saat içinde hazır olur.</p>
+ <div class="cipler" style="margin-top:14px">${A.durum==='akiyor'?'<span class="rozet orta">Dosyalar geliyor…</span>':`<button class="btn ana" data-agbas="${AG_TOP}">${A.durum==='bitti'?'Sınav gününü yeniden oynat':'Sınav gününü başlat'}</button>`}</div></div>
+ <div class="olcek"><div><b>8</b><span>kurum</span></div><div><b>${f0s(AG_TOP)}</b><span>öğrenci, tek sınav</span></div><div><b>16</b><span>txt dosyası (sabah + öğlen)</span></div><div><b>${f0s(AG_TOP*120)}</b><span>cevap okunur</span></div></div></section><div class="bosluk"></div>
+ <section class="kart"><div class="kart-bas"><div><h2>${A.durum==='bos'?'Kurumlar':'Dosyalar geliyor'} · TYT Ortak Deneme 7</h2><p>Sabah oturumu 10.00–12.45 · öğlen oturumu 14.00–16.45 · dosyalar kurum adıyla ortak gruba gelir</p></div></div><div class="ic"><div class="ag-kurumlar">${kurumKart}</div></div></section>`;
+ if(A.durum!=='bitti')return giris+`<p class="dipnot">"Sınav gününü başlat" dediğinde 8 kurumun 16 dosyası bu sayfada üretilir, sırayla gelir ve senin tarayıcında gerçekten okunur. Hiçbir şey sunucuya gitmez.</p>`;
+ const r=A.r,S_=r.sonuc,N=S_.length;const ks=AGK.map(([k,ad],ki)=>{const l=S_.filter(x=>x.ki===ki);return{ad,ki,n:l.length,sab:l.filter(x=>x.ot==='sabah').length,ort:ort(l.map(x=>x.n.top)),ust:l.length?l[0].n.top:0,ilk:l.filter(x=>x.s<=100).length,d:Object.fromEntries(DERS.TYT.map(d=>[d.k,ort(l.map(x=>x.n[d.k]))/d.max*100]))}}).sort((a,b)=>b.ort-a.ort);
+ const agOrt=ort(S_.map(x=>x.n.top));
+ const konu={};SORU.forEach((s,qi)=>{const kk=s.d+'|'+s.konu;konu[kk]=konu[kk]||{d:s.d,t:s.konu,dog:0,top:0,ku:AGK.map(()=>[0,0])};AGK.forEach((_,ki)=>{konu[kk].dog+=r.qDog[ki*120+qi];konu[kk].top+=r.qSay[ki];konu[kk].ku[ki][0]+=r.qDog[ki*120+qi];konu[kk].ku[ki][1]+=r.qSay[ki]})});
+ const kl=Object.values(konu).map(x=>({...x,p:100*x.dog/x.top,kp:x.ku.map(([a,b],ki)=>({ki,p:b?100*a/b:0})).sort((a,b)=>a.p-b.p)})).sort((a,b)=>a.p-b.p);
+ const q=A.ara.toLocaleLowerCase('tr');const filt=S_.filter(x=>(A.kurum==='hepsi'||AGK[x.ki][0]===A.kurum)&&(!q||x.ad.toLocaleLowerCase('tr').includes(q)));const sayfa=Math.min(A.sayfa,Math.max(0,Math.ceil(filt.length/25)-1));const parca=filt.slice(sayfa*25,sayfa*25+25);
+ const ist=A.paket.dosyalar[0].txt.split('\n').slice(0,6).join('\n');
+ return giris+`<div class="bosluk"></div>
+ <div class="izgara k4"><div class="kpi"><span>Okunan öğrenci</span><b>${f0s(N)}</b><small>${f0s(r.satir)} satır · ${f0s(r.satir*120)} cevap</small></div><div class="kpi"><span>Okuma süresi (bu tarayıcıda)</span><b class="iyi">${r.ms<1000?f0s(r.ms)+' ms':f1(r.ms/1000)+' sn'}</b><small>birleştirme + kontrol + puanlama + sıralama</small></div><div class="kpi"><span>Ağ ortalaması</span><b>${f1(agOrt)}</b><small>en yüksek ${f1(S_[0].n.top)} net</small></div><a class="kpi" href="#ag-sorun"><span>Kontrol edilecek</span><b class="orta">${r.sorun.length}</b><small>otomatik bulundu, tahmin yapılmadı</small></a></div><div class="bosluk"></div>
+ <section class="kart"><div class="kart-bas"><div><h2>Sınav gününden sonuca</h2><p>Hedef: son oturum bittikten sonra en geç bir saat</p></div></div><div class="zaman">${[['12.45','Sabah oturumu biter'],['13.06','Sabah sonuçları okunur, ilk liste kurumlara'],['16.45','Öğlen oturumu biter'],['17.05','Son txt gelir'],['17.08','Birleşik sıralama ve kurum raporları'],['17.35','Karneler onaya hazır']].map(x=>`<div class="ok"><b>${x[0]}</b><span>${x[1]}</span></div>`).join('')}</div></section><div class="bosluk"></div>
+ <div class="izgara k2"><section class="kart"><div class="kart-bas"><div><h2>Kurum karşılaştırması</h2><p>Ortalama toplam net · ilk 100'deki öğrenci sayısı</p></div></div><div class="scroll"><table class="tablo"><thead><tr><th>Kurum</th><th class="s">Katılım</th><th class="s">Ortalama</th><th class="s">En yüksek</th><th class="s">İlk 100</th></tr></thead><tbody>${ks.map(k=>`<tr class="tik" data-agk="${AGK[k.ki][0]}"><td><b>${k.ad}</b><br><span class="soluk" style="font-size:12px">sabah ${k.sab} · öğlen ${k.n-k.sab}</span></td><td class="s">${f0s(k.n)}</td><td class="s"><b>${f1(k.ort)}</b></td><td class="s">${f1(k.ust)}</td><td class="s">${k.ilk}</td></tr>`).join('')}</tbody></table></div></section>
+ <section class="kart"><div class="kart-bas"><div><h2>Ders başarısı · kurum × ders</h2><p>Kırmızı %40 altı · sarı %40–49 · yeşil %50 ve üstü</p></div></div><div class="scroll ic"><table class="tablo isi"><thead><tr><th>Kurum</th>${DERS.TYT.map(d=>`<th style="text-align:center">${d.ad.split(' ')[0]}</th>`).join('')}</tr></thead><tbody>${ks.map(k=>`<tr><td><b>${k.ad}</b></td>${DERS.TYT.map(d=>{const v=k.d[d.k];return `<td class="h ${v<40?'h1':v<50?'h2':'h3'}" style="cursor:default">${yuzde(v)}</td>`}).join('')}</tr>`).join('')}</tbody></table></div></section></div><div class="bosluk"></div>
+ <section class="kart"><div class="kart-bas"><div><h2>Ağ genelinde en zayıf konular</h2><p>Her konu için ağ başarısı, en zayıf ve en güçlü kurum. Öğretmen toplantısının gündemi buradan çıkar.</p></div></div><div class="scroll"><table class="tablo"><thead><tr><th>Konu</th><th>Ders</th><th class="s">Ağ</th><th>En zayıf kurum</th><th>En güçlü kurum</th></tr></thead><tbody>${kl.slice(0,8).map(x=>`<tr><td><b>${esc(x.t)}</b></td><td>${DERS.TYT.find(d=>d.k===x.d).ad}</td><td class="s"><span class="rozet ${x.p<40?'kotu':x.p<55?'orta':'iyi'}">${yuzde(x.p)}</span></td><td>${AGK[x.kp[0].ki][1]} ${yuzde(x.kp[0].p)}</td><td>${AGK[x.kp[x.kp.length-1].ki][1]} ${yuzde(x.kp[x.kp.length-1].p)}</td></tr>`).join('')}</tbody></table></div></section><div class="bosluk"></div>
+ <section class="kart"><div class="kart-bas"><div><h2>Kurumlar arası sıralama</h2><p>${f0s(filt.length)} öğrenci · her öğrencinin yanında kurumu yazar</p></div></div>
+ <div class="arac" style="padding:0 18px"><label class="ara">${ico('ara')}<input id="ag-ara" type="search" placeholder="Öğrenci ara" value="${esc(A.ara)}" aria-label="Sıralamada öğrenci ara"></label><select id="ag-kurum" style="width:auto" aria-label="Kurum"><option value="hepsi">Bütün kurumlar</option>${AGK.map(([k,ad])=>`<option value="${k}" ${A.kurum===k?'selected':''}>${ad}</option>`).join('')}</select></div>
+ <div class="scroll"><table class="tablo"><thead><tr><th class="s">Ağ sırası</th><th>Öğrenci</th><th>Kurum</th>${DERS.TYT.map(d=>`<th class="s">${d.ad.split(' ')[0]}</th>`).join('')}<th class="s">Toplam</th></tr></thead><tbody>${parca.map(x=>`<tr><td class="s">${f0s(x.s)}</td><td><b>${esc(baslikHarf(x.ad))}</b></td><td>${AGK[x.ki][1]} Kurs Merkezi</td>${DERS.TYT.map(d=>`<td class="s">${f1(x.n[d.k])}</td>`).join('')}<td class="s"><b>${f1(x.n.top)}</b></td></tr>`).join('')}</tbody></table></div>
+ <div class="sayfalama"><span class="soluk">${f0s(sayfa*25+1)}–${f0s(Math.min(filt.length,sayfa*25+25))} / ${f0s(filt.length)}</span><button class="btn kucuk" data-agsayfa="-1" ${sayfa===0?'disabled':''}>Önceki</button><button class="btn kucuk" data-agsayfa="1" ${(sayfa+1)*25>=filt.length?'disabled':''}>Sonraki</button></div></section><div class="bosluk"></div>
+ <div class="izgara k2"><section class="kart" id="ag-sorun"><div class="kart-bas"><div><h2>Otomatik bulunan sorunlar</h2><p>Okuma durmaz; her sorun düzeltilir ya da ilgili kuruma sorulur</p></div></div>${['Optik şablonu','Çift kayıt','Kitapçık boş'].map(t=>{const l=r.sorun.filter(s=>s.tur===t);if(!l.length)return '';return l.slice(0,3).map(s=>`<div class="bulgu"><span class="rozet ${t==='Optik şablonu'?'kotu':'orta'}">${t}</span><span>${esc(s.m)}</span></div>`).join('')+(l.length>3?`<div class="bulgu"><span class="rozet">+${f0s(l.length-3)}</span><span class="soluk">benzer ${t.toLocaleLowerCase('tr')} kaydı daha; hepsi kontrol listesinde</span></div>`:'')}).join('')}</section>
+ <section class="kart"><div class="kart-bas"><div><h2>Ham dosya böyle görünür</h2><p>${A.paket.dosyalar[0].dosya} · ilk 6 satır (uydurma)</p></div></div><pre class="txt">${esc(ist)}</pre><p class="dipnot" style="padding:0 18px 16px">Satır düzeni: 11 hane öğrenci no · 24 hane ad · kitapçık · 120 cevap. B kitapçığı soruları ters sırada olduğu için okurken A anahtarına çevrilir.</p></section></div><div class="bosluk"></div>
+ <section class="kart"><div class="kart-bas"><div><h2>Ölçek testi: binlerce, on binlerce öğrenci</h2><p>Aynı işlemi daha büyük bir ağ için çalıştır. Süre, bu sayfayı açan bilgisayarda ölçülür.</p></div></div>
+ <div class="cipler" style="padding:0 18px 12px">${[3720,10000,25000,50000].map(n=>`<button class="btn kucuk ${A.kosular.some(k=>Math.abs(k.n-n)<n*.02)?'':'ana'}" data-agolcek="${n}">${f0s(n)} öğrenci</button>`).join('')}</div>
+ <div class="scroll"><table class="tablo"><thead><tr><th class="s">Öğrenci</th><th class="s">Satır</th><th class="s">Okunan cevap</th><th class="s">Süre</th><th class="s">Öğrenci başına</th></tr></thead><tbody>${A.kosular.map(k=>`<tr><td class="s"><b>${f0s(k.n)}</b></td><td class="s">${f0s(k.satir)}</td><td class="s">${f0s(k.satir*120)}</td><td class="s iyi"><b>${k.ms<1000?f0s(k.ms)+' ms':f1(k.ms/1000)+' sn'}</b></td><td class="s">${(k.ms/k.n).toLocaleString('tr-TR',{maximumFractionDigits:3})} ms</td></tr>`).join('')}</tbody></table></div>
+ <p class="dipnot" style="padding:0 18px 16px">Okuma süresi saniyenin altında kaldığı için darboğaz bilgisayar değil, dosyaların gelme hızıdır. Bu yüzden ağ büyüdükçe asıl iş, kurumların dosyayı zamanında ve doğru adla göndermesini sağlayan koordinasyondur.</p></section>`}
+
+/* ---------- koordinasyon ---------- */
+function koordinasyon(){baslik('Kurum ağı','Koordinasyon');
+ const dongu=[['Pazartesi','Takvim teyidi','Haftanın yayınları, oturum saatleri ve cevap anahtarı için referans kurum belirlenir; değişiklik varsa bütün kurumlara tek mesajla duyurulur.'],['Salı–Çarşamba','Kitapçık teslimi','Her kurum teslim aldığı kitapçığı tek şablonla bildirir: kurum, yayın, A/B adedi, başka şubeye ayrılan.'],['Çarşamba','PDF ve çözüm planı','Kitapçığı ilk teslim alan kurum PDF\'i paylaşır; çözümler branş öğretmenlerine dağıtılır.'],['Perşembe','Anahtar ve duyuru','Cevap anahtarı ve çözümler sisteme yüklenir; sınıf ve veli gruplarına duyuru ve katılım anketi (gönderim onayla).'],['Cumartesi 10.00 / 14.00','Sınav','Her kurum oturum başlangıcını katılım sayısı ve geçen haftayla birlikte bildirir; oturum bitince txt dosyası kurum adıyla gruba gelir.'],['Cumartesi akşam','Sonuç','Birleştirme, kontrol, kurumlar arası sıralama, kurum raporları, karneler; edesis ve Kunduz yüklemeleri ve "yüklendi" bildirimi. Hedef: son oturumdan sonra bir saat.'],['Pazartesi','Geri bildirim','Ders-konu raporları öğretmenlere, neti düşen öğrenciler rehberlere; haftalık rehberlik toplantısı.']];
+ const rol=['Merkez koordinatör','Şube rehberi','Şube müdürü','Öğretmen','Sekreterya'];
+ const raci=[['Sınav takvimi ve yayın seçimi','S','B','O','B','B'],['Kitapçık teslim bildirimi','B','S','O','','S'],['Çözümler ve cevap anahtarı','S','B','','S',''],['Duyuru ve katılım anketi','O','S','B','','S'],['Optik okuma ve txt gönderimi','B','S','O','','S'],['Birleştirme, sıralama, raporlar','S','B','B','B',''],['Karne ve veli bildirimi','O','S','B','',''],['Risk listesi ve görüşmeler','O','S','B','B',''],['Ders-konu geri bildirimi','S','B','B','S',''],['Ders programı ve birleşik ders kontrolü','S','B','O','B','']];
+ const alanlar=[['Rehberlik',['Ağ genelinde tek görüşme formu ve tek risk puanı','Her şubede haftalık "kimi aramalıyım" listesi','Veli görüşmesine hazırlık sayfası','Sınav kaygısı, motivasyon ve çalışma programı için ortak materyal havuzu','Tercih dönemi için ortak danışmanlık takvimi','Rehberlere aylık vaka paylaşımı ve eğitim']],['Sınav',['Tek optik şablonu ve dosya adı standardı','Oturum sonu txt teslimi, bir saat içinde sonuç','Kurumlar arası sıralama ve kurum raporları','Optik veriden konu analizi (yayın vermese de)','Kitapçık ve katılım sayılarının takibi','Sınavlara girmeyen öğrencilerin şubeye bildirimi']],['Kurs işleri',['Ders programında kural kontrolü (çakışma, boş saat, öğle arası)','İzinsiz sınıf birleştirmenin programdan otomatik tespiti','Yoklamanın günlük girilmesi ve 3 günde bir devam raporu','Deneme kulübünden kurs kaydına dönüşümün takibi','Görüşme randevularından kayda dönüşümün takibi','Yeni kayıt akışı: sistem, rehber, gruplar tek seferde']]];
+ const kpi=[['Sonuç süresi','son oturumdan sonra ≤ 60 dk'],['Dosya zamanında','oturum bitişinden sonra ≤ 20 dk, kurum başına'],['Katılım','kurs öğrencilerinde ≥ %90'],['Risk listesi','yakın takipteki öğrenciyle 7 gün içinde görüşme'],['Veli bildirimi','devamsızlıkta aynı gün'],['Yoklama','her ders, aynı gün sisteme']];
+ const plan=[['İlk 30 gün','Mevcut durumu öğrenmek',['Şubelerin sınav ve rehberlik işleyişini yerinde görmek','Dosya adı, optik şablonu ve mesaj şablonlarını tek standarda bağlamak','Ortak sınavı bir kez baştan sona yürütüp süreyi ölçmek']],['31–60 gün','Ortak düzeni kurmak',['Bütün kurumlarda tek risk puanı ve haftalık takip listesi','Ders-konu raporlarının öğretmen toplantılarına girmesi','Rehberlere kısa kullanım eğitimi']],['61–90 gün','Ölçmek ve iyileştirmek',['Sonuç süresi, katılım ve görüşme oranlarının aylık raporu','Zayıf konularda ağ genelinde ortak etüt planı','Velilere aylık gelişim raporu']]];
+ return `<section class="ag-bas"><div><small>Koordinasyon modeli</small><h2>Kurumlar aynı dili konuşursa iş ölçeklenir.</h2><p>Binlerce öğrencide sorun hesaplama değil, sekiz kurumun aynı gün, aynı saatte, aynı biçimde çalışmasıdır. Aşağıdaki düzen şu an yürüyen ortak deneme işleyişinden çıkarıldı.</p></div>
+ <div class="olcek"><div><b>≤ 60 dk</b><span>son oturumdan sonuca</span></div><div><b>1</b><span>optik şablonu, dosya adı, mesaj dili</span></div><div><b>7 gün</b><span>riskli öğrenciyle görüşme süresi</span></div><div><b>0</b><span>onaysız veli mesajı</span></div></div></section><div class="bosluk"></div>
+ <section class="kart"><div class="kart-bas"><div><h2>Haftalık ortak sınav döngüsü</h2><p>Her hafta aynı ritim</p></div></div>${dongu.map(x=>`<div class="adim"><b>${x[0]}</b><div><b style="color:var(--ink);font-size:14.5px">${x[1]}</b><p style="margin:2px 0 0;color:var(--ink-2);font-size:14px">${x[2]}</p></div></div>`).join('')}</section><div class="bosluk"></div>
+ <section class="kart"><div class="kart-bas"><div><h2>Görev dağılımı</h2><p>S: sorumlu · O: onaylar · B: bilgilendirilir</p></div></div><div class="scroll"><table class="tablo raci"><thead><tr><th>İş</th>${rol.map(r=>`<th style="text-align:center">${r}</th>`).join('')}</tr></thead><tbody>${raci.map(x=>`<tr><td>${x[0]}</td>${x.slice(1).map(c=>`<td class="c"><span class="rozet ${c==='S'?'marka':c==='O'?'iyi':''}" ${c?'':'style="background:none"'}>${c}</span></td>`).join('')}</tr>`).join('')}</tbody></table></div></section><div class="bosluk"></div>
+ <div class="izgara k3">${alanlar.map(([b,l])=>`<section class="kart"><div class="kart-bas"><div><h2>${b}</h2><p>Neler yapılabilir</p></div></div><ul class="liste">${l.map(x=>`<li>${x}</li>`).join('')}</ul></section>`).join('')}</div><div class="bosluk"></div>
+ <section class="kart"><div class="kart-bas"><div><h2>Standartlar</h2><p>Her kurum aynı şeyi aynı biçimde gönderir</p></div></div><div class="izgara k3" style="padding:0 18px 18px">${[['Dosya adı','KURUM_SINAV_OTURUM.txt — ör. IZMIR_TYT7_SABAH.txt'],['Optik şablonu','Ağda tek şablon; farklı çıkarsa okuma sırasında yakalanır ve kuruma bildirilir'],['Öğrenci kimliği','Her öğrencinin kalıcı numarası; ad yazımı farklı olsa da aynı kişi'],['Şube kodu','Kurs öğrencisi ve deneme kulübü öğrencisi optikte ayrı kodlanır'],['Mesaj şablonları','Kitapçık teslimi, oturum başlangıcı, "yüklendi" bildirimi için tek metin'],['Veri güvenliği','Kişisel sonuç yalnızca ilgili veliye; her gönderim onayla; veri kurumda']].map(x=>`<div class="kural" style="border:1px solid var(--line);border-radius:12px"><b>${x[0]}</b><span>${x[1]}</span></div>`).join('')}</div></section><div class="bosluk"></div>
+ <div class="izgara k2"><section class="kart"><div class="kart-bas"><div><h2>Ölçütler</h2><p>Ayda bir raporlanır</p></div></div>${kpi.map(x=>`<div class="adim"><b>${x[0]}</b><span style="color:var(--ink-2)">${x[1]}</span></div>`).join('')}</section>
+ <section class="kart"><div class="kart-bas"><div><h2>İlk 90 gün</h2><p>Göreve başlarsam</p></div></div>${plan.map(x=>`<div class="adim"><b>${x[0]}</b><div><b style="color:var(--ink);font-size:14.5px">${x[1]}</b><ul class="liste" style="padding:4px 0 0 18px">${x[2].map(y=>`<li>${y}</li>`).join('')}</ul></div></div>`).join('')}</section></div>`}
+
+/* ---------- yetkinlik ---------- */
+function yetkinlik(){baslik('Hakkında','Bu sistemi kuran');
+ const satir=[['Rehberlik hizmetlerini planlama ve yürütme','Öğrenci ve veli görüşmelerini kayıt altında tutuyorum (yaklaşık 100 görüşme kaydı); kiminle görüşeceğimi her hafta açık kurallarla belirliyorum.','takip','Takip Listesi, Rehberlik'],['Ölçme ve değerlendirme','30\'dan fazla denemenin sonucunu tek yerde topladım; konu ve kazanım analizini, yayın vermediğinde optik veriden kendim çıkarıyorum.','sinav','Sınav Merkezi, Isı Haritası'],['Kurumlar arası sınav koordinasyonu','Ağdaki kurumların txt dosyalarını birleştirip sınavdan sonra bir saat içinde okuyorum; kurumlar arası sıralamayı ve sisteme yüklemeleri yapıyorum.','ag','Ağ sınav merkezi'],['Veli iletişimi','Devamsızlıkta aynı gün veliyi arıyorum; karneleri tek tek, kişiye özel gönderiyorum. Hiçbir kişisel sonuç gruba gitmiyor.','onay','Gönderim onayı, Veli ekranı'],['Öğretmenlerle iş birliği','Her denemeden sonra ders-konu raporunu öğretmenlere iletiyorum; ders programını ve gözetmen planını kurallara göre hazırlıyorum.','raporlar','Örnek raporlar'],['Raporlama','Devam raporu, haftalık rehberlik özeti, neti düşen öğrenciler: hepsi düzenli ve zamanında, kendiliğinden hazırlanıyor.','ekip1','Ekip 1'],['Ekip ve süreç yönetimi','Sınav günü öğrenci yönlendirme, duyurular, anketler, kitapçık ve yükleme bildirimleri: tekrarlanan işi standarda bağlıyorum.','koordinasyon','Koordinasyon'],['Veri güvenliği','Rol bazlı erişim, onaysız gönderim yok, veri kurumda kalır, her değişiklikten önce yedek.','veli','Veli ekranı']];
+ return `<section class="ag-bas"><div><small>Hakkında</small><h2>Ali Can Bal · Rehber Öğretmen</h2><p>Bu demodaki sistemi, rehberlik işimi kolaylaştırmak için kendim kurdum ve çalıştığım kurumda her gün kullanıyorum. Amacım teknoloji değil: her öğrencinin zamanında fark edilmesi, her velinin doğru bilgiyi doğru zamanda alması.</p></div>
+ <div class="olcek"><div><b>430+</b><span>öğrencinin takibi</span></div><div><b>7</b><span>kurs merkeziyle ortak deneme</span></div><div><b>≤ 1 saat</b><span>sınavdan sonuca</span></div><div><b>~100</b><span>kayıtlı görüşme</span></div></div></section><div class="bosluk"></div>
+ <section class="kart"><div class="kart-bas"><div><h2>Pozisyonun gerektirdiği ve elimdeki kanıt</h2><p>Her satırın karşılığı bu demoda tıklanarak görülebilir</p></div></div>
+ ${satir.map(x=>`<div class="kanit"><div><b style="font:700 15px var(--fd)">${x[0]}</b></div><div><p style="margin:0 0 6px;color:var(--ink-2)">${x[1]}</p><a class="btn kucuk" href="#${x[2]}">Demoda gör: ${x[3]}</a></div></div>`).join('')}</section>
+ <p class="dipnot">Demodaki bütün öğrenci, veli, öğretmen ve kurum adları uydurmadır. Üst kısımdaki sayılar gerçek işimin isimsiz ölçeğidir.</p>`}
+
+/* ---------- veli (zengin) ---------- */
+function veliYeni(){const o=OGR[st.veliOgr-1];const veliRol=st.rol==='veli';baslik('Veli','Benim Pusulam');
+ const arr=yapilan(o.tur);const L=sonNet(o);const sd=sonDeneme(o.tur);const sonuc=sonuclar(sd.id);const sinifL=sonuc.filter(x=>x.o.sinif===o.sinif).sort((a,b)=>b.s.top-a.s.top),kurumL=[...sonuc].sort((a,b)=>b.s.top-a.s.top);
+ const si=sinifL.findIndex(x=>x.o===o)+1,ki=kurumL.findIndex(x=>x.o===o)+1;const dl=DERS[o.tur];const var_=o.son.filter(x=>!x.yok).slice(-3);
+ const a=dl.map(d=>ort(var_.map(v=>v.n[d.k]))/d.max),b=dl.map(d=>ort(OGR.filter(x=>x.sinif===o.sinif).flatMap(x=>x.son.filter(y=>!y.yok).slice(-3).map(v=>v.n[d.k])))/d.max);
+ cizgiGrafik('g-veli',arr.map(d=>d.ad.replace(/(TYT|LGS) Genel Deneme /,'D')),[{d:arr.map(d=>{const x=o.son.find(y=>y.den===d.id);return x&&!x.yok?x.top:null}),renk:'#C2410C',alan:1},{d:arr.map(d=>SORT[o.sinif][d.id]),renk:'#7A8CA0',kesik:1}],{hedef:o.hedefNet});
+ radar('g-radar',dl.map(d=>d.ad.split(' ')[0]),a,b);
+ const konular=Object.entries(o.konu).map(([k,v])=>({t:k.split('|')[1],v}));const onc=[...konular].sort((x,y)=>x.v-y.v).slice(0,4),gu=[...konular].sort((x,y)=>y.v-x.v).slice(0,4);
+ const gecmis=arr.map((d,i)=>{const x=o.son.find(y=>y.den===d.id);if(!x||x.yok)return{d,yok:1};const l=sonuclar(d.id).filter(y=>y.o.sinif===o.sinif).sort((p,q)=>q.s.top-p.s.top);const onceki=o.son.slice(0,o.son.indexOf(x)).filter(y=>!y.yok).slice(-1)[0];return{d,x,sira:l.findIndex(y=>y.o===o)+1+'/'+l.length,f:onceki?x.top-onceki.top:null}}).reverse();
+ const yak=DEN.find(d=>d.tur===o.tur&&d.plan);const anket=st.anket[o.no];
+ const saatler=o.tur==='LGS'?['17.00','17.50','18.40']:['09.00','10.40','13.10'];const gun=['Pazartesi','Salı','Çarşamba','Perşembe','Cuma'];const dk=dl.map(d=>d.ad);
+ const prog=gun.map((g,i)=>saatler.map((s,j)=>dk[(i*2+j+o.no)%dk.length]));
+ const odev=[[dk[0]+': 2 paragraf testi','Teslim edildi','iyi'],[(dk[2]||dk[1])+': '+(onc[0]?onc[0].t:'tekrar')+' çalışma yaprağı','Bu Cuma','orta'],[(dk[1])+': deneme yanlışlarını defterine yaz','Teslim edildi','iyi'],['Haftalık deneme analizi formu','Pazartesi','']];
+ const fark=L?Math.max(0,o.hedefNet-L.top):0;const oda=dl.map((d,i)=>({d,bos:d.max-ort(var_.map(v=>v.n[d.k]))}));const topB=oda.reduce((x,y)=>x+y.bos,0)||1;
+ const rozet=[];if(o.devYuzde>=95)rozet.push(['Tam devam','son 20 günde neredeyse hiç kaçırmadı']);if(gecmis.filter(g=>g.f!=null&&g.f>0).length>=3)rozet.push(['Yükselişte','son denemelerin çoğunda neti arttı']);if(si&&si<=3)rozet.push(['Sınıfta ilk 3','son denemede']);if(gu[0]&&gu[0].v>=90)rozet.push(['Konu ustası',gu[0].t+' '+yuzde(gu[0].v)]);if(!rozet.length)rozet.push(['Düzenli katılım','denemelere girmeye devam']);
+ const gunler=[];{let d=BUGUN;while(gunler.length<5){d=ekle(d,1);const g=D(d).getDay();if(g>0&&g<6&&g!==2)gunler.push(d)}}
+ const talep=st.talep.filter(t=>t.o===o.no);const sonG=o.gor[o.gor.length-1];
+ return `${veliRol?'':`<div class="onizleme">${ico('goz')}<b>Rehber önizlemesi:</b> veli bu ekranı görür, başka hiçbir öğrenciyi göremez.<select id="veli-sec" aria-label="Önizlenen öğrenci">${OGR.map(x=>`<option value="${x.no}" ${x.no===o.no?'selected':''}>${esc(x.ad)} · ${SK[x.sinif].kisa}</option>`).join('')}</select></div>`}
+ <section class="veli-bant"><span class="av b" style="background:var(--brand);color:#fff">${bas(o.ad)}</span><div><small style="font:700 11.5px var(--fd);letter-spacing:.07em;text-transform:uppercase;color:var(--brand)">${veliRol?'Hoş geldiniz, '+esc(o.veli.ad.split(' ')[0])+' Hanım':'Veli ekranı'}</small><h2>${esc(o.ilk)}, yolun burada.</h2><p>${SK[o.sinif].ad} · ${arr.length} deneme · son: ${sd.ad}</p>
+ <div class="siralar"><span><b>${si?si+'/'+sinifL.length:'—'}</b>sınıf sırası</span><span><b>${ki?ki+'/'+kurumL.length:'—'}</b>kurum sırası</span><span><b>${L?f1(L.top):'—'}</b>son net</span><span><b>${yuzde(o.devYuzde)}</b>devam</span></div></div></section><div class="bosluk"></div>
+ ${yak?`<section class="kart duyuru-kart"><div class="kart-bas"><div><h2>Yaklaşan deneme: ${yak.ad}</h2><p>${tarih(yak.t)} ${GUNAD[D(yak.t).getDay()]} · ${o.tur==='LGS'?'10.00':'09.30'} · ${o.tur==='LGS'?'09.45':'09.15'}'te kurumda olunması rica edilir</p></div><div class="sag">${anket?`<span class="rozet ${anket==='evet'?'iyi':'orta'}">${anket==='evet'?'Katılacak':'Katılamayacak'} olarak bildirildi</span><button class="btn kucuk" data-anket="sil">Değiştir</button>`:`<button class="btn kucuk ana" data-anket="evet">Katılacak</button><button class="btn kucuk" data-anket="hayir">Katılamayacak</button>`}</div></div></section><div class="bosluk"></div>`:''}
+ <div class="izgara k4"><div class="kpi"><span>Sınıf ortalamasına göre</span><b class="${L&&L.top>=SORT[o.sinif][sd.id]?'iyi':'kotu'}">${L?(L.top>=SORT[o.sinif][sd.id]?'+':'')+f1(L.top-SORT[o.sinif][sd.id]):'—'}</b><small>sınıf ort. ${f1(SORT[o.sinif][sd.id])}</small></div><div class="kpi"><span>Devam (20 gün)</span><b>${yuzde(o.devYuzde)}</b><small>${o.devam.filter(x=>x==='Y').length} gün gelmedi</small></div><div class="kpi"><span>Öncelikli konu</span><b>${konular.filter(x=>x.v<50).length}</b><small>başarısı %50 altında</small></div><div class="kpi"><span>Hedefe kalan</span><b>${L?f1(fark):'—'}</b><small>${esc(o.hedef)} · ${o.hedefNet} net</small></div></div><div class="bosluk"></div>
+ <div class="izgara k2"><section class="kart"><div class="kart-bas"><div><h2>Net yolculuğu</h2><p>Kesikli çizgi sınıf ortalaması · yeşil çizgi hedef</p></div></div><div class="ic"><div class="fig" id="g-veli"></div></div></section>
+ <section class="kart"><div class="kart-bas"><div><h2>Ders profili</h2><p>Son 3 deneme · sınıfla karşılaştırma</p></div></div><div class="ic"><div class="fig" id="g-radar" style="height:250px"></div></div><div class="lejant"><span><i></i>${esc(o.ilk)}</span><span><i class="k"></i>Sınıf ortalaması</span></div></section></div><div class="bosluk"></div>
+ <div class="izgara k2"><section class="kart"><div class="kart-bas"><div><h2>Deneme geçmişi</h2><p>Her denemede net, sınıf sırası ve değişim</p></div></div><div class="scroll"><table class="tablo"><thead><tr><th>Deneme</th><th>Tarih</th><th class="s">Net</th><th class="s">Sınıf sırası</th><th class="s">Değişim</th></tr></thead><tbody>${gecmis.map(g=>g.yok?`<tr><td>${g.d.ad.replace(/(TYT|LGS) Genel /,'')}</td><td>${tarih(g.d.t)}</td><td class="s soluk" colspan="3">girmedi</td></tr>`:`<tr><td>${g.d.ad.replace(/(TYT|LGS) Genel /,'')}</td><td>${tarih(g.d.t)}</td><td class="s"><b>${f1(g.x.top)}</b></td><td class="s">${g.sira}</td><td class="s ${g.f==null?'':g.f>=0?'iyi':'kotu'}">${g.f==null?'—':(g.f>=0?'+':'')+f1(g.f)}</td></tr>`).join('')}</tbody></table></div></section>
+ <section class="kart"><div class="kart-bas"><div><h2>Hedefe giden yol</h2><p>${esc(o.hedef)} için ${L?f1(fark):'—'} net daha; derslerdeki boşluğa göre dağıtıldı</p></div></div><div class="ic">${oda.map(x=>`<div class="satir-bar"><span>${x.d.ad}</span>${cubuk(x.bos,x.d.max,'orta')}<b>+${f1(fark*x.bos/topB)}</b></div>`).join('')}<p class="dipnot">Örnek: Matematikte ${f1(fark*(oda.find(x=>x.d.k==='mat')||oda[0]).bos/topB)} net artış, haftada yaklaşık 2 konu tekrarı ve 1 süreli testle hedeflenir.</p></div></section></div><div class="bosluk"></div>
+ <div class="izgara k3"><section class="kart"><div class="kart-bas"><div><h2>Öncelikli konular</h2><p>Bu hafta odaklanılacaklar</p></div></div><div class="ic">${onc.map(z=>`<div class="satir-bar"><span>${esc(z.t)}</span>${cubuk(z.v,100,seviye(z.v))}<b>${yuzde(z.v)}</b></div>`).join('')}</div></section>
+ <section class="kart"><div class="kart-bas"><div><h2>Güçlü olduğu konular</h2><p>Böyle devam</p></div></div><div class="ic">${gu.map(z=>`<div class="satir-bar"><span>${esc(z.t)}</span>${cubuk(z.v,100,'iyi')}<b>${yuzde(z.v)}</b></div>`).join('')}</div></section>
+ <section class="kart"><div class="kart-bas"><div><h2>Rozetler</h2><p>Gerçek sonuçlardan kazanılır</p></div></div><div class="ic rozetler">${rozet.map(x=>`<div><i>${ico('tik')}</i><b>${x[0]}</b><span>${esc(x[1])}</span></div>`).join('')}</div></section></div><div class="bosluk"></div>
+ <div class="izgara k2"><section class="kart"><div class="kart-bas"><div><h2>Haftalık ders programı</h2><p>${SK[o.sinif].ad}</p></div></div><div class="scroll"><table class="tablo prog"><thead><tr><th>Saat</th>${gun.map(g=>`<th>${g.slice(0,3)}</th>`).join('')}</tr></thead><tbody>${saatler.map((s,j)=>`<tr><td><b>${s}</b></td>${gun.map((g,i)=>`<td>${prog[i][j]}</td>`).join('')}</tr>`).join('')}</tbody></table></div></section>
+ <section class="kart"><div class="kart-bas"><div><h2>Devam takvimi</h2><p>Son 20 iş günü · yeşil geldi · kırmızı gelmedi · sarı geç · gri izinli</p></div></div><div class="gunler">${o.devam.map((x,i)=>`<i class="g-${x}" title="${tarih(GUNLER[i])}">${D(GUNLER[i]).getDate()}</i>`).join('')}</div><p class="dipnot" style="padding:0 18px 14px">Devamsızlık olduğunda aynı gün bilgilendirilirsiniz.</p></section></div><div class="bosluk"></div>
+ <div class="izgara k3"><section class="kart"><div class="kart-bas"><div><h2>Ödevler</h2><p>Bu hafta</p></div></div>${odev.map(x=>`<div class="is"><span class="rozet ${x[2]}">${x[1]}</span><div class="metin" style="cursor:default"><b>${esc(x[0])}</b></div></div>`).join('')}</section>
+ <section class="kart"><div class="kart-bas"><div><h2>Rehberden</h2><p>Son görüşmenin veliyle paylaşılan özeti</p></div></div><div class="ic">${sonG?`<p style="margin:0 0 6px"><b>${tarih(sonG.t,1)} · ${esc(sonG.konu)}</b></p><p style="margin:0;color:var(--ink-2)">${esc(sonG.not)}</p>`:'<p class="soluk" style="margin:0">Henüz görüşme yapılmadı. Aşağıdan randevu isteyebilirsiniz.</p>'}</div></section>
+ <section class="kart"><div class="kart-bas"><div><h2>Duyurular</h2><p>Kurumdan</p></div></div>${[['2 Aralık','12. sınıf veli toplantısı, 18.30'],[tarih(yak?yak.t:BUGUN),'Deneme sınavı · katılım anketi açık'],['1 Aralık','Aralık etüt programı yayınlandı']].map(x=>`<div class="is"><span class="rozet">${x[0]}</span><div class="metin" style="cursor:default"><b>${x[1]}</b></div></div>`).join('')}</section></div><div class="bosluk"></div>
+ <section class="kart"><div class="kart-bas"><div><h2>Rehberle görüşme iste</h2><p>Görüşmeler Salı hariç hafta içi 09.00–18.00 arasında yapılır. Talebiniz rehbere düşer, onaylanınca bildirim gelir.</p></div></div>
+ <form id="talep-form" class="ic izgara k3" style="align-items:end"><label class="alan">Gün<select id="tf-g">${gunler.map(g=>`<option value="${g}">${tarih(g)} ${GUNAD[D(g).getDay()]}</option>`).join('')}</select></label><label class="alan">Saat<select id="tf-s">${['09.00','10.00','11.00','13.30','14.30','15.30','16.30','17.30'].map(s=>`<option>${s}</option>`).join('')}</select></label><button class="btn ana" type="submit">Talep gönder</button><label class="alan" style="grid-column:1/-1">Konu (isteğe bağlı)<input id="tf-n" type="text" placeholder="Örn. son deneme ve çalışma düzeni"></label></form>
+ ${talep.map(t=>`<div class="is"><span class="rozet orta">Onay bekliyor</span><div class="metin" style="cursor:default"><b>${tarih(t.g)} ${t.s}</b><span>${esc(t.n||'Görüşme talebi')}</span></div></div>`).join('')}</section>`}
+
+/* ---------- yönlendirme ---------- */
+function ciz(){gozler.splice(0).forEach(g=>g.disconnect());sonra.length=0;
+ let h=(location.hash||'').slice(1);if(st.rol==='veli')h='veli';if(!h)h='ana-sayfa';
+ let aktif=h,html;
+ if(h.startsWith('ogrenci-')){aktif='ogrenciler';html=ogrenciKart(+h.slice(8))}
+ else if(h.startsWith('sinav-')){aktif='sinav';html=sinavDetay(h.slice(6))}
+ else html=({'ana-sayfa':anaSayfa,ogrenciler,takip,rehberlik,yoklama,sinav:sinavMerkezi,isi,veli:veliYeni,ekip1,onay,raporlar,ag:agSayfa,koordinasyon,yetkinlik}[h]||anaSayfa)();
+ menuCiz(aktif);const m=document.getElementById('ana');m.innerHTML=html;sonra.forEach(f=>f())}
+function gir(rol){st.rol=rol==='veli'?'veli':'rehber';document.getElementById('giris').hidden=true;document.getElementById('uygulama').hidden=false;
+ if(rol==='veli')location.hash='veli';else if(rol==='ekip')location.hash='ekip1';else if(rol==='ag')location.hash='ag';else if(!location.hash||location.hash==='#veli')location.hash='ana-sayfa';ciz();window.scrollTo(0,0)}
+function cik(){st.rol=null;document.getElementById('uygulama').hidden=true;document.getElementById('giris').hidden=false;history.replaceState(null,'',location.pathname+location.search);window.scrollTo(0,0)}
+function modalAc(html){const m=document.getElementById('modal');gozler.splice(0).forEach(g=>g.disconnect());sonra.length=0;m.innerHTML=`<div style="width:100%;max-width:860px"><div class="kapat"><button class="btn" id="modal-kapat">Kapat</button></div>${html}</div>`;m.hidden=false;sonra.forEach(f=>f());document.getElementById('modal-kapat').focus()}
+function modalKapat(){const m=document.getElementById('modal');m.hidden=true;m.innerHTML='';ciz()}
+
+/* ---------- olaylar ---------- */
+document.querySelectorAll('[data-rol]').forEach(b=>b.addEventListener('click',()=>gir(b.dataset.rol)));
+document.getElementById('cikis').addEventListener('click',cik);
+window.addEventListener('hashchange',()=>{if(!st.rol){gir(location.hash==='#veli'?'rehber':'rehber');return}ciz();document.getElementById('ana').focus({preventScroll:true});window.scrollTo(0,0)});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!document.getElementById('modal').hidden)modalKapat();if((e.key==='Enter'||e.key===' ')&&e.target.dataset&&e.target.dataset.hucre){e.preventDefault();e.target.click()}});
+document.addEventListener('click',e=>{const t=e.target.closest('button,[data-git],[data-hucre]');if(!t)return;const d=t.dataset;
+ if(t.id==='modal-kapat'||e.target.id==='modal'){modalKapat();return}
+ if(d.is){st.isler[d.is]=!st.isler[d.is];ciz();return}
+ if(d.git){location.hash=d.git;return}
+ if(d.grup){st.grup=d.grup;ciz();return}
+ if(d.hazirlik){modalAc(hazirlik(OGR[d.hazirlik-1]));return}
+ if(d.veligoz){st.veliOgr=+d.veligoz;location.hash='veli';return}
+ if(d.karne){st.rapor='karne';st.raporOgr=+d.karne;location.hash='raporlar';return}
+ if(d.planla){if(st.planli[d.planla])delete st.planli[d.planla];else{st.planli[d.planla]=1;toast(OGR[d.planla-1].ad+' için görüşme yarın 11.30\'a planlandı (demo)')}ciz();return}
+ if(d.gun){st.yokGun=d.gun;ciz();return}
+ if(d.ysinif){st.yokSinif=d.ysinif;ciz();return}
+ if(d.yok){st.yok[st.yokGun+'|'+st.yokSaat+'|'+d.yok]=d.d;ciz();return}
+ if(t.id==='yok-kaydet'){toast('Yoklama kaydedildi (demo). Devam raporu bu kayıttan beslenir.');return}
+ if(d.sf){st.sinavF=d.sf;ciz();return}
+ if(d.sir){st.siralama={k:d.sir,y:st.siralama.k===d.sir?-st.siralama.y:(d.sir==='ad'?1:-1)};ciz();return}
+ if(d.isi){st.isiTur=d.isi;st.isiSec=null;ciz();return}
+ if(d.hucre){st.isiSec=d.hucre;ciz();return}
+ if(d.sekme){st.rapor=d.sekme;ciz();return}
+ if(d.rapor){st.rapor=d.rapor;location.hash='raporlar';if(location.hash==='#raporlar')ciz();return}
+ const x=id=>onayListe().find(y=>y.id===+id);
+ if(d.onayla){const m=x(d.onayla);const ta=document.querySelector(`[data-metin="${m.id}"]`);if(ta)m.m=ta.value;m.duzen=false;m.d='gonderildi';toast('Onaylandı. Demo: gerçek mesaj gönderilmedi.');ciz();return}
+ if(d.duzenle){const m=x(d.duzenle);const ta=document.querySelector(`[data-metin="${m.id}"]`);if(ta)m.m=ta.value;m.duzen=!m.duzen;ciz();return}
+ if(d.vazgec){x(d.vazgec).d='iptal';ciz();return}
+ if(d.geri){x(d.geri).d='bekliyor';ciz();return}
+ if(d.agbas){agBaslat(+d.agbas,true);return}
+ if(d.agolcek){agBaslat(+d.agolcek,false);return}
+ if(d.agsayfa){st.ag.sayfa=Math.max(0,st.ag.sayfa+ +d.agsayfa);ciz();return}
+ if(d.agk){st.ag.kurum=d.agk;st.ag.sayfa=0;ciz();return}
+ if(d.anket){if(d.anket==='sil')delete st.anket[st.veliOgr];else{st.anket[st.veliOgr]=d.anket;toast('Katılım bilgisi rehbere iletildi.')}ciz();return}
+ if(t.id==='tara'){toast('Tarama tamamlandı: 4 bulgu, yeni sorun yok (demo).');return}
+});
+document.addEventListener('input',e=>{if(e.target.id==='ag-ara'){st.ag.ara=e.target.value;st.ag.sayfa=0;const p=e.target.selectionStart;ciz();const i=document.getElementById('ag-ara');i.focus();i.setSelectionRange(p,p);return}if(e.target.id==='ara'){st.ara=e.target.value;const p=e.target.selectionStart;ciz();const i=document.getElementById('ara');i.focus();i.setSelectionRange(p,p)}});
+document.addEventListener('change',e=>{const t=e.target;if(t.id==='veli-sec'){st.veliOgr=+t.value;ciz()}if(t.id==='rapor-ogr'){st.raporOgr=+t.value;ciz()}if(t.id==='yok-saat'){st.yokSaat=+t.value;ciz()}if(t.id==='ag-kurum'){st.ag.kurum=t.value;st.ag.sayfa=0;ciz()}});
+document.addEventListener('submit',e=>{if(e.target.id==='talep-form'){e.preventDefault();st.talep.push({o:st.veliOgr,g:document.getElementById('tf-g').value,s:document.getElementById('tf-s').value,n:document.getElementById('tf-n').value.trim()});toast('Görüşme talebiniz rehbere iletildi.');ciz();return}if(e.target.id!=='gor-form')return;e.preventDefault();const o=OGR[+document.getElementById('gf-o').value-1];const n=document.getElementById('gf-n').value.trim();if(!n){toast('Önce görüşme notunu yaz.');return}
+ const g={t:BUGUN,konu:document.getElementById('gf-k').value,not:n,o};o.gor.push({t:g.t,konu:g.konu,not:g.not});o.risk=risk(o);toast('Not '+o.ad+' kartına eklendi.');ciz()});
+if(location.hash&&location.hash.length>1)gir(location.hash==='#veli'?'rehber':'rehber');
+}
+</script>
+</body>
+</html>
